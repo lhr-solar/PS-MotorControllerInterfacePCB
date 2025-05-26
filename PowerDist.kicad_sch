@@ -1,14 +1,18 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "36ff14e9-4627-4db4-af81-c3f55886bc85")
 	(paper "User" 254 279.4)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.762) hide)
+				(offset 0.762)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -106,9 +110,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -181,7 +188,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -193,7 +200,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -242,9 +249,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:Fuse"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -375,9 +385,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -496,11 +509,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Jumper:SolderJumper_2_Open"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim yes)
 			(in_bom no)
 			(on_board yes)
@@ -566,30 +584,6 @@
 				)
 			)
 			(symbol "SolderJumper_2_Open_0_1"
-				(arc
-					(start -0.254 1.016)
-					(mid -1.2656 0)
-					(end -0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 1.016)
-					(mid -1.2656 0)
-					(end -0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 				(polyline
 					(pts
 						(xy -0.254 1.016) (xy -0.254 -1.016)
@@ -602,6 +596,54 @@
 						(type none)
 					)
 				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
 				(polyline
 					(pts
 						(xy 0.254 1.016) (xy 0.254 -1.016)
@@ -612,30 +654,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(arc
-					(start 0.254 -1.016)
-					(mid 1.2656 0)
-					(end 0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.254 -1.016)
-					(mid 1.2656 0)
-					(end 0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
 					)
 				)
 			)
@@ -677,6 +695,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "TPS2121:TPS2121RUXR"
 			(pin_names
@@ -759,18 +778,6 @@
 			(symbol "TPS2121RUXR_0_1"
 				(polyline
 					(pts
-						(xy -12.7 -25.4) (xy 12.7 -25.4)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy -12.7 25.4) (xy -12.7 -25.4)
 					)
 					(stroke
@@ -783,7 +790,7 @@
 				)
 				(polyline
 					(pts
-						(xy 12.7 -25.4) (xy 12.7 25.4)
+						(xy -12.7 -25.4) (xy 12.7 -25.4)
 					)
 					(stroke
 						(width 0.2032)
@@ -805,71 +812,65 @@
 						(type none)
 					)
 				)
-				(pin power_in line
-					(at 17.78 20.32 180)
-					(length 5.08)
-					(name "OUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+				(polyline
+					(pts
+						(xy 12.7 -25.4) (xy 12.7 25.4)
 					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+					(stroke
+						(width 0.2032)
+						(type default)
 					)
-				)
-				(pin bidirectional line
-					(at 17.78 -10.16 180)
-					(length 5.08)
-					(name "ILM"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -5.08 180)
-					(length 5.08)
-					(name "SS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+					(fill
+						(type none)
 					)
 				)
 				(pin power_in line
-					(at 17.78 -20.32 180)
+					(at -17.78 20.32 0)
 					(length 5.08)
-					(name "GND"
+					(name "IN1"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "12"
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 7.62 0)
+					(length 5.08)
+					(name "PR1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -2.54 0)
+					(length 5.08)
+					(name "CP2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -896,24 +897,6 @@
 					)
 				)
 				(pin input line
-					(at -17.78 -2.54 0)
-					(length 5.08)
-					(name "CP2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
 					(at -17.78 -20.32 0)
 					(length 5.08)
 					(name "OV2"
@@ -931,53 +914,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at 17.78 7.62 180)
-					(length 5.08)
-					(name "OV1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -17.78 7.62 0)
-					(length 5.08)
-					(name "PR1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin power_in line
-					(at -17.78 20.32 0)
+					(at 17.78 20.32 180)
 					(length 5.08)
-					(name "IN1"
+					(name "OUT"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "7"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1003,6 +950,24 @@
 						)
 					)
 				)
+				(pin input line
+					(at 17.78 7.62 180)
+					(length 5.08)
+					(name "OV1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin output line
 					(at 17.78 2.54 180)
 					(length 5.08)
@@ -1021,13 +986,72 @@
 						)
 					)
 				)
+				(pin bidirectional line
+					(at 17.78 -5.08 180)
+					(length 5.08)
+					(name "SS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 17.78 -10.16 180)
+					(length 5.08)
+					(name "ILM"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 17.78 -20.32 180)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+12V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1099,7 +1123,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1111,7 +1135,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1142,12 +1166,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1238,12 +1267,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:PWR_FLAG"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1334,7 +1368,243 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(rectangle
+		(start 19.05 229.87)
+		(end 128.27 261.62)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 5781a0e8-2a52-4562-9d5b-04b7cf0c1601)
+	)
+	(rectangle
+		(start 19.05 96.52)
+		(end 67.31 121.92)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 605b6956-b185-4ef6-a934-669cf40c3498)
+	)
+	(rectangle
+		(start 19.05 125.73)
+		(end 237.49 224.79)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 6dd3e7bf-402c-470b-8242-313d19cb0446)
+	)
+	(rectangle
+		(start 72.39 19.05)
+		(end 237.49 120.65)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 7c7be3eb-6ebe-41b0-992c-bd7d4ed0fc78)
+	)
+	(rectangle
+		(start 19.05 19.05)
+		(end 67.31 44.45)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid e2615a81-d81e-43ae-b1d0-2b9eeb6bc867)
+	)
+	(rectangle
+		(start 19.05 49.53)
+		(end 67.31 91.44)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid ed3f5741-4d6e-4976-aeb8-02f2e288f7cd)
+	)
+	(text "VREF = 1.06V = 14.204V * (5k/5k+62k)"
+		(exclude_from_sim no)
+		(at 97.536 95.758 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6bde0693-4d8b-4b78-869c-19ba9bc1cd47")
+	)
+	(text "VREF = 1.06V = 12V * (5k/5k+51k)"
+		(exclude_from_sim no)
+		(at 96.774 69.596 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "948f971e-71c4-4540-b46e-dd27ceb746d3")
+	)
+	(text "Using VREF mode (when PR1 > VREF (1.06V), IN1 selected):\n - If only one input is valid, then that input will power the output\n - If both inputs are valid, then IN1 (controls) takes priority\n\nFor a source to be valid, it must be above UV (~2.6V) and below OV as defined by the OVx resistors\nFrom WaveSculptor 22 datasheet: \"expects a DC supply on the CAN bus connection of between 9 and 15V\"\n - Selected OV = ~14.2V"
+		(exclude_from_sim no)
+		(at 104.902 30.988 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bd6d8164-2902-4dc9-91c8-8d96822be152")
+	)
+	(text "RILM configured for limit 2.5A, change based on testing with MC\nEach fan draws 160mA, NOT SURE WHAT MC DRAWS"
+		(exclude_from_sim no)
+		(at 163.068 98.552 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e0da180b-9c72-4b13-b9ae-96c5d0fa93c1")
+	)
+	(text "VREF = 1.06V = 14.204V * (5k/5k+62k)"
+		(exclude_from_sim no)
+		(at 194.818 66.294 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "f37d5807-3cb8-44a6-b120-1a3ef306eec2")
+	)
+	(text "Manual enable/disable for external pwr and\ncontrols in case of issues with muxing IC"
+		(exclude_from_sim no)
+		(at 43.18 99.568 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "f9a21fa1-d2b2-4683-a3d8-77a724482cf9")
+	)
+	(text_box "Testpoints"
+		(exclude_from_sim no)
+		(at 116.84 257.81 0)
+		(size 11.43 3.81)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "2b3063a1-0b11-4892-8b9d-4fdc384cf3e7")
+	)
+	(text_box "Relevant TPS2121 Documentation"
+		(exclude_from_sim no)
+		(at 185.42 219.71 0)
+		(size 52.07 5.08)
+		(margins 1.4288 1.4288 1.4288 1.4288)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.905 1.905)
+			)
+			(justify left top)
+		)
+		(uuid "9173f1c1-61a1-404f-8e79-457eb29ea3d7")
+	)
+	(text_box "PWR Jumpers"
+		(exclude_from_sim no)
+		(at 52.07 118.11 0)
+		(size 15.24 3.81)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "9e89e7e5-cdf2-4126-ba48-8d4a283b3aac")
+	)
+	(text_box "Bypass Caps"
+		(exclude_from_sim no)
+		(at 52.07 87.63 0)
+		(size 15.24 3.81)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "a2b16e83-0317-4591-b17d-ed751f0e9f20")
+	)
+	(text_box "Power Muxing Logic"
+		(exclude_from_sim no)
+		(at 204.47 115.57 0)
+		(size 33.02 5.08)
+		(margins 1.4288 1.4288 1.4288 1.4288)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.905 1.905)
+				(thickness 0.2381)
+			)
+			(justify left top)
+		)
+		(uuid "c3186e36-9193-4236-8b9f-8c6857e32fe8")
 	)
 	(junction
 		(at 119.38 95.25)
@@ -2085,78 +2355,6 @@
 			(type default)
 		)
 		(uuid "ff0fc3e9-809a-44c9-852f-223ff15b380a")
-	)
-	(rectangle
-		(start 19.05 229.87)
-		(end 128.27 261.62)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 5781a0e8-2a52-4562-9d5b-04b7cf0c1601)
-	)
-	(rectangle
-		(start 19.05 96.52)
-		(end 67.31 121.92)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 605b6956-b185-4ef6-a934-669cf40c3498)
-	)
-	(rectangle
-		(start 19.05 125.73)
-		(end 237.49 224.79)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 6dd3e7bf-402c-470b-8242-313d19cb0446)
-	)
-	(rectangle
-		(start 72.39 19.05)
-		(end 237.49 120.65)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 7c7be3eb-6ebe-41b0-992c-bd7d4ed0fc78)
-	)
-	(rectangle
-		(start 19.05 19.05)
-		(end 67.31 44.45)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid e2615a81-d81e-43ae-b1d0-2b9eeb6bc867)
-	)
-	(rectangle
-		(start 19.05 49.53)
-		(end 67.31 91.44)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid ed3f5741-4d6e-4976-aeb8-02f2e288f7cd)
 	)
 	(image
 		(at 72.39 208.28)
@@ -4228,7 +4426,25 @@
 			"xhhjQY4v6jHGGGOMMcYYY4wxxhhjjDEW5PiiHmOMMcYYY4wxxhhjjDHGGGNBji/qMcYYY4wxxhhj"
 			"jDHGGGOMMRbk+KIeY4wxxhhjjDHGGGOMMcYYY0GOL+oxxhhjjDHGGGOMMcYYY4wxFuT4oh5jjDHG"
 			"GGOMMcYYY4wxxhhjQY4v6jHGGGOMMcYYY4wxxhhjjDEW5PiiHmOMMcYYY4wxxhhjjDHGGGNB7v8H"
-			"5YIiokQfF4gAAAAASUVORK5CYII="
+			"5YIiokQfF4gAAAAASUVORK5CYIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAA=="
 		)
 	)
 	(image
@@ -8142,7 +8358,25 @@
 			"sHORiIiIiIiIiIiIiIiIiHRh5yIRERERERERERERERER6cLORSIiIiIiIiIiIiIiIiLShZ2LRERE"
 			"RERERERERERERKQLOxeJiIiIiIiIiIiIiIiISBd2LhIRERERERERERERERGRLuxcJCIiIiIiIiIi"
 			"IiIiIiJd2LlIRERERERERERERERERLqwc5GIiIiIiIiIiIiIiIiIdPn/ACr4/UqOMBxNAAAAAElF"
-			"TkSuQmCC"
+			"TkSuQmCCAHAAMgB0ACsAawBzAG8AUQA0AHAAKwA4AGMAVQBYAGEAcgBEAEcAUwB5ACsAOQBKAE8A"
+			"TwBhAHYAdwA3AEIANgBEAEwAVgBWAGgAdgBSAEUAdgBPAGIAMABHADAAZABHAHkAUABvAFMAUQBk"
+			"AEcAMQBsAGQARwAxACsATwBlAHEAcQAvADAAWABQAGUAMwAxAHIAawBvAGgAQgBCAG4AegBwAHoA"
+			"UgB2AE4ATABNAFUAcwBlAHAASwBJAEcAZABpADUANAA0AGQAeQBSAGoAbABVAEkASgBkAHYAWABx"
+			"AFYAYQBTAG0AcABxAHEATABOAGUATABqADQAOQBWAEYAcABPAGoAWAByAHgALwBxADEASwBtAGoA"
+			"TABwAFkAaQBJAGkATABRAHIAVgBzADMAKwBmAG0ALwAvAC8AMgB2AG4ATgArADAAYQBSAE4AeQBj"
+			"ADMATQBCAEEAQQA4ADkAOQBCAEQANgA5AE8AawBqAHcAeQB5AEoAagBJAHgARQAvAC8ANwA5ADUA"
+			"ZQBjAGYAZgAvAHgAUgBFADEANABjAG4AVAB0ADMAUgBwAFUAcQBWAGQAVABGAFUAcwB1AFcATABl"
+			"AFgAOABuADMALwArAHEAUQBsAHoAbABlADcAZAB1ADYATgA4ACsAZgBMAHEAWQBxAGwANQA4ACsA"
+			"WgB5AC8AdQBiAE4AbQA1AG8AdwBTAC8AcgAyADcAWQB0AGEAdABXAHEAcABpADYAVgBLAGwAUwBx"
+			"AGgAYgA5ACsAKwA4AHYAUABhAHQAVwBzADEANABlADQAVwBGAGgAWQBtADUAMQBlAHYAWABvADAA"
+			"TABGAHkANQBvAHcAcwAxAHQAMgBiAEkARgBDAFEAawBKADIATABoAHgASQA1AG8AMABhAGEASQBH"
+			"ADIAeABVAGMASABJAHgAOQArAC8AYgBoAHgAeAA5AC8AeABJAEkARgBDADIAeQBtAFoAUQBDAGEA"
+			"LwBaAGkAZABuAGEAMABKAHMANgBSAHQAMgA3AGEAbwBWAEsAbQBTAHUAaABnAEEAOABQAHYAdgB2"
+			"AHkATQB4AE0AUgBFAEEAVQBLADUAYwBPAGIAegA4ADgAcwB0AHEARgBJADIASwBGAFMAdgBLAFAA"
+			"QwBLAEUAMABPAFEAbABSADcAegAwADAAawB0AHkAZgB0AG0AeQBaAFoAbwB3AGsAeABNAG4AVAB1"
+			"AEQASQBrAFMATQBBAGcARwByAFYAcQBxAEYAagB4ADQANgBhAGMARgBmAHYATgAwAGQAcwAyAGIA"
+			"SgBGAGwAaQBPAE4ARwBqAFYAQwBWAEYAUwBVAEcAawBVAEsAQwBRAG0AeAB1ADUAKwBOAGsAcABP"
+			"AFQAbw=="
 		)
 	)
 	(image
@@ -9274,7 +9508,25 @@
 			"iLSYPCMiIiIiIiIiIiIiIiLSYvKMiIiIiIiIiIiIiIiISIvJMyIiIiIiIiIiIiIiIiItJs+IiIiI"
 			"iIiIiIiIiIiItJg8IyIiIiIiIiIiIiIiItJi8oyIiIiIiIiIiIiIiIhIi8kzIiIiIiIiIiIiIiIi"
 			"Ii0mz4iIiIiIiIiIiIiIiIi0mDwjIiIiIiIiIiIiIiIi0mLyjIiIiIiIiIiIiIiIiEiLyTMiIiIi"
-			"IiIiIiIiIiIirf8Dv1LNjNsuZFAAAAAASUVORK5CYII="
+			"IiIiIiIiIiIirf8Dv1LNjNsuZFAAAAAASUVORK5CYIIAAAAAAAAAAAAAAKPaDmwANAWAAAAAAAAA"
+			"AAADAAAAAAAAAABA61UKAgAAAQAAAAAAAAAAAAAAAAAAAKbaCWwANQWAAAAAAAAAAAADAAAAAAAA"
+			"AFBN7lUKAgAAAQAAAAAAAAAAAAAAAAAAAKXaFGwANgWAAAAAAAAAAAAIAAAAAAAAAJB97lUKAgAA"
+			"AQAAAAAAAAAAAAAAAAAAAKjaF2wANwWAAAAAAAAAAAAEAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAA"
+			"AAAAAAAAAK/aEmwAOAWAAAAAAAAAAAAIAAAAAAAAAFB97lUKAgAAAQAAAAAAAAAAAAAAAAAAANLa"
+			"HWwAOQWAAAAAAAAAAAADAAAAAAAAAPAn7lUKAgAAAQAAAAAAAAAAAAAAAAAAANHaGGwAOgWAAAAA"
+			"AAAAAAAEAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAANTaG2wAOwWAAAAAAAAAAAAIAAAA"
+			"AAAAAJB77lUKAgAAAQAAAAAAAAAAAAAAAAAAANvaZmwAPAWAQzovV0lORE9XUy9mb250c1xiYWhu"
+			"c2NocmlmdC50dGYAAAAAAAAAAN7aYWwAPQWAAAAAAAAAAAADAAAAAAAAAOBA61UKAgAAAQAAAAAA"
+			"AAAAAAAAAAAAAN3abGwAPgWAAAAAAAAAAAADAAAAAAAAAGAh7lUKAgAAAQAAAAAAAAAAAAAAAAAA"
+			"AMDab2wAPwWAAAAAAAAAAAADAAAAAAAAAKAs7lUKAgAAAQAAAAAAAAAAAAAAAAAAAMfaamwAQAWA"
+			"AAAAAAAAAAAEAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAMradWwAQQWAAAAAAAAAAAAD"
+			"AAAAAAAAAFBO7lUKAgAAAQAAAAAAAAAAAAAAAAAAAMnacGwAQgWAAAAAAAAAAAAIAAAAAAAAABB0"
+			"7lUKAgAAAQAAAAAAAAAAAAAAAAAAAMzac2wAQwWAQzovV0lORE9XUy9mb250c1xiYWhuc2Nocmlm"
+			"dC50dGYAAAAAAAAAAPPafmwARAWAAAAAAAAAAAADAAAAAAAAAIAu7lUKAgAAAQAAAAAAAAAAAAAA"
+			"AAAAAPbaeWwARQWAAAAAAAAAAAADAAAAAAAAAEBP7lUKAgAAAQAAAAAAAAAAAAAAAAAAAPXaRGwA"
+			"RgWAQzovV0lORE9XUy9mb250c1xjODUxNGZpeC5mb24AAAAAAAAAAAAAAPjaR2wARwWAAAAAAAAA"
+			"AAADAAAAAAAAAMBQ7lUKAgAAAQAAAAAAAAAAAAAAAAAAAP/aQmwASAWAAAAAAAAAAAADAAAAAAAA"
+			"AEBK61UKAgAAAQAAAAAAAAAAAAAAAAAAAOLaTWwASQ=="
 		)
 	)
 	(image
@@ -10816,170 +11068,29 @@
 			"AAAALhEoAwAAAAAAAAAAAABcIlAGAAAAAAAAAAAAALhEoAwAAAAAAAAAAAAAcIlAGQAAAAAAAAAA"
 			"AADgEoEyAAAAAAAAAAAAAMAlAmUAAAAAAAAAAAAAgEsEygAAAAAAAAAAAAAAlwiUAQAAAAAAAAAA"
 			"AAAuESgDAAAAAAAAAAAAAFwiUAYAAAAAAAAAAAAAuESgDAAAAAAAAAAAAABwiUAZAAAAAAAAAAAA"
-			"AOASgTIAAAAAAAAAAAAAwCUCZQAAAAAAAAAAAACAS/8fBxl+tXOjba0AAAAASUVORK5CYII="
+			"AOASgTIAAAAAAAAAAAAAwCUCZQAAAAAAAAAAAACAS/8fBxl+tXOjba0AAAAASUVORK5CYIIAAAAA"
+			"AAAAAAAAAAA1hIJnAF8BgAC+61UKAgAAAwAAAAAAAADAjOpVCgIAAAEAAAAAAAAAAAAAAAAAAAA4"
+			"hI1nAGABgKDD61UKAgAAAwAAAAAAAABAiepVCgIAAAEAAAAAAAAAAAAAAAAAAAA/hIhnAGEBgLDC"
+			"61UKAgAAAwAAAAAAAADgiepVCgIAAAEAAAAAAAAAAAAAAAAAAAAihItnAGIBgIDC61UKAgAAAwAA"
+			"AAAAAADAiupVCgIAAAEAAAAAAAAAAAAAAAAAAAAhhJZnAGMBgNDG61UKAgAAAwAAAAAAAABQBexV"
+			"CgIAAAEAAAAAAAAAAAAAAAAAAAAkhJFnAGQBgAAAAAAAAAAACAAAAAAAAAAg1+lVCgIAAAEAAAAA"
+			"AAAAAAAAAAAAAAArhJxnAGUBgEDD61UKAgAAAwAAAAAAAAAgi+pVCgIAAAEAAAAAAAAAAAAAAAAA"
+			"AAAuhJ9nAGYBgIC/61UKAgAAAwAAAAAAAACwBOxVCgIAAAEAAAAAAAAAAAAAAAAAAAAthJpnAGcB"
+			"gAAAAAAAAAAABAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAABQhOVnAGgBgLC861UKAgAA"
+			"AwAAAAAAAADgh+pVCgIAAAEAAAAAAAAAAAAAAAAAAABXhOBnAGkBgEdsb3VjZXN0ZXIgTVQgRXh0"
+			"cmEgQ29uZGVuc2VkAAAAAAAAAAAAAABahONnAGoBgAAAAAAAAAAAAwAAAAAAAACQBuxVCgIAAAEA"
+			"AAAAAAAAAAAAAAAAAABZhO5nAGsBgAAAAAAAAAAAAwAAAAAAAABwBuxVCgIAAAEAAAAAAAAAAAAA"
+			"AAAAAABchOlnAGwBgEM6L1dJTkRPV1MvZm9udHNcR0lMU0FOVUIuVFRGAAAAAAAAAAAAAABDhPRn"
+			"AG0BgGDH61UKAgAAAwAAAAAAAACAjepVCgIAAAEAAAAAAAAAAAAAAAAAAABGhPdnAG4BgAAAAAAA"
+			"AAAACAAAAAAAAABg1+lVCgIAAAEAAAAAAAAAAAAAAAAAAABFhPJnAG8BgAAAAAAAAAAAAwAAAAAA"
+			"AACgiupVCgIAAAEAAAAAAAAAAAAAAAAAAABIhP1nAHABgOC861UKAgAAAwAAAAAAAACAi+pVCgIA"
+			"AAEAAAAAAAAAAAAAAAAAAABPhPhnAHEBgAAAAAAAAAAABAAAAAAAAAABAAAAAAAAAAEAAAAAAAAA"
+			"AAAAAAAAAAByhPtnAHIBgHDA61UKAgAAAwAAAAAAAACgiOpVCgIAAAEAAAAAAAAAAAAAAAAAAABx"
+			"hMZnAHMBgAAAAAAAAAAACAAAAAAAAACg1ulVCgIAAAEAAAAAAAAAAAAAAAAAAAB0hMFnAA=="
 		)
-	)
-	(text_box "Testpoints"
-		(exclude_from_sim no)
-		(at 116.84 257.81 0)
-		(size 11.43 3.81)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "2b3063a1-0b11-4892-8b9d-4fdc384cf3e7")
-	)
-	(text_box "Relevant TPS2121 Documentation"
-		(exclude_from_sim no)
-		(at 185.42 219.71 0)
-		(size 52.07 5.08)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.905 1.905)
-			)
-			(justify left top)
-		)
-		(uuid "9173f1c1-61a1-404f-8e79-457eb29ea3d7")
-	)
-	(text_box "PWR Jumpers"
-		(exclude_from_sim no)
-		(at 52.07 118.11 0)
-		(size 15.24 3.81)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "9e89e7e5-cdf2-4126-ba48-8d4a283b3aac")
-	)
-	(text_box "Bypass Caps"
-		(exclude_from_sim no)
-		(at 52.07 87.63 0)
-		(size 15.24 3.81)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "a2b16e83-0317-4591-b17d-ed751f0e9f20")
-	)
-	(text_box "Power Muxing Logic"
-		(exclude_from_sim no)
-		(at 204.47 115.57 0)
-		(size 33.02 5.08)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.905 1.905)
-				(thickness 0.2381)
-			)
-			(justify left top)
-		)
-		(uuid "c3186e36-9193-4236-8b9f-8c6857e32fe8")
-	)
-	(text "VREF = 1.06V = 14.204V * (5k/5k+62k)"
-		(exclude_from_sim no)
-		(at 97.536 95.758 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "6bde0693-4d8b-4b78-869c-19ba9bc1cd47")
-	)
-	(text "VREF = 1.06V = 12V * (5k/5k+51k)"
-		(exclude_from_sim no)
-		(at 96.774 69.596 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "948f971e-71c4-4540-b46e-dd27ceb746d3")
-	)
-	(text "Using VREF mode (when PR1 > VREF (1.06V), IN1 selected):\n - If only one input is valid, then that input will power the output\n - If both inputs are valid, then IN1 (controls) takes priority\n\nFor a source to be valid, it must be above UV (~2.6V) and below OV as defined by the OVx resistors\nFrom WaveSculptor 22 datasheet: \"expects a DC supply on the CAN bus connection of between 9 and 15V\"\n - Selected OV = ~14.2V"
-		(exclude_from_sim no)
-		(at 104.902 30.988 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "bd6d8164-2902-4dc9-91c8-8d96822be152")
-	)
-	(text "RILM configured for limit 2.5A, change based on testing with MC\nEach fan draws 160mA, NOT SURE WHAT MC DRAWS"
-		(exclude_from_sim no)
-		(at 163.068 98.552 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e0da180b-9c72-4b13-b9ae-96c5d0fa93c1")
-	)
-	(text "VREF = 1.06V = 14.204V * (5k/5k+62k)"
-		(exclude_from_sim no)
-		(at 194.818 66.294 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "f37d5807-3cb8-44a6-b120-1a3ef306eec2")
-	)
-	(text "Manual enable/disable for external pwr and\ncontrols in case of issues with muxing IC"
-		(exclude_from_sim no)
-		(at 43.18 99.568 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "f9a21fa1-d2b2-4683-a3d8-77a724482cf9")
 	)
 	(label "F1-IN"
 		(at 171.45 54.61 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10990,7 +11101,6 @@
 	)
 	(label "+12V_CTRLS_PROT"
 		(at 66.04 30.48 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11001,7 +11111,6 @@
 	)
 	(label "+12V_CTRLS_PROT"
 		(at 41.91 52.07 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11012,7 +11121,6 @@
 	)
 	(label "OV2"
 		(at 119.38 95.25 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11023,7 +11131,6 @@
 	)
 	(label "F1-IN"
 		(at 57.15 52.07 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11034,7 +11141,6 @@
 	)
 	(label "+12V_EXT_PROT"
 		(at 35.56 259.08 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11045,7 +11151,6 @@
 	)
 	(label "+12V_EXT_EN"
 		(at 66.04 33.02 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11056,7 +11161,6 @@
 	)
 	(label "+12V_CTRLS_PROT"
 		(at 52.07 259.08 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11067,7 +11171,6 @@
 	)
 	(label "PR1"
 		(at 92.71 67.31 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11078,7 +11181,6 @@
 	)
 	(label "+12V_EXT_PROT"
 		(at 26.67 52.07 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11089,7 +11191,6 @@
 	)
 	(label "OV1"
 		(at 172.72 67.31 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11100,7 +11201,6 @@
 	)
 	(label "+12V_CTRLS_PROT"
 		(at 196.85 57.15 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11111,7 +11211,6 @@
 	)
 	(label "+12V_EXT_PROT"
 		(at 102.87 82.55 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11122,7 +11221,6 @@
 	)
 	(label "+12V_CTRLS_PROT"
 		(at 93.98 54.61 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11133,7 +11231,6 @@
 	)
 	(label "CSS"
 		(at 179.07 80.01 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11144,7 +11241,6 @@
 	)
 	(label "ILM"
 		(at 163.83 85.09 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11155,7 +11251,6 @@
 	)
 	(label "+12V_EXT_PROT"
 		(at 66.04 35.56 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11166,7 +11261,6 @@
 	)
 	(label "+12V_EXT_EN"
 		(at 62.23 107.95 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11177,7 +11271,6 @@
 	)
 	(label "F1-IN"
 		(at 63.5 115.57 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11188,7 +11281,6 @@
 	)
 	(label "+12V_CTRLS_PROT"
 		(at 21.59 115.57 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11200,7 +11292,6 @@
 	(hierarchical_label "+12V_CTRLS"
 		(shape input)
 		(at 52.07 26.67 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11212,7 +11303,6 @@
 	(hierarchical_label "+12V_STATUS"
 		(shape output)
 		(at 86.36 242.57 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11224,7 +11314,6 @@
 	(hierarchical_label "+12V_EXT"
 		(shape input)
 		(at 34.29 107.95 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11236,7 +11325,6 @@
 	(hierarchical_label "+12V_STATUS"
 		(shape output)
 		(at 182.88 69.85 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13713,6 +13801,10 @@
 	(sheet
 		(at 21.59 24.13)
 		(size 26.67 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -13742,43 +13834,43 @@
 		)
 		(pin "+12V_CTRLS_PROT" output
 			(at 48.26 30.48 0)
+			(uuid "e83a6b02-5fc5-4291-9f65-ea9b91a6acd5")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "e83a6b02-5fc5-4291-9f65-ea9b91a6acd5")
 		)
 		(pin "+12V_CTRLS" input
 			(at 48.26 26.67 0)
+			(uuid "44931925-4e3d-4a1b-babf-58c2f59ccc71")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "44931925-4e3d-4a1b-babf-58c2f59ccc71")
 		)
 		(pin "+12V_EXT_EN" input
 			(at 48.26 33.02 0)
+			(uuid "7e24a9b5-c385-4c04-8012-d3f7f660a7b7")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "7e24a9b5-c385-4c04-8012-d3f7f660a7b7")
 		)
 		(pin "+12V_EXT_PROT" output
 			(at 48.26 35.56 0)
+			(uuid "95147ff9-428c-49c9-8a70-37fee67399d1")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "95147ff9-428c-49c9-8a70-37fee67399d1")
 		)
 		(instances
 			(project "Controls-MotorControllerBreakout"
