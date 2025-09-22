@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP BZT52-B12-QX
-D plastic surface-mounted package; 2 leads .SOD123,VF:0.9v,IF = 10 mA,
-K
-F https://assets.nexperia.com/documents/data-sheet/BZT52-B-Q_SER.pdf
-$ENDCMP
-#
-#End Doc Library
