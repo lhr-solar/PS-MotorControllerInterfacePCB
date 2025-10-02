@@ -619,6 +619,18 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Link",
+          "name": "Mouser Link",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -680,6 +692,14 @@
     [
       "c5209a46-926e-46c4-85fe-b5b4e4d6cad2",
       "Power"
+    ],
+    [
+      "07f22498-fffc-46fc-8b11-2ac98c172822",
+      "Fuses"
+    ],
+    [
+      "2c6af1c6-af26-4746-8ed9-5deb88ce0ee1",
+      "Buck Converter 24V-12V"
     ]
   ],
   "text_variables": {}
