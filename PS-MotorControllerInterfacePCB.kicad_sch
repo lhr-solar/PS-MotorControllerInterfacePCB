@@ -2682,7 +2682,7 @@
 	)
 	(text "(24-2.5)/(.005) \n= 4.3k"
 		(exclude_from_sim no)
-		(at 190.754 130.302 0)
+		(at 190.5 134.366 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2742,7 +2742,7 @@
 	)
 	(text "(12-2.5)/(.005) \n= 1.9k"
 		(exclude_from_sim no)
-		(at 219.964 130.302 0)
+		(at 220.472 133.604 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2834,7 +2834,7 @@
 	)
 	(text "(3.3-2.5)/(.005) \n= 260"
 		(exclude_from_sim no)
-		(at 249.174 129.794 0)
+		(at 249.682 133.096 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2859,6 +2859,12 @@
 		(uuid "07cd90e1-267f-4a8d-aa67-ef397b03bfbe")
 	)
 	(junction
+		(at 200.66 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5c1f7d4f-f478-45ca-ba55-1ef10d4ecc9d")
+	)
+	(junction
 		(at 52.07 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2869,6 +2875,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "97d12837-0c4e-4c0d-9fa3-cc1f0193d5b8")
+	)
+	(junction
+		(at 259.08 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9a9930c5-6fa4-44c0-b844-0830f1fdcf53")
 	)
 	(junction
 		(at 133.35 57.15)
@@ -2887,6 +2899,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c828f7bb-ab39-4a67-b033-63c3e998f51a")
+	)
+	(junction
+		(at 229.87 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ea1da792-b132-46e8-976e-c944b0a5841a")
 	)
 	(junction
 		(at 46.99 83.82)
@@ -3014,7 +3032,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 123.19) (xy 229.87 125.73)
+			(xy 229.87 123.19) (xy 229.87 124.46)
 		)
 		(stroke
 			(width 0)
@@ -3134,6 +3152,16 @@
 	)
 	(wire
 		(pts
+			(xy 229.87 124.46) (xy 229.87 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32bab7d2-052b-4db4-aa6c-c7fe4a1d9da9")
+	)
+	(wire
+		(pts
 			(xy 187.96 81.28) (xy 191.77 81.28)
 		)
 		(stroke
@@ -3154,7 +3182,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 123.19) (xy 200.66 125.73)
+			(xy 200.66 123.19) (xy 200.66 124.46)
 		)
 		(stroke
 			(width 0)
@@ -3454,6 +3482,16 @@
 	)
 	(wire
 		(pts
+			(xy 259.08 124.46) (xy 259.08 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8c07452-4a81-46d9-9f49-c73b7321e68a")
+	)
+	(wire
+		(pts
 			(xy 133.35 53.34) (xy 133.35 57.15)
 		)
 		(stroke
@@ -3494,7 +3532,17 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 123.19) (xy 259.08 125.73)
+			(xy 200.66 124.46) (xy 200.66 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c26f3067-0081-4eec-9566-e41a2829f9ed")
+	)
+	(wire
+		(pts
+			(xy 259.08 123.19) (xy 259.08 124.46)
 		)
 		(stroke
 			(width 0)
@@ -4703,6 +4751,70 @@
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
 					(reference "LVPWR2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 200.66 124.46 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "40bd728a-b456-4e83-a3cd-de5e79172eeb")
+		(property "Reference" "TP13"
+			(at 193.802 125.222 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TP_24V"
+			(at 193.802 127.762 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 200.66 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 200.66 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "88fd1bca-052d-4782-9dba-7aededf1e681")
+		)
+		(instances
+			(project "PS-MotorControllerInterfacePCB"
+				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
+					(reference "TP13")
 					(unit 1)
 				)
 			)
@@ -5957,6 +6069,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 259.08 124.46 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b5fc57cf-b26e-430b-b9bc-f00802b76250")
+		(property "Reference" "TP15"
+			(at 252.222 125.222 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TP_3V3"
+			(at 252.222 127.762 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 259.08 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 259.08 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 259.08 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "43acc9c6-339b-4ad7-9245-dd5fa3edc4fd")
+		)
+		(instances
+			(project "PS-MotorControllerInterfacePCB"
+				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
+					(reference "TP15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 229.87 129.54 180)
 		(unit 1)
@@ -6283,6 +6459,70 @@
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
 					(reference "#PWR027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 229.87 124.46 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d12e4911-cb89-4041-9d0f-962c3261c227")
+		(property "Reference" "TP14"
+			(at 223.012 125.222 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TP_12V"
+			(at 223.012 127.762 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 229.87 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 229.87 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 229.87 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e17519e2-0680-41a6-8042-8bc8c3c00dda")
+		)
+		(instances
+			(project "PS-MotorControllerInterfacePCB"
+				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
+					(reference "TP14")
 					(unit 1)
 				)
 			)

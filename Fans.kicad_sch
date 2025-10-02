@@ -5,6 +5,113 @@
 	(uuid "881cb00c-6d7e-41c3-ac54-8afad063d660")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector_Generic:Conn_01x06"
 			(pin_names
 				(offset 1.016)
@@ -1379,6 +1486,24 @@
 		(uuid "f9845ea5-ca43-474d-8e05-de0a02079e66")
 	)
 	(junction
+		(at 90.17 146.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0d1d5c54-d344-4b91-9aeb-5d593693be2d")
+	)
+	(junction
+		(at 109.22 146.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e6b5147-f103-4144-b2b0-b0e361b7e3ee")
+	)
+	(junction
+		(at 52.07 146.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "40a31b0b-de18-45ef-be27-1b57b0d31761")
+	)
+	(junction
 		(at 44.45 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1391,14 +1516,32 @@
 		(uuid "6af1384e-1630-4e7d-8f15-eaf46a41498e")
 	)
 	(junction
+		(at 33.02 146.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d8409dd2-8e0f-479c-8b6e-87120dbc0a7b")
+	)
+	(junction
+		(at 71.12 146.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "da15437c-1af4-4039-b8f2-e89c517ebe1b")
+	)
+	(junction
 		(at 100.33 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e44549a0-6f29-43de-9f62-81a5ba078e7f")
 	)
+	(junction
+		(at 129.54 146.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ff7bafad-99c4-43eb-9285-66e08fa02091")
+	)
 	(wire
 		(pts
-			(xy 119.38 163.83) (xy 119.38 162.56)
+			(xy 129.54 163.83) (xy 129.54 162.56)
 		)
 		(stroke
 			(width 0)
@@ -1488,7 +1631,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 163.83) (xy 102.87 162.56)
+			(xy 109.22 163.83) (xy 109.22 162.56)
 		)
 		(stroke
 			(width 0)
@@ -1498,7 +1641,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 153.67) (xy 36.83 154.94)
+			(xy 33.02 153.67) (xy 33.02 154.94)
 		)
 		(stroke
 			(width 0)
@@ -1538,7 +1681,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 143.51) (xy 53.34 146.05)
+			(xy 52.07 143.51) (xy 52.07 146.05)
 		)
 		(stroke
 			(width 0)
@@ -1558,7 +1701,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 162.56) (xy 86.36 167.64)
+			(xy 90.17 162.56) (xy 90.17 167.64)
 		)
 		(stroke
 			(width 0)
@@ -1578,7 +1721,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 162.56) (xy 36.83 167.64)
+			(xy 33.02 162.56) (xy 33.02 167.64)
 		)
 		(stroke
 			(width 0)
@@ -1618,7 +1761,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 154.94) (xy 119.38 153.67)
+			(xy 129.54 154.94) (xy 129.54 153.67)
 		)
 		(stroke
 			(width 0)
@@ -1638,7 +1781,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 143.51) (xy 69.85 146.05)
+			(xy 71.12 143.51) (xy 71.12 146.05)
 		)
 		(stroke
 			(width 0)
@@ -1658,7 +1801,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 146.05) (xy 102.87 143.51)
+			(xy 109.22 146.05) (xy 109.22 143.51)
 		)
 		(stroke
 			(width 0)
@@ -1768,7 +1911,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 162.56) (xy 53.34 167.64)
+			(xy 52.07 162.56) (xy 52.07 167.64)
 		)
 		(stroke
 			(width 0)
@@ -1838,7 +1981,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 143.51) (xy 119.38 146.05)
+			(xy 129.54 143.51) (xy 129.54 146.05)
 		)
 		(stroke
 			(width 0)
@@ -1858,7 +2001,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 153.67) (xy 69.85 154.94)
+			(xy 71.12 153.67) (xy 71.12 154.94)
 		)
 		(stroke
 			(width 0)
@@ -1868,7 +2011,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 143.51) (xy 36.83 146.05)
+			(xy 33.02 143.51) (xy 33.02 146.05)
 		)
 		(stroke
 			(width 0)
@@ -1898,7 +2041,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 154.94) (xy 102.87 153.67)
+			(xy 109.22 154.94) (xy 109.22 153.67)
 		)
 		(stroke
 			(width 0)
@@ -1908,7 +2051,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 143.51) (xy 86.36 146.05)
+			(xy 90.17 143.51) (xy 90.17 146.05)
 		)
 		(stroke
 			(width 0)
@@ -1938,7 +2081,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 162.56) (xy 69.85 167.64)
+			(xy 71.12 162.56) (xy 71.12 167.64)
 		)
 		(stroke
 			(width 0)
@@ -1948,7 +2091,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 153.67) (xy 86.36 154.94)
+			(xy 90.17 153.67) (xy 90.17 154.94)
 		)
 		(stroke
 			(width 0)
@@ -1958,7 +2101,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 153.67) (xy 53.34 154.94)
+			(xy 52.07 153.67) (xy 52.07 154.94)
 		)
 		(stroke
 			(width 0)
@@ -1987,7 +2130,7 @@
 		(uuid "352fd345-d11b-485d-9ee8-81f69aba8bb8")
 	)
 	(label "FAN_A_TACHO"
-		(at 69.85 143.51 90)
+		(at 71.12 143.51 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2007,7 +2150,7 @@
 		(uuid "71d3c64b-ed82-4f93-abea-2bbe224c3bbb")
 	)
 	(label "PWM_FAN_B"
-		(at 53.34 143.51 90)
+		(at 52.07 143.51 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2037,7 +2180,7 @@
 		(uuid "a453e6fe-86c1-4eab-bef7-4997541b47d9")
 	)
 	(label "FAN_B_NEG"
-		(at 119.38 163.83 270)
+		(at 129.54 163.83 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2047,7 +2190,7 @@
 		(uuid "aa7ce666-7b0b-4713-a2db-8d6626e934ab")
 	)
 	(label "FAN_A_NEG"
-		(at 102.87 163.83 270)
+		(at 109.22 163.83 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2077,7 +2220,7 @@
 		(uuid "d1ff8a58-e4da-437b-84a8-75f4dfb835ef")
 	)
 	(label "PWM_FAN_A"
-		(at 36.83 143.51 90)
+		(at 33.02 143.51 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2107,7 +2250,7 @@
 		(uuid "e93955fc-f378-4de3-be21-969ac61b27eb")
 	)
 	(label "FAN_B_TACHO"
-		(at 86.36 143.51 90)
+		(at 90.17 143.51 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2227,7 +2370,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 86.36 167.64 0)
+		(at 90.17 167.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2236,7 +2379,7 @@
 		(fields_autoplaced yes)
 		(uuid "293240d2-0422-4643-a694-88482a4e25ec")
 		(property "Reference" "#PWR015"
-			(at 86.36 173.99 0)
+			(at 90.17 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2245,7 +2388,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 86.36 172.72 0)
+			(at 90.17 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2253,7 +2396,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 167.64 0)
+			(at 90.17 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2262,7 +2405,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 167.64 0)
+			(at 90.17 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2271,7 +2414,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 86.36 167.64 0)
+			(at 90.17 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2411,7 +2554,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 86.36 158.75 90)
+		(at 90.17 158.75 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2419,7 +2562,7 @@
 		(dnp no)
 		(uuid "37ba4b32-d548-4a22-b4e9-097ecf89fbbf")
 		(property "Reference" "LVPWR5"
-			(at 87.884 153.67 90)
+			(at 91.694 153.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2428,7 +2571,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 87.884 156.21 90)
+			(at 91.694 156.21 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2437,7 +2580,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 86.36 158.75 0)
+			(at 90.17 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2446,7 +2589,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 86.36 158.75 0)
+			(at 90.17 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2455,7 +2598,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 86.36 158.75 0)
+			(at 90.17 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2464,7 +2607,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 86.36 158.75 0)
+			(at 90.17 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2555,7 +2698,7 @@
 	)
 	(symbol
 		(lib_id "power:+24V")
-		(at 119.38 143.51 0)
+		(at 129.54 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2564,7 +2707,7 @@
 		(fields_autoplaced yes)
 		(uuid "4204bc02-a609-46f4-ac32-5d89708b66bb")
 		(property "Reference" "#PWR062"
-			(at 119.38 147.32 0)
+			(at 129.54 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2573,7 +2716,7 @@
 			)
 		)
 		(property "Value" "+24V"
-			(at 119.38 138.43 0)
+			(at 129.54 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2581,7 +2724,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 119.38 143.51 0)
+			(at 129.54 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2590,7 +2733,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 119.38 143.51 0)
+			(at 129.54 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2599,7 +2742,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+24V\""
-			(at 119.38 143.51 0)
+			(at 129.54 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2757,7 +2900,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 119.38 149.86 180)
+		(at 129.54 149.86 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2765,7 +2908,7 @@
 		(dnp no)
 		(uuid "4bf874ca-0061-488c-a373-b51b5f98b7d2")
 		(property "Reference" "R20"
-			(at 123.952 148.336 0)
+			(at 134.112 148.336 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2773,7 +2916,7 @@
 			)
 		)
 		(property "Value" "4.3k"
-			(at 123.952 150.876 0)
+			(at 134.112 150.876 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2781,7 +2924,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 121.158 149.86 90)
+			(at 131.318 149.86 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2790,7 +2933,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 119.38 149.86 0)
+			(at 129.54 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2799,7 +2942,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 119.38 149.86 0)
+			(at 129.54 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2824,7 +2967,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 53.34 158.75 90)
+		(at 52.07 158.75 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2833,7 +2976,7 @@
 		(fields_autoplaced yes)
 		(uuid "4d93ffb8-4312-4fea-b120-558572200e59")
 		(property "Reference" "LVPWR6"
-			(at 57.15 159.0674 90)
+			(at 55.88 159.0674 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2842,7 +2985,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 57.15 161.6074 90)
+			(at 55.88 161.6074 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2851,7 +2994,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 53.34 158.75 0)
+			(at 52.07 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2860,7 +3003,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 53.34 158.75 0)
+			(at 52.07 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2869,7 +3012,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 53.34 158.75 0)
+			(at 52.07 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2878,7 +3021,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 53.34 158.75 0)
+			(at 52.07 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2970,7 +3113,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 53.34 167.64 0)
+		(at 52.07 167.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2979,7 +3122,7 @@
 		(fields_autoplaced yes)
 		(uuid "51cd7267-8c5f-446b-8177-986f7d983eab")
 		(property "Reference" "#PWR035"
-			(at 53.34 173.99 0)
+			(at 52.07 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2988,7 +3131,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 53.34 172.72 0)
+			(at 52.07 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2996,7 +3139,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 53.34 167.64 0)
+			(at 52.07 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3005,7 +3148,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 167.64 0)
+			(at 52.07 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3014,7 +3157,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 53.34 167.64 0)
+			(at 52.07 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3105,7 +3248,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 53.34 149.86 180)
+		(at 52.07 149.86 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3113,7 +3256,7 @@
 		(dnp no)
 		(uuid "59c2fbf7-7a67-4625-b535-47c83b6ee4ef")
 		(property "Reference" "R15"
-			(at 57.912 148.336 0)
+			(at 56.642 148.336 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3121,7 +3264,7 @@
 			)
 		)
 		(property "Value" "260"
-			(at 57.912 150.876 0)
+			(at 56.642 150.876 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3129,7 +3272,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 55.118 149.86 90)
+			(at 53.848 149.86 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3138,7 +3281,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 53.34 149.86 0)
+			(at 52.07 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3147,7 +3290,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 53.34 149.86 0)
+			(at 52.07 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3171,24 +3314,24 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 119.38 158.75 90)
+		(lib_id "Connector:TestPoint")
+		(at 71.12 146.05 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "61ec5d22-e5ba-428a-a971-1a5f9b1c08d3")
-		(property "Reference" "D9"
-			(at 122.682 155.194 90)
+		(uuid "5a6b9d50-134a-4540-bea5-88b669aa3931")
+		(property "Reference" "TP9"
+			(at 64.262 146.812 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "LED"
-			(at 122.682 157.734 90)
+		(property "Value" "TP_A_TACH"
+			(at 64.262 149.352 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3196,7 +3339,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 119.38 158.75 0)
+			(at 71.12 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3205,7 +3348,71 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 119.38 158.75 0)
+			(at 71.12 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 71.12 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "182ba3a3-43d1-4a83-b143-1f1a883726b4")
+		)
+		(instances
+			(project "PS-MotorControllerInterfacePCB"
+				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
+					(reference "TP9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 129.54 158.75 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "61ec5d22-e5ba-428a-a971-1a5f9b1c08d3")
+		(property "Reference" "D9"
+			(at 132.842 155.194 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 132.842 157.734 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 129.54 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3214,7 +3421,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 119.38 158.75 0)
+			(at 129.54 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3223,7 +3430,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 119.38 158.75 0)
+			(at 129.54 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3247,34 +3454,32 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 69.85 158.75 90)
+		(lib_id "Connector:TestPoint")
+		(at 129.54 146.05 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6d0a4376-cad7-40f2-a6bc-d896ce16e10e")
-		(property "Reference" "LVPWR4"
-			(at 71.628 155.194 90)
+		(uuid "634374bb-a8c1-4023-8c47-38976807cf60")
+		(property "Reference" "TP12"
+			(at 122.682 146.812 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "LED"
-			(at 71.628 157.734 90)
+		(property "Value" "TP_B_NEG"
+			(at 122.682 149.352 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 69.85 158.75 0)
+		(property "Footprint" ""
+			(at 129.54 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3283,7 +3488,73 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 69.85 158.75 0)
+			(at 129.54 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 129.54 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "92cd1cb6-761d-4c0e-b35d-f4a028d1ef3c")
+		)
+		(instances
+			(project "PS-MotorControllerInterfacePCB"
+				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
+					(reference "TP12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 71.12 158.75 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6d0a4376-cad7-40f2-a6bc-d896ce16e10e")
+		(property "Reference" "LVPWR4"
+			(at 72.898 155.194 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 72.898 157.734 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+			(at 71.12 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 71.12 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3292,7 +3563,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 69.85 158.75 0)
+			(at 71.12 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3301,7 +3572,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 69.85 158.75 0)
+			(at 71.12 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3532,7 +3803,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 36.83 158.75 90)
+		(at 33.02 158.75 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3541,7 +3812,7 @@
 		(fields_autoplaced yes)
 		(uuid "77a9cb2f-ea46-485e-8ee2-82550712cca3")
 		(property "Reference" "LVPWR3"
-			(at 40.64 159.0674 90)
+			(at 36.83 159.0674 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3550,7 +3821,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 40.64 161.6074 90)
+			(at 36.83 161.6074 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3559,7 +3830,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 36.83 158.75 0)
+			(at 33.02 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3568,7 +3839,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 36.83 158.75 0)
+			(at 33.02 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3577,7 +3848,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 36.83 158.75 0)
+			(at 33.02 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3586,7 +3857,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 36.83 158.75 0)
+			(at 33.02 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3611,7 +3882,7 @@
 	)
 	(symbol
 		(lib_id "power:+24V")
-		(at 102.87 143.51 0)
+		(at 109.22 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3620,7 +3891,7 @@
 		(fields_autoplaced yes)
 		(uuid "7bf106a8-26ec-4ae0-8ec2-94d0e48ff9b0")
 		(property "Reference" "#PWR061"
-			(at 102.87 147.32 0)
+			(at 109.22 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3629,7 +3900,7 @@
 			)
 		)
 		(property "Value" "+24V"
-			(at 102.87 138.43 0)
+			(at 109.22 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3637,7 +3908,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 102.87 143.51 0)
+			(at 109.22 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3646,7 +3917,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 102.87 143.51 0)
+			(at 109.22 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3655,7 +3926,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+24V\""
-			(at 102.87 143.51 0)
+			(at 109.22 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3677,7 +3948,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 86.36 149.86 180)
+		(at 90.17 149.86 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3685,7 +3956,7 @@
 		(dnp no)
 		(uuid "8097d5a4-628b-4415-af35-5c344e5dc553")
 		(property "Reference" "R8"
-			(at 90.932 148.336 0)
+			(at 94.742 148.336 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3693,7 +3964,7 @@
 			)
 		)
 		(property "Value" "260"
-			(at 90.932 150.876 0)
+			(at 94.742 150.876 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3701,7 +3972,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 88.138 149.86 90)
+			(at 91.948 149.86 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3710,7 +3981,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 86.36 149.86 0)
+			(at 90.17 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3719,7 +3990,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 86.36 149.86 0)
+			(at 90.17 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3743,8 +4014,136 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 33.02 146.05 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "85dfaa53-0f4b-4a24-b65d-f996b805ebb2")
+		(property "Reference" "TP7"
+			(at 26.162 146.812 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TP_PWM_A"
+			(at 26.162 149.352 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 33.02 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 33.02 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 33.02 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "db818ca6-1c4f-45c1-8488-311af2f99770")
+		)
+		(instances
+			(project ""
+				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 90.17 146.05 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "882fe116-e95f-4430-aafe-b087b7b869b7")
+		(property "Reference" "TP10"
+			(at 83.312 146.812 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TP_B_TACH"
+			(at 83.312 149.352 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 90.17 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 90.17 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "81d93d6e-68cf-461f-8685-dd269536a5e8")
+		)
+		(instances
+			(project "PS-MotorControllerInterfacePCB"
+				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
+					(reference "TP10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
-		(at 69.85 167.64 0)
+		(at 71.12 167.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3753,7 +4152,7 @@
 		(fields_autoplaced yes)
 		(uuid "8e40ed43-0e35-4b57-bfc9-069869a02788")
 		(property "Reference" "#PWR013"
-			(at 69.85 173.99 0)
+			(at 71.12 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3762,7 +4161,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 69.85 172.72 0)
+			(at 71.12 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3770,7 +4169,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 69.85 167.64 0)
+			(at 71.12 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3779,7 +4178,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 69.85 167.64 0)
+			(at 71.12 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3788,7 +4187,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 69.85 167.64 0)
+			(at 71.12 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3810,7 +4209,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 36.83 149.86 180)
+		(at 33.02 149.86 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3818,7 +4217,7 @@
 		(dnp no)
 		(uuid "900a168f-f3a4-4674-badd-806b36b1d2d8")
 		(property "Reference" "R4"
-			(at 41.402 148.336 0)
+			(at 37.592 148.336 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3826,7 +4225,7 @@
 			)
 		)
 		(property "Value" "260"
-			(at 41.402 150.876 0)
+			(at 37.592 150.876 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3834,7 +4233,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 38.608 149.86 90)
+			(at 34.798 149.86 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3843,7 +4242,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 36.83 149.86 0)
+			(at 33.02 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3852,7 +4251,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 36.83 149.86 0)
+			(at 33.02 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3877,7 +4276,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 102.87 149.86 180)
+		(at 109.22 149.86 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3885,7 +4284,7 @@
 		(dnp no)
 		(uuid "9301623d-04cd-4cc0-97b8-5e20fb8a93dc")
 		(property "Reference" "R19"
-			(at 107.442 148.336 0)
+			(at 113.792 148.336 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3893,7 +4292,7 @@
 			)
 		)
 		(property "Value" "4.3k"
-			(at 107.442 150.876 0)
+			(at 113.792 150.876 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3901,7 +4300,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 104.648 149.86 90)
+			(at 110.998 149.86 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3910,7 +4309,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 102.87 149.86 0)
+			(at 109.22 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3919,7 +4318,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 102.87 149.86 0)
+			(at 109.22 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4094,6 +4493,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 109.22 146.05 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c2b5a9a4-a78d-4803-a587-071e5aad6d21")
+		(property "Reference" "TP11"
+			(at 102.362 146.812 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TP_A_NEG"
+			(at 102.362 149.352 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 109.22 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 109.22 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e21dc2df-dedb-41b0-9e12-4d6deac33afc")
+		)
+		(instances
+			(project "PS-MotorControllerInterfacePCB"
+				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
+					(reference "TP11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Diode:1N4148WT")
 		(at 196.85 128.27 270)
 		(unit 1)
@@ -4176,6 +4639,70 @@
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
 					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 52.07 146.05 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d325b8bd-8e31-430d-bbe5-8efda7569436")
+		(property "Reference" "TP8"
+			(at 45.212 146.812 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TP_PWM_B"
+			(at 45.212 149.352 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.07 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 52.07 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9ccced07-ffe2-46d3-85e0-49186e973513")
+		)
+		(instances
+			(project "PS-MotorControllerInterfacePCB"
+				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -4320,7 +4847,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 69.85 149.86 180)
+		(at 71.12 149.86 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4328,7 +4855,7 @@
 		(dnp no)
 		(uuid "d78bbd49-d74a-46a8-86dc-a0cc2ad224fb")
 		(property "Reference" "R5"
-			(at 74.422 148.336 0)
+			(at 75.692 148.336 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4336,7 +4863,7 @@
 			)
 		)
 		(property "Value" "260"
-			(at 74.422 150.876 0)
+			(at 75.692 150.876 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4344,7 +4871,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 71.628 149.86 90)
+			(at 72.898 149.86 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4353,7 +4880,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 69.85 149.86 0)
+			(at 71.12 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4362,7 +4889,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 69.85 149.86 0)
+			(at 71.12 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4387,7 +4914,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 102.87 158.75 90)
+		(at 109.22 158.75 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4395,7 +4922,7 @@
 		(dnp no)
 		(uuid "d88de2b5-039a-4b11-b31d-3b7f6874774b")
 		(property "Reference" "D6"
-			(at 106.934 155.194 90)
+			(at 113.284 155.194 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4403,7 +4930,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 106.934 157.734 90)
+			(at 113.284 157.734 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4411,7 +4938,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 102.87 158.75 0)
+			(at 109.22 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4420,7 +4947,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 102.87 158.75 0)
+			(at 109.22 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4429,7 +4956,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 102.87 158.75 0)
+			(at 109.22 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4438,7 +4965,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 102.87 158.75 0)
+			(at 109.22 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4529,7 +5056,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 36.83 167.64 0)
+		(at 33.02 167.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4538,7 +5065,7 @@
 		(fields_autoplaced yes)
 		(uuid "eab90cd2-3afe-4baf-8cb0-593f2adc0712")
 		(property "Reference" "#PWR016"
-			(at 36.83 173.99 0)
+			(at 33.02 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4547,7 +5074,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 36.83 172.72 0)
+			(at 33.02 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4555,7 +5082,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 36.83 167.64 0)
+			(at 33.02 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4564,7 +5091,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 36.83 167.64 0)
+			(at 33.02 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4573,7 +5100,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 36.83 167.64 0)
+			(at 33.02 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
