@@ -690,16 +690,24 @@
       "Fans"
     ],
     [
-      "c5209a46-926e-46c4-85fe-b5b4e4d6cad2",
-      "Power"
+      "1be836d0-aa31-4c63-bede-07160ebddab5",
+      "Power12V"
     ],
     [
       "07f22498-fffc-46fc-8b11-2ac98c172822",
-      "Fuses"
+      "Fuse"
     ],
     [
       "2c6af1c6-af26-4746-8ed9-5deb88ce0ee1",
       "Buck Converter 24V-12V"
+    ],
+    [
+      "a900cd4e-a274-446c-92be-25b8d12a288b",
+      "Power24V"
+    ],
+    [
+      "596d5dbc-45f3-4537-b268-5dc84ec230e0",
+      "StatusLEDs"
     ]
   ],
   "text_variables": {}
