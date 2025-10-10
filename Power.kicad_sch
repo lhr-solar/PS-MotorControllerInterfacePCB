@@ -1525,7 +1525,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 68.58) (xy 181.61 77.47)
+			(xy 185.42 66.04) (xy 185.42 74.93)
 		)
 		(stroke
 			(width 0)
@@ -1565,7 +1565,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 68.58) (xy 171.45 77.47)
+			(xy 175.26 66.04) (xy 175.26 74.93)
 		)
 		(stroke
 			(width 0)
@@ -1645,7 +1645,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 62.23) (xy 132.08 60.96)
+			(xy 132.08 62.23) (xy 132.08 59.69)
 		)
 		(stroke
 			(width 0)
@@ -1695,7 +1695,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 53.34) (xy 171.45 60.96)
+			(xy 175.26 50.8) (xy 175.26 58.42)
 		)
 		(stroke
 			(width 0)
@@ -1705,7 +1705,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 53.34) (xy 181.61 60.96)
+			(xy 185.42 50.8) (xy 185.42 58.42)
 		)
 		(stroke
 			(width 0)
@@ -1725,7 +1725,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 68.58) (xy 158.75 77.47)
+			(xy 162.56 66.04) (xy 162.56 74.93)
 		)
 		(stroke
 			(width 0)
@@ -1755,7 +1755,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 53.34) (xy 158.75 60.96)
+			(xy 162.56 50.8) (xy 162.56 58.42)
 		)
 		(stroke
 			(width 0)
@@ -1830,7 +1830,7 @@
 	)
 	(hierarchical_label "V_OUT"
 		(shape input)
-		(at 158.75 53.34 0)
+		(at 162.56 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1841,7 +1841,7 @@
 	)
 	(hierarchical_label "VIN"
 		(shape input)
-		(at 181.61 53.34 0)
+		(at 185.42 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1852,7 +1852,7 @@
 	)
 	(hierarchical_label "V_OUT"
 		(shape input)
-		(at 171.45 53.34 0)
+		(at 175.26 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1863,7 +1863,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 158.75 77.47 0)
+		(at 162.56 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1872,7 +1872,7 @@
 		(fields_autoplaced yes)
 		(uuid "015d3b15-ad19-4800-a42e-515619d0d06f")
 		(property "Reference" "#PWR030"
-			(at 158.75 83.82 0)
+			(at 162.56 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1881,7 +1881,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 158.75 82.55 0)
+			(at 162.56 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1889,7 +1889,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 158.75 77.47 0)
+			(at 162.56 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1898,7 +1898,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 77.47 0)
+			(at 162.56 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1907,7 +1907,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 158.75 77.47 0)
+			(at 162.56 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2003,7 +2003,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 171.45 64.77 0)
+		(at 175.26 62.23 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2012,7 +2012,7 @@
 		(fields_autoplaced yes)
 		(uuid "1bcae146-d5e9-446c-9eb8-d38bff8bdbd4")
 		(property "Reference" "C9"
-			(at 174.625 63.4999 0)
+			(at 178.435 60.9599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2021,7 +2021,7 @@
 			)
 		)
 		(property "Value" "0.1u"
-			(at 174.625 66.0399 0)
+			(at 178.435 63.4999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2029,8 +2029,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 172.4152 68.58 0)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 176.2252 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2039,7 +2039,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 171.45 64.77 0)
+			(at 175.26 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2048,7 +2048,34 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 171.45 64.77 0)
+			(at 175.26 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 175.26 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 175.26 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MLASH168SB7104KTNA01"
+			(at 175.26 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2103,7 +2130,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 87.376 76.454 90)
 			(effects
 				(font
@@ -2122,6 +2149,33 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 86.36 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 86.36 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 86.36 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CRCW060310K0FKEI "
 			(at 86.36 76.2 0)
 			(effects
 				(font
@@ -2178,7 +2232,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 79.7052 92.71 0)
 			(effects
 				(font
@@ -2197,6 +2251,33 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 78.74 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 78.74 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 78.74 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MLASU168SB5105KTNA01"
 			(at 78.74 96.52 0)
 			(effects
 				(font
@@ -2328,6 +2409,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 95.25 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 95.25 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "54e360d5-f0e8-4356-ac7d-dd8f75a38df8")
 		)
@@ -2367,7 +2466,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 181.61 64.77 0)
+		(at 185.42 62.23 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2376,7 +2475,7 @@
 		(fields_autoplaced yes)
 		(uuid "773bdf2f-608c-4f5a-a13b-233077e9cbb1")
 		(property "Reference" "C10"
-			(at 184.785 63.4999 0)
+			(at 188.595 60.9599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2385,7 +2484,7 @@
 			)
 		)
 		(property "Value" "0.1u"
-			(at 184.785 66.0399 0)
+			(at 188.595 63.4999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2393,8 +2492,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 182.5752 68.58 0)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 186.3852 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2403,7 +2502,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 181.61 64.77 0)
+			(at 185.42 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2412,7 +2511,34 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 181.61 64.77 0)
+			(at 185.42 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 185.42 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 185.42 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MLASH168SB7104KTNA01"
+			(at 185.42 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2511,7 +2637,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 132.08 60.96 0)
+		(at 132.08 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2519,7 +2645,7 @@
 		(dnp no)
 		(uuid "80be388d-a735-49e6-9f1d-db87716da261")
 		(property "Reference" "24V_TP1"
-			(at 131.064 53.086 0)
+			(at 131.064 51.816 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2528,7 +2654,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 131.064 55.372 0)
+			(at 131.064 54.102 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2536,8 +2662,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
-			(at 137.16 60.96 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 137.16 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2546,7 +2672,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 137.16 60.96 0)
+			(at 137.16 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2555,7 +2681,25 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 132.08 60.96 0)
+			(at 132.08 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 132.08 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 132.08 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2581,7 +2725,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 181.61 77.47 0)
+		(at 185.42 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2590,7 +2734,7 @@
 		(fields_autoplaced yes)
 		(uuid "b74826c3-e0be-429f-bb95-60b398fdba85")
 		(property "Reference" "#PWR032"
-			(at 181.61 83.82 0)
+			(at 185.42 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2599,7 +2743,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 181.61 82.55 0)
+			(at 185.42 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2607,7 +2751,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 77.47 0)
+			(at 185.42 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2616,7 +2760,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 77.47 0)
+			(at 185.42 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2625,7 +2769,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 181.61 77.47 0)
+			(at 185.42 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2677,7 +2821,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 100.0252 57.15 0)
 			(effects
 				(font
@@ -2696,6 +2840,33 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 99.06 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 99.06 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 99.06 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "06035C223K4T4A "
 			(at 99.06 60.96 0)
 			(effects
 				(font
@@ -2751,7 +2922,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 134.3152 74.93 0)
 			(effects
 				(font
@@ -2770,6 +2941,33 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 133.35 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 133.35 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "GRM21BR61H106KE43K"
+			(at 133.35 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Link" ""
 			(at 133.35 71.12 0)
 			(effects
 				(font
@@ -2799,7 +2997,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 171.45 77.47 0)
+		(at 175.26 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2808,7 +3006,7 @@
 		(fields_autoplaced yes)
 		(uuid "bf319a62-14b1-4dec-a63e-6e9eed8d4ecd")
 		(property "Reference" "#PWR031"
-			(at 171.45 83.82 0)
+			(at 175.26 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2817,7 +3015,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 171.45 82.55 0)
+			(at 175.26 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2825,7 +3023,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 171.45 77.47 0)
+			(at 175.26 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2834,7 +3032,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 77.47 0)
+			(at 175.26 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2843,7 +3041,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 171.45 77.47 0)
+			(at 175.26 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2896,7 +3094,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 85.3948 100.33 0)
 			(effects
 				(font
@@ -2915,6 +3113,33 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 86.36 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 86.36 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 86.36 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MSASU168SB7224KTNB25 "
 			(at 86.36 96.52 0)
 			(effects
 				(font
@@ -3014,7 +3239,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 158.75 64.77 0)
+		(at 162.56 62.23 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3023,7 +3248,7 @@
 		(fields_autoplaced yes)
 		(uuid "e9469063-8f50-4aa7-9f0f-321e0dac1f1b")
 		(property "Reference" "C8"
-			(at 162.56 63.4999 0)
+			(at 166.37 60.9599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3032,7 +3257,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 162.56 66.0399 0)
+			(at 166.37 63.4999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3040,8 +3265,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 159.7152 68.58 0)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 163.5252 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3050,7 +3275,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 158.75 64.77 0)
+			(at 162.56 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3059,7 +3284,34 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 158.75 64.77 0)
+			(at 162.56 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 162.56 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "GRM21BR61H106KE43K"
+			(at 162.56 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 162.56 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3188,6 +3440,24 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 102.87 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 102.87 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
