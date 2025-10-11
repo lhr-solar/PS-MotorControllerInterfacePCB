@@ -4210,7 +4210,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "85dfaa53-0f4b-4a24-b65d-f996b805ebb2")
-		(property "Reference" "TP7"
+		(property "Reference" "PWM_A2"
 			(at 38.862 146.812 90)
 			(effects
 				(font
@@ -4277,7 +4277,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "TP7")
+					(reference "PWM_A2")
 					(unit 1)
 				)
 			)
@@ -5037,7 +5037,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d325b8bd-8e31-430d-bbe5-8efda7569436")
-		(property "Reference" "TP8"
+		(property "Reference" "PWM_B2"
 			(at 57.912 146.812 90)
 			(effects
 				(font
@@ -5104,7 +5104,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "TP8")
+					(reference "PWM_B2")
 					(unit 1)
 				)
 			)

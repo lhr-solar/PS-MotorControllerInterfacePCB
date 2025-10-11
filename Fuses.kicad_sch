@@ -1873,7 +1873,7 @@
 		)
 		(uuid "ed529865-ec91-44b8-a837-d4bf5e777b14")
 	)
-	(hierarchical_label "FANS_POS"
+	(hierarchical_label "FANS_IN"
 		(shape input)
 		(at 78.74 59.69 0)
 		(effects
@@ -1882,7 +1882,7 @@
 			)
 			(justify left)
 		)
-		(uuid "cb5dbe7d-6345-42f8-a57d-394fee75f473")
+		(uuid "b3870dde-6a09-4805-bfcd-fcae6fc03cb6")
 	)
 	(symbol
 		(lib_id "power:+24V")
@@ -2470,7 +2470,7 @@
 				)
 			)
 		)
-		(property "Footprint" "UTSVT_Power:PSMN8R5-40MSDX"
+		(property "Footprint" "UTSVT_Passives:BUK9M34100EX"
 			(at 134.62 160.96 0)
 			(effects
 				(font
