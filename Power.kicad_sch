@@ -1065,7 +1065,7 @@
 	)
 	(text "Overvoltage Protection: 29.03V\nVovr = (R2 * Vov)/(R1 + R2)\nVov = Vovr * (R1 + R2) / R2\n29.03 = 1.25 * (200k + 9k) / 9k"
 		(exclude_from_sim no)
-		(at 171.704 99.314 0)
+		(at 171.45 99.06 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1075,7 +1075,7 @@
 	)
 	(text "Overvoltage Protection: 14.41V\nVovr = (R2 * Vov)/(R1 + R2)\nVov = Vovr * (R1 + R2) / R2\n14.41 = 1.25 * (100k + 9.5k) / 9.5k"
 		(exclude_from_sim no)
-		(at 171.958 110.236 0)
+		(at 171.45 110.49 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1095,7 +1095,7 @@
 	)
 	(text "R2 : 9.5k\nR1: 100k"
 		(exclude_from_sim no)
-		(at 170.688 117.602 0)
+		(at 170.18 118.11 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1105,7 +1105,7 @@
 	)
 	(text "24V Input\nBypass Cap"
 		(exclude_from_sim no)
-		(at 161.544 87.376 0)
+		(at 161.29 87.63 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1118,12 +1118,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "09b9b178-c326-4604-8ff3-576b86b963d6")
-	)
-	(junction
-		(at 86.36 57.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "412c7037-6258-4d50-93c2-1700d128b45d")
 	)
 	(junction
 		(at 128.27 62.23)
@@ -1142,6 +1136,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7c81f148-93a8-488d-a907-48a0e2e0d4a8")
+	)
+	(junction
+		(at 86.36 57.785)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "86a7202e-ccd8-4aa2-8f5b-b58319882743")
 	)
 	(junction
 		(at 81.28 57.15)
@@ -1211,13 +1211,33 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 57.15) (xy 128.27 62.23)
+			(xy 128.27 57.785) (xy 128.27 62.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "33040f57-efbe-42b0-9b23-9dcfe92a1cbf")
+	)
+	(wire
+		(pts
+			(xy 72.39 57.15) (xy 81.28 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "362e4565-b43c-4fa7-b8a8-992bfc456088")
+	)
+	(wire
+		(pts
+			(xy 104.14 63.5) (xy 104.14 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e4d0477-8085-4c10-904e-05fef4b126e9")
 	)
 	(wire
 		(pts
@@ -1251,7 +1271,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 57.15) (xy 112.395 57.15)
+			(xy 128.27 57.785) (xy 109.855 57.785)
 		)
 		(stroke
 			(width 0)
@@ -1271,7 +1291,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 72.39) (xy 86.36 57.15)
+			(xy 86.36 57.15) (xy 86.36 57.785)
 		)
 		(stroke
 			(width 0)
@@ -1311,16 +1331,6 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 57.15) (xy 81.28 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "61f15913-e0eb-497b-859e-e0b7b87807d2")
-	)
-	(wire
-		(pts
 			(xy 175.26 66.04) (xy 175.26 74.93)
 		)
 		(stroke
@@ -1338,6 +1348,16 @@
 			(type default)
 		)
 		(uuid "6597ebd6-42c7-4ba9-911f-c1d9f04d7528")
+	)
+	(wire
+		(pts
+			(xy 98.425 57.785) (xy 86.36 57.785)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d8cc46b-924b-4105-aa90-401f9a34fdf3")
 	)
 	(polyline
 		(pts
@@ -1371,16 +1391,6 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 80.01) (xy 109.22 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a71598fa-ad09-41a0-af42-1264b700da74")
-	)
-	(wire
-		(pts
 			(xy 81.28 57.15) (xy 86.36 57.15)
 		)
 		(stroke
@@ -1388,6 +1398,16 @@
 			(type default)
 		)
 		(uuid "b35479c6-5b6d-473d-b3dd-efc978917920")
+	)
+	(wire
+		(pts
+			(xy 104.14 80.01) (xy 109.22 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b69bb306-735e-458c-bfa9-06d77a8c80fb")
 	)
 	(wire
 		(pts
@@ -1411,16 +1431,6 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 63.5) (xy 106.68 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c8436144-f31a-4728-8675-6f7bfcc4d274")
-	)
-	(wire
-		(pts
 			(xy 175.26 50.8) (xy 175.26 58.42)
 		)
 		(stroke
@@ -1428,16 +1438,6 @@
 			(type default)
 		)
 		(uuid "c8b097bb-742d-4c1b-bf9b-a2193282a51c")
-	)
-	(wire
-		(pts
-			(xy 100.965 57.15) (xy 100.965 57.785)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cb0804cf-bddc-43fd-9359-e54b459840ee")
 	)
 	(wire
 		(pts
@@ -1451,16 +1451,6 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 57.15) (xy 100.965 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d44bdbb7-be51-492b-8d84-d04499cdc489")
-	)
-	(wire
-		(pts
 			(xy 162.56 66.04) (xy 162.56 74.93)
 		)
 		(stroke
@@ -1471,16 +1461,6 @@
 	)
 	(wire
 		(pts
-			(xy 112.395 57.15) (xy 112.395 57.785)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d8455e2c-0c20-4c20-8312-be44a504426e")
-	)
-	(wire
-		(pts
 			(xy 162.56 50.8) (xy 162.56 58.42)
 		)
 		(stroke
@@ -1488,6 +1468,16 @@
 			(type default)
 		)
 		(uuid "ef0b42d8-ae3f-40c3-a269-1b803a46e752")
+	)
+	(wire
+		(pts
+			(xy 86.36 57.785) (xy 86.36 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0a6824f-4e49-4783-a576-ab1b12e7cf78")
 	)
 	(wire
 		(pts
@@ -2363,7 +2353,7 @@
 	)
 	(symbol
 		(lib_id "utsvt_power:PSMN8R5-40MSDX")
-		(at 106.68 57.15 0)
+		(at 104.14 57.15 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2373,7 +2363,7 @@
 		(fields_autoplaced yes)
 		(uuid "a5296538-8c17-4440-96e1-16a2042f62d9")
 		(property "Reference" "Q6"
-			(at 106.68 49.53 0)
+			(at 104.14 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2381,7 +2371,7 @@
 			)
 		)
 		(property "Value" "PSMN8R5-40MSDX"
-			(at 106.68 52.07 0)
+			(at 104.14 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2389,7 +2379,7 @@
 			)
 		)
 		(property "Footprint" "UTSVT_Power:PSMN8R5-40MSDX"
-			(at 85.09 152.07 0)
+			(at 82.55 152.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2399,7 +2389,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PSMN8R5-40MSD.pdf"
-			(at 85.09 252.07 0)
+			(at 82.55 252.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2409,7 +2399,7 @@
 			)
 		)
 		(property "Description" "MOSFETs PSMN8R5-40MSD/SOT1210/mLFPAK"
-			(at 105.664 45.72 0)
+			(at 103.124 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2418,7 +2408,7 @@
 			)
 		)
 		(property "Height" "1"
-			(at 85.09 452.07 0)
+			(at 82.55 452.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2428,7 +2418,7 @@
 			)
 		)
 		(property "Mouser Part Number" "771-PSMN8R5-40MSDX"
-			(at 85.09 552.07 0)
+			(at 82.55 552.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2438,7 +2428,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Nexperia/PSMN8R5-40MSDX?qs=vHuUswq2%252BswjdnYdBdHaPw%3D%3D"
-			(at 85.09 652.07 0)
+			(at 82.55 652.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2448,7 +2438,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Nexperia"
-			(at 85.09 752.07 0)
+			(at 82.55 752.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2458,7 +2448,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "PSMN8R5-40MSDX"
-			(at 85.09 852.07 0)
+			(at 82.55 852.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
