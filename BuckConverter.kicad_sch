@@ -4812,6 +4812,16 @@
 			"YII="
 		)
 	)
+	(label "SW"
+		(at 132.08 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cba5ce15-11d9-4dfd-94ad-9beadab8c3d5")
+	)
 	(hierarchical_label "12V_BUS"
 		(shape input)
 		(at 223.52 95.25 0)
