@@ -2465,6 +2465,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "534-3568"
+			(at 67.31 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "aeb2e91c-51cc-4686-b1a5-6e97720018ab")
 		)

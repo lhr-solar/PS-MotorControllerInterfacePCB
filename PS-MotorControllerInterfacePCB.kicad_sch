@@ -11394,6 +11394,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" ""
+			(at 261.62 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "333248a8-d7f6-4154-88f2-302d15302d3e")
 		)
