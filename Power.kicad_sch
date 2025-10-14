@@ -1799,6 +1799,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 175.26 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "09438bb5-b872-46f5-b41a-9fe2c7314d25")
 		)
@@ -1892,6 +1901,15 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CRCW060310K0FKEI "
+			(at 86.36 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 86.36 76.2 0)
 			(effects
 				(font
@@ -1994,6 +2012,15 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "MLASU168SB5105KTNA01"
+			(at 78.74 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 78.74 96.52 0)
 			(effects
 				(font
@@ -2143,6 +2170,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 95.25 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "54e360d5-f0e8-4356-ac7d-dd8f75a38df8")
 		)
@@ -2254,6 +2290,15 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "MLASH168SB7104KTNA01"
+			(at 185.42 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 185.42 62.23 0)
 			(effects
 				(font
@@ -2454,6 +2499,15 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 104.14 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -2701,6 +2755,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 81.28 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1118da9f-731d-45f3-9348-a63d27c3a631")
 		)
@@ -2794,6 +2857,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 133.35 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 133.35 71.12 0)
 			(effects
 				(font
@@ -2974,6 +3046,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 86.36 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c1f98507-64af-4036-a78e-1a55ccfa7c73")
 		)
@@ -3137,6 +3218,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 162.56 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 162.56 62.23 0)
 			(effects
 				(font

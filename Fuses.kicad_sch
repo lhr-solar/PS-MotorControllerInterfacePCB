@@ -2030,6 +2030,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 91.44 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "01d3305b-d6a3-46fd-a2f9-47622e25f729")
 		)
@@ -2107,6 +2116,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 143.51 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 143.51 96.52 0)
 			(effects
 				(font
@@ -2278,6 +2296,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 143.51 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c25d071b-96f0-4e54-a357-49823648138f")
 		)
@@ -2429,6 +2456,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 67.31 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "aeb2e91c-51cc-4686-b1a5-6e97720018ab")
 		)
@@ -2462,7 +2498,7 @@
 				)
 			)
 		)
-		(property "Value" "PSMN8R5-40MSDX"
+		(property "Value" "771-BUK6M61-60PX"
 			(at 125.73 61.595 0)
 			(effects
 				(font
@@ -2480,7 +2516,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PSMN8R5-40MSD.pdf"
+		(property "Datasheet" "https://www.mouser.com/ProductDetail/Nexperia/BUK6M61-60PX?qs=olJun0bQHM81LdZ7v5%252BDQQ%3D%3D&srsltid=AfmBOoq3fENficZeHwPsYPzVpNPJVRJ7828S54IrZ1gjzCZoGfPiKI1D"
 			(at 134.62 260.96 0)
 			(effects
 				(font
@@ -2509,7 +2545,7 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser Part Number" "771-PSMN8R5-40MSDX"
+		(property "Mouser Part Number" "771-BUK6M61-60PX"
 			(at 134.62 560.96 0)
 			(effects
 				(font
@@ -2559,6 +2595,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 113.03 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 113.03 66.04 0)
 			(effects
 				(font
@@ -2756,6 +2801,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 83.82 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "469d47e2-8279-406e-9747-22d230c12280")
 		)
@@ -2887,6 +2941,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 91.44 64.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 91.44 64.77 90)
 			(effects
 				(font

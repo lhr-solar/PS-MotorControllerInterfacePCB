@@ -1250,155 +1250,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Diode:PTVS5V0Z1USK"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "PTVS5V0Z1USK"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
-				(at 0 -4.445 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "TVS diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "*DSN1608?2*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "PTVS5V0Z1USK_0_1"
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "PTVS5V0Z1USK_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Jumper:Jumper_2_Open"
 			(pin_numbers
 				(hide yes)
@@ -3438,10 +3289,6 @@
 		(uuid "8658ca77-fffe-4f67-aad7-4ac33d56f8a4")
 	)
 	(no_connect
-		(at 162.56 161.29)
-		(uuid "9bc35dab-d00c-4311-8b55-4bd1f33ead10")
-	)
-	(no_connect
 		(at 45.72 167.64)
 		(uuid "a15090b6-879c-4b14-b0da-bb6b1848472b")
 	)
@@ -5369,6 +5216,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 209.55 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d38fab05-f6ff-4f61-8e6f-8545850787ef")
 		)
@@ -5528,6 +5384,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 231.14 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f20ead41-2df5-4c6c-806c-f08b62d0323f")
 		)
@@ -5624,6 +5489,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 209.55 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2b507171-1e02-4713-a63c-57e8844565c4")
 		)
@@ -5704,6 +5578,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 134.62 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 134.62 81.28 90)
 			(effects
 				(font
@@ -5860,6 +5743,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 269.24 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "41c85646-86e7-4c77-84de-1bb779c2f36b")
 		)
@@ -6007,7 +5899,7 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser Part Number" "833-SMAF4749A-TP"
+		(property "Mouser Part Number" "833-SMAF4751A-TP"
 			(at -281.56 90.17 0)
 			(effects
 				(font
@@ -6057,6 +5949,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 212.09 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 212.09 80.01 90)
 			(effects
 				(font
@@ -6351,6 +6252,24 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 68.58 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-105309-1202"
+			(at 68.58 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8a253007-0253-43a3-94ff-2febb82506a4")
 		)
@@ -6505,6 +6424,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 134.62 54.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "873325b0-e148-450d-847e-a8361826039e")
 		)
@@ -6598,6 +6526,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 219.71 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ae7ab95f-737f-4b91-873c-860c5095db86")
 		)
@@ -6683,6 +6620,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 241.3 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "107987e9-239b-49ac-ab51-f9becb2e42ec")
 		)
@@ -6705,7 +6651,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "41361948-d35d-485d-8c5c-16acc8384d68")
-		(property "Reference" "J6"
+		(property "Reference" "Moco-out1"
 			(at 52.07 173.99 0)
 			(effects
 				(font
@@ -6766,6 +6712,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "538-43045-0600"
+			(at 50.8 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 50.8 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e67c9eda-014c-4038-81c3-90237b2e9ddb")
 		)
@@ -6787,7 +6751,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "J6")
+					(reference "Moco-out1")
 					(unit 1)
 				)
 			)
@@ -6864,6 +6828,15 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CRCW06034K30FKEA"
+			(at 261.62 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 261.62 130.81 0)
 			(effects
 				(font
@@ -7019,7 +6992,7 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser Part Number" "833-SMAF4749A-TP"
+		(property "Mouser Part Number" "833-SMAF4744A-TP"
 			(at -216.79 74.93 0)
 			(effects
 				(font
@@ -7069,6 +7042,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 276.86 64.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 276.86 64.77 90)
 			(effects
 				(font
@@ -7173,6 +7155,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 134.62 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c1c000dd-86e9-46eb-804d-7d098c59f7d7")
 		)
@@ -7267,6 +7258,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 219.71 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3e054158-2a14-4621-9ba8-9d961bb32274")
 		)
@@ -7292,7 +7292,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "602f039c-dd35-424e-af0c-b7b35ae61ba4")
-		(property "Reference" "J2"
+		(property "Reference" "Moco-in1"
 			(at 52.07 156.21 0)
 			(effects
 				(font
@@ -7353,6 +7353,24 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "538-43045-0600"
+			(at 50.8 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 50.8 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "fae41919-c8da-438d-b692-84018ee7523a")
 		)
@@ -7374,7 +7392,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "J2")
+					(reference "Moco-in1")
 					(unit 1)
 				)
 			)
@@ -7453,6 +7471,15 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CRCW060310K0FKEI "
+			(at 134.62 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 134.62 73.66 90)
 			(effects
 				(font
@@ -7549,6 +7576,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 251.46 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 251.46 139.7 90)
 			(effects
 				(font
@@ -7706,94 +7742,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:PTVS5V0Z1USK")
-		(at 116.84 167.64 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6baa50a1-156a-475d-bfcc-cc54a924c036")
-		(property "Reference" "TVS1"
-			(at 119.38 166.3699 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PTVS5V0Z1USK"
-			(at 119.38 168.9099 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
-			(at 112.395 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
-			(at 116.84 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
-			(at 116.84 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 116.84 167.64 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Link" ""
-			(at 116.84 167.64 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "98d61969-4cff-4238-a98a-904ebd0b984b")
-		)
-		(pin "2"
-			(uuid "e34cf078-36bc-4ad4-9779-64cf4e79f36e")
-		)
-		(instances
-			(project ""
-				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "TVS1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 50.8 125.73 270)
 		(mirror x)
@@ -7933,6 +7881,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 162.56 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "626710d4-3f5b-4f4f-9ee4-4c938964eb6b")
 		)
@@ -8007,6 +7964,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 251.46 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 251.46 125.73 90)
 			(effects
 				(font
@@ -8176,7 +8142,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x06"
+		(property "Value" "PWR + CAN"
 			(at 62.23 134.62 90)
 			(effects
 				(font
@@ -8222,6 +8188,24 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 59.69 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 59.69 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-105309-1206"
 			(at 59.69 128.27 90)
 			(effects
 				(font
@@ -8328,6 +8312,15 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CRCW06034K30FKEA"
+			(at 231.14 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 231.14 130.81 0)
 			(effects
 				(font
@@ -8481,6 +8474,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 162.56 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 162.56 138.43 0)
 			(effects
 				(font
@@ -8712,6 +8714,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 251.46 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "652fa9c8-c80d-4122-a0e5-d44325059c03")
 		)
@@ -8800,6 +8811,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 261.62 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 261.62 139.7 90)
 			(effects
 				(font
@@ -8952,6 +8972,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 219.71 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 219.71 125.73 90)
 			(effects
 				(font
@@ -9182,6 +9211,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 209.55 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b2337db0-87a6-49ac-a6f2-36dd403a0cf3")
 		)
@@ -9261,6 +9299,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 50.8 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 50.8 76.2 0)
 			(effects
 				(font
@@ -9351,6 +9398,24 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 46.99 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-105309-1202"
+			(at 46.99 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c2ae9760-ed8b-446c-ad77-8f8dac9b184e")
 		)
@@ -9432,7 +9497,7 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser Part Number" "833-SMAF4749A-TP"
+		(property "Mouser Part Number" "833-SMAF4744A-TP"
 			(at -229.49 90.17 0)
 			(effects
 				(font
@@ -9482,6 +9547,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 264.16 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 264.16 80.01 90)
 			(effects
 				(font
@@ -9641,6 +9715,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 217.17 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0cb0384b-20d7-44bf-83f3-1d53db03144e")
 		)
@@ -9722,7 +9805,7 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser Part Number" "833-SMAF4749A-TP"
+		(property "Mouser Part Number" "833-SMAF4751A-TP"
 			(at -268.86 74.93 0)
 			(effects
 				(font
@@ -9772,6 +9855,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 224.79 64.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 224.79 64.77 90)
 			(effects
 				(font
@@ -9869,6 +9961,15 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "MCT06030C2003FP500 "
+			(at 212.09 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 212.09 69.85 0)
 			(effects
 				(font
@@ -10047,6 +10148,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 116.84 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "79a8cbc3-5760-428d-a6b9-ecfd4a026c4f")
 		)
@@ -10057,90 +10167,6 @@
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
 					(reference "R17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 162.56 158.75 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "dc449c19-070d-4396-9497-df0ac2db5286")
-		(property "Reference" "H3"
-			(at 165.1 156.2099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole_Pad"
-			(at 154.686 163.068 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 162.56 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 162.56 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole with connection"
-			(at 162.56 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 162.56 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Link" ""
-			(at 162.56 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "25aaed91-4007-4bca-8e62-5bc6acf53c53")
-		)
-		(instances
-			(project "PS-MotorControllerInterfacePCB"
-				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -10285,6 +10311,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 72.39 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 72.39 20.32 0)
 			(effects
 				(font
@@ -10458,6 +10493,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 162.56 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "87020ea3-9e79-4661-918a-5f73766597b4")
 		)
@@ -10465,6 +10509,154 @@
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
 					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "UTSVT_Power:SMAF4749A-TP")
+		(at 116.84 161.29 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e872e002-8c20-43f1-8853-d2b86e7f1c53")
+		(property "Reference" "Z5"
+			(at 117.348 161.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SMAF4749A"
+			(at 109.728 159.131 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "UTSVT_Passives:SODFL5026X125N"
+			(at 23.19 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mccsemi.com/pdf/Products/SMAF4735A_SMAF4764A(DO-221AC).pdf"
+			(at -76.81 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "1.0 Watt Zener Diodes 6.2V to 100V"
+			(at 116.84 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "1.25"
+			(at -276.81 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "833-SMAF4749A-TP"
+			(at -376.81 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Micro-Commercial-Components-MCC/SMAF4749A-TP?qs=%252BXxaIXUDbq1bdSZ3Ebik%2FA%3D%3D"
+			(at -476.81 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "MCC"
+			(at -576.81 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "SMAF4749A-TP"
+			(at -676.81 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 116.84 161.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 116.84 161.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 116.84 161.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "72f45051-3f87-4e2c-96dd-6a67d7608168")
+		)
+		(pin "2"
+			(uuid "995fbd90-6709-4b5f-bac4-949f2956c7c7")
+		)
+		(instances
+			(project "PS-MotorControllerInterfacePCB"
+				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
+					(reference "Z5")
 					(unit 1)
 				)
 			)
@@ -10541,6 +10733,15 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CRCW06034K30FKEA"
+			(at 241.3 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 241.3 130.81 0)
 			(effects
 				(font
@@ -10777,6 +10978,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 241.3 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e69a667e-a24d-4946-83bc-8d33e47c09c9")
 		)
@@ -10865,6 +11075,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 199.39 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 199.39 139.7 90)
 			(effects
 				(font
@@ -10969,6 +11188,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 264.16 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2dfc0be8-b987-48fd-a09c-785373559304")
 		)
@@ -11063,6 +11291,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 199.39 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "489e3068-9318-4fbb-b39a-2994348c2204")
 		)
@@ -11140,6 +11377,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 261.62 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 261.62 125.73 90)
 			(effects
 				(font
@@ -11296,6 +11542,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 231.14 125.73 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a8f4fa0f-71a7-48e8-becc-66b1eb257f51")
 		)
@@ -11380,6 +11635,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 129.54 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 129.54 121.92 0)
 			(effects
 				(font

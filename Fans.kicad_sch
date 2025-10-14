@@ -2750,6 +2750,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 96.52 66.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c1df650e-86f5-4b4d-9d2f-9b7346fa98f2")
 		)
@@ -2888,6 +2897,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 44.45 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "110bf2df-4f6f-485d-abf2-a74bbaa84c7e")
 		)
@@ -3004,6 +3022,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 86.36 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 86.36 158.75 90)
 			(effects
 				(font
@@ -3304,6 +3331,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 106.68 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "65799797-76b4-4731-8c2d-f0b5c182dfe2")
 		)
@@ -3393,6 +3429,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 64.77 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 64.77 158.75 90)
 			(effects
 				(font
@@ -3630,6 +3675,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 34.29 62.23 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8d8cc331-916c-4cf1-be33-57463bf848a1")
 		)
@@ -3716,6 +3770,15 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CRCW06034K30FKEA"
+			(at 64.77 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 64.77 149.86 0)
 			(effects
 				(font
@@ -3820,6 +3883,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 88.9 62.23 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e34cee47-2b56-4211-a500-898fd62816b1")
 		)
@@ -3897,6 +3969,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 106.68 146.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 106.68 146.05 90)
 			(effects
 				(font
@@ -4017,6 +4098,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 196.85 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5f1516c1-9236-40c8-98f3-b569978ea713")
 		)
@@ -4106,6 +4196,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 45.72 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 45.72 158.75 90)
 			(effects
 				(font
@@ -4265,6 +4364,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 45.72 146.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "db818ca6-1c4f-45c1-8488-311af2f99770")
 		)
@@ -4348,6 +4456,15 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CRCW06034K30FKEA"
+			(at 45.72 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 45.72 149.86 0)
 			(effects
 				(font
@@ -4442,6 +4559,15 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CRCW06034K30FKEA"
+			(at 86.36 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 86.36 149.86 0)
 			(effects
 				(font
@@ -4547,6 +4673,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 106.68 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "49131174-a972-47a1-b5bb-acdea9a61af8")
 		)
@@ -4643,6 +4778,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 41.91 66.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d1c89be6-b02a-4832-ba41-308e15331bc3")
 		)
@@ -4695,7 +4839,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 201.93 44.45 0)
 			(effects
 				(font
@@ -4723,6 +4867,24 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 201.93 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 201.93 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "538-105309-1206"
 			(at 201.93 44.45 0)
 			(effects
 				(font
@@ -4925,6 +5087,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 196.85 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9cc6a9ab-1973-4136-bc61-b559a9478927")
 		)
@@ -5002,6 +5173,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 64.77 146.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 64.77 146.05 90)
 			(effects
 				(font
@@ -5094,6 +5274,15 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CRCW06030000Z0EE"
+			(at 76.2 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 76.2 85.09 90)
 			(effects
 				(font
@@ -5298,6 +5487,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 99.06 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 99.06 50.8 0)
 			(effects
 				(font

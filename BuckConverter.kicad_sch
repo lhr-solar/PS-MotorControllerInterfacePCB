@@ -4981,6 +4981,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 175.26 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3eda6244-68b9-4725-a5ef-07841757b451")
 		)
@@ -5078,6 +5087,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 93.98 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a69f4193-424a-461f-8c61-af23f7964e33")
 		)
@@ -5155,6 +5173,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 102.87 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 102.87 100.33 90)
 			(effects
 				(font
@@ -5251,6 +5278,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 175.26 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f38d069c-0b56-4f82-a27e-ee46d082c98d")
 		)
@@ -5339,6 +5375,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 190.5 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ee1c377d-563a-43d5-984f-52acdd195b40")
 		)
@@ -5419,6 +5464,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 215.9 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 215.9 107.95 0)
 			(effects
 				(font
@@ -5578,6 +5632,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 137.16 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7d5141b6-1b13-489d-9094-ddd02999a338")
 		)
@@ -5657,6 +5720,24 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 118.11 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 118.11 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "595-TPS56339DDCR"
 			(at 118.11 97.79 0)
 			(effects
 				(font
@@ -5774,6 +5855,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 77.47 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "16167426-59a0-43fe-8869-7614cfaca8ad")
 		)
@@ -5854,6 +5944,15 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 203.2 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 203.2 107.95 0)
 			(effects
 				(font
@@ -5979,7 +6078,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 163.83 97.79 0)
 			(effects
 				(font
@@ -6007,6 +6106,24 @@
 			)
 		)
 		(property "Mouser Link" ""
+			(at 163.83 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 163.83 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "80-MPEV1D0630L6R8"
 			(at 163.83 97.79 90)
 			(effects
 				(font
@@ -6101,6 +6218,15 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "MLASH168SB7104KTNA01"
+			(at 149.86 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 149.86 100.33 90)
 			(effects
 				(font
