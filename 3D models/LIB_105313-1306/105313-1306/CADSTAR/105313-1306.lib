@@ -1,0 +1,16 @@
+.105313-1306 :1 ;Connector Header Through Hole, Right Angle 6 position 0.098" (2.50mm)
+"1053131306"
+*STM J
+*NGS
+*PLB 1="1" 2="2" 3="3" 4="4" 5="5" 6="6"
+*MXP 8
+*DFN 105313-1306
+~!Mouser Part Number (538-105313-1306)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Molex/105313-1306?qs=PqFvFmEiOr50lWn2UaMD6w%3D%3D)
+~!Manufacturer_Name (Molex)
+~!Manufacturer_Part_Number (105313-1306)
+~!Link Datasheet (https://tools.molex.com/pdm_docs/sd/1053131306_sd.pdf)
+~!Height (6.84mm)
+~!3D_Model (105313-1306)
+"105313-1306"
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 

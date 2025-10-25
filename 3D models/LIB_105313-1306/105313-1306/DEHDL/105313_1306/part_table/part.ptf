@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART '105313_1306'
+CLASS = IO
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Molex", "105313-1306" (!) = "", "1053131306", "Other", "538-105313-1306", "https://www.mouser.co.uk/ProductDetail/Molex/105313-1306?qs=PqFvFmEiOr50lWn2UaMD6w%3D%3D", "Connector Header Through Hole, Right Angle 6 position 0.098" (2.50mm)", "https://tools.molex.com/pdm_docs/sd/1053131306_sd.pdf", "6.84 mm"
+END_PART
+
+END.
