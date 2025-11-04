@@ -1,0 +1,9 @@
+Manufacturer=Molex
+PartNumber=105313-1306
+PartCategory=Connector
+PackageCategory=Other
+PinCount=6
+Version=1.2
+Released=2024-10-07 12:20:54
+Downloaded=2025-10-24 21:18:18
+3D=Y

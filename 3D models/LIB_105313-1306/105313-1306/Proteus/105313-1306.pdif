@@ -1,0 +1,172 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "105313-1306"
+   (description "Connector Header Through Hole, Right Angle 6 position 0.098\" (2.50mm)")
+   (family "CON")
+   (package "1053131306")
+   (attribute "Datasheet Link" "https://tools.molex.com/pdm_docs/sd/1053131306_sd.pdf")
+   (attribute "Geometry.Height" "6.84mm")
+   (attribute "Mouser Part Number" "538-105313-1306")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Molex/105313-1306?qs=PqFvFmEiOr50lWn2UaMD6w%3D%3D")
+   (attribute "Manufacturer_Name" "Molex")
+   (attribute "Manufacturer_Part_Number" "105313-1306")
+   (gate
+    (symbol "105313-1306")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+    (pin "3" 3 PS)
+    (pin "4" 4 PS)
+    (pin "5" 5 PS)
+    (pin "6" 6 PS)
+   )
+  )
+  (symbol "105313-1306"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 600 100) (pt 600 -600) (pt 200 -600) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 -500) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -400) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -300) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -200) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "1053131306"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -14.22 -1.92)
+      (pt 1.72 -1.92)
+      (pt 1.72 -10.38)
+      (pt -14.22 -10.38)
+      (pt -14.22 -1.92))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -14.22 -1.92)
+      (pt 1.72 -1.92)
+      (pt 1.72 -10.38)
+      (pt -14.22 -10.38)
+      (pt -14.22 -1.92))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -15.22 1.9)
+      (pt 2.72 1.9)
+      (pt 2.72 -12.84)
+      (pt -15.22 -12.84)
+      (pt -15.22 1.9))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -8.85 -10.38)
+      (pt -8.85 -11.84)
+      (pt -3.65 -11.84)
+      (pt -3.65 -10.38))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -8.85 -10.38)
+      (pt -8.85 -11.84)
+      (pt -3.65 -11.84)
+      (pt -3.65 -10.38))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt 0 1.5)
+      (arc (pt 0.000 1.500) (pt -0.050 1.400) (pt 0.050 1.500) (start 180.0) (sweep 90.0))
+      (pt 0 1.4)
+      (arc (pt 0.000 1.400) (pt -0.050 1.400) (pt 0.050 1.500) (start 180.0) (sweep -90.0))
+      (pt 0 1.5))))
+   (leg 1 (pt 0.000 0.000) (padstack 1))
+   (leg 2 (pt -2.500 0.000) (padstack 0))
+   (leg 3 (pt -5.000 0.000) (padstack 0))
+   (leg 4 (pt -7.500 0.000) (padstack 0))
+   (leg 5 (pt -10.000 0.000) (padstack 0))
+   (leg 6 (pt -12.500 0.000) (padstack 0))
+   (leg 7 (pt 0.000 -7.180) (padstack 7))
+   (leg 8 (pt -12.500 -7.180) (padstack 8))
+   (padstack 0
+    (hole 1.2)
+    (plated true)
+    (pad (layer TCOP) (round 1.800))
+    (pad (layer INNER) (round 1.800))
+    (pad (layer BCOP) (round 1.800))
+   )
+   (padstack 1
+    (hole 1.2)
+    (plated true)
+    (pad (layer TCOP) (square 1.800))
+    (pad (layer INNER) (round 1.800))
+    (pad (layer BCOP) (square 1.800))
+   )
+   (padstack 7
+    (hole 2.37)
+    (plated false)
+    (pad (layer TCOP) (round 1.185))
+    (pad (layer INNER) (round 1.185))
+    (pad (layer BCOP) (round 1.185))
+   )
+   (padstack 8
+    (hole 1.6)
+    (plated false)
+    (pad (layer TCOP) (round 0.800))
+    (pad (layer INNER) (round 0.800))
+    (pad (layer BCOP) (round 0.800))
+   )
+   (model "105313-1306.stp"
+    (euler 90 0 0)
+    (offset -6.25 -5.860000133514404 2.509999990463257)
+   )
+  )
+ )
+)
