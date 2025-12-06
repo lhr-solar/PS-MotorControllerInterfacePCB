@@ -1485,7 +1485,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 77.47) (xy 80.01 77.47)
+			(xy 74.93 77.47) (xy 91.44 77.47)
 		)
 		(stroke
 			(width 0)
@@ -1535,6 +1535,16 @@
 	)
 	(wire
 		(pts
+			(xy 102.87 77.47) (xy 113.03 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40e6207d-0f82-4111-92ed-9d1fbb2f1661")
+	)
+	(wire
+		(pts
 			(xy 102.87 59.69) (xy 102.87 64.77)
 		)
 		(stroke
@@ -1552,16 +1562,6 @@
 			(type default)
 		)
 		(uuid "43142405-229c-408f-8d08-5bc7fabc17fd")
-	)
-	(wire
-		(pts
-			(xy 87.63 77.47) (xy 91.44 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "44f0a72e-61f9-4ff9-8a4a-52ea02835351")
 	)
 	(wire
 		(pts
@@ -1755,7 +1755,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 77.47) (xy 113.03 77.47)
+			(xy 91.44 77.47) (xy 95.25 77.47)
 		)
 		(stroke
 			(width 0)
@@ -2776,7 +2776,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 83.82 77.47 270)
+		(at 99.06 77.47 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2784,7 +2784,7 @@
 		(dnp no)
 		(uuid "e9db5551-041e-4aed-b1e0-a28050ebb3cd")
 		(property "Reference" "R_G3"
-			(at 81.788 75.184 90)
+			(at 97.028 75.184 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2793,7 +2793,7 @@
 			)
 		)
 		(property "Value" "100"
-			(at 81.788 80.01 90)
+			(at 97.028 80.01 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2802,7 +2802,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 83.82 75.692 90)
+			(at 99.06 75.692 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2811,7 +2811,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 83.82 77.47 0)
+			(at 99.06 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2820,7 +2820,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 83.82 77.47 0)
+			(at 99.06 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2829,7 +2829,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 83.82 77.47 90)
+			(at 99.06 77.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2838,7 +2838,7 @@
 			)
 		)
 		(property "Mouser Link" ""
-			(at 83.82 77.47 90)
+			(at 99.06 77.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2847,7 +2847,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CRCW0603120RFKEC "
-			(at 83.82 77.47 90)
+			(at 99.06 77.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2856,7 +2856,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 83.82 77.47 90)
+			(at 99.06 77.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2865,7 +2865,7 @@
 			)
 		)
 		(property "Description (Customer #)" ""
-			(at 83.82 77.47 90)
+			(at 99.06 77.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)
