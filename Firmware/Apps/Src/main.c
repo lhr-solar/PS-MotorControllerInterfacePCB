@@ -40,7 +40,7 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-TIM_HandleTypeDef htim1;
+extern TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
 
 UART_HandleTypeDef huart1;
@@ -61,7 +61,10 @@ static void MX_USART1_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim)
+{
+    // DO NOTHING – but required for linking
+}
 //PWM
 void PWM_A_SetDuty(uint8_t duty) {
   if (duty > 100) duty = 100;
@@ -83,7 +86,7 @@ void LED_On(GPIO_TypeDef *GPIOx, uint16_t pin){
 
 void LED_Off(GPIO_TypeDef *GPIOx, uint16_t pin)
 {
-  HAL_GPIO_WritePin(GPIOx, pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOx, pin, GPIO_PIN_RESET);
 }
 
 void LED_Toggle(GPIO_TypeDef *GPIOx, uint16_t pin)
@@ -136,8 +139,9 @@ int main(void)
   while (1)
   {
     LED_Toggle(GPIOB, GPIO_PIN_0);
-    void PWM_A_SetDuty(uint8_t duty)(40);
-    void PWM_B_SetDuty(uint8_t duty)(40);
+    PWM_A_SetDuty(40);
+    PWM_B_SetDuty(40);
+    HAL_Delay(500);
     /* USER CODE END WHILE */
     
     /* USER CODE BEGIN 3 */
@@ -259,9 +263,9 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 0;
+  htim2.Init.Prescaler = 79;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 4294967295;
+  htim2.Init.Period = 999;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_OC_Init(&htim2) != HAL_OK)
