@@ -1,0 +1,2023 @@
+ARM GAS  /var/tmp//ccecwV2c.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c"
+  20              		.section	.text.MX_GPIO_Init,"ax",%progbits
+  21              		.align	1
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	MX_GPIO_Init:
+  27              	.LFB304:
+   1:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE BEGIN Header */
+   2:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /**
+   3:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   ******************************************************************************
+   4:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @file           : main.c
+   5:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @brief          : Main program body
+   6:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   ******************************************************************************
+   7:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @attention
+   8:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   *
+   9:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * Copyright (c) 2025 STMicroelectronics.
+  10:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * All rights reserved.
+  11:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   *
+  12:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  13:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * in the root directory of this software component.
+  14:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  15:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   *
+  16:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   ******************************************************************************
+  17:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   */
+  18:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE END Header */
+  19:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* Includes ------------------------------------------------------------------*/
+  20:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** #include "main.h"
+  21:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  22:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* Private includes ----------------------------------------------------------*/
+  23:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE BEGIN Includes */
+  24:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  25:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE END Includes */
+  26:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  27:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* Private typedef -----------------------------------------------------------*/
+  28:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE BEGIN PTD */
+  29:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  30:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE END PTD */
+  31:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ARM GAS  /var/tmp//ccecwV2c.s 			page 2
+
+
+  32:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* Private define ------------------------------------------------------------*/
+  33:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE BEGIN PD */
+  34:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  35:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE END PD */
+  36:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  37:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* Private macro -------------------------------------------------------------*/
+  38:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE BEGIN PM */
+  39:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  40:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE END PM */
+  41:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  42:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* Private variables ---------------------------------------------------------*/
+  43:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** extern TIM_HandleTypeDef htim1;
+  44:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** TIM_HandleTypeDef htim2;
+  45:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  46:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** UART_HandleTypeDef huart1;
+  47:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  48:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE BEGIN PV */
+  49:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  50:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE END PV */
+  51:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  52:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* Private function prototypes -----------------------------------------------*/
+  53:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** void SystemClock_Config(void);
+  54:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** static void MX_GPIO_Init(void);
+  55:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** static void MX_TIM1_Init(void);
+  56:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** static void MX_TIM2_Init(void);
+  57:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** static void MX_USART1_UART_Init(void);
+  58:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE BEGIN PFP */
+  59:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  60:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE END PFP */
+  61:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  62:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* Private user code ---------------------------------------------------------*/
+  63:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE BEGIN 0 */
+  64:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim)
+  65:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** {
+  66:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     // DO NOTHING – but required for linking
+  67:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+  68:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** //PWM
+  69:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** void PWM_A_SetDuty(uint8_t duty) {
+  70:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (duty > 100) duty = 100;
+  71:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   uint32_t arr = htim2.Init.Period;
+  72:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   uint32_t compare = (arr* duty)/100;
+  73:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, compare);
+  74:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+  75:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** void PWM_B_SetDuty(uint8_t duty) {
+  76:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (duty > 100) duty = 100;
+  77:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   uint32_t arr = htim2.Init.Period;
+  78:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   uint32_t compare = (arr * duty) / 100;
+  79:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, compare);
+  80:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+  81:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  82:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** //LED
+  83:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** void LED_On(GPIO_TypeDef *GPIOx, uint16_t pin){
+  84:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_GPIO_WritePin(GPIOx, pin, GPIO_PIN_SET);
+  85:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+  86:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  87:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** void LED_Off(GPIO_TypeDef *GPIOx, uint16_t pin)
+  88:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** {
+ARM GAS  /var/tmp//ccecwV2c.s 			page 3
+
+
+  89:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_GPIO_WritePin(GPIOx, pin, GPIO_PIN_RESET);
+  90:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+  91:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  92:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** void LED_Toggle(GPIO_TypeDef *GPIOx, uint16_t pin)
+  93:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** {
+  94:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_GPIO_TogglePin(GPIOx, pin);
+  95:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+  96:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE END 0 */
+  97:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+  98:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /**
+  99:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @brief  The application entry point.
+ 100:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @retval int
+ 101:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   */
+ 102:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** int main(void)
+ 103:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** {
+ 104:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 105:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN 1 */
+ 106:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 107:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END 1 */
+ 108:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 109:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* MCU Configuration--------------------------------------------------------*/
+ 110:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 111:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+ 112:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_Init();
+ 113:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 114:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN Init */
+ 115:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 116:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END Init */
+ 117:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 118:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* Configure the system clock */
+ 119:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   SystemClock_Config();
+ 120:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 121:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN SysInit */
+ 122:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 123:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END SysInit */
+ 124:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 125:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* Initialize all configured peripherals */
+ 126:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   MX_GPIO_Init();
+ 127:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   MX_TIM1_Init();
+ 128:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   MX_TIM2_Init();
+ 129:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   MX_USART1_UART_Init();
+ 130:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN 2 */
+ 131:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
+ 132:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+ 133:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 134:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   LED_Off(GPIOB, GPIO_PIN_0);
+ 135:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   LED_On(GPIOB, GPIO_PIN_0);
+ 136:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END 2 */
+ 137:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 138:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* Infinite loop */
+ 139:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN WHILE */
+ 140:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   while (1)
+ 141:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 142:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     PWM_A_SetDuty(40);
+ 143:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     PWM_B_SetDuty(40);
+ 144:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     HAL_Delay(500);
+ 145:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     /* USER CODE END WHILE */
+ARM GAS  /var/tmp//ccecwV2c.s 			page 4
+
+
+ 146:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     
+ 147:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     /* USER CODE BEGIN 3 */
+ 148:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 149:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END 3 */
+ 150:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+ 151:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 152:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /**
+ 153:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @brief System Clock Configuration
+ 154:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @retval None
+ 155:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   */
+ 156:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** void SystemClock_Config(void)
+ 157:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** {
+ 158:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 159:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 160:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 161:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /** Configure the main internal regulator output voltage
+ 162:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   */
+ 163:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1) != HAL_OK)
+ 164:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 165:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     Error_Handler();
+ 166:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 167:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 168:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /** Initializes the RCC Oscillators according to the specified parameters
+ 169:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * in the RCC_OscInitTypeDef structure.
+ 170:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   */
+ 171:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
+ 172:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
+ 173:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_OscInitStruct.MSICalibrationValue = 0;
+ 174:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_6;
+ 175:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+ 176:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 177:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 178:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     Error_Handler();
+ 179:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 180:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 181:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /** Initializes the CPU, AHB and APB buses clocks
+ 182:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   */
+ 183:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+ 184:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 185:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_MSI;
+ 186:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 187:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 188:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 189:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 190:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+ 191:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 192:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     Error_Handler();
+ 193:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 194:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+ 195:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 196:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /**
+ 197:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @brief TIM1 Initialization Function
+ 198:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @param None
+ 199:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @retval None
+ 200:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   */
+ 201:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** static void MX_TIM1_Init(void)
+ 202:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** {
+ARM GAS  /var/tmp//ccecwV2c.s 			page 5
+
+
+ 203:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 204:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN TIM1_Init 0 */
+ 205:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 206:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END TIM1_Init 0 */
+ 207:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 208:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   TIM_MasterConfigTypeDef sMasterConfig = {0};
+ 209:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   TIM_IC_InitTypeDef sConfigIC = {0};
+ 210:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 211:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN TIM1_Init 1 */
+ 212:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 213:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END TIM1_Init 1 */
+ 214:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Instance = TIM1;
+ 215:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.Prescaler = 0;
+ 216:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
+ 217:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.Period = 65535;
+ 218:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+ 219:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.RepetitionCounter = 0;
+ 220:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+ 221:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_IC_Init(&htim1) != HAL_OK)
+ 222:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 223:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     Error_Handler();
+ 224:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 225:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+ 226:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sMasterConfig.MasterOutputTrigger2 = TIM_TRGO2_RESET;
+ 227:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+ 228:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
+ 229:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 230:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     Error_Handler();
+ 231:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 232:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
+ 233:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
+ 234:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
+ 235:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICFilter = 0;
+ 236:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_IC_ConfigChannel(&htim1, &sConfigIC, TIM_CHANNEL_4) != HAL_OK)
+ 237:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 238:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     Error_Handler();
+ 239:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 240:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN TIM1_Init 2 */
+ 241:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 242:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END TIM1_Init 2 */
+ 243:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 244:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+ 245:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 246:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /**
+ 247:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @brief TIM2 Initialization Function
+ 248:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @param None
+ 249:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @retval None
+ 250:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   */
+ 251:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** static void MX_TIM2_Init(void)
+ 252:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** {
+ 253:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 254:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN TIM2_Init 0 */
+ 255:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 256:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END TIM2_Init 0 */
+ 257:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 258:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   TIM_MasterConfigTypeDef sMasterConfig = {0};
+ 259:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   TIM_OC_InitTypeDef sConfigOC = {0};
+ARM GAS  /var/tmp//ccecwV2c.s 			page 6
+
+
+ 260:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   TIM_IC_InitTypeDef sConfigIC = {0};
+ 261:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 262:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN TIM2_Init 1 */
+ 263:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 264:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END TIM2_Init 1 */
+ 265:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Instance = TIM2;
+ 266:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Init.Prescaler = 79;
+ 267:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+ 268:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Init.Period = 999;
+ 269:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+ 270:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+ 271:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_OC_Init(&htim2) != HAL_OK)
+ 272:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 273:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     Error_Handler();
+ 274:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 275:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_IC_Init(&htim2) != HAL_OK)
+ 276:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 277:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     Error_Handler();
+ 278:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 279:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
+ 280:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 281:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     Error_Handler();
+ 282:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 283:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+ 284:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+ 285:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+ 286:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 287:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     Error_Handler();
+ 288:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 289:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigOC.OCMode = TIM_OCMODE_TIMING;
+ 290:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigOC.Pulse = 0;
+ 291:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+ 292:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+ 293:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_OC_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+ 294:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 295:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     Error_Handler();
+ 296:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 297:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
+ 298:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
+ 299:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
+ 300:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICFilter = 0;
+ 301:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_2) != HAL_OK)
+ 302:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 303:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     Error_Handler();
+ 304:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 305:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigOC.OCMode = TIM_OCMODE_PWM1;
+ 306:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
+ 307:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 308:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     Error_Handler();
+ 309:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 310:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN TIM2_Init 2 */
+ 311:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 312:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END TIM2_Init 2 */
+ 313:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_TIM_MspPostInit(&htim2);
+ 314:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 315:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+ 316:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ARM GAS  /var/tmp//ccecwV2c.s 			page 7
+
+
+ 317:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /**
+ 318:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @brief USART1 Initialization Function
+ 319:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @param None
+ 320:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @retval None
+ 321:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   */
+ 322:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** static void MX_USART1_UART_Init(void)
+ 323:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** {
+ 324:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 325:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN USART1_Init 0 */
+ 326:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 327:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END USART1_Init 0 */
+ 328:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 329:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN USART1_Init 1 */
+ 330:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 331:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END USART1_Init 1 */
+ 332:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Instance = USART1;
+ 333:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.BaudRate = 115200;
+ 334:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.WordLength = UART_WORDLENGTH_8B;
+ 335:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.StopBits = UART_STOPBITS_1;
+ 336:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.Parity = UART_PARITY_NONE;
+ 337:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.Mode = UART_MODE_TX_RX;
+ 338:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+ 339:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+ 340:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+ 341:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+ 342:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_UART_Init(&huart1) != HAL_OK)
+ 343:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 344:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     Error_Handler();
+ 345:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 346:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN USART1_Init 2 */
+ 347:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 348:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END USART1_Init 2 */
+ 349:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 350:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+ 351:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 352:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /**
+ 353:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @brief GPIO Initialization Function
+ 354:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @param None
+ 355:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @retval None
+ 356:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   */
+ 357:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** static void MX_GPIO_Init(void)
+ 358:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** {
+  28              		.loc 1 358 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 32
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 70B5     		push	{r4, r5, r6, lr}
+  33              	.LCFI0:
+  34              		.cfi_def_cfa_offset 16
+  35              		.cfi_offset 4, -16
+  36              		.cfi_offset 5, -12
+  37              		.cfi_offset 6, -8
+  38              		.cfi_offset 14, -4
+  39 0002 88B0     		sub	sp, sp, #32
+  40              	.LCFI1:
+  41              		.cfi_def_cfa_offset 48
+ 359:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+ARM GAS  /var/tmp//ccecwV2c.s 			page 8
+
+
+  42              		.loc 1 359 3 view .LVU1
+  43              		.loc 1 359 20 is_stmt 0 view .LVU2
+  44 0004 0024     		movs	r4, #0
+  45 0006 0394     		str	r4, [sp, #12]
+  46 0008 0494     		str	r4, [sp, #16]
+  47 000a 0594     		str	r4, [sp, #20]
+  48 000c 0694     		str	r4, [sp, #24]
+  49 000e 0794     		str	r4, [sp, #28]
+ 360:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN MX_GPIO_Init_1 */
+ 361:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 362:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END MX_GPIO_Init_1 */
+ 363:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 364:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* GPIO Ports Clock Enable */
+ 365:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+  50              		.loc 1 365 3 is_stmt 1 view .LVU3
+  51              	.LBB4:
+  52              		.loc 1 365 3 view .LVU4
+  53              		.loc 1 365 3 view .LVU5
+  54 0010 1C4B     		ldr	r3, .L3
+  55 0012 DA6C     		ldr	r2, [r3, #76]
+  56 0014 42F00102 		orr	r2, r2, #1
+  57 0018 DA64     		str	r2, [r3, #76]
+  58              		.loc 1 365 3 view .LVU6
+  59 001a DA6C     		ldr	r2, [r3, #76]
+  60 001c 02F00102 		and	r2, r2, #1
+  61 0020 0192     		str	r2, [sp, #4]
+  62              		.loc 1 365 3 view .LVU7
+  63 0022 019A     		ldr	r2, [sp, #4]
+  64              	.LBE4:
+  65              		.loc 1 365 3 view .LVU8
+ 366:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   __HAL_RCC_GPIOB_CLK_ENABLE();
+  66              		.loc 1 366 3 view .LVU9
+  67              	.LBB5:
+  68              		.loc 1 366 3 view .LVU10
+  69              		.loc 1 366 3 view .LVU11
+  70 0024 DA6C     		ldr	r2, [r3, #76]
+  71 0026 42F00202 		orr	r2, r2, #2
+  72 002a DA64     		str	r2, [r3, #76]
+  73              		.loc 1 366 3 view .LVU12
+  74 002c DB6C     		ldr	r3, [r3, #76]
+  75 002e 03F00203 		and	r3, r3, #2
+  76 0032 0293     		str	r3, [sp, #8]
+  77              		.loc 1 366 3 view .LVU13
+  78 0034 029B     		ldr	r3, [sp, #8]
+  79              	.LBE5:
+  80              		.loc 1 366 3 view .LVU14
+ 367:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 368:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /*Configure GPIO pin Output Level */
+ 369:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2|GPIO_PIN_4|GPIO_PIN_12, GPIO_PIN_RESET);
+  81              		.loc 1 369 3 view .LVU15
+  82 0036 2246     		mov	r2, r4
+  83 0038 41F21401 		movw	r1, #4116
+  84 003c 4FF09040 		mov	r0, #1207959552
+  85 0040 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  86              	.LVL0:
+ 370:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 371:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /*Configure GPIO pin Output Level */
+ARM GAS  /var/tmp//ccecwV2c.s 			page 9
+
+
+ 372:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_12|GPIO_PIN_14|GPIO_PIN_15
+  87              		.loc 1 372 3 view .LVU16
+  88 0044 104D     		ldr	r5, .L3+4
+  89 0046 2246     		mov	r2, r4
+  90 0048 4DF2C101 		movw	r1, #53441
+  91 004c 2846     		mov	r0, r5
+  92 004e FFF7FEFF 		bl	HAL_GPIO_WritePin
+  93              	.LVL1:
+ 373:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****                           |GPIO_PIN_6|GPIO_PIN_7, GPIO_PIN_RESET);
+ 374:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 375:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /*Configure GPIO pins : PA2 PA4 PA12 */
+ 376:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_4|GPIO_PIN_12;
+  94              		.loc 1 376 3 view .LVU17
+  95              		.loc 1 376 23 is_stmt 0 view .LVU18
+  96 0052 41F21403 		movw	r3, #4116
+  97 0056 0393     		str	r3, [sp, #12]
+ 377:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  98              		.loc 1 377 3 is_stmt 1 view .LVU19
+  99              		.loc 1 377 24 is_stmt 0 view .LVU20
+ 100 0058 0126     		movs	r6, #1
+ 101 005a 0496     		str	r6, [sp, #16]
+ 378:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 102              		.loc 1 378 3 is_stmt 1 view .LVU21
+ 103              		.loc 1 378 24 is_stmt 0 view .LVU22
+ 104 005c 0594     		str	r4, [sp, #20]
+ 379:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 105              		.loc 1 379 3 is_stmt 1 view .LVU23
+ 106              		.loc 1 379 25 is_stmt 0 view .LVU24
+ 107 005e 0694     		str	r4, [sp, #24]
+ 380:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 108              		.loc 1 380 3 is_stmt 1 view .LVU25
+ 109 0060 03A9     		add	r1, sp, #12
+ 110 0062 4FF09040 		mov	r0, #1207959552
+ 111 0066 FFF7FEFF 		bl	HAL_GPIO_Init
+ 112              	.LVL2:
+ 381:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 382:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /*Configure GPIO pins : PB0 PB12 PB14 PB15
+ 383:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****                            PB6 PB7 */
+ 384:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_12|GPIO_PIN_14|GPIO_PIN_15
+ 113              		.loc 1 384 3 view .LVU26
+ 114              		.loc 1 384 23 is_stmt 0 view .LVU27
+ 115 006a 4DF2C103 		movw	r3, #53441
+ 116 006e 0393     		str	r3, [sp, #12]
+ 385:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****                           |GPIO_PIN_6|GPIO_PIN_7;
+ 386:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 117              		.loc 1 386 3 is_stmt 1 view .LVU28
+ 118              		.loc 1 386 24 is_stmt 0 view .LVU29
+ 119 0070 0496     		str	r6, [sp, #16]
+ 387:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 120              		.loc 1 387 3 is_stmt 1 view .LVU30
+ 121              		.loc 1 387 24 is_stmt 0 view .LVU31
+ 122 0072 0594     		str	r4, [sp, #20]
+ 388:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 123              		.loc 1 388 3 is_stmt 1 view .LVU32
+ 124              		.loc 1 388 25 is_stmt 0 view .LVU33
+ 125 0074 0694     		str	r4, [sp, #24]
+ 389:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ARM GAS  /var/tmp//ccecwV2c.s 			page 10
+
+
+ 126              		.loc 1 389 3 is_stmt 1 view .LVU34
+ 127 0076 03A9     		add	r1, sp, #12
+ 128 0078 2846     		mov	r0, r5
+ 129 007a FFF7FEFF 		bl	HAL_GPIO_Init
+ 130              	.LVL3:
+ 390:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 391:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN MX_GPIO_Init_2 */
+ 392:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 393:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END MX_GPIO_Init_2 */
+ 394:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+ 131              		.loc 1 394 1 is_stmt 0 view .LVU35
+ 132 007e 08B0     		add	sp, sp, #32
+ 133              	.LCFI2:
+ 134              		.cfi_def_cfa_offset 16
+ 135              		@ sp needed
+ 136 0080 70BD     		pop	{r4, r5, r6, pc}
+ 137              	.L4:
+ 138 0082 00BF     		.align	2
+ 139              	.L3:
+ 140 0084 00100240 		.word	1073876992
+ 141 0088 00040048 		.word	1207960576
+ 142              		.cfi_endproc
+ 143              	.LFE304:
+ 145              		.section	.text.HAL_TIM_MspPostInit,"ax",%progbits
+ 146              		.align	1
+ 147              		.global	HAL_TIM_MspPostInit
+ 148              		.syntax unified
+ 149              		.thumb
+ 150              		.thumb_func
+ 152              	HAL_TIM_MspPostInit:
+ 153              	.LVL4:
+ 154              	.LFB293:
+  65:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     // DO NOTHING – but required for linking
+ 155              		.loc 1 65 1 is_stmt 1 view -0
+ 156              		.cfi_startproc
+ 157              		@ args = 0, pretend = 0, frame = 0
+ 158              		@ frame_needed = 0, uses_anonymous_args = 0
+ 159              		@ link register save eliminated.
+  67:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** //PWM
+ 160              		.loc 1 67 1 view .LVU37
+ 161 0000 7047     		bx	lr
+ 162              		.cfi_endproc
+ 163              	.LFE293:
+ 165              		.section	.text.PWM_A_SetDuty,"ax",%progbits
+ 166              		.align	1
+ 167              		.global	PWM_A_SetDuty
+ 168              		.syntax unified
+ 169              		.thumb
+ 170              		.thumb_func
+ 172              	PWM_A_SetDuty:
+ 173              	.LVL5:
+ 174              	.LFB294:
+  69:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (duty > 100) duty = 100;
+ 175              		.loc 1 69 34 view -0
+ 176              		.cfi_startproc
+ 177              		@ args = 0, pretend = 0, frame = 0
+ 178              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /var/tmp//ccecwV2c.s 			page 11
+
+
+ 179              		@ link register save eliminated.
+  70:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   uint32_t arr = htim2.Init.Period;
+ 180              		.loc 1 70 3 view .LVU39
+  70:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   uint32_t arr = htim2.Init.Period;
+ 181              		.loc 1 70 6 is_stmt 0 view .LVU40
+ 182 0000 6428     		cmp	r0, #100
+ 183 0002 00D9     		bls	.L7
+  70:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   uint32_t arr = htim2.Init.Period;
+ 184              		.loc 1 70 24 view .LVU41
+ 185 0004 6420     		movs	r0, #100
+ 186              	.LVL6:
+ 187              	.L7:
+  71:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   uint32_t compare = (arr* duty)/100;
+ 188              		.loc 1 71 3 is_stmt 1 view .LVU42
+  71:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   uint32_t compare = (arr* duty)/100;
+ 189              		.loc 1 71 12 is_stmt 0 view .LVU43
+ 190 0006 054B     		ldr	r3, .L9
+ 191 0008 DA68     		ldr	r2, [r3, #12]
+ 192              	.LVL7:
+  72:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, compare);
+ 193              		.loc 1 72 3 is_stmt 1 view .LVU44
+  72:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, compare);
+ 194              		.loc 1 72 26 is_stmt 0 view .LVU45
+ 195 000a 02FB00F0 		mul	r0, r2, r0
+ 196              	.LVL8:
+  72:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, compare);
+ 197              		.loc 1 72 12 view .LVU46
+ 198 000e 044A     		ldr	r2, .L9+4
+ 199              	.LVL9:
+  72:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, compare);
+ 200              		.loc 1 72 12 view .LVU47
+ 201 0010 A2FB0020 		umull	r2, r0, r2, r0
+ 202 0014 4009     		lsrs	r0, r0, #5
+ 203              	.LVL10:
+  73:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+ 204              		.loc 1 73 3 is_stmt 1 view .LVU48
+ 205 0016 1B68     		ldr	r3, [r3]
+ 206 0018 D863     		str	r0, [r3, #60]
+ 207              	.LVL11:
+  74:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** void PWM_B_SetDuty(uint8_t duty) {
+ 208              		.loc 1 74 1 is_stmt 0 view .LVU49
+ 209 001a 7047     		bx	lr
+ 210              	.L10:
+ 211              		.align	2
+ 212              	.L9:
+ 213 001c 00000000 		.word	htim2
+ 214 0020 1F85EB51 		.word	1374389535
+ 215              		.cfi_endproc
+ 216              	.LFE294:
+ 218              		.section	.text.PWM_B_SetDuty,"ax",%progbits
+ 219              		.align	1
+ 220              		.global	PWM_B_SetDuty
+ 221              		.syntax unified
+ 222              		.thumb
+ 223              		.thumb_func
+ 225              	PWM_B_SetDuty:
+ 226              	.LVL12:
+ARM GAS  /var/tmp//ccecwV2c.s 			page 12
+
+
+ 227              	.LFB295:
+  75:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (duty > 100) duty = 100;
+ 228              		.loc 1 75 34 is_stmt 1 view -0
+ 229              		.cfi_startproc
+ 230              		@ args = 0, pretend = 0, frame = 0
+ 231              		@ frame_needed = 0, uses_anonymous_args = 0
+ 232              		@ link register save eliminated.
+  76:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   uint32_t arr = htim2.Init.Period;
+ 233              		.loc 1 76 3 view .LVU51
+  76:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   uint32_t arr = htim2.Init.Period;
+ 234              		.loc 1 76 6 is_stmt 0 view .LVU52
+ 235 0000 6428     		cmp	r0, #100
+ 236 0002 00D9     		bls	.L12
+  76:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   uint32_t arr = htim2.Init.Period;
+ 237              		.loc 1 76 24 view .LVU53
+ 238 0004 6420     		movs	r0, #100
+ 239              	.LVL13:
+ 240              	.L12:
+  77:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   uint32_t compare = (arr * duty) / 100;
+ 241              		.loc 1 77 3 is_stmt 1 view .LVU54
+  77:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   uint32_t compare = (arr * duty) / 100;
+ 242              		.loc 1 77 12 is_stmt 0 view .LVU55
+ 243 0006 054B     		ldr	r3, .L14
+ 244 0008 DA68     		ldr	r2, [r3, #12]
+ 245              	.LVL14:
+  78:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, compare);
+ 246              		.loc 1 78 3 is_stmt 1 view .LVU56
+  78:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, compare);
+ 247              		.loc 1 78 27 is_stmt 0 view .LVU57
+ 248 000a 02FB00F0 		mul	r0, r2, r0
+ 249              	.LVL15:
+  78:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, compare);
+ 250              		.loc 1 78 12 view .LVU58
+ 251 000e 044A     		ldr	r2, .L14+4
+ 252              	.LVL16:
+  78:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, compare);
+ 253              		.loc 1 78 12 view .LVU59
+ 254 0010 A2FB0020 		umull	r2, r0, r2, r0
+ 255 0014 4009     		lsrs	r0, r0, #5
+ 256              	.LVL17:
+  79:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+ 257              		.loc 1 79 3 is_stmt 1 view .LVU60
+ 258 0016 1B68     		ldr	r3, [r3]
+ 259 0018 5863     		str	r0, [r3, #52]
+ 260              	.LVL18:
+  80:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 261              		.loc 1 80 1 is_stmt 0 view .LVU61
+ 262 001a 7047     		bx	lr
+ 263              	.L15:
+ 264              		.align	2
+ 265              	.L14:
+ 266 001c 00000000 		.word	htim2
+ 267 0020 1F85EB51 		.word	1374389535
+ 268              		.cfi_endproc
+ 269              	.LFE295:
+ 271              		.section	.text.LED_On,"ax",%progbits
+ 272              		.align	1
+ARM GAS  /var/tmp//ccecwV2c.s 			page 13
+
+
+ 273              		.global	LED_On
+ 274              		.syntax unified
+ 275              		.thumb
+ 276              		.thumb_func
+ 278              	LED_On:
+ 279              	.LVL19:
+ 280              	.LFB296:
+  83:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_GPIO_WritePin(GPIOx, pin, GPIO_PIN_SET);
+ 281              		.loc 1 83 47 is_stmt 1 view -0
+ 282              		.cfi_startproc
+ 283              		@ args = 0, pretend = 0, frame = 0
+ 284              		@ frame_needed = 0, uses_anonymous_args = 0
+  83:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_GPIO_WritePin(GPIOx, pin, GPIO_PIN_SET);
+ 285              		.loc 1 83 47 is_stmt 0 view .LVU63
+ 286 0000 08B5     		push	{r3, lr}
+ 287              	.LCFI3:
+ 288              		.cfi_def_cfa_offset 8
+ 289              		.cfi_offset 3, -8
+ 290              		.cfi_offset 14, -4
+  84:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+ 291              		.loc 1 84 3 is_stmt 1 view .LVU64
+ 292 0002 0122     		movs	r2, #1
+ 293 0004 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 294              	.LVL20:
+  85:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 295              		.loc 1 85 1 is_stmt 0 view .LVU65
+ 296 0008 08BD     		pop	{r3, pc}
+ 297              		.cfi_endproc
+ 298              	.LFE296:
+ 300              		.section	.text.LED_Off,"ax",%progbits
+ 301              		.align	1
+ 302              		.global	LED_Off
+ 303              		.syntax unified
+ 304              		.thumb
+ 305              		.thumb_func
+ 307              	LED_Off:
+ 308              	.LVL21:
+ 309              	.LFB297:
+  88:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_GPIO_WritePin(GPIOx, pin, GPIO_PIN_RESET);
+ 310              		.loc 1 88 1 is_stmt 1 view -0
+ 311              		.cfi_startproc
+ 312              		@ args = 0, pretend = 0, frame = 0
+ 313              		@ frame_needed = 0, uses_anonymous_args = 0
+  88:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_GPIO_WritePin(GPIOx, pin, GPIO_PIN_RESET);
+ 314              		.loc 1 88 1 is_stmt 0 view .LVU67
+ 315 0000 08B5     		push	{r3, lr}
+ 316              	.LCFI4:
+ 317              		.cfi_def_cfa_offset 8
+ 318              		.cfi_offset 3, -8
+ 319              		.cfi_offset 14, -4
+  89:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+ 320              		.loc 1 89 3 is_stmt 1 view .LVU68
+ 321 0002 0022     		movs	r2, #0
+ 322 0004 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 323              	.LVL22:
+  90:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 324              		.loc 1 90 1 is_stmt 0 view .LVU69
+ARM GAS  /var/tmp//ccecwV2c.s 			page 14
+
+
+ 325 0008 08BD     		pop	{r3, pc}
+ 326              		.cfi_endproc
+ 327              	.LFE297:
+ 329              		.section	.text.LED_Toggle,"ax",%progbits
+ 330              		.align	1
+ 331              		.global	LED_Toggle
+ 332              		.syntax unified
+ 333              		.thumb
+ 334              		.thumb_func
+ 336              	LED_Toggle:
+ 337              	.LVL23:
+ 338              	.LFB298:
+  93:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_GPIO_TogglePin(GPIOx, pin);
+ 339              		.loc 1 93 1 is_stmt 1 view -0
+ 340              		.cfi_startproc
+ 341              		@ args = 0, pretend = 0, frame = 0
+ 342              		@ frame_needed = 0, uses_anonymous_args = 0
+  93:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_GPIO_TogglePin(GPIOx, pin);
+ 343              		.loc 1 93 1 is_stmt 0 view .LVU71
+ 344 0000 08B5     		push	{r3, lr}
+ 345              	.LCFI5:
+ 346              		.cfi_def_cfa_offset 8
+ 347              		.cfi_offset 3, -8
+ 348              		.cfi_offset 14, -4
+  94:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** }
+ 349              		.loc 1 94 3 is_stmt 1 view .LVU72
+ 350 0002 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 351              	.LVL24:
+  95:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE END 0 */
+ 352              		.loc 1 95 1 is_stmt 0 view .LVU73
+ 353 0006 08BD     		pop	{r3, pc}
+ 354              		.cfi_endproc
+ 355              	.LFE298:
+ 357              		.section	.text.Error_Handler,"ax",%progbits
+ 358              		.align	1
+ 359              		.global	Error_Handler
+ 360              		.syntax unified
+ 361              		.thumb
+ 362              		.thumb_func
+ 364              	Error_Handler:
+ 365              	.LFB305:
+ 395:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 396:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE BEGIN 4 */
+ 397:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 398:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /* USER CODE END 4 */
+ 399:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 400:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** /**
+ 401:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @brief  This function is executed in case of error occurrence.
+ 402:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   * @retval None
+ 403:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   */
+ 404:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** void Error_Handler(void)
+ 405:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** {
+ 366              		.loc 1 405 1 is_stmt 1 view -0
+ 367              		.cfi_startproc
+ 368              		@ Volatile: function does not return.
+ 369              		@ args = 0, pretend = 0, frame = 0
+ 370              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /var/tmp//ccecwV2c.s 			page 15
+
+
+ 371              		@ link register save eliminated.
+ 406:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
+ 407:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
+ 408:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   __disable_irq();
+ 372              		.loc 1 408 3 view .LVU75
+ 373              	.LBB6:
+ 374              	.LBI6:
+ 375              		.file 2 "stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h"
+   1:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
+   2:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
+   3:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
+   4:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * @version  V5.2.0
+   5:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * @date     08. May 2019
+   6:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  ******************************************************************************/
+   7:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /*
+   8:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * Copyright (c) 2009-2019 Arm Limited. All rights reserved.
+   9:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  *
+  10:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * SPDX-License-Identifier: Apache-2.0
+  11:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  *
+  12:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
+  13:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * not use this file except in compliance with the License.
+  14:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * You may obtain a copy of the License at
+  15:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  *
+  16:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * www.apache.org/licenses/LICENSE-2.0
+  17:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  *
+  18:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * Unless required by applicable law or agreed to in writing, software
+  19:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+  20:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  21:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * See the License for the specific language governing permissions and
+  22:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * limitations under the License.
+  23:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  */
+  24:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+  25:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __CMSIS_GCC_H
+  26:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_H
+  27:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+  28:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /* ignore some GCC warnings */
+  29:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic push
+  30:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
+  31:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
+  32:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
+  33:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+  34:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /* Fallback for __has_builtin */
+  35:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __has_builtin
+  36:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __has_builtin(x) (0)
+  37:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  38:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+  39:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /* CMSIS compiler specific defines */
+  40:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ASM
+  41:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __ASM                                  __asm
+  42:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  43:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __INLINE
+  44:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __INLINE                               inline
+  45:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  46:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_INLINE
+  47:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_INLINE                        static inline
+  48:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  49:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_FORCEINLINE                 
+ARM GAS  /var/tmp//ccecwV2c.s 			page 16
+
+
+  50:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_FORCEINLINE                   __attribute__((always_inline)) static inline
+  51:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif                                           
+  52:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __NO_RETURN
+  53:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __NO_RETURN                            __attribute__((__noreturn__))
+  54:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  55:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __USED
+  56:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __USED                                 __attribute__((used))
+  57:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  58:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __WEAK
+  59:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
+  60:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  61:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED
+  62:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED                               __attribute__((packed, aligned(1)))
+  63:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  64:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_STRUCT
+  65:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_STRUCT                        struct __attribute__((packed, aligned(1)))
+  66:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  67:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_UNION
+  68:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
+  69:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  70:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
+  71:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  72:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  73:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  74:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   struct __attribute__((packed)) T_UINT32 { uint32_t v; };
+  75:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  76:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32(x)                  (((struct T_UINT32 *)(x))->v)
+  77:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  78:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_WRITE
+  79:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  80:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  81:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  82:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_WRITE { uint16_t v; };
+  83:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  84:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_WRITE(addr, val)    (void)((((struct T_UINT16_WRITE *)(void *)(addr))-
+  85:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  86:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_READ
+  87:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  88:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  89:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  90:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_READ { uint16_t v; };
+  91:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  92:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_READ(addr)          (((const struct T_UINT16_READ *)(const void *)(add
+  93:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  94:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_WRITE
+  95:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  96:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  97:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  98:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_WRITE { uint32_t v; };
+  99:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 100:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_WRITE(addr, val)    (void)((((struct T_UINT32_WRITE *)(void *)(addr))-
+ 101:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 102:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_READ
+ 103:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+ 104:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+ 105:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+ 106:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_READ { uint32_t v; };
+ARM GAS  /var/tmp//ccecwV2c.s 			page 17
+
+
+ 107:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 108:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_READ(addr)          (((const struct T_UINT32_READ *)(const void *)(add
+ 109:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 110:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ALIGNED
+ 111:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __ALIGNED(x)                           __attribute__((aligned(x)))
+ 112:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 113:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __RESTRICT
+ 114:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __RESTRICT                             __restrict
+ 115:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 116:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __COMPILER_BARRIER
+ 117:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __COMPILER_BARRIER()                   __ASM volatile("":::"memory")
+ 118:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 119:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 120:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /* #########################  Startup and Lowlevel Init  ######################## */
+ 121:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 122:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __PROGRAM_START
+ 123:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 124:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /**
+ 125:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \brief   Initializes data and bss sections
+ 126:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \details This default implementations initialized all data and additional bss
+ 127:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****            sections relying on .copy.table and .zero.table specified properly
+ 128:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****            in the used linker script.
+ 129:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   
+ 130:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  */
+ 131:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE __NO_RETURN void __cmsis_start(void)
+ 132:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** {
+ 133:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   extern void _start(void) __NO_RETURN;
+ 134:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   
+ 135:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   typedef struct {
+ 136:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     uint32_t const* src;
+ 137:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     uint32_t* dest;
+ 138:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     uint32_t  wlen;
+ 139:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   } __copy_table_t;
+ 140:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   
+ 141:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   typedef struct {
+ 142:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     uint32_t* dest;
+ 143:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     uint32_t  wlen;
+ 144:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   } __zero_table_t;
+ 145:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   
+ 146:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   extern const __copy_table_t __copy_table_start__;
+ 147:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   extern const __copy_table_t __copy_table_end__;
+ 148:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   extern const __zero_table_t __zero_table_start__;
+ 149:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   extern const __zero_table_t __zero_table_end__;
+ 150:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 151:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   for (__copy_table_t const* pTable = &__copy_table_start__; pTable < &__copy_table_end__; ++pTable
+ 152:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     for(uint32_t i=0u; i<pTable->wlen; ++i) {
+ 153:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****       pTable->dest[i] = pTable->src[i];
+ 154:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     }
+ 155:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   }
+ 156:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  
+ 157:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   for (__zero_table_t const* pTable = &__zero_table_start__; pTable < &__zero_table_end__; ++pTable
+ 158:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     for(uint32_t i=0u; i<pTable->wlen; ++i) {
+ 159:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****       pTable->dest[i] = 0u;
+ 160:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     }
+ 161:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   }
+ 162:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  
+ 163:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   _start();
+ARM GAS  /var/tmp//ccecwV2c.s 			page 18
+
+
+ 164:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** }
+ 165:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   
+ 166:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __PROGRAM_START           __cmsis_start
+ 167:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 168:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 169:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __INITIAL_SP
+ 170:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __INITIAL_SP              __StackTop
+ 171:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 172:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 173:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __STACK_LIMIT
+ 174:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __STACK_LIMIT             __StackLimit
+ 175:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 176:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 177:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __VECTOR_TABLE
+ 178:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __VECTOR_TABLE            __Vectors
+ 179:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 180:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 181:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __VECTOR_TABLE_ATTRIBUTE
+ 182:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __VECTOR_TABLE_ATTRIBUTE  __attribute((used, section(".vectors")))
+ 183:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 184:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 185:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /* ###########################  Core Function Access  ########################### */
+ 186:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /** \ingroup  CMSIS_Core_FunctionInterface
+ 187:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
+ 188:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   @{
+ 189:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  */
+ 190:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 191:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /**
+ 192:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
+ 193:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
+ 194:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 195:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  */
+ 196:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __enable_irq(void)
+ 197:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** {
+ 198:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsie i" : : : "memory");
+ 199:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** }
+ 200:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 201:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 202:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /**
+ 203:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
+ 204:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
+ 205:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 206:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  */
+ 207:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
+ 376              		.loc 2 207 27 view .LVU76
+ 377              	.LBB7:
+ 208:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** {
+ 209:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
+ 378              		.loc 2 209 3 view .LVU77
+ 379              		.syntax unified
+ 380              	@ 209 "stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h" 1
+ 381 0000 72B6     		cpsid i
+ 382              	@ 0 "" 2
+ 383              		.thumb
+ 384              		.syntax unified
+ 385              	.L23:
+ 386              	.LBE7:
+ARM GAS  /var/tmp//ccecwV2c.s 			page 19
+
+
+ 387              	.LBE6:
+ 409:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   while (1)
+ 388              		.loc 1 409 3 discriminator 1 view .LVU78
+ 410:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 411:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 389              		.loc 1 411 3 discriminator 1 view .LVU79
+ 409:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   while (1)
+ 390              		.loc 1 409 9 discriminator 1 view .LVU80
+ 391 0002 FEE7     		b	.L23
+ 392              		.cfi_endproc
+ 393              	.LFE305:
+ 395              		.section	.text.MX_TIM1_Init,"ax",%progbits
+ 396              		.align	1
+ 397              		.syntax unified
+ 398              		.thumb
+ 399              		.thumb_func
+ 401              	MX_TIM1_Init:
+ 402              	.LFB301:
+ 202:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 403              		.loc 1 202 1 view -0
+ 404              		.cfi_startproc
+ 405              		@ args = 0, pretend = 0, frame = 32
+ 406              		@ frame_needed = 0, uses_anonymous_args = 0
+ 407 0000 00B5     		push	{lr}
+ 408              	.LCFI6:
+ 409              		.cfi_def_cfa_offset 4
+ 410              		.cfi_offset 14, -4
+ 411 0002 89B0     		sub	sp, sp, #36
+ 412              	.LCFI7:
+ 413              		.cfi_def_cfa_offset 40
+ 208:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   TIM_IC_InitTypeDef sConfigIC = {0};
+ 414              		.loc 1 208 3 view .LVU82
+ 208:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   TIM_IC_InitTypeDef sConfigIC = {0};
+ 415              		.loc 1 208 27 is_stmt 0 view .LVU83
+ 416 0004 0023     		movs	r3, #0
+ 417 0006 0593     		str	r3, [sp, #20]
+ 418 0008 0693     		str	r3, [sp, #24]
+ 419 000a 0793     		str	r3, [sp, #28]
+ 209:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 420              		.loc 1 209 3 is_stmt 1 view .LVU84
+ 209:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 421              		.loc 1 209 22 is_stmt 0 view .LVU85
+ 422 000c 0193     		str	r3, [sp, #4]
+ 423 000e 0293     		str	r3, [sp, #8]
+ 424 0010 0393     		str	r3, [sp, #12]
+ 425 0012 0493     		str	r3, [sp, #16]
+ 214:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.Prescaler = 0;
+ 426              		.loc 1 214 3 is_stmt 1 view .LVU86
+ 214:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.Prescaler = 0;
+ 427              		.loc 1 214 18 is_stmt 0 view .LVU87
+ 428 0014 1548     		ldr	r0, .L32
+ 429 0016 164A     		ldr	r2, .L32+4
+ 430 0018 0260     		str	r2, [r0]
+ 215:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
+ 431              		.loc 1 215 3 is_stmt 1 view .LVU88
+ 215:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
+ 432              		.loc 1 215 24 is_stmt 0 view .LVU89
+ARM GAS  /var/tmp//ccecwV2c.s 			page 20
+
+
+ 433 001a 4360     		str	r3, [r0, #4]
+ 216:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.Period = 65535;
+ 434              		.loc 1 216 3 is_stmt 1 view .LVU90
+ 216:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.Period = 65535;
+ 435              		.loc 1 216 26 is_stmt 0 view .LVU91
+ 436 001c 8360     		str	r3, [r0, #8]
+ 217:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+ 437              		.loc 1 217 3 is_stmt 1 view .LVU92
+ 217:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+ 438              		.loc 1 217 21 is_stmt 0 view .LVU93
+ 439 001e 4FF6FF72 		movw	r2, #65535
+ 440 0022 C260     		str	r2, [r0, #12]
+ 218:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.RepetitionCounter = 0;
+ 441              		.loc 1 218 3 is_stmt 1 view .LVU94
+ 218:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.RepetitionCounter = 0;
+ 442              		.loc 1 218 28 is_stmt 0 view .LVU95
+ 443 0024 0361     		str	r3, [r0, #16]
+ 219:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+ 444              		.loc 1 219 3 is_stmt 1 view .LVU96
+ 219:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+ 445              		.loc 1 219 32 is_stmt 0 view .LVU97
+ 446 0026 4361     		str	r3, [r0, #20]
+ 220:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_IC_Init(&htim1) != HAL_OK)
+ 447              		.loc 1 220 3 is_stmt 1 view .LVU98
+ 220:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_IC_Init(&htim1) != HAL_OK)
+ 448              		.loc 1 220 32 is_stmt 0 view .LVU99
+ 449 0028 8361     		str	r3, [r0, #24]
+ 221:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 450              		.loc 1 221 3 is_stmt 1 view .LVU100
+ 221:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 451              		.loc 1 221 7 is_stmt 0 view .LVU101
+ 452 002a FFF7FEFF 		bl	HAL_TIM_IC_Init
+ 453              	.LVL25:
+ 221:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 454              		.loc 1 221 6 view .LVU102
+ 455 002e B8B9     		cbnz	r0, .L29
+ 225:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sMasterConfig.MasterOutputTrigger2 = TIM_TRGO2_RESET;
+ 456              		.loc 1 225 3 is_stmt 1 view .LVU103
+ 225:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sMasterConfig.MasterOutputTrigger2 = TIM_TRGO2_RESET;
+ 457              		.loc 1 225 37 is_stmt 0 view .LVU104
+ 458 0030 0023     		movs	r3, #0
+ 459 0032 0593     		str	r3, [sp, #20]
+ 226:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+ 460              		.loc 1 226 3 is_stmt 1 view .LVU105
+ 226:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+ 461              		.loc 1 226 38 is_stmt 0 view .LVU106
+ 462 0034 0693     		str	r3, [sp, #24]
+ 227:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
+ 463              		.loc 1 227 3 is_stmt 1 view .LVU107
+ 227:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
+ 464              		.loc 1 227 33 is_stmt 0 view .LVU108
+ 465 0036 0793     		str	r3, [sp, #28]
+ 228:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 466              		.loc 1 228 3 is_stmt 1 view .LVU109
+ 228:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 467              		.loc 1 228 7 is_stmt 0 view .LVU110
+ 468 0038 05A9     		add	r1, sp, #20
+ARM GAS  /var/tmp//ccecwV2c.s 			page 21
+
+
+ 469 003a 0C48     		ldr	r0, .L32
+ 470 003c FFF7FEFF 		bl	HAL_TIMEx_MasterConfigSynchronization
+ 471              	.LVL26:
+ 228:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 472              		.loc 1 228 6 view .LVU111
+ 473 0040 80B9     		cbnz	r0, .L30
+ 232:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
+ 474              		.loc 1 232 3 is_stmt 1 view .LVU112
+ 232:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
+ 475              		.loc 1 232 24 is_stmt 0 view .LVU113
+ 476 0042 0023     		movs	r3, #0
+ 477 0044 0193     		str	r3, [sp, #4]
+ 233:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
+ 478              		.loc 1 233 3 is_stmt 1 view .LVU114
+ 233:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
+ 479              		.loc 1 233 25 is_stmt 0 view .LVU115
+ 480 0046 0122     		movs	r2, #1
+ 481 0048 0292     		str	r2, [sp, #8]
+ 234:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICFilter = 0;
+ 482              		.loc 1 234 3 is_stmt 1 view .LVU116
+ 234:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICFilter = 0;
+ 483              		.loc 1 234 25 is_stmt 0 view .LVU117
+ 484 004a 0393     		str	r3, [sp, #12]
+ 235:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_IC_ConfigChannel(&htim1, &sConfigIC, TIM_CHANNEL_4) != HAL_OK)
+ 485              		.loc 1 235 3 is_stmt 1 view .LVU118
+ 235:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_IC_ConfigChannel(&htim1, &sConfigIC, TIM_CHANNEL_4) != HAL_OK)
+ 486              		.loc 1 235 22 is_stmt 0 view .LVU119
+ 487 004c 0493     		str	r3, [sp, #16]
+ 236:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 488              		.loc 1 236 3 is_stmt 1 view .LVU120
+ 236:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 489              		.loc 1 236 7 is_stmt 0 view .LVU121
+ 490 004e 0C22     		movs	r2, #12
+ 491 0050 01A9     		add	r1, sp, #4
+ 492 0052 0648     		ldr	r0, .L32
+ 493 0054 FFF7FEFF 		bl	HAL_TIM_IC_ConfigChannel
+ 494              	.LVL27:
+ 236:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 495              		.loc 1 236 6 view .LVU122
+ 496 0058 30B9     		cbnz	r0, .L31
+ 244:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 497              		.loc 1 244 1 view .LVU123
+ 498 005a 09B0     		add	sp, sp, #36
+ 499              	.LCFI8:
+ 500              		.cfi_remember_state
+ 501              		.cfi_def_cfa_offset 4
+ 502              		@ sp needed
+ 503 005c 5DF804FB 		ldr	pc, [sp], #4
+ 504              	.L29:
+ 505              	.LCFI9:
+ 506              		.cfi_restore_state
+ 223:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 507              		.loc 1 223 5 is_stmt 1 view .LVU124
+ 508 0060 FFF7FEFF 		bl	Error_Handler
+ 509              	.LVL28:
+ 510              	.L30:
+ 230:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ARM GAS  /var/tmp//ccecwV2c.s 			page 22
+
+
+ 511              		.loc 1 230 5 view .LVU125
+ 512 0064 FFF7FEFF 		bl	Error_Handler
+ 513              	.LVL29:
+ 514              	.L31:
+ 238:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 515              		.loc 1 238 5 view .LVU126
+ 516 0068 FFF7FEFF 		bl	Error_Handler
+ 517              	.LVL30:
+ 518              	.L33:
+ 519              		.align	2
+ 520              	.L32:
+ 521 006c 00000000 		.word	htim1
+ 522 0070 002C0140 		.word	1073818624
+ 523              		.cfi_endproc
+ 524              	.LFE301:
+ 526              		.section	.text.MX_TIM2_Init,"ax",%progbits
+ 527              		.align	1
+ 528              		.syntax unified
+ 529              		.thumb
+ 530              		.thumb_func
+ 532              	MX_TIM2_Init:
+ 533              	.LFB302:
+ 252:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 534              		.loc 1 252 1 view -0
+ 535              		.cfi_startproc
+ 536              		@ args = 0, pretend = 0, frame = 56
+ 537              		@ frame_needed = 0, uses_anonymous_args = 0
+ 538 0000 00B5     		push	{lr}
+ 539              	.LCFI10:
+ 540              		.cfi_def_cfa_offset 4
+ 541              		.cfi_offset 14, -4
+ 542 0002 8FB0     		sub	sp, sp, #60
+ 543              	.LCFI11:
+ 544              		.cfi_def_cfa_offset 64
+ 258:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   TIM_OC_InitTypeDef sConfigOC = {0};
+ 545              		.loc 1 258 3 view .LVU128
+ 258:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   TIM_OC_InitTypeDef sConfigOC = {0};
+ 546              		.loc 1 258 27 is_stmt 0 view .LVU129
+ 547 0004 0023     		movs	r3, #0
+ 548 0006 0B93     		str	r3, [sp, #44]
+ 549 0008 0C93     		str	r3, [sp, #48]
+ 550 000a 0D93     		str	r3, [sp, #52]
+ 259:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   TIM_IC_InitTypeDef sConfigIC = {0};
+ 551              		.loc 1 259 3 is_stmt 1 view .LVU130
+ 259:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   TIM_IC_InitTypeDef sConfigIC = {0};
+ 552              		.loc 1 259 22 is_stmt 0 view .LVU131
+ 553 000c 0493     		str	r3, [sp, #16]
+ 554 000e 0593     		str	r3, [sp, #20]
+ 555 0010 0693     		str	r3, [sp, #24]
+ 556 0012 0793     		str	r3, [sp, #28]
+ 557 0014 0893     		str	r3, [sp, #32]
+ 558 0016 0993     		str	r3, [sp, #36]
+ 559 0018 0A93     		str	r3, [sp, #40]
+ 260:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 560              		.loc 1 260 3 is_stmt 1 view .LVU132
+ 260:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 561              		.loc 1 260 22 is_stmt 0 view .LVU133
+ARM GAS  /var/tmp//ccecwV2c.s 			page 23
+
+
+ 562 001a 0093     		str	r3, [sp]
+ 563 001c 0193     		str	r3, [sp, #4]
+ 564 001e 0293     		str	r3, [sp, #8]
+ 565 0020 0393     		str	r3, [sp, #12]
+ 265:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Init.Prescaler = 79;
+ 566              		.loc 1 265 3 is_stmt 1 view .LVU134
+ 265:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Init.Prescaler = 79;
+ 567              		.loc 1 265 18 is_stmt 0 view .LVU135
+ 568 0022 2848     		ldr	r0, .L50
+ 569 0024 4FF08042 		mov	r2, #1073741824
+ 570 0028 0260     		str	r2, [r0]
+ 266:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+ 571              		.loc 1 266 3 is_stmt 1 view .LVU136
+ 266:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+ 572              		.loc 1 266 24 is_stmt 0 view .LVU137
+ 573 002a 4F22     		movs	r2, #79
+ 574 002c 4260     		str	r2, [r0, #4]
+ 267:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Init.Period = 999;
+ 575              		.loc 1 267 3 is_stmt 1 view .LVU138
+ 267:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Init.Period = 999;
+ 576              		.loc 1 267 26 is_stmt 0 view .LVU139
+ 577 002e 8360     		str	r3, [r0, #8]
+ 268:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+ 578              		.loc 1 268 3 is_stmt 1 view .LVU140
+ 268:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+ 579              		.loc 1 268 21 is_stmt 0 view .LVU141
+ 580 0030 40F2E732 		movw	r2, #999
+ 581 0034 C260     		str	r2, [r0, #12]
+ 269:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+ 582              		.loc 1 269 3 is_stmt 1 view .LVU142
+ 269:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+ 583              		.loc 1 269 28 is_stmt 0 view .LVU143
+ 584 0036 0361     		str	r3, [r0, #16]
+ 270:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_OC_Init(&htim2) != HAL_OK)
+ 585              		.loc 1 270 3 is_stmt 1 view .LVU144
+ 270:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_OC_Init(&htim2) != HAL_OK)
+ 586              		.loc 1 270 32 is_stmt 0 view .LVU145
+ 587 0038 8361     		str	r3, [r0, #24]
+ 271:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 588              		.loc 1 271 3 is_stmt 1 view .LVU146
+ 271:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 589              		.loc 1 271 7 is_stmt 0 view .LVU147
+ 590 003a FFF7FEFF 		bl	HAL_TIM_OC_Init
+ 591              	.LVL31:
+ 271:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 592              		.loc 1 271 6 view .LVU148
+ 593 003e 0028     		cmp	r0, #0
+ 594 0040 31D1     		bne	.L43
+ 275:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 595              		.loc 1 275 3 is_stmt 1 view .LVU149
+ 275:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 596              		.loc 1 275 7 is_stmt 0 view .LVU150
+ 597 0042 2048     		ldr	r0, .L50
+ 598 0044 FFF7FEFF 		bl	HAL_TIM_IC_Init
+ 599              	.LVL32:
+ 275:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 600              		.loc 1 275 6 view .LVU151
+ARM GAS  /var/tmp//ccecwV2c.s 			page 24
+
+
+ 601 0048 0028     		cmp	r0, #0
+ 602 004a 2ED1     		bne	.L44
+ 279:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 603              		.loc 1 279 3 is_stmt 1 view .LVU152
+ 279:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 604              		.loc 1 279 7 is_stmt 0 view .LVU153
+ 605 004c 1D48     		ldr	r0, .L50
+ 606 004e FFF7FEFF 		bl	HAL_TIM_PWM_Init
+ 607              	.LVL33:
+ 279:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 608              		.loc 1 279 6 view .LVU154
+ 609 0052 60BB     		cbnz	r0, .L45
+ 283:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+ 610              		.loc 1 283 3 is_stmt 1 view .LVU155
+ 283:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+ 611              		.loc 1 283 37 is_stmt 0 view .LVU156
+ 612 0054 0023     		movs	r3, #0
+ 613 0056 0B93     		str	r3, [sp, #44]
+ 284:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+ 614              		.loc 1 284 3 is_stmt 1 view .LVU157
+ 284:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+ 615              		.loc 1 284 33 is_stmt 0 view .LVU158
+ 616 0058 0D93     		str	r3, [sp, #52]
+ 285:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 617              		.loc 1 285 3 is_stmt 1 view .LVU159
+ 285:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 618              		.loc 1 285 7 is_stmt 0 view .LVU160
+ 619 005a 0BA9     		add	r1, sp, #44
+ 620 005c 1948     		ldr	r0, .L50
+ 621 005e FFF7FEFF 		bl	HAL_TIMEx_MasterConfigSynchronization
+ 622              	.LVL34:
+ 285:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 623              		.loc 1 285 6 view .LVU161
+ 624 0062 30BB     		cbnz	r0, .L46
+ 289:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigOC.Pulse = 0;
+ 625              		.loc 1 289 3 is_stmt 1 view .LVU162
+ 289:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigOC.Pulse = 0;
+ 626              		.loc 1 289 20 is_stmt 0 view .LVU163
+ 627 0064 0022     		movs	r2, #0
+ 628 0066 0492     		str	r2, [sp, #16]
+ 290:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+ 629              		.loc 1 290 3 is_stmt 1 view .LVU164
+ 290:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+ 630              		.loc 1 290 19 is_stmt 0 view .LVU165
+ 631 0068 0592     		str	r2, [sp, #20]
+ 291:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+ 632              		.loc 1 291 3 is_stmt 1 view .LVU166
+ 291:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+ 633              		.loc 1 291 24 is_stmt 0 view .LVU167
+ 634 006a 0692     		str	r2, [sp, #24]
+ 292:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_OC_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+ 635              		.loc 1 292 3 is_stmt 1 view .LVU168
+ 292:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_OC_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+ 636              		.loc 1 292 24 is_stmt 0 view .LVU169
+ 637 006c 0892     		str	r2, [sp, #32]
+ 293:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 638              		.loc 1 293 3 is_stmt 1 view .LVU170
+ARM GAS  /var/tmp//ccecwV2c.s 			page 25
+
+
+ 293:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 639              		.loc 1 293 7 is_stmt 0 view .LVU171
+ 640 006e 04A9     		add	r1, sp, #16
+ 641 0070 1448     		ldr	r0, .L50
+ 642 0072 FFF7FEFF 		bl	HAL_TIM_OC_ConfigChannel
+ 643              	.LVL35:
+ 293:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 644              		.loc 1 293 6 view .LVU172
+ 645 0076 F0B9     		cbnz	r0, .L47
+ 297:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
+ 646              		.loc 1 297 3 is_stmt 1 view .LVU173
+ 297:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
+ 647              		.loc 1 297 24 is_stmt 0 view .LVU174
+ 648 0078 0023     		movs	r3, #0
+ 649 007a 0093     		str	r3, [sp]
+ 298:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
+ 650              		.loc 1 298 3 is_stmt 1 view .LVU175
+ 298:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
+ 651              		.loc 1 298 25 is_stmt 0 view .LVU176
+ 652 007c 0122     		movs	r2, #1
+ 653 007e 0192     		str	r2, [sp, #4]
+ 299:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICFilter = 0;
+ 654              		.loc 1 299 3 is_stmt 1 view .LVU177
+ 299:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   sConfigIC.ICFilter = 0;
+ 655              		.loc 1 299 25 is_stmt 0 view .LVU178
+ 656 0080 0293     		str	r3, [sp, #8]
+ 300:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_2) != HAL_OK)
+ 657              		.loc 1 300 3 is_stmt 1 view .LVU179
+ 300:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_2) != HAL_OK)
+ 658              		.loc 1 300 22 is_stmt 0 view .LVU180
+ 659 0082 0393     		str	r3, [sp, #12]
+ 301:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 660              		.loc 1 301 3 is_stmt 1 view .LVU181
+ 301:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 661              		.loc 1 301 7 is_stmt 0 view .LVU182
+ 662 0084 0422     		movs	r2, #4
+ 663 0086 6946     		mov	r1, sp
+ 664 0088 0E48     		ldr	r0, .L50
+ 665 008a FFF7FEFF 		bl	HAL_TIM_IC_ConfigChannel
+ 666              	.LVL36:
+ 301:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 667              		.loc 1 301 6 view .LVU183
+ 668 008e A0B9     		cbnz	r0, .L48
+ 305:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
+ 669              		.loc 1 305 3 is_stmt 1 view .LVU184
+ 305:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
+ 670              		.loc 1 305 20 is_stmt 0 view .LVU185
+ 671 0090 6023     		movs	r3, #96
+ 672 0092 0493     		str	r3, [sp, #16]
+ 306:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 673              		.loc 1 306 3 is_stmt 1 view .LVU186
+ 306:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 674              		.loc 1 306 7 is_stmt 0 view .LVU187
+ 675 0094 0822     		movs	r2, #8
+ 676 0096 04A9     		add	r1, sp, #16
+ 677 0098 0A48     		ldr	r0, .L50
+ 678 009a FFF7FEFF 		bl	HAL_TIM_PWM_ConfigChannel
+ARM GAS  /var/tmp//ccecwV2c.s 			page 26
+
+
+ 679              	.LVL37:
+ 306:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 680              		.loc 1 306 6 view .LVU188
+ 681 009e 70B9     		cbnz	r0, .L49
+ 315:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 682              		.loc 1 315 1 view .LVU189
+ 683 00a0 0FB0     		add	sp, sp, #60
+ 684              	.LCFI12:
+ 685              		.cfi_remember_state
+ 686              		.cfi_def_cfa_offset 4
+ 687              		@ sp needed
+ 688 00a2 5DF804FB 		ldr	pc, [sp], #4
+ 689              	.L43:
+ 690              	.LCFI13:
+ 691              		.cfi_restore_state
+ 273:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 692              		.loc 1 273 5 is_stmt 1 view .LVU190
+ 693 00a6 FFF7FEFF 		bl	Error_Handler
+ 694              	.LVL38:
+ 695              	.L44:
+ 277:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 696              		.loc 1 277 5 view .LVU191
+ 697 00aa FFF7FEFF 		bl	Error_Handler
+ 698              	.LVL39:
+ 699              	.L45:
+ 281:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 700              		.loc 1 281 5 view .LVU192
+ 701 00ae FFF7FEFF 		bl	Error_Handler
+ 702              	.LVL40:
+ 703              	.L46:
+ 287:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 704              		.loc 1 287 5 view .LVU193
+ 705 00b2 FFF7FEFF 		bl	Error_Handler
+ 706              	.LVL41:
+ 707              	.L47:
+ 295:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 708              		.loc 1 295 5 view .LVU194
+ 709 00b6 FFF7FEFF 		bl	Error_Handler
+ 710              	.LVL42:
+ 711              	.L48:
+ 303:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 712              		.loc 1 303 5 view .LVU195
+ 713 00ba FFF7FEFF 		bl	Error_Handler
+ 714              	.LVL43:
+ 715              	.L49:
+ 308:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 716              		.loc 1 308 5 view .LVU196
+ 717 00be FFF7FEFF 		bl	Error_Handler
+ 718              	.LVL44:
+ 719              	.L51:
+ 720 00c2 00BF     		.align	2
+ 721              	.L50:
+ 722 00c4 00000000 		.word	htim2
+ 723              		.cfi_endproc
+ 724              	.LFE302:
+ 726              		.section	.text.MX_USART1_UART_Init,"ax",%progbits
+ 727              		.align	1
+ARM GAS  /var/tmp//ccecwV2c.s 			page 27
+
+
+ 728              		.syntax unified
+ 729              		.thumb
+ 730              		.thumb_func
+ 732              	MX_USART1_UART_Init:
+ 733              	.LFB303:
+ 323:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 734              		.loc 1 323 1 view -0
+ 735              		.cfi_startproc
+ 736              		@ args = 0, pretend = 0, frame = 0
+ 737              		@ frame_needed = 0, uses_anonymous_args = 0
+ 738 0000 08B5     		push	{r3, lr}
+ 739              	.LCFI14:
+ 740              		.cfi_def_cfa_offset 8
+ 741              		.cfi_offset 3, -8
+ 742              		.cfi_offset 14, -4
+ 332:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.BaudRate = 115200;
+ 743              		.loc 1 332 3 view .LVU198
+ 332:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.BaudRate = 115200;
+ 744              		.loc 1 332 19 is_stmt 0 view .LVU199
+ 745 0002 0B48     		ldr	r0, .L56
+ 746 0004 0B4B     		ldr	r3, .L56+4
+ 747 0006 0360     		str	r3, [r0]
+ 333:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.WordLength = UART_WORDLENGTH_8B;
+ 748              		.loc 1 333 3 is_stmt 1 view .LVU200
+ 333:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.WordLength = UART_WORDLENGTH_8B;
+ 749              		.loc 1 333 24 is_stmt 0 view .LVU201
+ 750 0008 4FF4E133 		mov	r3, #115200
+ 751 000c 4360     		str	r3, [r0, #4]
+ 334:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.StopBits = UART_STOPBITS_1;
+ 752              		.loc 1 334 3 is_stmt 1 view .LVU202
+ 334:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.StopBits = UART_STOPBITS_1;
+ 753              		.loc 1 334 26 is_stmt 0 view .LVU203
+ 754 000e 0023     		movs	r3, #0
+ 755 0010 8360     		str	r3, [r0, #8]
+ 335:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.Parity = UART_PARITY_NONE;
+ 756              		.loc 1 335 3 is_stmt 1 view .LVU204
+ 335:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.Parity = UART_PARITY_NONE;
+ 757              		.loc 1 335 24 is_stmt 0 view .LVU205
+ 758 0012 C360     		str	r3, [r0, #12]
+ 336:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.Mode = UART_MODE_TX_RX;
+ 759              		.loc 1 336 3 is_stmt 1 view .LVU206
+ 336:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.Mode = UART_MODE_TX_RX;
+ 760              		.loc 1 336 22 is_stmt 0 view .LVU207
+ 761 0014 0361     		str	r3, [r0, #16]
+ 337:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+ 762              		.loc 1 337 3 is_stmt 1 view .LVU208
+ 337:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+ 763              		.loc 1 337 20 is_stmt 0 view .LVU209
+ 764 0016 0C22     		movs	r2, #12
+ 765 0018 4261     		str	r2, [r0, #20]
+ 338:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+ 766              		.loc 1 338 3 is_stmt 1 view .LVU210
+ 338:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+ 767              		.loc 1 338 25 is_stmt 0 view .LVU211
+ 768 001a 8361     		str	r3, [r0, #24]
+ 339:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+ 769              		.loc 1 339 3 is_stmt 1 view .LVU212
+ARM GAS  /var/tmp//ccecwV2c.s 			page 28
+
+
+ 339:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+ 770              		.loc 1 339 28 is_stmt 0 view .LVU213
+ 771 001c C361     		str	r3, [r0, #28]
+ 340:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+ 772              		.loc 1 340 3 is_stmt 1 view .LVU214
+ 340:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   huart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+ 773              		.loc 1 340 30 is_stmt 0 view .LVU215
+ 774 001e 0362     		str	r3, [r0, #32]
+ 341:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_UART_Init(&huart1) != HAL_OK)
+ 775              		.loc 1 341 3 is_stmt 1 view .LVU216
+ 341:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_UART_Init(&huart1) != HAL_OK)
+ 776              		.loc 1 341 38 is_stmt 0 view .LVU217
+ 777 0020 4362     		str	r3, [r0, #36]
+ 342:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 778              		.loc 1 342 3 is_stmt 1 view .LVU218
+ 342:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 779              		.loc 1 342 7 is_stmt 0 view .LVU219
+ 780 0022 FFF7FEFF 		bl	HAL_UART_Init
+ 781              	.LVL45:
+ 342:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 782              		.loc 1 342 6 view .LVU220
+ 783 0026 00B9     		cbnz	r0, .L55
+ 350:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 784              		.loc 1 350 1 view .LVU221
+ 785 0028 08BD     		pop	{r3, pc}
+ 786              	.L55:
+ 344:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 787              		.loc 1 344 5 is_stmt 1 view .LVU222
+ 788 002a FFF7FEFF 		bl	Error_Handler
+ 789              	.LVL46:
+ 790              	.L57:
+ 791 002e 00BF     		.align	2
+ 792              	.L56:
+ 793 0030 00000000 		.word	huart1
+ 794 0034 00380140 		.word	1073821696
+ 795              		.cfi_endproc
+ 796              	.LFE303:
+ 798              		.section	.text.SystemClock_Config,"ax",%progbits
+ 799              		.align	1
+ 800              		.weak	SystemClock_Config
+ 801              		.syntax unified
+ 802              		.thumb
+ 803              		.thumb_func
+ 805              	SystemClock_Config:
+ 806              	.LFB300:
+ 157:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 807              		.loc 1 157 1 view -0
+ 808              		.cfi_startproc
+ 809              		@ args = 0, pretend = 0, frame = 88
+ 810              		@ frame_needed = 0, uses_anonymous_args = 0
+ 811 0000 00B5     		push	{lr}
+ 812              	.LCFI15:
+ 813              		.cfi_def_cfa_offset 4
+ 814              		.cfi_offset 14, -4
+ 815 0002 97B0     		sub	sp, sp, #92
+ 816              	.LCFI16:
+ 817              		.cfi_def_cfa_offset 96
+ARM GAS  /var/tmp//ccecwV2c.s 			page 29
+
+
+ 158:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 818              		.loc 1 158 3 view .LVU224
+ 158:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 819              		.loc 1 158 22 is_stmt 0 view .LVU225
+ 820 0004 4422     		movs	r2, #68
+ 821 0006 0021     		movs	r1, #0
+ 822 0008 05A8     		add	r0, sp, #20
+ 823 000a FFF7FEFF 		bl	memset
+ 824              	.LVL47:
+ 159:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 825              		.loc 1 159 3 is_stmt 1 view .LVU226
+ 159:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 826              		.loc 1 159 22 is_stmt 0 view .LVU227
+ 827 000e 0023     		movs	r3, #0
+ 828 0010 0093     		str	r3, [sp]
+ 829 0012 0193     		str	r3, [sp, #4]
+ 830 0014 0293     		str	r3, [sp, #8]
+ 831 0016 0393     		str	r3, [sp, #12]
+ 832 0018 0493     		str	r3, [sp, #16]
+ 163:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 833              		.loc 1 163 3 is_stmt 1 view .LVU228
+ 163:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 834              		.loc 1 163 7 is_stmt 0 view .LVU229
+ 835 001a 4FF40070 		mov	r0, #512
+ 836 001e FFF7FEFF 		bl	HAL_PWREx_ControlVoltageScaling
+ 837              	.LVL48:
+ 163:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 838              		.loc 1 163 6 view .LVU230
+ 839 0022 D0B9     		cbnz	r0, .L63
+ 171:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
+ 840              		.loc 1 171 3 is_stmt 1 view .LVU231
+ 171:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
+ 841              		.loc 1 171 36 is_stmt 0 view .LVU232
+ 842 0024 1023     		movs	r3, #16
+ 843 0026 0593     		str	r3, [sp, #20]
+ 172:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_OscInitStruct.MSICalibrationValue = 0;
+ 844              		.loc 1 172 3 is_stmt 1 view .LVU233
+ 172:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_OscInitStruct.MSICalibrationValue = 0;
+ 845              		.loc 1 172 30 is_stmt 0 view .LVU234
+ 846 0028 0123     		movs	r3, #1
+ 847 002a 0B93     		str	r3, [sp, #44]
+ 173:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_6;
+ 848              		.loc 1 173 3 is_stmt 1 view .LVU235
+ 173:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_6;
+ 849              		.loc 1 173 41 is_stmt 0 view .LVU236
+ 850 002c 0023     		movs	r3, #0
+ 851 002e 0C93     		str	r3, [sp, #48]
+ 174:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+ 852              		.loc 1 174 3 is_stmt 1 view .LVU237
+ 174:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+ 853              		.loc 1 174 35 is_stmt 0 view .LVU238
+ 854 0030 6022     		movs	r2, #96
+ 855 0032 0D92     		str	r2, [sp, #52]
+ 175:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 856              		.loc 1 175 3 is_stmt 1 view .LVU239
+ 175:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 857              		.loc 1 175 34 is_stmt 0 view .LVU240
+ARM GAS  /var/tmp//ccecwV2c.s 			page 30
+
+
+ 858 0034 0F93     		str	r3, [sp, #60]
+ 176:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 859              		.loc 1 176 3 is_stmt 1 view .LVU241
+ 176:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 860              		.loc 1 176 7 is_stmt 0 view .LVU242
+ 861 0036 05A8     		add	r0, sp, #20
+ 862 0038 FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 863              	.LVL49:
+ 176:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 864              		.loc 1 176 6 view .LVU243
+ 865 003c 78B9     		cbnz	r0, .L64
+ 183:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 866              		.loc 1 183 3 is_stmt 1 view .LVU244
+ 183:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 867              		.loc 1 183 31 is_stmt 0 view .LVU245
+ 868 003e 0F23     		movs	r3, #15
+ 869 0040 0093     		str	r3, [sp]
+ 185:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 870              		.loc 1 185 3 is_stmt 1 view .LVU246
+ 185:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 871              		.loc 1 185 34 is_stmt 0 view .LVU247
+ 872 0042 0021     		movs	r1, #0
+ 873 0044 0191     		str	r1, [sp, #4]
+ 186:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 874              		.loc 1 186 3 is_stmt 1 view .LVU248
+ 186:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 875              		.loc 1 186 35 is_stmt 0 view .LVU249
+ 876 0046 0291     		str	r1, [sp, #8]
+ 187:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 877              		.loc 1 187 3 is_stmt 1 view .LVU250
+ 187:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 878              		.loc 1 187 36 is_stmt 0 view .LVU251
+ 879 0048 0391     		str	r1, [sp, #12]
+ 188:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 880              		.loc 1 188 3 is_stmt 1 view .LVU252
+ 188:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 881              		.loc 1 188 36 is_stmt 0 view .LVU253
+ 882 004a 0491     		str	r1, [sp, #16]
+ 190:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 883              		.loc 1 190 3 is_stmt 1 view .LVU254
+ 190:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 884              		.loc 1 190 7 is_stmt 0 view .LVU255
+ 885 004c 6846     		mov	r0, sp
+ 886 004e FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 887              	.LVL50:
+ 190:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 888              		.loc 1 190 6 view .LVU256
+ 889 0052 30B9     		cbnz	r0, .L65
+ 194:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 890              		.loc 1 194 1 view .LVU257
+ 891 0054 17B0     		add	sp, sp, #92
+ 892              	.LCFI17:
+ 893              		.cfi_remember_state
+ 894              		.cfi_def_cfa_offset 4
+ 895              		@ sp needed
+ 896 0056 5DF804FB 		ldr	pc, [sp], #4
+ 897              	.L63:
+ARM GAS  /var/tmp//ccecwV2c.s 			page 31
+
+
+ 898              	.LCFI18:
+ 899              		.cfi_restore_state
+ 165:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 900              		.loc 1 165 5 is_stmt 1 view .LVU258
+ 901 005a FFF7FEFF 		bl	Error_Handler
+ 902              	.LVL51:
+ 903              	.L64:
+ 178:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 904              		.loc 1 178 5 view .LVU259
+ 905 005e FFF7FEFF 		bl	Error_Handler
+ 906              	.LVL52:
+ 907              	.L65:
+ 192:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   }
+ 908              		.loc 1 192 5 view .LVU260
+ 909 0062 FFF7FEFF 		bl	Error_Handler
+ 910              	.LVL53:
+ 911              		.cfi_endproc
+ 912              	.LFE300:
+ 914              		.section	.text.main,"ax",%progbits
+ 915              		.align	1
+ 916              		.global	main
+ 917              		.syntax unified
+ 918              		.thumb
+ 919              		.thumb_func
+ 921              	main:
+ 922              	.LFB299:
+ 103:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 923              		.loc 1 103 1 view -0
+ 924              		.cfi_startproc
+ 925              		@ Volatile: function does not return.
+ 926              		@ args = 0, pretend = 0, frame = 0
+ 927              		@ frame_needed = 0, uses_anonymous_args = 0
+ 928 0000 08B5     		push	{r3, lr}
+ 929              	.LCFI19:
+ 930              		.cfi_def_cfa_offset 8
+ 931              		.cfi_offset 3, -8
+ 932              		.cfi_offset 14, -4
+ 112:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 933              		.loc 1 112 3 view .LVU262
+ 934 0002 FFF7FEFF 		bl	HAL_Init
+ 935              	.LVL54:
+ 119:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 936              		.loc 1 119 3 view .LVU263
+ 937 0006 FFF7FEFF 		bl	SystemClock_Config
+ 938              	.LVL55:
+ 126:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   MX_TIM1_Init();
+ 939              		.loc 1 126 3 view .LVU264
+ 940 000a FFF7FEFF 		bl	MX_GPIO_Init
+ 941              	.LVL56:
+ 127:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   MX_TIM2_Init();
+ 942              		.loc 1 127 3 view .LVU265
+ 943 000e FFF7FEFF 		bl	MX_TIM1_Init
+ 944              	.LVL57:
+ 128:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   MX_USART1_UART_Init();
+ 945              		.loc 1 128 3 view .LVU266
+ 946 0012 FFF7FEFF 		bl	MX_TIM2_Init
+ 947              	.LVL58:
+ARM GAS  /var/tmp//ccecwV2c.s 			page 32
+
+
+ 129:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE BEGIN 2 */
+ 948              		.loc 1 129 3 view .LVU267
+ 949 0016 FFF7FEFF 		bl	MX_USART1_UART_Init
+ 950              	.LVL59:
+ 131:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+ 951              		.loc 1 131 3 view .LVU268
+ 952 001a 0E4C     		ldr	r4, .L69
+ 953 001c 0821     		movs	r1, #8
+ 954 001e 2046     		mov	r0, r4
+ 955 0020 FFF7FEFF 		bl	HAL_TIM_PWM_Start
+ 956              	.LVL60:
+ 132:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c **** 
+ 957              		.loc 1 132 3 view .LVU269
+ 958 0024 0021     		movs	r1, #0
+ 959 0026 2046     		mov	r0, r4
+ 960 0028 FFF7FEFF 		bl	HAL_TIM_PWM_Start
+ 961              	.LVL61:
+ 134:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   LED_On(GPIOB, GPIO_PIN_0);
+ 962              		.loc 1 134 3 view .LVU270
+ 963 002c 0A4C     		ldr	r4, .L69+4
+ 964 002e 0121     		movs	r1, #1
+ 965 0030 2046     		mov	r0, r4
+ 966 0032 FFF7FEFF 		bl	LED_Off
+ 967              	.LVL62:
+ 135:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   /* USER CODE END 2 */
+ 968              		.loc 1 135 3 view .LVU271
+ 969 0036 0121     		movs	r1, #1
+ 970 0038 2046     		mov	r0, r4
+ 971 003a FFF7FEFF 		bl	LED_On
+ 972              	.LVL63:
+ 973              	.L67:
+ 140:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 974              		.loc 1 140 3 discriminator 1 view .LVU272
+ 142:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     PWM_B_SetDuty(40);
+ 975              		.loc 1 142 5 discriminator 1 view .LVU273
+ 976 003e 2820     		movs	r0, #40
+ 977 0040 FFF7FEFF 		bl	PWM_A_SetDuty
+ 978              	.LVL64:
+ 143:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     HAL_Delay(500);
+ 979              		.loc 1 143 5 discriminator 1 view .LVU274
+ 980 0044 2820     		movs	r0, #40
+ 981 0046 FFF7FEFF 		bl	PWM_B_SetDuty
+ 982              	.LVL65:
+ 144:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****     /* USER CODE END WHILE */
+ 983              		.loc 1 144 5 discriminator 1 view .LVU275
+ 984 004a 4FF4FA70 		mov	r0, #500
+ 985 004e FFF7FEFF 		bl	HAL_Delay
+ 986              	.LVL66:
+ 140:/Users/jenniferli/Desktop/LHR/PS-MotorControllerInterfacePCB/Firmware/Apps/Src/main.c ****   {
+ 987              		.loc 1 140 9 discriminator 1 view .LVU276
+ 988 0052 F4E7     		b	.L67
+ 989              	.L70:
+ 990              		.align	2
+ 991              	.L69:
+ 992 0054 00000000 		.word	htim2
+ 993 0058 00040048 		.word	1207960576
+ 994              		.cfi_endproc
+ARM GAS  /var/tmp//ccecwV2c.s 			page 33
+
+
+ 995              	.LFE299:
+ 997              		.global	huart1
+ 998              		.section	.bss.huart1,"aw",%nobits
+ 999              		.align	2
+ 1002              	huart1:
+ 1003 0000 00000000 		.space	136
+ 1003      00000000 
+ 1003      00000000 
+ 1003      00000000 
+ 1003      00000000 
+ 1004              		.global	htim2
+ 1005              		.section	.bss.htim2,"aw",%nobits
+ 1006              		.align	2
+ 1009              	htim2:
+ 1010 0000 00000000 		.space	76
+ 1010      00000000 
+ 1010      00000000 
+ 1010      00000000 
+ 1010      00000000 
+ 1011              		.text
+ 1012              	.Letext0:
+ 1013              		.file 3 "/nix/store/wlyks4zmr4x2sj2nrg9xhhdmjyhqk7ql-gcc-arm-embedded-12.2.rel1/arm-none-eabi/incl
+ 1014              		.file 4 "/nix/store/wlyks4zmr4x2sj2nrg9xhhdmjyhqk7ql-gcc-arm-embedded-12.2.rel1/arm-none-eabi/incl
+ 1015              		.file 5 "stm/stm32l4xx/CMSIS/Device/ST/STM32L4xx/Include/stm32l431xx.h"
+ 1016              		.file 6 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 1017              		.file 7 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h"
+ 1018              		.file 8 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 1019              		.file 9 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
+ 1020              		.file 10 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim.h"
+ 1021              		.file 11 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
+ 1022              		.file 12 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h"
+ 1023              		.file 13 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h"
+ 1024              		.file 14 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ 1025              		.file 15 "<built-in>"
+ARM GAS  /var/tmp//ccecwV2c.s 			page 34
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+/var/tmp//ccecwV2c.s:21     .text.MX_GPIO_Init:0000000000000000 $t
+/var/tmp//ccecwV2c.s:26     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
+/var/tmp//ccecwV2c.s:140    .text.MX_GPIO_Init:0000000000000084 $d
+/var/tmp//ccecwV2c.s:146    .text.HAL_TIM_MspPostInit:0000000000000000 $t
+/var/tmp//ccecwV2c.s:152    .text.HAL_TIM_MspPostInit:0000000000000000 HAL_TIM_MspPostInit
+/var/tmp//ccecwV2c.s:166    .text.PWM_A_SetDuty:0000000000000000 $t
+/var/tmp//ccecwV2c.s:172    .text.PWM_A_SetDuty:0000000000000000 PWM_A_SetDuty
+/var/tmp//ccecwV2c.s:213    .text.PWM_A_SetDuty:000000000000001c $d
+/var/tmp//ccecwV2c.s:1009   .bss.htim2:0000000000000000 htim2
+/var/tmp//ccecwV2c.s:219    .text.PWM_B_SetDuty:0000000000000000 $t
+/var/tmp//ccecwV2c.s:225    .text.PWM_B_SetDuty:0000000000000000 PWM_B_SetDuty
+/var/tmp//ccecwV2c.s:266    .text.PWM_B_SetDuty:000000000000001c $d
+/var/tmp//ccecwV2c.s:272    .text.LED_On:0000000000000000 $t
+/var/tmp//ccecwV2c.s:278    .text.LED_On:0000000000000000 LED_On
+/var/tmp//ccecwV2c.s:301    .text.LED_Off:0000000000000000 $t
+/var/tmp//ccecwV2c.s:307    .text.LED_Off:0000000000000000 LED_Off
+/var/tmp//ccecwV2c.s:330    .text.LED_Toggle:0000000000000000 $t
+/var/tmp//ccecwV2c.s:336    .text.LED_Toggle:0000000000000000 LED_Toggle
+/var/tmp//ccecwV2c.s:358    .text.Error_Handler:0000000000000000 $t
+/var/tmp//ccecwV2c.s:364    .text.Error_Handler:0000000000000000 Error_Handler
+/var/tmp//ccecwV2c.s:396    .text.MX_TIM1_Init:0000000000000000 $t
+/var/tmp//ccecwV2c.s:401    .text.MX_TIM1_Init:0000000000000000 MX_TIM1_Init
+/var/tmp//ccecwV2c.s:521    .text.MX_TIM1_Init:000000000000006c $d
+/var/tmp//ccecwV2c.s:527    .text.MX_TIM2_Init:0000000000000000 $t
+/var/tmp//ccecwV2c.s:532    .text.MX_TIM2_Init:0000000000000000 MX_TIM2_Init
+/var/tmp//ccecwV2c.s:722    .text.MX_TIM2_Init:00000000000000c4 $d
+/var/tmp//ccecwV2c.s:727    .text.MX_USART1_UART_Init:0000000000000000 $t
+/var/tmp//ccecwV2c.s:732    .text.MX_USART1_UART_Init:0000000000000000 MX_USART1_UART_Init
+/var/tmp//ccecwV2c.s:793    .text.MX_USART1_UART_Init:0000000000000030 $d
+/var/tmp//ccecwV2c.s:1002   .bss.huart1:0000000000000000 huart1
+/var/tmp//ccecwV2c.s:799    .text.SystemClock_Config:0000000000000000 $t
+/var/tmp//ccecwV2c.s:805    .text.SystemClock_Config:0000000000000000 SystemClock_Config
+/var/tmp//ccecwV2c.s:915    .text.main:0000000000000000 $t
+/var/tmp//ccecwV2c.s:921    .text.main:0000000000000000 main
+/var/tmp//ccecwV2c.s:992    .text.main:0000000000000054 $d
+/var/tmp//ccecwV2c.s:999    .bss.huart1:0000000000000000 $d
+/var/tmp//ccecwV2c.s:1006   .bss.htim2:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+HAL_GPIO_Init
+HAL_GPIO_TogglePin
+HAL_TIM_IC_Init
+HAL_TIMEx_MasterConfigSynchronization
+HAL_TIM_IC_ConfigChannel
+htim1
+HAL_TIM_OC_Init
+HAL_TIM_PWM_Init
+HAL_TIM_OC_ConfigChannel
+HAL_TIM_PWM_ConfigChannel
+HAL_UART_Init
+memset
+HAL_PWREx_ControlVoltageScaling
+HAL_RCC_OscConfig
+HAL_RCC_ClockConfig
+ARM GAS  /var/tmp//ccecwV2c.s 			page 35
+
+
+HAL_Init
+HAL_TIM_PWM_Start
+HAL_Delay

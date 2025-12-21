@@ -1,0 +1,612 @@
+ARM GAS  /var/tmp//cczkM0xs.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"stm32l4xx_hal_init.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "stm/stm32l4xx/stm32l4xx_hal_init.c"
+  20              		.section	.text.Error_Handler,"ax",%progbits
+  21              		.align	1
+  22              		.weak	Error_Handler
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	Error_Handler:
+  28              	.LFB288:
+   1:stm/stm32l4xx/stm32l4xx_hal_init.c **** #include "stm32l4xx_hal.h"
+   2:stm/stm32l4xx/stm32l4xx_hal_init.c **** 
+   3:stm/stm32l4xx/stm32l4xx_hal_init.c **** /**
+   4:stm/stm32l4xx/stm32l4xx_hal_init.c ****  * @brief This function is executed in case of error occurrence.
+   5:stm/stm32l4xx/stm32l4xx_hal_init.c ****  * 
+   6:stm/stm32l4xx/stm32l4xx_hal_init.c ****  */
+   7:stm/stm32l4xx/stm32l4xx_hal_init.c **** __weak void Error_Handler(void) {
+  29              		.loc 1 7 33 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+   8:stm/stm32l4xx/stm32l4xx_hal_init.c ****   __disable_irq();
+  34              		.loc 1 8 3 view .LVU1
+  35              	.LBB4:
+  36              	.LBI4:
+  37              		.file 2 "stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h"
+   1:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
+   2:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
+   3:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
+   4:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * @version  V5.2.0
+   5:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * @date     08. May 2019
+   6:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  ******************************************************************************/
+   7:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /*
+   8:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * Copyright (c) 2009-2019 Arm Limited. All rights reserved.
+   9:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  *
+  10:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * SPDX-License-Identifier: Apache-2.0
+  11:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  *
+  12:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
+  13:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * not use this file except in compliance with the License.
+ARM GAS  /var/tmp//cczkM0xs.s 			page 2
+
+
+  14:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * You may obtain a copy of the License at
+  15:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  *
+  16:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * www.apache.org/licenses/LICENSE-2.0
+  17:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  *
+  18:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * Unless required by applicable law or agreed to in writing, software
+  19:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+  20:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  21:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * See the License for the specific language governing permissions and
+  22:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  * limitations under the License.
+  23:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  */
+  24:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+  25:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __CMSIS_GCC_H
+  26:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_H
+  27:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+  28:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /* ignore some GCC warnings */
+  29:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic push
+  30:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
+  31:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
+  32:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
+  33:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+  34:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /* Fallback for __has_builtin */
+  35:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __has_builtin
+  36:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __has_builtin(x) (0)
+  37:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  38:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+  39:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /* CMSIS compiler specific defines */
+  40:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ASM
+  41:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __ASM                                  __asm
+  42:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  43:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __INLINE
+  44:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __INLINE                               inline
+  45:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  46:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_INLINE
+  47:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_INLINE                        static inline
+  48:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  49:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __STATIC_FORCEINLINE                 
+  50:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_FORCEINLINE                   __attribute__((always_inline)) static inline
+  51:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif                                           
+  52:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __NO_RETURN
+  53:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __NO_RETURN                            __attribute__((__noreturn__))
+  54:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  55:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __USED
+  56:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __USED                                 __attribute__((used))
+  57:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  58:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __WEAK
+  59:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
+  60:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  61:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED
+  62:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED                               __attribute__((packed, aligned(1)))
+  63:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  64:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_STRUCT
+  65:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_STRUCT                        struct __attribute__((packed, aligned(1)))
+  66:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  67:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED_UNION
+  68:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
+  69:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  70:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
+ARM GAS  /var/tmp//cczkM0xs.s 			page 3
+
+
+  71:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  72:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  73:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  74:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   struct __attribute__((packed)) T_UINT32 { uint32_t v; };
+  75:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  76:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32(x)                  (((struct T_UINT32 *)(x))->v)
+  77:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  78:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_WRITE
+  79:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  80:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  81:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  82:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_WRITE { uint16_t v; };
+  83:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  84:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_WRITE(addr, val)    (void)((((struct T_UINT16_WRITE *)(void *)(addr))-
+  85:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  86:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_READ
+  87:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  88:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  89:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  90:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_READ { uint16_t v; };
+  91:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  92:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_READ(addr)          (((const struct T_UINT16_READ *)(const void *)(add
+  93:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+  94:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_WRITE
+  95:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  96:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  97:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  98:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_WRITE { uint32_t v; };
+  99:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 100:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_WRITE(addr, val)    (void)((((struct T_UINT32_WRITE *)(void *)(addr))-
+ 101:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 102:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_READ
+ 103:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+ 104:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+ 105:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+ 106:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_READ { uint32_t v; };
+ 107:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 108:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_READ(addr)          (((const struct T_UINT32_READ *)(const void *)(add
+ 109:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 110:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ALIGNED
+ 111:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __ALIGNED(x)                           __attribute__((aligned(x)))
+ 112:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 113:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __RESTRICT
+ 114:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __RESTRICT                             __restrict
+ 115:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 116:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef   __COMPILER_BARRIER
+ 117:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   #define __COMPILER_BARRIER()                   __ASM volatile("":::"memory")
+ 118:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 119:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 120:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /* #########################  Startup and Lowlevel Init  ######################## */
+ 121:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 122:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __PROGRAM_START
+ 123:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 124:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /**
+ 125:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \brief   Initializes data and bss sections
+ 126:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \details This default implementations initialized all data and additional bss
+ 127:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****            sections relying on .copy.table and .zero.table specified properly
+ARM GAS  /var/tmp//cczkM0xs.s 			page 4
+
+
+ 128:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****            in the used linker script.
+ 129:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   
+ 130:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  */
+ 131:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE __NO_RETURN void __cmsis_start(void)
+ 132:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** {
+ 133:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   extern void _start(void) __NO_RETURN;
+ 134:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   
+ 135:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   typedef struct {
+ 136:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     uint32_t const* src;
+ 137:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     uint32_t* dest;
+ 138:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     uint32_t  wlen;
+ 139:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   } __copy_table_t;
+ 140:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   
+ 141:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   typedef struct {
+ 142:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     uint32_t* dest;
+ 143:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     uint32_t  wlen;
+ 144:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   } __zero_table_t;
+ 145:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   
+ 146:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   extern const __copy_table_t __copy_table_start__;
+ 147:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   extern const __copy_table_t __copy_table_end__;
+ 148:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   extern const __zero_table_t __zero_table_start__;
+ 149:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   extern const __zero_table_t __zero_table_end__;
+ 150:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 151:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   for (__copy_table_t const* pTable = &__copy_table_start__; pTable < &__copy_table_end__; ++pTable
+ 152:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     for(uint32_t i=0u; i<pTable->wlen; ++i) {
+ 153:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****       pTable->dest[i] = pTable->src[i];
+ 154:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     }
+ 155:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   }
+ 156:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  
+ 157:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   for (__zero_table_t const* pTable = &__zero_table_start__; pTable < &__zero_table_end__; ++pTable
+ 158:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     for(uint32_t i=0u; i<pTable->wlen; ++i) {
+ 159:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****       pTable->dest[i] = 0u;
+ 160:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     }
+ 161:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   }
+ 162:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  
+ 163:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   _start();
+ 164:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** }
+ 165:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   
+ 166:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __PROGRAM_START           __cmsis_start
+ 167:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 168:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 169:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __INITIAL_SP
+ 170:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __INITIAL_SP              __StackTop
+ 171:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 172:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 173:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __STACK_LIMIT
+ 174:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __STACK_LIMIT             __StackLimit
+ 175:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 176:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 177:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __VECTOR_TABLE
+ 178:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __VECTOR_TABLE            __Vectors
+ 179:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 180:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 181:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #ifndef __VECTOR_TABLE_ATTRIBUTE
+ 182:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #define __VECTOR_TABLE_ATTRIBUTE  __attribute((used, section(".vectors")))
+ 183:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** #endif
+ 184:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ARM GAS  /var/tmp//cczkM0xs.s 			page 5
+
+
+ 185:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /* ###########################  Core Function Access  ########################### */
+ 186:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /** \ingroup  CMSIS_Core_FunctionInterface
+ 187:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
+ 188:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   @{
+ 189:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  */
+ 190:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 191:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /**
+ 192:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
+ 193:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
+ 194:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 195:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  */
+ 196:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __enable_irq(void)
+ 197:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** {
+ 198:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsie i" : : : "memory");
+ 199:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** }
+ 200:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 201:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** 
+ 202:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** /**
+ 203:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
+ 204:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
+ 205:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 206:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****  */
+ 207:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
+  38              		.loc 2 207 27 view .LVU2
+  39              	.LBB5:
+ 208:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h **** {
+ 209:stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
+  40              		.loc 2 209 3 view .LVU3
+  41              		.syntax unified
+  42              	@ 209 "stm/stm32l4xx/CMSIS/Include/cmsis_gcc.h" 1
+  43 0000 72B6     		cpsid i
+  44              	@ 0 "" 2
+  45              		.thumb
+  46              		.syntax unified
+  47              	.L2:
+  48              	.LBE5:
+  49              	.LBE4:
+   9:stm/stm32l4xx/stm32l4xx_hal_init.c ****   while (1) {
+  50              		.loc 1 9 3 discriminator 1 view .LVU4
+  10:stm/stm32l4xx/stm32l4xx_hal_init.c ****   }
+  51              		.loc 1 10 3 discriminator 1 view .LVU5
+   9:stm/stm32l4xx/stm32l4xx_hal_init.c ****   while (1) {
+  52              		.loc 1 9 9 discriminator 1 view .LVU6
+  53 0002 FEE7     		b	.L2
+  54              		.cfi_endproc
+  55              	.LFE288:
+  57              		.section	.text.HAL_MspInit,"ax",%progbits
+  58              		.align	1
+  59              		.global	HAL_MspInit
+  60              		.syntax unified
+  61              		.thumb
+  62              		.thumb_func
+  64              	HAL_MspInit:
+  65              	.LFB289:
+  11:stm/stm32l4xx/stm32l4xx_hal_init.c **** }
+  12:stm/stm32l4xx/stm32l4xx_hal_init.c **** 
+  13:stm/stm32l4xx/stm32l4xx_hal_init.c **** /**
+ARM GAS  /var/tmp//cczkM0xs.s 			page 6
+
+
+  14:stm/stm32l4xx/stm32l4xx_hal_init.c ****  * @brief Initializes the Global MSP.
+  15:stm/stm32l4xx/stm32l4xx_hal_init.c ****  * 
+  16:stm/stm32l4xx/stm32l4xx_hal_init.c ****  */
+  17:stm/stm32l4xx/stm32l4xx_hal_init.c **** void HAL_MspInit(void){
+  66              		.loc 1 17 23 view -0
+  67              		.cfi_startproc
+  68              		@ args = 0, pretend = 0, frame = 8
+  69              		@ frame_needed = 0, uses_anonymous_args = 0
+  70 0000 00B5     		push	{lr}
+  71              	.LCFI0:
+  72              		.cfi_def_cfa_offset 4
+  73              		.cfi_offset 14, -4
+  74 0002 83B0     		sub	sp, sp, #12
+  75              	.LCFI1:
+  76              		.cfi_def_cfa_offset 16
+  18:stm/stm32l4xx/stm32l4xx_hal_init.c ****   __HAL_RCC_SYSCFG_CLK_ENABLE();
+  77              		.loc 1 18 3 view .LVU8
+  78              	.LBB6:
+  79              		.loc 1 18 3 view .LVU9
+  80              		.loc 1 18 3 view .LVU10
+  81 0004 0D4B     		ldr	r3, .L5
+  82 0006 1A6E     		ldr	r2, [r3, #96]
+  83 0008 42F00102 		orr	r2, r2, #1
+  84 000c 1A66     		str	r2, [r3, #96]
+  85              		.loc 1 18 3 view .LVU11
+  86 000e 1A6E     		ldr	r2, [r3, #96]
+  87 0010 02F00102 		and	r2, r2, #1
+  88 0014 0092     		str	r2, [sp]
+  89              		.loc 1 18 3 view .LVU12
+  90 0016 009A     		ldr	r2, [sp]
+  91              	.LBE6:
+  92              		.loc 1 18 3 view .LVU13
+  19:stm/stm32l4xx/stm32l4xx_hal_init.c ****   __HAL_RCC_PWR_CLK_ENABLE();
+  93              		.loc 1 19 3 view .LVU14
+  94              	.LBB7:
+  95              		.loc 1 19 3 view .LVU15
+  96              		.loc 1 19 3 view .LVU16
+  97 0018 9A6D     		ldr	r2, [r3, #88]
+  98 001a 42F08052 		orr	r2, r2, #268435456
+  99 001e 9A65     		str	r2, [r3, #88]
+ 100              		.loc 1 19 3 view .LVU17
+ 101 0020 9B6D     		ldr	r3, [r3, #88]
+ 102 0022 03F08053 		and	r3, r3, #268435456
+ 103 0026 0193     		str	r3, [sp, #4]
+ 104              		.loc 1 19 3 view .LVU18
+ 105 0028 019B     		ldr	r3, [sp, #4]
+ 106              	.LBE7:
+ 107              		.loc 1 19 3 view .LVU19
+  20:stm/stm32l4xx/stm32l4xx_hal_init.c **** 
+  21:stm/stm32l4xx/stm32l4xx_hal_init.c ****   /* System interrupt init*/
+  22:stm/stm32l4xx/stm32l4xx_hal_init.c ****   /* PendSV_IRQn interrupt configuration */
+  23:stm/stm32l4xx/stm32l4xx_hal_init.c ****   HAL_NVIC_SetPriority(PendSV_IRQn, 15, 0);
+ 108              		.loc 1 23 3 view .LVU20
+ 109 002a 0022     		movs	r2, #0
+ 110 002c 0F21     		movs	r1, #15
+ 111 002e 6FF00100 		mvn	r0, #1
+ 112 0032 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ARM GAS  /var/tmp//cczkM0xs.s 			page 7
+
+
+ 113              	.LVL0:
+  24:stm/stm32l4xx/stm32l4xx_hal_init.c **** }
+ 114              		.loc 1 24 1 is_stmt 0 view .LVU21
+ 115 0036 03B0     		add	sp, sp, #12
+ 116              	.LCFI2:
+ 117              		.cfi_def_cfa_offset 4
+ 118              		@ sp needed
+ 119 0038 5DF804FB 		ldr	pc, [sp], #4
+ 120              	.L6:
+ 121              		.align	2
+ 122              	.L5:
+ 123 003c 00100240 		.word	1073876992
+ 124              		.cfi_endproc
+ 125              	.LFE289:
+ 127              		.section	.text.SystemClock_Config,"ax",%progbits
+ 128              		.align	1
+ 129              		.weak	SystemClock_Config
+ 130              		.syntax unified
+ 131              		.thumb
+ 132              		.thumb_func
+ 134              	SystemClock_Config:
+ 135              	.LFB290:
+  25:stm/stm32l4xx/stm32l4xx_hal_init.c **** 
+  26:stm/stm32l4xx/stm32l4xx_hal_init.c **** /**
+  27:stm/stm32l4xx/stm32l4xx_hal_init.c ****  * @brief System Clock Configuration
+  28:stm/stm32l4xx/stm32l4xx_hal_init.c ****  * 
+  29:stm/stm32l4xx/stm32l4xx_hal_init.c ****  */
+  30:stm/stm32l4xx/stm32l4xx_hal_init.c **** __weak void SystemClock_Config(void)
+  31:stm/stm32l4xx/stm32l4xx_hal_init.c **** {
+ 136              		.loc 1 31 1 is_stmt 1 view -0
+ 137              		.cfi_startproc
+ 138              		@ args = 0, pretend = 0, frame = 88
+ 139              		@ frame_needed = 0, uses_anonymous_args = 0
+ 140 0000 00B5     		push	{lr}
+ 141              	.LCFI3:
+ 142              		.cfi_def_cfa_offset 4
+ 143              		.cfi_offset 14, -4
+ 144 0002 97B0     		sub	sp, sp, #92
+ 145              	.LCFI4:
+ 146              		.cfi_def_cfa_offset 96
+  32:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+ 147              		.loc 1 32 3 view .LVU23
+ 148              		.loc 1 32 22 is_stmt 0 view .LVU24
+ 149 0004 4422     		movs	r2, #68
+ 150 0006 0021     		movs	r1, #0
+ 151 0008 05A8     		add	r0, sp, #20
+ 152 000a FFF7FEFF 		bl	memset
+ 153              	.LVL1:
+  33:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ 154              		.loc 1 33 3 is_stmt 1 view .LVU25
+ 155              		.loc 1 33 22 is_stmt 0 view .LVU26
+ 156 000e 0023     		movs	r3, #0
+ 157 0010 0093     		str	r3, [sp]
+ 158 0012 0193     		str	r3, [sp, #4]
+ 159 0014 0293     		str	r3, [sp, #8]
+ 160 0016 0393     		str	r3, [sp, #12]
+ 161 0018 0493     		str	r3, [sp, #16]
+ARM GAS  /var/tmp//cczkM0xs.s 			page 8
+
+
+  34:stm/stm32l4xx/stm32l4xx_hal_init.c **** 
+  35:stm/stm32l4xx/stm32l4xx_hal_init.c ****   /** Configure the main internal regulator output voltage
+  36:stm/stm32l4xx/stm32l4xx_hal_init.c ****   */
+  37:stm/stm32l4xx/stm32l4xx_hal_init.c ****   if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1) != HAL_OK)
+ 162              		.loc 1 37 3 is_stmt 1 view .LVU27
+ 163              		.loc 1 37 7 is_stmt 0 view .LVU28
+ 164 001a 4FF40070 		mov	r0, #512
+ 165 001e FFF7FEFF 		bl	HAL_PWREx_ControlVoltageScaling
+ 166              	.LVL2:
+ 167              		.loc 1 37 6 view .LVU29
+ 168 0022 28BB     		cbnz	r0, .L12
+ 169              	.L8:
+  38:stm/stm32l4xx/stm32l4xx_hal_init.c ****   {
+  39:stm/stm32l4xx/stm32l4xx_hal_init.c ****     Error_Handler();
+  40:stm/stm32l4xx/stm32l4xx_hal_init.c ****   }
+  41:stm/stm32l4xx/stm32l4xx_hal_init.c **** 
+  42:stm/stm32l4xx/stm32l4xx_hal_init.c ****   /** Initializes the RCC Oscillators according to the specified parameters
+  43:stm/stm32l4xx/stm32l4xx_hal_init.c ****   * in the RCC_OscInitTypeDef structure.
+  44:stm/stm32l4xx/stm32l4xx_hal_init.c ****   */
+  45:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
+ 170              		.loc 1 45 3 is_stmt 1 view .LVU30
+ 171              		.loc 1 45 36 is_stmt 0 view .LVU31
+ 172 0024 1023     		movs	r3, #16
+ 173 0026 0593     		str	r3, [sp, #20]
+  46:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
+ 174              		.loc 1 46 3 is_stmt 1 view .LVU32
+ 175              		.loc 1 46 30 is_stmt 0 view .LVU33
+ 176 0028 0122     		movs	r2, #1
+ 177 002a 0B92     		str	r2, [sp, #44]
+  47:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_OscInitStruct.MSICalibrationValue = 0;
+ 178              		.loc 1 47 3 is_stmt 1 view .LVU34
+ 179              		.loc 1 47 41 is_stmt 0 view .LVU35
+ 180 002c 0023     		movs	r3, #0
+ 181 002e 0C93     		str	r3, [sp, #48]
+  48:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_6;
+ 182              		.loc 1 48 3 is_stmt 1 view .LVU36
+ 183              		.loc 1 48 35 is_stmt 0 view .LVU37
+ 184 0030 6023     		movs	r3, #96
+ 185 0032 0D93     		str	r3, [sp, #52]
+  49:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 186              		.loc 1 49 3 is_stmt 1 view .LVU38
+ 187              		.loc 1 49 34 is_stmt 0 view .LVU39
+ 188 0034 0223     		movs	r3, #2
+ 189 0036 0F93     		str	r3, [sp, #60]
+  50:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_MSI;
+ 190              		.loc 1 50 3 is_stmt 1 view .LVU40
+ 191              		.loc 1 50 35 is_stmt 0 view .LVU41
+ 192 0038 1092     		str	r2, [sp, #64]
+  51:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_OscInitStruct.PLL.PLLM = 1;
+ 193              		.loc 1 51 3 is_stmt 1 view .LVU42
+ 194              		.loc 1 51 30 is_stmt 0 view .LVU43
+ 195 003a 1192     		str	r2, [sp, #68]
+  52:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_OscInitStruct.PLL.PLLN = 40;
+ 196              		.loc 1 52 3 is_stmt 1 view .LVU44
+ 197              		.loc 1 52 30 is_stmt 0 view .LVU45
+ 198 003c 2822     		movs	r2, #40
+ 199 003e 1292     		str	r2, [sp, #72]
+ARM GAS  /var/tmp//cczkM0xs.s 			page 9
+
+
+  53:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV7;
+ 200              		.loc 1 53 3 is_stmt 1 view .LVU46
+ 201              		.loc 1 53 30 is_stmt 0 view .LVU47
+ 202 0040 0722     		movs	r2, #7
+ 203 0042 1392     		str	r2, [sp, #76]
+  54:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+ 204              		.loc 1 54 3 is_stmt 1 view .LVU48
+ 205              		.loc 1 54 30 is_stmt 0 view .LVU49
+ 206 0044 1493     		str	r3, [sp, #80]
+  55:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
+ 207              		.loc 1 55 3 is_stmt 1 view .LVU50
+ 208              		.loc 1 55 30 is_stmt 0 view .LVU51
+ 209 0046 1593     		str	r3, [sp, #84]
+  56:stm/stm32l4xx/stm32l4xx_hal_init.c ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 210              		.loc 1 56 3 is_stmt 1 view .LVU52
+ 211              		.loc 1 56 7 is_stmt 0 view .LVU53
+ 212 0048 05A8     		add	r0, sp, #20
+ 213 004a FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 214              	.LVL3:
+ 215              		.loc 1 56 6 view .LVU54
+ 216 004e 90B9     		cbnz	r0, .L13
+ 217              	.L9:
+  57:stm/stm32l4xx/stm32l4xx_hal_init.c ****   {
+  58:stm/stm32l4xx/stm32l4xx_hal_init.c ****     Error_Handler();
+  59:stm/stm32l4xx/stm32l4xx_hal_init.c ****   }
+  60:stm/stm32l4xx/stm32l4xx_hal_init.c **** 
+  61:stm/stm32l4xx/stm32l4xx_hal_init.c ****   /** Initializes the CPU, AHB and APB buses clocks
+  62:stm/stm32l4xx/stm32l4xx_hal_init.c ****   */
+  63:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+ 218              		.loc 1 63 3 is_stmt 1 view .LVU55
+ 219              		.loc 1 63 31 is_stmt 0 view .LVU56
+ 220 0050 0F23     		movs	r3, #15
+ 221 0052 0093     		str	r3, [sp]
+  64:stm/stm32l4xx/stm32l4xx_hal_init.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+  65:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+ 222              		.loc 1 65 3 is_stmt 1 view .LVU57
+ 223              		.loc 1 65 34 is_stmt 0 view .LVU58
+ 224 0054 0323     		movs	r3, #3
+ 225 0056 0193     		str	r3, [sp, #4]
+  66:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 226              		.loc 1 66 3 is_stmt 1 view .LVU59
+ 227              		.loc 1 66 35 is_stmt 0 view .LVU60
+ 228 0058 0023     		movs	r3, #0
+ 229 005a 0293     		str	r3, [sp, #8]
+  67:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 230              		.loc 1 67 3 is_stmt 1 view .LVU61
+ 231              		.loc 1 67 36 is_stmt 0 view .LVU62
+ 232 005c 0393     		str	r3, [sp, #12]
+  68:stm/stm32l4xx/stm32l4xx_hal_init.c ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 233              		.loc 1 68 3 is_stmt 1 view .LVU63
+ 234              		.loc 1 68 36 is_stmt 0 view .LVU64
+ 235 005e 0493     		str	r3, [sp, #16]
+  69:stm/stm32l4xx/stm32l4xx_hal_init.c **** 
+  70:stm/stm32l4xx/stm32l4xx_hal_init.c ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
+ 236              		.loc 1 70 3 is_stmt 1 view .LVU65
+ 237              		.loc 1 70 7 is_stmt 0 view .LVU66
+ 238 0060 0421     		movs	r1, #4
+ARM GAS  /var/tmp//cczkM0xs.s 			page 10
+
+
+ 239 0062 6846     		mov	r0, sp
+ 240 0064 FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 241              	.LVL4:
+ 242              		.loc 1 70 6 view .LVU67
+ 243 0068 40B9     		cbnz	r0, .L14
+ 244              	.L7:
+  71:stm/stm32l4xx/stm32l4xx_hal_init.c ****   {
+  72:stm/stm32l4xx/stm32l4xx_hal_init.c ****     Error_Handler();
+  73:stm/stm32l4xx/stm32l4xx_hal_init.c ****   }
+  74:stm/stm32l4xx/stm32l4xx_hal_init.c **** }
+ 245              		.loc 1 74 1 view .LVU68
+ 246 006a 17B0     		add	sp, sp, #92
+ 247              	.LCFI5:
+ 248              		.cfi_remember_state
+ 249              		.cfi_def_cfa_offset 4
+ 250              		@ sp needed
+ 251 006c 5DF804FB 		ldr	pc, [sp], #4
+ 252              	.L12:
+ 253              	.LCFI6:
+ 254              		.cfi_restore_state
+  39:stm/stm32l4xx/stm32l4xx_hal_init.c ****   }
+ 255              		.loc 1 39 5 is_stmt 1 view .LVU69
+ 256 0070 FFF7FEFF 		bl	Error_Handler
+ 257              	.LVL5:
+ 258 0074 D6E7     		b	.L8
+ 259              	.L13:
+  58:stm/stm32l4xx/stm32l4xx_hal_init.c ****   }
+ 260              		.loc 1 58 5 view .LVU70
+ 261 0076 FFF7FEFF 		bl	Error_Handler
+ 262              	.LVL6:
+ 263 007a E9E7     		b	.L9
+ 264              	.L14:
+  72:stm/stm32l4xx/stm32l4xx_hal_init.c ****   }
+ 265              		.loc 1 72 5 view .LVU71
+ 266 007c FFF7FEFF 		bl	Error_Handler
+ 267              	.LVL7:
+ 268              		.loc 1 74 1 is_stmt 0 view .LVU72
+ 269 0080 F3E7     		b	.L7
+ 270              		.cfi_endproc
+ 271              	.LFE290:
+ 273              		.text
+ 274              	.Letext0:
+ 275              		.file 3 "stm/stm32l4xx/CMSIS/Device/ST/STM32L4xx/Include/stm32l431xx.h"
+ 276              		.file 4 "/nix/store/wlyks4zmr4x2sj2nrg9xhhdmjyhqk7ql-gcc-arm-embedded-12.2.rel1/arm-none-eabi/incl
+ 277              		.file 5 "/nix/store/wlyks4zmr4x2sj2nrg9xhhdmjyhqk7ql-gcc-arm-embedded-12.2.rel1/arm-none-eabi/incl
+ 278              		.file 6 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 279              		.file 7 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h"
+ 280              		.file 8 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h"
+ 281              		.file 9 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h"
+ 282              		.file 10 "<built-in>"
+ARM GAS  /var/tmp//cczkM0xs.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32l4xx_hal_init.c
+/var/tmp//cczkM0xs.s:21     .text.Error_Handler:0000000000000000 $t
+/var/tmp//cczkM0xs.s:27     .text.Error_Handler:0000000000000000 Error_Handler
+/var/tmp//cczkM0xs.s:58     .text.HAL_MspInit:0000000000000000 $t
+/var/tmp//cczkM0xs.s:64     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+/var/tmp//cczkM0xs.s:123    .text.HAL_MspInit:000000000000003c $d
+/var/tmp//cczkM0xs.s:128    .text.SystemClock_Config:0000000000000000 $t
+/var/tmp//cczkM0xs.s:134    .text.SystemClock_Config:0000000000000000 SystemClock_Config
+
+UNDEFINED SYMBOLS
+HAL_NVIC_SetPriority
+memset
+HAL_PWREx_ControlVoltageScaling
+HAL_RCC_OscConfig
+HAL_RCC_ClockConfig

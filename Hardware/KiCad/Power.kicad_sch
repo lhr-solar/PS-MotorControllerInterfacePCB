@@ -1138,7 +1138,7 @@
 		(uuid "7c81f148-93a8-488d-a907-48a0e2e0d4a8")
 	)
 	(junction
-		(at 86.36 57.785)
+		(at 86.36 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "86a7202e-ccd8-4aa2-8f5b-b58319882743")
@@ -1211,23 +1211,13 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 57.785) (xy 128.27 62.23)
+			(xy 128.27 58.42) (xy 128.27 62.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "33040f57-efbe-42b0-9b23-9dcfe92a1cbf")
-	)
-	(wire
-		(pts
-			(xy 72.39 57.15) (xy 81.28 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "362e4565-b43c-4fa7-b8a8-992bfc456088")
 	)
 	(wire
 		(pts
@@ -1271,7 +1261,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 57.785) (xy 109.855 57.785)
+			(xy 128.27 58.42) (xy 110.49 58.42)
 		)
 		(stroke
 			(width 0)
@@ -1291,7 +1281,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 57.15) (xy 86.36 57.785)
+			(xy 86.36 57.15) (xy 86.36 58.42)
 		)
 		(stroke
 			(width 0)
@@ -1351,7 +1341,7 @@
 	)
 	(wire
 		(pts
-			(xy 98.425 57.785) (xy 86.36 57.785)
+			(xy 99.06 58.42) (xy 86.36 58.42)
 		)
 		(stroke
 			(width 0)
@@ -1388,6 +1378,16 @@
 			(type default)
 		)
 		(uuid "8ce552ca-3581-4102-a414-6c331c5fff99")
+	)
+	(wire
+		(pts
+			(xy 72.39 57.15) (xy 81.28 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2a6d4c9-ad08-4517-97d6-8cc436accfad")
 	)
 	(wire
 		(pts
@@ -1471,7 +1471,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 57.785) (xy 86.36 72.39)
+			(xy 86.36 58.42) (xy 86.36 72.39)
 		)
 		(stroke
 			(width 0)
@@ -1524,7 +1524,7 @@
 	)
 	(hierarchical_label "VIN"
 		(shape input)
-		(at 76.2 57.15 180)
+		(at 72.39 57.15 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2443,7 +2443,7 @@
 	)
 	(symbol
 		(lib_id "utsvt_power:PSMN8R5-40MSDX")
-		(at 104.14 57.15 0)
+		(at 104.775 57.785 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2453,7 +2453,7 @@
 		(fields_autoplaced yes)
 		(uuid "a5296538-8c17-4440-96e1-16a2042f62d9")
 		(property "Reference" "Q6"
-			(at 104.14 49.53 0)
+			(at 104.775 50.165 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2461,7 +2461,7 @@
 			)
 		)
 		(property "Value" "PSMN8R5-40MSDX"
-			(at 104.14 52.07 0)
+			(at 104.775 52.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2469,7 +2469,7 @@
 			)
 		)
 		(property "Footprint" "UTSVT_Power:PSMN8R5-40MSDX"
-			(at 82.55 152.07 0)
+			(at 83.185 152.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2479,7 +2479,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PSMN8R5-40MSD.pdf"
-			(at 82.55 252.07 0)
+			(at 83.185 252.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2489,7 +2489,7 @@
 			)
 		)
 		(property "Description" "MOSFETs PSMN8R5-40MSD/SOT1210/mLFPAK"
-			(at 103.124 45.72 0)
+			(at 103.759 46.355 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2498,7 +2498,7 @@
 			)
 		)
 		(property "Height" "1"
-			(at 82.55 452.07 0)
+			(at 83.185 452.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2508,7 +2508,7 @@
 			)
 		)
 		(property "Mouser Part Number" "771-PSMN8R5-40MSDX"
-			(at 82.55 552.07 0)
+			(at 83.185 552.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2518,7 +2518,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Nexperia/PSMN8R5-40MSDX?qs=vHuUswq2%252BswjdnYdBdHaPw%3D%3D"
-			(at 82.55 652.07 0)
+			(at 83.185 652.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2528,7 +2528,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Nexperia"
-			(at 82.55 752.07 0)
+			(at 83.185 752.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2538,7 +2538,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "PSMN8R5-40MSDX"
-			(at 82.55 852.07 0)
+			(at 83.185 852.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2548,7 +2548,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 104.14 57.15 0)
+			(at 104.775 57.785 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2557,7 +2557,7 @@
 			)
 		)
 		(property "Description (Customer #)" ""
-			(at 104.14 57.15 0)
+			(at 104.775 57.785 0)
 			(effects
 				(font
 					(size 1.27 1.27)

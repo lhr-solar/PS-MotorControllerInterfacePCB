@@ -1,0 +1,604 @@
+ARM GAS  /var/tmp//ccfhwlVA.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"list.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "middleware/FreeRTOS-Kernel/list.c"
+  20              		.section	.text.vListInitialise,"ax",%progbits
+  21              		.align	1
+  22              		.global	vListInitialise
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	vListInitialise:
+  28              	.LVL0:
+  29              	.LFB5:
+   1:middleware/FreeRTOS-Kernel/list.c **** /*
+   2:middleware/FreeRTOS-Kernel/list.c ****  * FreeRTOS Kernel V11.1.0
+   3:middleware/FreeRTOS-Kernel/list.c ****  * Copyright (C) 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+   4:middleware/FreeRTOS-Kernel/list.c ****  *
+   5:middleware/FreeRTOS-Kernel/list.c ****  * SPDX-License-Identifier: MIT
+   6:middleware/FreeRTOS-Kernel/list.c ****  *
+   7:middleware/FreeRTOS-Kernel/list.c ****  * Permission is hereby granted, free of charge, to any person obtaining a copy of
+   8:middleware/FreeRTOS-Kernel/list.c ****  * this software and associated documentation files (the "Software"), to deal in
+   9:middleware/FreeRTOS-Kernel/list.c ****  * the Software without restriction, including without limitation the rights to
+  10:middleware/FreeRTOS-Kernel/list.c ****  * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+  11:middleware/FreeRTOS-Kernel/list.c ****  * the Software, and to permit persons to whom the Software is furnished to do so,
+  12:middleware/FreeRTOS-Kernel/list.c ****  * subject to the following conditions:
+  13:middleware/FreeRTOS-Kernel/list.c ****  *
+  14:middleware/FreeRTOS-Kernel/list.c ****  * The above copyright notice and this permission notice shall be included in all
+  15:middleware/FreeRTOS-Kernel/list.c ****  * copies or substantial portions of the Software.
+  16:middleware/FreeRTOS-Kernel/list.c ****  *
+  17:middleware/FreeRTOS-Kernel/list.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  18:middleware/FreeRTOS-Kernel/list.c ****  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+  19:middleware/FreeRTOS-Kernel/list.c ****  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  20:middleware/FreeRTOS-Kernel/list.c ****  * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+  21:middleware/FreeRTOS-Kernel/list.c ****  * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  22:middleware/FreeRTOS-Kernel/list.c ****  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  23:middleware/FreeRTOS-Kernel/list.c ****  *
+  24:middleware/FreeRTOS-Kernel/list.c ****  * https://www.FreeRTOS.org
+  25:middleware/FreeRTOS-Kernel/list.c ****  * https://github.com/FreeRTOS
+  26:middleware/FreeRTOS-Kernel/list.c ****  *
+  27:middleware/FreeRTOS-Kernel/list.c ****  */
+  28:middleware/FreeRTOS-Kernel/list.c **** 
+  29:middleware/FreeRTOS-Kernel/list.c **** 
+ARM GAS  /var/tmp//ccfhwlVA.s 			page 2
+
+
+  30:middleware/FreeRTOS-Kernel/list.c **** #include <stdlib.h>
+  31:middleware/FreeRTOS-Kernel/list.c **** 
+  32:middleware/FreeRTOS-Kernel/list.c **** /* Defining MPU_WRAPPERS_INCLUDED_FROM_API_FILE prevents task.h from redefining
+  33:middleware/FreeRTOS-Kernel/list.c ****  * all the API functions to use the MPU wrappers.  That should only be done when
+  34:middleware/FreeRTOS-Kernel/list.c ****  * task.h is included from an application file. */
+  35:middleware/FreeRTOS-Kernel/list.c **** #define MPU_WRAPPERS_INCLUDED_FROM_API_FILE
+  36:middleware/FreeRTOS-Kernel/list.c **** 
+  37:middleware/FreeRTOS-Kernel/list.c **** #include "FreeRTOS.h"
+  38:middleware/FreeRTOS-Kernel/list.c **** #include "list.h"
+  39:middleware/FreeRTOS-Kernel/list.c **** 
+  40:middleware/FreeRTOS-Kernel/list.c **** /* The MPU ports require MPU_WRAPPERS_INCLUDED_FROM_API_FILE to be
+  41:middleware/FreeRTOS-Kernel/list.c ****  * defined for the header files above, but not in this file, in order to
+  42:middleware/FreeRTOS-Kernel/list.c ****  * generate the correct privileged Vs unprivileged linkage and placement. */
+  43:middleware/FreeRTOS-Kernel/list.c **** #undef MPU_WRAPPERS_INCLUDED_FROM_API_FILE
+  44:middleware/FreeRTOS-Kernel/list.c **** 
+  45:middleware/FreeRTOS-Kernel/list.c **** /*-----------------------------------------------------------
+  46:middleware/FreeRTOS-Kernel/list.c **** * PUBLIC LIST API documented in list.h
+  47:middleware/FreeRTOS-Kernel/list.c **** *----------------------------------------------------------*/
+  48:middleware/FreeRTOS-Kernel/list.c **** 
+  49:middleware/FreeRTOS-Kernel/list.c **** void vListInitialise( List_t * const pxList )
+  50:middleware/FreeRTOS-Kernel/list.c **** {
+  30              		.loc 1 50 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  51:middleware/FreeRTOS-Kernel/list.c ****     traceENTER_vListInitialise( pxList );
+  35              		.loc 1 51 41 view .LVU1
+  52:middleware/FreeRTOS-Kernel/list.c **** 
+  53:middleware/FreeRTOS-Kernel/list.c ****     /* The list structure contains a list item which is used to mark the
+  54:middleware/FreeRTOS-Kernel/list.c ****      * end of the list.  To initialise the list the list end is inserted
+  55:middleware/FreeRTOS-Kernel/list.c ****      * as the only list entry. */
+  56:middleware/FreeRTOS-Kernel/list.c ****     pxList->pxIndex = ( ListItem_t * ) &( pxList->xListEnd );
+  36              		.loc 1 56 5 view .LVU2
+  37              		.loc 1 56 40 is_stmt 0 view .LVU3
+  38 0000 00F10803 		add	r3, r0, #8
+  39              		.loc 1 56 21 view .LVU4
+  40 0004 4360     		str	r3, [r0, #4]
+  57:middleware/FreeRTOS-Kernel/list.c **** 
+  58:middleware/FreeRTOS-Kernel/list.c ****     listSET_FIRST_LIST_ITEM_INTEGRITY_CHECK_VALUE( &( pxList->xListEnd ) );
+  41              		.loc 1 58 75 is_stmt 1 view .LVU5
+  59:middleware/FreeRTOS-Kernel/list.c **** 
+  60:middleware/FreeRTOS-Kernel/list.c ****     /* The list end value is the highest possible value in the list to
+  61:middleware/FreeRTOS-Kernel/list.c ****      * ensure it remains at the end of the list. */
+  62:middleware/FreeRTOS-Kernel/list.c ****     pxList->xListEnd.xItemValue = portMAX_DELAY;
+  42              		.loc 1 62 5 view .LVU6
+  43              		.loc 1 62 33 is_stmt 0 view .LVU7
+  44 0006 4FF0FF32 		mov	r2, #-1
+  45 000a 8260     		str	r2, [r0, #8]
+  63:middleware/FreeRTOS-Kernel/list.c **** 
+  64:middleware/FreeRTOS-Kernel/list.c ****     /* The list end next and previous pointers point to itself so we know
+  65:middleware/FreeRTOS-Kernel/list.c ****      * when the list is empty. */
+  66:middleware/FreeRTOS-Kernel/list.c ****     pxList->xListEnd.pxNext = ( ListItem_t * ) &( pxList->xListEnd );
+  46              		.loc 1 66 5 is_stmt 1 view .LVU8
+  47              		.loc 1 66 29 is_stmt 0 view .LVU9
+  48 000c C360     		str	r3, [r0, #12]
+  67:middleware/FreeRTOS-Kernel/list.c ****     pxList->xListEnd.pxPrevious = ( ListItem_t * ) &( pxList->xListEnd );
+ARM GAS  /var/tmp//ccfhwlVA.s 			page 3
+
+
+  49              		.loc 1 67 5 is_stmt 1 view .LVU10
+  50              		.loc 1 67 33 is_stmt 0 view .LVU11
+  51 000e 0361     		str	r3, [r0, #16]
+  68:middleware/FreeRTOS-Kernel/list.c **** 
+  69:middleware/FreeRTOS-Kernel/list.c ****     /* Initialize the remaining fields of xListEnd when it is a proper ListItem_t */
+  70:middleware/FreeRTOS-Kernel/list.c ****     #if ( configUSE_MINI_LIST_ITEM == 0 )
+  71:middleware/FreeRTOS-Kernel/list.c ****     {
+  72:middleware/FreeRTOS-Kernel/list.c ****         pxList->xListEnd.pvOwner = NULL;
+  73:middleware/FreeRTOS-Kernel/list.c ****         pxList->xListEnd.pxContainer = NULL;
+  74:middleware/FreeRTOS-Kernel/list.c ****         listSET_SECOND_LIST_ITEM_INTEGRITY_CHECK_VALUE( &( pxList->xListEnd ) );
+  75:middleware/FreeRTOS-Kernel/list.c ****     }
+  76:middleware/FreeRTOS-Kernel/list.c ****     #endif
+  77:middleware/FreeRTOS-Kernel/list.c **** 
+  78:middleware/FreeRTOS-Kernel/list.c ****     pxList->uxNumberOfItems = ( UBaseType_t ) 0U;
+  52              		.loc 1 78 5 is_stmt 1 view .LVU12
+  53              		.loc 1 78 29 is_stmt 0 view .LVU13
+  54 0010 0023     		movs	r3, #0
+  55 0012 0360     		str	r3, [r0]
+  79:middleware/FreeRTOS-Kernel/list.c **** 
+  80:middleware/FreeRTOS-Kernel/list.c ****     /* Write known values into the list if
+  81:middleware/FreeRTOS-Kernel/list.c ****      * configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES is set to 1. */
+  82:middleware/FreeRTOS-Kernel/list.c ****     listSET_LIST_INTEGRITY_CHECK_1_VALUE( pxList );
+  56              		.loc 1 82 51 is_stmt 1 view .LVU14
+  83:middleware/FreeRTOS-Kernel/list.c ****     listSET_LIST_INTEGRITY_CHECK_2_VALUE( pxList );
+  57              		.loc 1 83 51 view .LVU15
+  84:middleware/FreeRTOS-Kernel/list.c **** 
+  85:middleware/FreeRTOS-Kernel/list.c ****     traceRETURN_vListInitialise();
+  58              		.loc 1 85 34 view .LVU16
+  86:middleware/FreeRTOS-Kernel/list.c **** }
+  59              		.loc 1 86 1 is_stmt 0 view .LVU17
+  60 0014 7047     		bx	lr
+  61              		.cfi_endproc
+  62              	.LFE5:
+  64              		.section	.text.vListInitialiseItem,"ax",%progbits
+  65              		.align	1
+  66              		.global	vListInitialiseItem
+  67              		.syntax unified
+  68              		.thumb
+  69              		.thumb_func
+  71              	vListInitialiseItem:
+  72              	.LVL1:
+  73              	.LFB6:
+  87:middleware/FreeRTOS-Kernel/list.c **** /*-----------------------------------------------------------*/
+  88:middleware/FreeRTOS-Kernel/list.c **** 
+  89:middleware/FreeRTOS-Kernel/list.c **** void vListInitialiseItem( ListItem_t * const pxItem )
+  90:middleware/FreeRTOS-Kernel/list.c **** {
+  74              		.loc 1 90 1 is_stmt 1 view -0
+  75              		.cfi_startproc
+  76              		@ args = 0, pretend = 0, frame = 0
+  77              		@ frame_needed = 0, uses_anonymous_args = 0
+  78              		@ link register save eliminated.
+  91:middleware/FreeRTOS-Kernel/list.c ****     traceENTER_vListInitialiseItem( pxItem );
+  79              		.loc 1 91 45 view .LVU19
+  92:middleware/FreeRTOS-Kernel/list.c **** 
+  93:middleware/FreeRTOS-Kernel/list.c ****     /* Make sure the list item is not recorded as being on a list. */
+  94:middleware/FreeRTOS-Kernel/list.c ****     pxItem->pxContainer = NULL;
+  80              		.loc 1 94 5 view .LVU20
+ARM GAS  /var/tmp//ccfhwlVA.s 			page 4
+
+
+  81              		.loc 1 94 25 is_stmt 0 view .LVU21
+  82 0000 0023     		movs	r3, #0
+  83 0002 0361     		str	r3, [r0, #16]
+  95:middleware/FreeRTOS-Kernel/list.c **** 
+  96:middleware/FreeRTOS-Kernel/list.c ****     /* Write known values into the list item if
+  97:middleware/FreeRTOS-Kernel/list.c ****      * configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES is set to 1. */
+  98:middleware/FreeRTOS-Kernel/list.c ****     listSET_FIRST_LIST_ITEM_INTEGRITY_CHECK_VALUE( pxItem );
+  84              		.loc 1 98 60 is_stmt 1 view .LVU22
+  99:middleware/FreeRTOS-Kernel/list.c ****     listSET_SECOND_LIST_ITEM_INTEGRITY_CHECK_VALUE( pxItem );
+  85              		.loc 1 99 61 view .LVU23
+ 100:middleware/FreeRTOS-Kernel/list.c **** 
+ 101:middleware/FreeRTOS-Kernel/list.c ****     traceRETURN_vListInitialiseItem();
+  86              		.loc 1 101 38 view .LVU24
+ 102:middleware/FreeRTOS-Kernel/list.c **** }
+  87              		.loc 1 102 1 is_stmt 0 view .LVU25
+  88 0004 7047     		bx	lr
+  89              		.cfi_endproc
+  90              	.LFE6:
+  92              		.section	.text.vListInsertEnd,"ax",%progbits
+  93              		.align	1
+  94              		.global	vListInsertEnd
+  95              		.syntax unified
+  96              		.thumb
+  97              		.thumb_func
+  99              	vListInsertEnd:
+ 100              	.LVL2:
+ 101              	.LFB7:
+ 103:middleware/FreeRTOS-Kernel/list.c **** /*-----------------------------------------------------------*/
+ 104:middleware/FreeRTOS-Kernel/list.c **** 
+ 105:middleware/FreeRTOS-Kernel/list.c **** void vListInsertEnd( List_t * const pxList,
+ 106:middleware/FreeRTOS-Kernel/list.c ****                      ListItem_t * const pxNewListItem )
+ 107:middleware/FreeRTOS-Kernel/list.c **** {
+ 102              		.loc 1 107 1 is_stmt 1 view -0
+ 103              		.cfi_startproc
+ 104              		@ args = 0, pretend = 0, frame = 0
+ 105              		@ frame_needed = 0, uses_anonymous_args = 0
+ 106              		@ link register save eliminated.
+ 108:middleware/FreeRTOS-Kernel/list.c ****     ListItem_t * const pxIndex = pxList->pxIndex;
+ 107              		.loc 1 108 5 view .LVU27
+ 108              		.loc 1 108 24 is_stmt 0 view .LVU28
+ 109 0000 4368     		ldr	r3, [r0, #4]
+ 110              	.LVL3:
+ 109:middleware/FreeRTOS-Kernel/list.c **** 
+ 110:middleware/FreeRTOS-Kernel/list.c ****     traceENTER_vListInsertEnd( pxList, pxNewListItem );
+ 111              		.loc 1 110 55 is_stmt 1 view .LVU29
+ 111:middleware/FreeRTOS-Kernel/list.c **** 
+ 112:middleware/FreeRTOS-Kernel/list.c ****     /* Only effective when configASSERT() is also defined, these tests may catch
+ 113:middleware/FreeRTOS-Kernel/list.c ****      * the list data structures being overwritten in memory.  They will not catch
+ 114:middleware/FreeRTOS-Kernel/list.c ****      * data errors caused by incorrect configuration or use of FreeRTOS. */
+ 115:middleware/FreeRTOS-Kernel/list.c ****     listTEST_LIST_INTEGRITY( pxList );
+ 112              		.loc 1 115 38 view .LVU30
+ 116:middleware/FreeRTOS-Kernel/list.c ****     listTEST_LIST_ITEM_INTEGRITY( pxNewListItem );
+ 113              		.loc 1 116 50 view .LVU31
+ 117:middleware/FreeRTOS-Kernel/list.c **** 
+ 118:middleware/FreeRTOS-Kernel/list.c ****     /* Insert a new list item into pxList, but rather than sort the list,
+ 119:middleware/FreeRTOS-Kernel/list.c ****      * makes the new list item the last item to be removed by a call to
+ 120:middleware/FreeRTOS-Kernel/list.c ****      * listGET_OWNER_OF_NEXT_ENTRY(). */
+ARM GAS  /var/tmp//ccfhwlVA.s 			page 5
+
+
+ 121:middleware/FreeRTOS-Kernel/list.c ****     pxNewListItem->pxNext = pxIndex;
+ 114              		.loc 1 121 5 view .LVU32
+ 115              		.loc 1 121 27 is_stmt 0 view .LVU33
+ 116 0002 4B60     		str	r3, [r1, #4]
+ 122:middleware/FreeRTOS-Kernel/list.c ****     pxNewListItem->pxPrevious = pxIndex->pxPrevious;
+ 117              		.loc 1 122 5 is_stmt 1 view .LVU34
+ 118              		.loc 1 122 40 is_stmt 0 view .LVU35
+ 119 0004 9A68     		ldr	r2, [r3, #8]
+ 120              		.loc 1 122 31 view .LVU36
+ 121 0006 8A60     		str	r2, [r1, #8]
+ 123:middleware/FreeRTOS-Kernel/list.c **** 
+ 124:middleware/FreeRTOS-Kernel/list.c ****     /* Only used during decision coverage testing. */
+ 125:middleware/FreeRTOS-Kernel/list.c ****     mtCOVERAGE_TEST_DELAY();
+ 122              		.loc 1 125 28 is_stmt 1 view .LVU37
+ 126:middleware/FreeRTOS-Kernel/list.c **** 
+ 127:middleware/FreeRTOS-Kernel/list.c ****     pxIndex->pxPrevious->pxNext = pxNewListItem;
+ 123              		.loc 1 127 5 view .LVU38
+ 124              		.loc 1 127 33 is_stmt 0 view .LVU39
+ 125 0008 5160     		str	r1, [r2, #4]
+ 128:middleware/FreeRTOS-Kernel/list.c ****     pxIndex->pxPrevious = pxNewListItem;
+ 126              		.loc 1 128 5 is_stmt 1 view .LVU40
+ 127              		.loc 1 128 25 is_stmt 0 view .LVU41
+ 128 000a 9960     		str	r1, [r3, #8]
+ 129:middleware/FreeRTOS-Kernel/list.c **** 
+ 130:middleware/FreeRTOS-Kernel/list.c ****     /* Remember which list the item is in. */
+ 131:middleware/FreeRTOS-Kernel/list.c ****     pxNewListItem->pxContainer = pxList;
+ 129              		.loc 1 131 5 is_stmt 1 view .LVU42
+ 130              		.loc 1 131 32 is_stmt 0 view .LVU43
+ 131 000c 0861     		str	r0, [r1, #16]
+ 132:middleware/FreeRTOS-Kernel/list.c **** 
+ 133:middleware/FreeRTOS-Kernel/list.c ****     ( pxList->uxNumberOfItems ) = ( UBaseType_t ) ( pxList->uxNumberOfItems + 1U );
+ 132              		.loc 1 133 5 is_stmt 1 view .LVU44
+ 133              		.loc 1 133 59 is_stmt 0 view .LVU45
+ 134 000e 0368     		ldr	r3, [r0]
+ 135              	.LVL4:
+ 136              		.loc 1 133 35 view .LVU46
+ 137 0010 0133     		adds	r3, r3, #1
+ 138              		.loc 1 133 33 view .LVU47
+ 139 0012 0360     		str	r3, [r0]
+ 134:middleware/FreeRTOS-Kernel/list.c **** 
+ 135:middleware/FreeRTOS-Kernel/list.c ****     traceRETURN_vListInsertEnd();
+ 140              		.loc 1 135 33 is_stmt 1 view .LVU48
+ 136:middleware/FreeRTOS-Kernel/list.c **** }
+ 141              		.loc 1 136 1 is_stmt 0 view .LVU49
+ 142 0014 7047     		bx	lr
+ 143              		.cfi_endproc
+ 144              	.LFE7:
+ 146              		.section	.text.vListInsert,"ax",%progbits
+ 147              		.align	1
+ 148              		.global	vListInsert
+ 149              		.syntax unified
+ 150              		.thumb
+ 151              		.thumb_func
+ 153              	vListInsert:
+ 154              	.LVL5:
+ 155              	.LFB8:
+ 137:middleware/FreeRTOS-Kernel/list.c **** /*-----------------------------------------------------------*/
+ARM GAS  /var/tmp//ccfhwlVA.s 			page 6
+
+
+ 138:middleware/FreeRTOS-Kernel/list.c **** 
+ 139:middleware/FreeRTOS-Kernel/list.c **** void vListInsert( List_t * const pxList,
+ 140:middleware/FreeRTOS-Kernel/list.c ****                   ListItem_t * const pxNewListItem )
+ 141:middleware/FreeRTOS-Kernel/list.c **** {
+ 156              		.loc 1 141 1 is_stmt 1 view -0
+ 157              		.cfi_startproc
+ 158              		@ args = 0, pretend = 0, frame = 0
+ 159              		@ frame_needed = 0, uses_anonymous_args = 0
+ 160              		@ link register save eliminated.
+ 161              		.loc 1 141 1 is_stmt 0 view .LVU51
+ 162 0000 30B4     		push	{r4, r5}
+ 163              	.LCFI0:
+ 164              		.cfi_def_cfa_offset 8
+ 165              		.cfi_offset 4, -8
+ 166              		.cfi_offset 5, -4
+ 142:middleware/FreeRTOS-Kernel/list.c ****     ListItem_t * pxIterator;
+ 167              		.loc 1 142 5 is_stmt 1 view .LVU52
+ 143:middleware/FreeRTOS-Kernel/list.c ****     const TickType_t xValueOfInsertion = pxNewListItem->xItemValue;
+ 168              		.loc 1 143 5 view .LVU53
+ 169              		.loc 1 143 22 is_stmt 0 view .LVU54
+ 170 0002 0D68     		ldr	r5, [r1]
+ 171              	.LVL6:
+ 144:middleware/FreeRTOS-Kernel/list.c **** 
+ 145:middleware/FreeRTOS-Kernel/list.c ****     traceENTER_vListInsert( pxList, pxNewListItem );
+ 172              		.loc 1 145 52 is_stmt 1 view .LVU55
+ 146:middleware/FreeRTOS-Kernel/list.c **** 
+ 147:middleware/FreeRTOS-Kernel/list.c ****     /* Only effective when configASSERT() is also defined, these tests may catch
+ 148:middleware/FreeRTOS-Kernel/list.c ****      * the list data structures being overwritten in memory.  They will not catch
+ 149:middleware/FreeRTOS-Kernel/list.c ****      * data errors caused by incorrect configuration or use of FreeRTOS. */
+ 150:middleware/FreeRTOS-Kernel/list.c ****     listTEST_LIST_INTEGRITY( pxList );
+ 173              		.loc 1 150 38 view .LVU56
+ 151:middleware/FreeRTOS-Kernel/list.c ****     listTEST_LIST_ITEM_INTEGRITY( pxNewListItem );
+ 174              		.loc 1 151 50 view .LVU57
+ 152:middleware/FreeRTOS-Kernel/list.c **** 
+ 153:middleware/FreeRTOS-Kernel/list.c ****     /* Insert the new list item into the list, sorted in xItemValue order.
+ 154:middleware/FreeRTOS-Kernel/list.c ****      *
+ 155:middleware/FreeRTOS-Kernel/list.c ****      * If the list already contains a list item with the same item value then the
+ 156:middleware/FreeRTOS-Kernel/list.c ****      * new list item should be placed after it.  This ensures that TCBs which are
+ 157:middleware/FreeRTOS-Kernel/list.c ****      * stored in ready lists (all of which have the same xItemValue value) get a
+ 158:middleware/FreeRTOS-Kernel/list.c ****      * share of the CPU.  However, if the xItemValue is the same as the back marker
+ 159:middleware/FreeRTOS-Kernel/list.c ****      * the iteration loop below will not end.  Therefore the value is checked
+ 160:middleware/FreeRTOS-Kernel/list.c ****      * first, and the algorithm slightly modified if necessary. */
+ 161:middleware/FreeRTOS-Kernel/list.c ****     if( xValueOfInsertion == portMAX_DELAY )
+ 175              		.loc 1 161 5 view .LVU58
+ 176              		.loc 1 161 7 is_stmt 0 view .LVU59
+ 177 0004 B5F1FF3F 		cmp	r5, #-1
+ 178 0008 11D0     		beq	.L9
+ 162:middleware/FreeRTOS-Kernel/list.c ****     {
+ 163:middleware/FreeRTOS-Kernel/list.c ****         pxIterator = pxList->xListEnd.pxPrevious;
+ 164:middleware/FreeRTOS-Kernel/list.c ****     }
+ 165:middleware/FreeRTOS-Kernel/list.c ****     else
+ 166:middleware/FreeRTOS-Kernel/list.c ****     {
+ 167:middleware/FreeRTOS-Kernel/list.c ****         /* *** NOTE ***********************************************************
+ 168:middleware/FreeRTOS-Kernel/list.c ****         *  If you find your application is crashing here then likely causes are
+ 169:middleware/FreeRTOS-Kernel/list.c ****         *  listed below.  In addition see https://www.FreeRTOS.org/FAQHelp.html for
+ 170:middleware/FreeRTOS-Kernel/list.c ****         *  more tips, and ensure configASSERT() is defined!
+ 171:middleware/FreeRTOS-Kernel/list.c ****         *  https://www.FreeRTOS.org/a00110.html#configASSERT
+ARM GAS  /var/tmp//ccfhwlVA.s 			page 7
+
+
+ 172:middleware/FreeRTOS-Kernel/list.c ****         *
+ 173:middleware/FreeRTOS-Kernel/list.c ****         *   1) Stack overflow -
+ 174:middleware/FreeRTOS-Kernel/list.c ****         *      see https://www.FreeRTOS.org/Stacks-and-stack-overflow-checking.html
+ 175:middleware/FreeRTOS-Kernel/list.c ****         *   2) Incorrect interrupt priority assignment, especially on Cortex-M
+ 176:middleware/FreeRTOS-Kernel/list.c ****         *      parts where numerically high priority values denote low actual
+ 177:middleware/FreeRTOS-Kernel/list.c ****         *      interrupt priorities, which can seem counter intuitive.  See
+ 178:middleware/FreeRTOS-Kernel/list.c ****         *      https://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html and the definition
+ 179:middleware/FreeRTOS-Kernel/list.c ****         *      of configMAX_SYSCALL_INTERRUPT_PRIORITY on
+ 180:middleware/FreeRTOS-Kernel/list.c ****         *      https://www.FreeRTOS.org/a00110.html
+ 181:middleware/FreeRTOS-Kernel/list.c ****         *   3) Calling an API function from within a critical section or when
+ 182:middleware/FreeRTOS-Kernel/list.c ****         *      the scheduler is suspended, or calling an API function that does
+ 183:middleware/FreeRTOS-Kernel/list.c ****         *      not end in "FromISR" from an interrupt.
+ 184:middleware/FreeRTOS-Kernel/list.c ****         *   4) Using a queue or semaphore before it has been initialised or
+ 185:middleware/FreeRTOS-Kernel/list.c ****         *      before the scheduler has been started (are interrupts firing
+ 186:middleware/FreeRTOS-Kernel/list.c ****         *      before vTaskStartScheduler() has been called?).
+ 187:middleware/FreeRTOS-Kernel/list.c ****         *   5) If the FreeRTOS port supports interrupt nesting then ensure that
+ 188:middleware/FreeRTOS-Kernel/list.c ****         *      the priority of the tick interrupt is at or below
+ 189:middleware/FreeRTOS-Kernel/list.c ****         *      configMAX_SYSCALL_INTERRUPT_PRIORITY.
+ 190:middleware/FreeRTOS-Kernel/list.c ****         **********************************************************************/
+ 191:middleware/FreeRTOS-Kernel/list.c **** 
+ 192:middleware/FreeRTOS-Kernel/list.c ****         for( pxIterator = ( ListItem_t * ) &( pxList->xListEnd ); pxIterator->pxNext->xItemValue <=
+ 179              		.loc 1 192 9 is_stmt 1 view .LVU60
+ 180              		.loc 1 192 25 is_stmt 0 view .LVU61
+ 181 000a 00F10803 		add	r3, r0, #8
+ 182              	.LVL7:
+ 183              	.L7:
+ 184              		.loc 1 192 98 is_stmt 1 discriminator 1 view .LVU62
+ 185 000e 1C46     		mov	r4, r3
+ 186              		.loc 1 192 77 is_stmt 0 discriminator 1 view .LVU63
+ 187 0010 5B68     		ldr	r3, [r3, #4]
+ 188              	.LVL8:
+ 189              		.loc 1 192 85 discriminator 1 view .LVU64
+ 190 0012 1A68     		ldr	r2, [r3]
+ 191              		.loc 1 192 98 discriminator 1 view .LVU65
+ 192 0014 AA42     		cmp	r2, r5
+ 193 0016 FAD9     		bls	.L7
+ 194              	.L6:
+ 193:middleware/FreeRTOS-Kernel/list.c ****         {
+ 194:middleware/FreeRTOS-Kernel/list.c ****             /* There is nothing to do here, just iterating to the wanted
+ 195:middleware/FreeRTOS-Kernel/list.c ****              * insertion position. */
+ 196:middleware/FreeRTOS-Kernel/list.c ****         }
+ 197:middleware/FreeRTOS-Kernel/list.c ****     }
+ 198:middleware/FreeRTOS-Kernel/list.c **** 
+ 199:middleware/FreeRTOS-Kernel/list.c ****     pxNewListItem->pxNext = pxIterator->pxNext;
+ 195              		.loc 1 199 5 is_stmt 1 view .LVU66
+ 196              		.loc 1 199 39 is_stmt 0 view .LVU67
+ 197 0018 6368     		ldr	r3, [r4, #4]
+ 198              		.loc 1 199 27 view .LVU68
+ 199 001a 4B60     		str	r3, [r1, #4]
+ 200:middleware/FreeRTOS-Kernel/list.c ****     pxNewListItem->pxNext->pxPrevious = pxNewListItem;
+ 200              		.loc 1 200 5 is_stmt 1 view .LVU69
+ 201              		.loc 1 200 39 is_stmt 0 view .LVU70
+ 202 001c 9960     		str	r1, [r3, #8]
+ 201:middleware/FreeRTOS-Kernel/list.c ****     pxNewListItem->pxPrevious = pxIterator;
+ 203              		.loc 1 201 5 is_stmt 1 view .LVU71
+ 204              		.loc 1 201 31 is_stmt 0 view .LVU72
+ 205 001e 8C60     		str	r4, [r1, #8]
+ARM GAS  /var/tmp//ccfhwlVA.s 			page 8
+
+
+ 202:middleware/FreeRTOS-Kernel/list.c ****     pxIterator->pxNext = pxNewListItem;
+ 206              		.loc 1 202 5 is_stmt 1 view .LVU73
+ 207              		.loc 1 202 24 is_stmt 0 view .LVU74
+ 208 0020 6160     		str	r1, [r4, #4]
+ 203:middleware/FreeRTOS-Kernel/list.c **** 
+ 204:middleware/FreeRTOS-Kernel/list.c ****     /* Remember which list the item is in.  This allows fast removal of the
+ 205:middleware/FreeRTOS-Kernel/list.c ****      * item later. */
+ 206:middleware/FreeRTOS-Kernel/list.c ****     pxNewListItem->pxContainer = pxList;
+ 209              		.loc 1 206 5 is_stmt 1 view .LVU75
+ 210              		.loc 1 206 32 is_stmt 0 view .LVU76
+ 211 0022 0861     		str	r0, [r1, #16]
+ 207:middleware/FreeRTOS-Kernel/list.c **** 
+ 208:middleware/FreeRTOS-Kernel/list.c ****     ( pxList->uxNumberOfItems ) = ( UBaseType_t ) ( pxList->uxNumberOfItems + 1U );
+ 212              		.loc 1 208 5 is_stmt 1 view .LVU77
+ 213              		.loc 1 208 59 is_stmt 0 view .LVU78
+ 214 0024 0368     		ldr	r3, [r0]
+ 215              		.loc 1 208 35 view .LVU79
+ 216 0026 0133     		adds	r3, r3, #1
+ 217              		.loc 1 208 33 view .LVU80
+ 218 0028 0360     		str	r3, [r0]
+ 209:middleware/FreeRTOS-Kernel/list.c **** 
+ 210:middleware/FreeRTOS-Kernel/list.c ****     traceRETURN_vListInsert();
+ 219              		.loc 1 210 30 is_stmt 1 view .LVU81
+ 211:middleware/FreeRTOS-Kernel/list.c **** }
+ 220              		.loc 1 211 1 is_stmt 0 view .LVU82
+ 221 002a 30BC     		pop	{r4, r5}
+ 222              	.LCFI1:
+ 223              		.cfi_remember_state
+ 224              		.cfi_restore 5
+ 225              		.cfi_restore 4
+ 226              		.cfi_def_cfa_offset 0
+ 227              	.LVL9:
+ 228              		.loc 1 211 1 view .LVU83
+ 229 002c 7047     		bx	lr
+ 230              	.LVL10:
+ 231              	.L9:
+ 232              	.LCFI2:
+ 233              		.cfi_restore_state
+ 163:middleware/FreeRTOS-Kernel/list.c ****     }
+ 234              		.loc 1 163 9 is_stmt 1 view .LVU84
+ 163:middleware/FreeRTOS-Kernel/list.c ****     }
+ 235              		.loc 1 163 20 is_stmt 0 view .LVU85
+ 236 002e 0469     		ldr	r4, [r0, #16]
+ 237              	.LVL11:
+ 163:middleware/FreeRTOS-Kernel/list.c ****     }
+ 238              		.loc 1 163 20 view .LVU86
+ 239 0030 F2E7     		b	.L6
+ 240              		.cfi_endproc
+ 241              	.LFE8:
+ 243              		.section	.text.uxListRemove,"ax",%progbits
+ 244              		.align	1
+ 245              		.global	uxListRemove
+ 246              		.syntax unified
+ 247              		.thumb
+ 248              		.thumb_func
+ 250              	uxListRemove:
+ 251              	.LVL12:
+ARM GAS  /var/tmp//ccfhwlVA.s 			page 9
+
+
+ 252              	.LFB9:
+ 212:middleware/FreeRTOS-Kernel/list.c **** /*-----------------------------------------------------------*/
+ 213:middleware/FreeRTOS-Kernel/list.c **** 
+ 214:middleware/FreeRTOS-Kernel/list.c **** 
+ 215:middleware/FreeRTOS-Kernel/list.c **** UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove )
+ 216:middleware/FreeRTOS-Kernel/list.c **** {
+ 253              		.loc 1 216 1 is_stmt 1 view -0
+ 254              		.cfi_startproc
+ 255              		@ args = 0, pretend = 0, frame = 0
+ 256              		@ frame_needed = 0, uses_anonymous_args = 0
+ 257              		@ link register save eliminated.
+ 217:middleware/FreeRTOS-Kernel/list.c ****     /* The list item knows which list it is in.  Obtain the list from the list
+ 218:middleware/FreeRTOS-Kernel/list.c ****      * item. */
+ 219:middleware/FreeRTOS-Kernel/list.c ****     List_t * const pxList = pxItemToRemove->pxContainer;
+ 258              		.loc 1 219 5 view .LVU88
+ 259              		.loc 1 219 20 is_stmt 0 view .LVU89
+ 260 0000 0369     		ldr	r3, [r0, #16]
+ 261              	.LVL13:
+ 220:middleware/FreeRTOS-Kernel/list.c **** 
+ 221:middleware/FreeRTOS-Kernel/list.c ****     traceENTER_uxListRemove( pxItemToRemove );
+ 262              		.loc 1 221 46 is_stmt 1 view .LVU90
+ 222:middleware/FreeRTOS-Kernel/list.c **** 
+ 223:middleware/FreeRTOS-Kernel/list.c ****     pxItemToRemove->pxNext->pxPrevious = pxItemToRemove->pxPrevious;
+ 263              		.loc 1 223 5 view .LVU91
+ 264              		.loc 1 223 19 is_stmt 0 view .LVU92
+ 265 0002 4168     		ldr	r1, [r0, #4]
+ 266              		.loc 1 223 56 view .LVU93
+ 267 0004 8268     		ldr	r2, [r0, #8]
+ 268              		.loc 1 223 40 view .LVU94
+ 269 0006 8A60     		str	r2, [r1, #8]
+ 224:middleware/FreeRTOS-Kernel/list.c ****     pxItemToRemove->pxPrevious->pxNext = pxItemToRemove->pxNext;
+ 270              		.loc 1 224 5 is_stmt 1 view .LVU95
+ 271              		.loc 1 224 56 is_stmt 0 view .LVU96
+ 272 0008 4168     		ldr	r1, [r0, #4]
+ 273              		.loc 1 224 40 view .LVU97
+ 274 000a 5160     		str	r1, [r2, #4]
+ 225:middleware/FreeRTOS-Kernel/list.c **** 
+ 226:middleware/FreeRTOS-Kernel/list.c ****     /* Only used during decision coverage testing. */
+ 227:middleware/FreeRTOS-Kernel/list.c ****     mtCOVERAGE_TEST_DELAY();
+ 275              		.loc 1 227 28 is_stmt 1 view .LVU98
+ 228:middleware/FreeRTOS-Kernel/list.c **** 
+ 229:middleware/FreeRTOS-Kernel/list.c ****     /* Make sure the index is left pointing to a valid item. */
+ 230:middleware/FreeRTOS-Kernel/list.c ****     if( pxList->pxIndex == pxItemToRemove )
+ 276              		.loc 1 230 5 view .LVU99
+ 277              		.loc 1 230 15 is_stmt 0 view .LVU100
+ 278 000c 5A68     		ldr	r2, [r3, #4]
+ 279              		.loc 1 230 7 view .LVU101
+ 280 000e 8242     		cmp	r2, r0
+ 281 0010 05D0     		beq	.L12
+ 282              	.L11:
+ 231:middleware/FreeRTOS-Kernel/list.c ****     {
+ 232:middleware/FreeRTOS-Kernel/list.c ****         pxList->pxIndex = pxItemToRemove->pxPrevious;
+ 233:middleware/FreeRTOS-Kernel/list.c ****     }
+ 234:middleware/FreeRTOS-Kernel/list.c ****     else
+ 235:middleware/FreeRTOS-Kernel/list.c ****     {
+ 236:middleware/FreeRTOS-Kernel/list.c ****         mtCOVERAGE_TEST_MARKER();
+ 283              		.loc 1 236 33 is_stmt 1 view .LVU102
+ARM GAS  /var/tmp//ccfhwlVA.s 			page 10
+
+
+ 237:middleware/FreeRTOS-Kernel/list.c ****     }
+ 238:middleware/FreeRTOS-Kernel/list.c **** 
+ 239:middleware/FreeRTOS-Kernel/list.c ****     pxItemToRemove->pxContainer = NULL;
+ 284              		.loc 1 239 5 view .LVU103
+ 285              		.loc 1 239 33 is_stmt 0 view .LVU104
+ 286 0012 0022     		movs	r2, #0
+ 287 0014 0261     		str	r2, [r0, #16]
+ 240:middleware/FreeRTOS-Kernel/list.c ****     ( pxList->uxNumberOfItems ) = ( UBaseType_t ) ( pxList->uxNumberOfItems - 1U );
+ 288              		.loc 1 240 5 is_stmt 1 view .LVU105
+ 289              		.loc 1 240 59 is_stmt 0 view .LVU106
+ 290 0016 1868     		ldr	r0, [r3]
+ 291              	.LVL14:
+ 292              		.loc 1 240 35 view .LVU107
+ 293 0018 0138     		subs	r0, r0, #1
+ 294              		.loc 1 240 33 view .LVU108
+ 295 001a 1860     		str	r0, [r3]
+ 241:middleware/FreeRTOS-Kernel/list.c **** 
+ 242:middleware/FreeRTOS-Kernel/list.c ****     traceRETURN_uxListRemove( pxList->uxNumberOfItems );
+ 296              		.loc 1 242 56 is_stmt 1 view .LVU109
+ 243:middleware/FreeRTOS-Kernel/list.c **** 
+ 244:middleware/FreeRTOS-Kernel/list.c ****     return pxList->uxNumberOfItems;
+ 297              		.loc 1 244 5 view .LVU110
+ 245:middleware/FreeRTOS-Kernel/list.c **** }
+ 298              		.loc 1 245 1 is_stmt 0 view .LVU111
+ 299 001c 7047     		bx	lr
+ 300              	.LVL15:
+ 301              	.L12:
+ 232:middleware/FreeRTOS-Kernel/list.c ****     }
+ 302              		.loc 1 232 9 is_stmt 1 view .LVU112
+ 232:middleware/FreeRTOS-Kernel/list.c ****     }
+ 303              		.loc 1 232 41 is_stmt 0 view .LVU113
+ 304 001e 8268     		ldr	r2, [r0, #8]
+ 232:middleware/FreeRTOS-Kernel/list.c ****     }
+ 305              		.loc 1 232 25 view .LVU114
+ 306 0020 5A60     		str	r2, [r3, #4]
+ 307 0022 F6E7     		b	.L11
+ 308              		.cfi_endproc
+ 309              	.LFE9:
+ 311              		.text
+ 312              	.Letext0:
+ 313              		.file 2 "/nix/store/wlyks4zmr4x2sj2nrg9xhhdmjyhqk7ql-gcc-arm-embedded-12.2.rel1/arm-none-eabi/incl
+ 314              		.file 3 "/nix/store/wlyks4zmr4x2sj2nrg9xhhdmjyhqk7ql-gcc-arm-embedded-12.2.rel1/arm-none-eabi/incl
+ 315              		.file 4 "middleware/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h"
+ 316              		.file 5 "middleware/FreeRTOS-Kernel/include/list.h"
+ARM GAS  /var/tmp//ccfhwlVA.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 list.c
+/var/tmp//ccfhwlVA.s:21     .text.vListInitialise:0000000000000000 $t
+/var/tmp//ccfhwlVA.s:27     .text.vListInitialise:0000000000000000 vListInitialise
+/var/tmp//ccfhwlVA.s:65     .text.vListInitialiseItem:0000000000000000 $t
+/var/tmp//ccfhwlVA.s:71     .text.vListInitialiseItem:0000000000000000 vListInitialiseItem
+/var/tmp//ccfhwlVA.s:93     .text.vListInsertEnd:0000000000000000 $t
+/var/tmp//ccfhwlVA.s:99     .text.vListInsertEnd:0000000000000000 vListInsertEnd
+/var/tmp//ccfhwlVA.s:147    .text.vListInsert:0000000000000000 $t
+/var/tmp//ccfhwlVA.s:153    .text.vListInsert:0000000000000000 vListInsert
+/var/tmp//ccfhwlVA.s:244    .text.uxListRemove:0000000000000000 $t
+/var/tmp//ccfhwlVA.s:250    .text.uxListRemove:0000000000000000 uxListRemove
+
+NO UNDEFINED SYMBOLS

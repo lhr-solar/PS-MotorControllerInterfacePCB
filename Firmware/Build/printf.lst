@@ -1,0 +1,311 @@
+ARM GAS  /var/tmp//ccHETcjv.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"printf.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "driver/Src/printf.c"
+  20              		.section	.text.printf_init,"ax",%progbits
+  21              		.align	1
+  22              		.global	printf_init
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	printf_init:
+  28              	.LVL0:
+  29              	.LFB293:
+   1:driver/Src/printf.c **** #include "printf.h"
+   2:driver/Src/printf.c **** 
+   3:driver/Src/printf.c **** UART_HandleTypeDef *printf_huart = NULL;
+   4:driver/Src/printf.c **** 
+   5:driver/Src/printf.c **** /**
+   6:driver/Src/printf.c ****  * @brief Initializes printf
+   7:driver/Src/printf.c ****  * @param huart pointer to the UART handle
+   8:driver/Src/printf.c ****  * @return bool true if success
+   9:driver/Src/printf.c ****  */
+  10:driver/Src/printf.c **** bool printf_init(UART_HandleTypeDef *huart) { 
+  30              		.loc 1 10 45 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 10 45 is_stmt 0 view .LVU1
+  35 0000 08B5     		push	{r3, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 3, -8
+  39              		.cfi_offset 14, -4
+  11:driver/Src/printf.c ****     printf_huart = huart; 
+  40              		.loc 1 11 5 is_stmt 1 view .LVU2
+  41              		.loc 1 11 18 is_stmt 0 view .LVU3
+  42 0002 044B     		ldr	r3, .L3
+  43 0004 1860     		str	r0, [r3]
+  12:driver/Src/printf.c ****     return uart_init(huart) == UART_OK;
+  44              		.loc 1 12 5 is_stmt 1 view .LVU4
+  45              		.loc 1 12 12 is_stmt 0 view .LVU5
+  46 0006 FFF7FEFF 		bl	uart_init
+ARM GAS  /var/tmp//ccHETcjv.s 			page 2
+
+
+  47              	.LVL1:
+  13:driver/Src/printf.c **** }
+  48              		.loc 1 13 1 view .LVU6
+  49 000a 0128     		cmp	r0, #1
+  50 000c 14BF     		ite	ne
+  51 000e 0020     		movne	r0, #0
+  52 0010 0120     		moveq	r0, #1
+  53 0012 08BD     		pop	{r3, pc}
+  54              	.L4:
+  55              		.align	2
+  56              	.L3:
+  57 0014 00000000 		.word	printf_huart
+  58              		.cfi_endproc
+  59              	.LFE293:
+  61              		.section	.text.__io_getchar,"ax",%progbits
+  62              		.align	1
+  63              		.global	__io_getchar
+  64              		.syntax unified
+  65              		.thumb
+  66              		.thumb_func
+  68              	__io_getchar:
+  69              	.LFB294:
+  14:driver/Src/printf.c **** 
+  15:driver/Src/printf.c **** // Called by _read in syscalls.c
+  16:driver/Src/printf.c **** int __io_getchar() {
+  70              		.loc 1 16 20 is_stmt 1 view -0
+  71              		.cfi_startproc
+  72              		@ args = 0, pretend = 0, frame = 8
+  73              		@ frame_needed = 0, uses_anonymous_args = 0
+  17:driver/Src/printf.c ****     if (printf_huart != NULL) {
+  74              		.loc 1 17 5 view .LVU8
+  75              		.loc 1 17 22 is_stmt 0 view .LVU9
+  76 0000 0C4B     		ldr	r3, .L15
+  77 0002 1868     		ldr	r0, [r3]
+  78              		.loc 1 17 8 view .LVU10
+  79 0004 90B1     		cbz	r0, .L8
+  16:driver/Src/printf.c ****     if (printf_huart != NULL) {
+  80              		.loc 1 16 20 view .LVU11
+  81 0006 00B5     		push	{lr}
+  82              	.LCFI1:
+  83              		.cfi_def_cfa_offset 4
+  84              		.cfi_offset 14, -4
+  85 0008 83B0     		sub	sp, sp, #12
+  86              	.LCFI2:
+  87              		.cfi_def_cfa_offset 16
+  88              	.LBB2:
+  18:driver/Src/printf.c ****         uint8_t data;
+  89              		.loc 1 18 9 is_stmt 1 view .LVU12
+  19:driver/Src/printf.c ****         uart_status_t ret = uart_recv(printf_huart, &data, 1, portMAX_DELAY);
+  90              		.loc 1 19 9 view .LVU13
+  91              		.loc 1 19 29 is_stmt 0 view .LVU14
+  92 000a 4FF0FF33 		mov	r3, #-1
+  93 000e 0122     		movs	r2, #1
+  94 0010 0DF10701 		add	r1, sp, #7
+  95 0014 FFF7FEFF 		bl	uart_recv
+  96              	.LVL2:
+  20:driver/Src/printf.c ****         if(ret != UART_OK) return -1;
+ARM GAS  /var/tmp//ccHETcjv.s 			page 3
+
+
+  97              		.loc 1 20 9 is_stmt 1 view .LVU15
+  98              		.loc 1 20 11 is_stmt 0 view .LVU16
+  99 0018 0128     		cmp	r0, #1
+ 100 001a 04D0     		beq	.L14
+ 101              		.loc 1 20 35 view .LVU17
+ 102 001c 4FF0FF30 		mov	r0, #-1
+ 103              	.LVL3:
+ 104              	.L5:
+ 105              		.loc 1 20 35 view .LVU18
+ 106              	.LBE2:
+  21:driver/Src/printf.c ****         return data;
+  22:driver/Src/printf.c ****     }
+  23:driver/Src/printf.c ****     return -1;
+  24:driver/Src/printf.c **** }
+ 107              		.loc 1 24 1 view .LVU19
+ 108 0020 03B0     		add	sp, sp, #12
+ 109              	.LCFI3:
+ 110              		.cfi_remember_state
+ 111              		.cfi_def_cfa_offset 4
+ 112              		@ sp needed
+ 113 0022 5DF804FB 		ldr	pc, [sp], #4
+ 114              	.LVL4:
+ 115              	.L14:
+ 116              	.LCFI4:
+ 117              		.cfi_restore_state
+ 118              	.LBB3:
+  21:driver/Src/printf.c ****         return data;
+ 119              		.loc 1 21 9 is_stmt 1 view .LVU20
+  21:driver/Src/printf.c ****         return data;
+ 120              		.loc 1 21 16 is_stmt 0 view .LVU21
+ 121 0026 9DF80700 		ldrb	r0, [sp, #7]	@ zero_extendqisi2
+ 122              	.LVL5:
+  21:driver/Src/printf.c ****         return data;
+ 123              		.loc 1 21 16 view .LVU22
+ 124 002a F9E7     		b	.L5
+ 125              	.LVL6:
+ 126              	.L8:
+ 127              	.LCFI5:
+ 128              		.cfi_def_cfa_offset 0
+ 129              		.cfi_restore 14
+  21:driver/Src/printf.c ****         return data;
+ 130              		.loc 1 21 16 view .LVU23
+ 131              	.LBE3:
+  23:driver/Src/printf.c **** }
+ 132              		.loc 1 23 12 view .LVU24
+ 133 002c 4FF0FF30 		mov	r0, #-1
+ 134              		.loc 1 24 1 view .LVU25
+ 135 0030 7047     		bx	lr
+ 136              	.L16:
+ 137 0032 00BF     		.align	2
+ 138              	.L15:
+ 139 0034 00000000 		.word	printf_huart
+ 140              		.cfi_endproc
+ 141              	.LFE294:
+ 143              		.section	.text.__io_putchar,"ax",%progbits
+ 144              		.align	1
+ 145              		.global	__io_putchar
+ARM GAS  /var/tmp//ccHETcjv.s 			page 4
+
+
+ 146              		.syntax unified
+ 147              		.thumb
+ 148              		.thumb_func
+ 150              	__io_putchar:
+ 151              	.LVL7:
+ 152              	.LFB295:
+  25:driver/Src/printf.c **** 
+  26:driver/Src/printf.c **** // Called by _write in syscalls.c
+  27:driver/Src/printf.c **** int __io_putchar(int data) {
+ 153              		.loc 1 27 28 is_stmt 1 view -0
+ 154              		.cfi_startproc
+ 155              		@ args = 0, pretend = 0, frame = 8
+ 156              		@ frame_needed = 0, uses_anonymous_args = 0
+ 157              		.loc 1 27 28 is_stmt 0 view .LVU27
+ 158 0000 00B5     		push	{lr}
+ 159              	.LCFI6:
+ 160              		.cfi_def_cfa_offset 4
+ 161              		.cfi_offset 14, -4
+ 162 0002 83B0     		sub	sp, sp, #12
+ 163              	.LCFI7:
+ 164              		.cfi_def_cfa_offset 16
+ 165 0004 0190     		str	r0, [sp, #4]
+  28:driver/Src/printf.c ****     if (printf_huart != NULL) {
+ 166              		.loc 1 28 5 is_stmt 1 view .LVU28
+ 167              		.loc 1 28 22 is_stmt 0 view .LVU29
+ 168 0006 0A4B     		ldr	r3, .L22
+ 169 0008 1868     		ldr	r0, [r3]
+ 170              	.LVL8:
+ 171              		.loc 1 28 8 view .LVU30
+ 172 000a 58B1     		cbz	r0, .L19
+ 173              	.LBB4:
+  29:driver/Src/printf.c ****         uart_status_t ret = uart_send(printf_huart, (const uint8_t *)&data, 1, portMAX_DELAY);
+ 174              		.loc 1 29 9 is_stmt 1 view .LVU31
+ 175              		.loc 1 29 29 is_stmt 0 view .LVU32
+ 176 000c 4FF0FF33 		mov	r3, #-1
+ 177 0010 0122     		movs	r2, #1
+ 178 0012 01A9     		add	r1, sp, #4
+ 179              	.LVL9:
+ 180              		.loc 1 29 29 view .LVU33
+ 181 0014 FFF7FEFF 		bl	uart_send
+ 182              	.LVL10:
+  30:driver/Src/printf.c ****         if(ret != UART_OK) return -1;
+ 183              		.loc 1 30 9 is_stmt 1 view .LVU34
+ 184              		.loc 1 30 11 is_stmt 0 view .LVU35
+ 185 0018 0128     		cmp	r0, #1
+ 186 001a 06D1     		bne	.L20
+  31:driver/Src/printf.c ****         return data;
+ 187              		.loc 1 31 9 is_stmt 1 view .LVU36
+ 188              		.loc 1 31 16 is_stmt 0 view .LVU37
+ 189 001c 0198     		ldr	r0, [sp, #4]
+ 190              	.LVL11:
+ 191              	.L17:
+ 192              		.loc 1 31 16 view .LVU38
+ 193              	.LBE4:
+  32:driver/Src/printf.c ****     }
+  33:driver/Src/printf.c ****     return -1;
+  34:driver/Src/printf.c **** }
+ARM GAS  /var/tmp//ccHETcjv.s 			page 5
+
+
+ 194              		.loc 1 34 1 view .LVU39
+ 195 001e 03B0     		add	sp, sp, #12
+ 196              	.LCFI8:
+ 197              		.cfi_remember_state
+ 198              		.cfi_def_cfa_offset 4
+ 199              		@ sp needed
+ 200 0020 5DF804FB 		ldr	pc, [sp], #4
+ 201              	.LVL12:
+ 202              	.L19:
+ 203              	.LCFI9:
+ 204              		.cfi_restore_state
+  33:driver/Src/printf.c **** }
+ 205              		.loc 1 33 12 view .LVU40
+ 206 0024 4FF0FF30 		mov	r0, #-1
+ 207 0028 F9E7     		b	.L17
+ 208              	.LVL13:
+ 209              	.L20:
+ 210              	.LBB5:
+  30:driver/Src/printf.c ****         return data;
+ 211              		.loc 1 30 35 view .LVU41
+ 212 002a 4FF0FF30 		mov	r0, #-1
+ 213              	.LVL14:
+  30:driver/Src/printf.c ****         return data;
+ 214              		.loc 1 30 35 view .LVU42
+ 215 002e F6E7     		b	.L17
+ 216              	.L23:
+ 217              		.align	2
+ 218              	.L22:
+ 219 0030 00000000 		.word	printf_huart
+ 220              	.LBE5:
+ 221              		.cfi_endproc
+ 222              	.LFE295:
+ 224              		.global	printf_huart
+ 225              		.section	.bss.printf_huart,"aw",%nobits
+ 226              		.align	2
+ 229              	printf_huart:
+ 230 0000 00000000 		.space	4
+ 231              		.text
+ 232              	.Letext0:
+ 233              		.file 2 "/nix/store/wlyks4zmr4x2sj2nrg9xhhdmjyhqk7ql-gcc-arm-embedded-12.2.rel1/arm-none-eabi/incl
+ 234              		.file 3 "/nix/store/wlyks4zmr4x2sj2nrg9xhhdmjyhqk7ql-gcc-arm-embedded-12.2.rel1/arm-none-eabi/incl
+ 235              		.file 4 "stm/stm32l4xx/CMSIS/Device/ST/STM32L4xx/Include/stm32l431xx.h"
+ 236              		.file 5 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 237              		.file 6 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
+ 238              		.file 7 "stm/stm32l4xx/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
+ 239              		.file 8 "middleware/FreeRTOS-Kernel/portable/GCC/ARM_CM4F/portmacro.h"
+ 240              		.file 9 "bsp/Inc/UART.h"
+ARM GAS  /var/tmp//ccHETcjv.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 printf.c
+/var/tmp//ccHETcjv.s:21     .text.printf_init:0000000000000000 $t
+/var/tmp//ccHETcjv.s:27     .text.printf_init:0000000000000000 printf_init
+/var/tmp//ccHETcjv.s:57     .text.printf_init:0000000000000014 $d
+/var/tmp//ccHETcjv.s:229    .bss.printf_huart:0000000000000000 printf_huart
+/var/tmp//ccHETcjv.s:62     .text.__io_getchar:0000000000000000 $t
+/var/tmp//ccHETcjv.s:68     .text.__io_getchar:0000000000000000 __io_getchar
+/var/tmp//ccHETcjv.s:139    .text.__io_getchar:0000000000000034 $d
+/var/tmp//ccHETcjv.s:144    .text.__io_putchar:0000000000000000 $t
+/var/tmp//ccHETcjv.s:150    .text.__io_putchar:0000000000000000 __io_putchar
+/var/tmp//ccHETcjv.s:219    .text.__io_putchar:0000000000000030 $d
+/var/tmp//ccHETcjv.s:226    .bss.printf_huart:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+uart_init
+uart_recv
+uart_send

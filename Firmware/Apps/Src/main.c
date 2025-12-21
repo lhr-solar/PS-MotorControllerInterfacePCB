@@ -132,13 +132,13 @@ int main(void)
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 
   LED_Off(GPIOB, GPIO_PIN_0);
+  LED_On(GPIOB, GPIO_PIN_0);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    LED_Toggle(GPIOB, GPIO_PIN_0);
     PWM_A_SetDuty(40);
     PWM_B_SetDuty(40);
     HAL_Delay(500);
