@@ -63,13 +63,41 @@ static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN 0 */
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim)
 {
-    // DO NOTHING – but required for linking
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+  if (htim->Instance == TIM2)
+  {
+    __HAL_RCC_TIM2_CLK_ENABLE();
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+
+    /** TIM2 GPIO Configuration
+        PA5  --> TIM2_CH1
+        PB10 --> TIM2_CH3
+    */
+
+    /* PA5 - TIM2_CH1 */
+    GPIO_InitStruct.Pin = GPIO_PIN_5;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF1_TIM2;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    /* PB10 - TIM2_CH3 */
+    GPIO_InitStruct.Pin = GPIO_PIN_10;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF1_TIM2;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  }
 }
 //PWM
 void PWM_A_SetDuty(uint8_t duty) {
   if (duty > 100) duty = 100;
-  uint32_t arr = htim2.Init.Period;
-  uint32_t compare = (arr* duty)/100;
+  uint32_t arr = __HAL_TIM_GET_AUTORELOAD(&htim2);
+uint32_t compare = ((arr + 1) * duty) / 100;
   __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, compare);
 }
 void PWM_B_SetDuty(uint8_t duty) {
@@ -139,9 +167,13 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    
     PWM_A_SetDuty(40);
     PWM_B_SetDuty(40);
-    HAL_Delay(500);
+    HAL_Delay(500); // PWMs do not work, no output at all
+
+    HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
+    HAL_Delay(200);   // works, 3.3V output
     /* USER CODE END WHILE */
     
     /* USER CODE BEGIN 3 */
@@ -206,7 +238,6 @@ static void MX_TIM1_Init(void)
   /* USER CODE END TIM1_Init 0 */
 
   TIM_MasterConfigTypeDef sMasterConfig = {0};
-  TIM_IC_InitTypeDef sConfigIC = {0};
 
   /* USER CODE BEGIN TIM1_Init 1 */
 
@@ -229,14 +260,7 @@ static void MX_TIM1_Init(void)
   {
     Error_Handler();
   }
-  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
-  sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
-  sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
-  sConfigIC.ICFilter = 0;
-  if (HAL_TIM_IC_ConfigChannel(&htim1, &sConfigIC, TIM_CHANNEL_4) != HAL_OK)
-  {
-    Error_Handler();
-  }
+  
   /* USER CODE BEGIN TIM1_Init 2 */
 
   /* USER CODE END TIM1_Init 2 */
@@ -257,7 +281,6 @@ static void MX_TIM2_Init(void)
 
   TIM_MasterConfigTypeDef sMasterConfig = {0};
   TIM_OC_InitTypeDef sConfigOC = {0};
-  TIM_IC_InitTypeDef sConfigIC = {0};
 
   /* USER CODE BEGIN TIM2_Init 1 */
 
@@ -268,14 +291,7 @@ static void MX_TIM2_Init(void)
   htim2.Init.Period = 999;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_OC_Init(&htim2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_TIM_IC_Init(&htim2) != HAL_OK)
-  {
-    Error_Handler();
-  }
+
   if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
   {
     Error_Handler();
@@ -286,27 +302,24 @@ static void MX_TIM2_Init(void)
   {
     Error_Handler();
   }
-  sConfigOC.OCMode = TIM_OCMODE_TIMING;
-  sConfigOC.Pulse = 0;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
-  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
-  if (HAL_TIM_OC_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
-  sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
-  sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
-  sConfigIC.ICFilter = 0;
-  if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
-  {
-    Error_Handler();
-  }
+sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+
+/* TIM2_CH1 - PA5 */
+sConfigOC.OCMode = TIM_OCMODE_PWM1;
+sConfigOC.Pulse = 400;   // ~40% of 999
+if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+{
+  Error_Handler();
+}
+
+/* TIM2_CH3 - PB10 */
+sConfigOC.OCMode = TIM_OCMODE_PWM1;
+sConfigOC.Pulse = 400;
+if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
+{
+  Error_Handler();
+}
   /* USER CODE BEGIN TIM2_Init 2 */
 
   /* USER CODE END TIM2_Init 2 */
