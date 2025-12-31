@@ -1396,7 +1396,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 66.04) (xy 146.05 66.04)
+			(xy 139.7 66.04) (xy 144.78 66.04)
 		)
 		(stroke
 			(width 0)
@@ -1666,23 +1666,23 @@
 	)
 	(hierarchical_label "PWM_FAN_B"
 		(shape input)
-		(at 167.64 97.79 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2508ed64-afd1-44b1-b0d6-bce96311b7aa")
-	)
-	(hierarchical_label "FAN_A_TACHO"
-		(shape output)
-		(at 110.49 66.04 180)
+		(at 88.9 97.79 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
+		)
+		(uuid "2508ed64-afd1-44b1-b0d6-bce96311b7aa")
+	)
+	(hierarchical_label "FAN_A_TACHO"
+		(shape output)
+		(at 144.78 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
 		)
 		(uuid "2c8717f2-73a5-4ad2-b447-bd35af35adcf")
 	)
@@ -1732,23 +1732,23 @@
 	)
 	(hierarchical_label "PWM_FAN_A"
 		(shape input)
-		(at 88.9 97.79 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "d4916966-3741-4239-a9c3-9f183afaed6f")
-	)
-	(hierarchical_label "FAN_B_TACHO"
-		(shape output)
-		(at 146.05 66.04 0)
+		(at 167.64 97.79 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
+		)
+		(uuid "d4916966-3741-4239-a9c3-9f183afaed6f")
+	)
+	(hierarchical_label "FAN_B_TACHO"
+		(shape output)
+		(at 110.49 66.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
 		)
 		(uuid "ff89c4cd-738c-410a-a09e-02f5ff94b28d")
 	)
@@ -2740,7 +2740,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "85dfaa53-0f4b-4a24-b65d-f996b805ebb2")
-		(property "Reference" "PWM_A1"
+		(property "Reference" "PWM_B1"
 			(at 86.614 105.918 90)
 			(effects
 				(font
@@ -2835,7 +2835,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "PWM_A1")
+					(reference "PWM_B1")
 					(unit 1)
 				)
 			)
@@ -2926,7 +2926,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8c0db939-4772-4f58-b4c7-5964263416ca")
-		(property "Reference" "TACH_A1"
+		(property "Reference" "TACH_B1"
 			(at 114.808 60.198 0)
 			(effects
 				(font
@@ -3021,7 +3021,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "TACH_A1")
+					(reference "TACH_B1")
 					(unit 1)
 				)
 			)
@@ -3299,7 +3299,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Molex:Molex_Nano-Fit_105309-xx06_1x06_P2.50mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_Nano-Fit_105313-xx06_1x06_P2.50mm_Horizontal"
 			(at 129.54 60.96 0)
 			(effects
 				(font
@@ -3815,7 +3815,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d325b8bd-8e31-430d-bbe5-8efda7569436")
-		(property "Reference" "PWM_B1"
+		(property "Reference" "PWM_A1"
 			(at 169.418 105.664 90)
 			(effects
 				(font
@@ -3910,7 +3910,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "PWM_B1")
+					(reference "PWM_A1")
 					(unit 1)
 				)
 			)
@@ -4048,7 +4048,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e88e615b-d899-408b-b9a2-380d50c84c49")
-		(property "Reference" "TACH_B1"
+		(property "Reference" "TACH_A1"
 			(at 141.478 60.452 0)
 			(effects
 				(font
@@ -4143,7 +4143,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "TACH_B1")
+					(reference "TACH_A1")
 					(unit 1)
 				)
 			)
