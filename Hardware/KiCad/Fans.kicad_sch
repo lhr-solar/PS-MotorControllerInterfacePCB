@@ -370,189 +370,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:LED"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "LED"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Light emitting diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "LED diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "LED_0_1"
-				(polyline
-					(pts
-						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "LED_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -1245,18 +1062,6 @@
 		)
 	)
 	(junction
-		(at 129.54 78.74)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4586ca7d-6361-45c7-8a71-f23c6d3bc685")
-	)
-	(junction
-		(at 163.83 102.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5eb9c0a5-c5ba-443c-b94d-717f059c8236")
-	)
-	(junction
 		(at 106.68 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1281,16 +1086,16 @@
 		(uuid "95fdff92-0859-449a-a00e-1359e979c63d")
 	)
 	(junction
+		(at 127 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a605c0af-1426-423f-a9a2-c23bb874fffd")
+	)
+	(junction
 		(at 163.83 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aab620a5-9ce1-4b46-a0ca-3c70a661cb44")
-	)
-	(junction
-		(at 92.71 102.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b55739ac-2ed2-4233-ada2-2de84334f8b8")
 	)
 	(junction
 		(at 149.86 97.79)
@@ -1299,40 +1104,20 @@
 		(uuid "b78297eb-bad5-4d48-8aaa-bdf280312433")
 	)
 	(junction
-		(at 127 78.74)
+		(at 129.54 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ecbc6a75-84f1-4cb3-ab0c-c4e5d1eb84a7")
+		(uuid "dd71ac43-c221-4118-a422-f561f673e3f3")
 	)
 	(wire
 		(pts
-			(xy 92.71 97.79) (xy 92.71 102.87)
+			(xy 127 78.74) (xy 127 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "13ce7d78-46dc-4226-a120-8a50e9548106")
-	)
-	(wire
-		(pts
-			(xy 127 66.04) (xy 127 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "14d144db-1337-4872-9402-391f2b4a241e")
-	)
-	(wire
-		(pts
-			(xy 163.83 110.49) (xy 163.83 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "14d2d388-a472-4c51-ba0b-e8ebcc00f0ce")
+		(uuid "0dba3045-e15b-4c56-92fb-75c02f65a1f8")
 	)
 	(wire
 		(pts
@@ -1406,16 +1191,6 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 66.04) (xy 129.54 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2b8401e1-1b7c-4345-93c8-5a8042bca4d1")
-	)
-	(wire
-		(pts
 			(xy 129.54 83.82) (xy 139.7 83.82)
 		)
 		(stroke
@@ -1436,23 +1211,13 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 110.49) (xy 92.71 102.87)
+			(xy 129.54 78.74) (xy 129.54 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "46aaf6c0-9714-4dd6-a9b5-8a0c18ec4ed4")
-	)
-	(wire
-		(pts
-			(xy 92.71 125.73) (xy 92.71 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4866b99b-9b8b-4749-a59f-b0d1a1b602d4")
+		(uuid "3a7b6ae7-149f-4b77-b0ac-9b685aec818c")
 	)
 	(wire
 		(pts
@@ -1466,6 +1231,16 @@
 	)
 	(wire
 		(pts
+			(xy 129.54 73.66) (xy 129.54 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55fa69f5-c50b-410d-b71b-5dc869b61c57")
+	)
+	(wire
+		(pts
 			(xy 163.83 97.79) (xy 161.29 97.79)
 		)
 		(stroke
@@ -1473,6 +1248,16 @@
 			(type default)
 		)
 		(uuid "59802bba-40aa-4208-a511-54d976b1831c")
+	)
+	(wire
+		(pts
+			(xy 127 73.66) (xy 129.54 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a3940e1-b224-4905-80a5-20e067844bc3")
 	)
 	(wire
 		(pts
@@ -1493,6 +1278,16 @@
 			(type default)
 		)
 		(uuid "5ced2de9-d717-4a12-a45f-b92ae0004a87")
+	)
+	(wire
+		(pts
+			(xy 129.54 76.2) (xy 128.27 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "667b2f62-d77c-4ebd-9c0d-4bd4ccf51ff1")
 	)
 	(wire
 		(pts
@@ -1586,26 +1381,6 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 125.73) (xy 163.83 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf035575-5a6b-4edd-ba2d-3643f688094c")
-	)
-	(wire
-		(pts
-			(xy 163.83 97.79) (xy 163.83 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c5a355b1-a946-4147-ab75-a672d586df59")
-	)
-	(wire
-		(pts
 			(xy 116.84 83.82) (xy 127 83.82)
 		)
 		(stroke
@@ -1636,6 +1411,26 @@
 	)
 	(wire
 		(pts
+			(xy 128.27 66.04) (xy 128.27 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5c72ede-b86d-419e-8c25-7000c8c84aeb")
+	)
+	(wire
+		(pts
+			(xy 127 66.04) (xy 128.27 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5c9cf71-33ce-4708-b7cf-74ebd2958f65")
+	)
+	(wire
+		(pts
 			(xy 92.71 97.79) (xy 95.25 97.79)
 		)
 		(stroke
@@ -1644,7 +1439,7 @@
 		)
 		(uuid "fe0fae6c-42d0-496e-9905-cb55c7598f6b")
 	)
-	(label "FAN_B_NEG"
+	(label "FAN_A_NEG"
 		(at 139.7 91.44 0)
 		(effects
 			(font
@@ -1654,7 +1449,7 @@
 		)
 		(uuid "d3960253-ad9e-4f7a-849b-2176f5cfb0f5")
 	)
-	(label "FAN_A_NEG"
+	(label "FAN_B_NEG"
 		(at 116.84 91.44 180)
 		(effects
 			(font
@@ -1954,131 +1749,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 163.83 121.92 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4d93ffb8-4312-4fea-b120-558572200e59")
-		(property "Reference" "LVPWR9"
-			(at 160.02 122.2374 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED"
-			(at 160.02 124.7774 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 163.83 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 163.83 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 163.83 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 163.83 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 163.83 121.92 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Link" ""
-			(at 163.83 121.92 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 163.83 121.92 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description (Customer #)" ""
-			(at 163.83 121.92 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" ""
-			(at 163.83 121.92 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ba415eb6-f7d6-4166-aa10-a494d3eac8a8")
-		)
-		(pin "2"
-			(uuid "7c114619-ec7a-48f5-b7d2-73244ae206e0")
-		)
-		(instances
-			(project "PS-MotorControllerInterfacePCB"
-				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "LVPWR9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 116.84 106.68 0)
 		(unit 1)
@@ -2140,73 +1810,6 @@
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
 					(reference "#PWR030")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 163.83 128.27 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "51cd7267-8c5f-446b-8177-986f7d983eab")
-		(property "Reference" "#PWR033"
-			(at 163.83 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 163.83 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 163.83 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 163.83 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 163.83 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d9aa2603-9f7e-4074-924c-2906ee700489")
-		)
-		(instances
-			(project "PS-MotorControllerInterfacePCB"
-				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -2330,128 +1933,6 @@
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
 					(reference "R_G1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 163.83 114.3 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "59c2fbf7-7a67-4625-b535-47c83b6ee4ef")
-		(property "Reference" "R14"
-			(at 159.258 112.776 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4.3k"
-			(at 159.258 115.316 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 162.052 114.3 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 163.83 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 163.83 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 163.83 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Link" ""
-			(at 163.83 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "CRCW06034K30FKEA"
-			(at 163.83 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 163.83 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description (Customer #)" ""
-			(at 163.83 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C2907165"
-			(at 163.83 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4f794beb-cb65-40b1-a132-57f9f39f71df")
-		)
-		(pin "2"
-			(uuid "84a9d9c9-dc03-4571-bd3a-3fedc56127fc")
-		)
-		(instances
-			(project "PS-MotorControllerInterfacePCB"
-				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -2608,132 +2089,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 92.71 121.92 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "77a9cb2f-ea46-485e-8ee2-82550712cca3")
-		(property "Reference" "LVPWR8"
-			(at 96.52 122.2374 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED"
-			(at 96.52 124.7774 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 92.71 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 92.71 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 92.71 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 92.71 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 92.71 121.92 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Link" ""
-			(at 92.71 121.92 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 92.71 121.92 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description (Customer #)" ""
-			(at 92.71 121.92 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" ""
-			(at 92.71 121.92 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8be683a1-442b-4f07-8331-d3e763b86cbd")
-		)
-		(pin "2"
-			(uuid "04dbe4e2-379c-4f48-a261-1ca27a01c69e")
-		)
-		(instances
-			(project "PS-MotorControllerInterfacePCB"
-				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "LVPWR8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 92.71 102.87 90)
+		(at 92.71 97.79 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -2741,7 +2098,7 @@
 		(dnp no)
 		(uuid "85dfaa53-0f4b-4a24-b65d-f996b805ebb2")
 		(property "Reference" "PWM_B1"
-			(at 86.614 105.918 90)
+			(at 89.662 91.694 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2749,7 +2106,7 @@
 			)
 		)
 		(property "Value" "TP_PWM_A"
-			(at 86.614 108.458 90)
+			(at 87.122 91.694 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2758,7 +2115,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 92.71 97.79 0)
+			(at 97.79 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2767,7 +2124,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 92.71 97.79 0)
+			(at 97.79 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2776,7 +2133,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 92.71 102.87 0)
+			(at 92.71 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2785,7 +2142,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 92.71 102.87 90)
+			(at 92.71 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2794,7 +2151,7 @@
 			)
 		)
 		(property "Mouser Link" ""
-			(at 92.71 102.87 90)
+			(at 92.71 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2803,7 +2160,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 92.71 102.87 90)
+			(at 92.71 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2812,7 +2169,7 @@
 			)
 		)
 		(property "Description (Customer #)" ""
-			(at 92.71 102.87 90)
+			(at 92.71 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2821,7 +2178,7 @@
 			)
 		)
 		(property "LCSC" ""
-			(at 92.71 102.87 90)
+			(at 92.71 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3022,127 +2379,6 @@
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
 					(reference "TACH_B1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 92.71 114.3 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "900a168f-f3a4-4674-badd-806b36b1d2d8")
-		(property "Reference" "R13"
-			(at 97.282 112.776 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4.3k"
-			(at 97.282 115.316 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 94.488 114.3 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 92.71 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 92.71 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 92.71 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Link" ""
-			(at 92.71 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "CRCW06034K30FKEA"
-			(at 92.71 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 92.71 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description (Customer #)" ""
-			(at 92.71 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C2907165"
-			(at 92.71 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fc64e4b1-f1fb-4e9a-a0b1-2efae82acbd5")
-		)
-		(pin "2"
-			(uuid "45a51232-1319-4983-b3f2-53adcccc2941")
-		)
-		(instances
-			(project "PS-MotorControllerInterfacePCB"
-				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -3807,8 +3043,8 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 163.83 102.87 270)
-		(mirror x)
+		(at 163.83 97.79 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -3816,7 +3052,7 @@
 		(dnp no)
 		(uuid "d325b8bd-8e31-430d-bbe5-8efda7569436")
 		(property "Reference" "PWM_A1"
-			(at 169.418 105.664 90)
+			(at 166.624 92.202 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3824,7 +3060,7 @@
 			)
 		)
 		(property "Value" "TP_PWM_B"
-			(at 170.434 108.204 90)
+			(at 169.164 91.186 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3833,7 +3069,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 163.83 97.79 0)
+			(at 158.75 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3842,7 +3078,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 163.83 97.79 0)
+			(at 158.75 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3851,7 +3087,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 163.83 102.87 0)
+			(at 163.83 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3860,7 +3096,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 163.83 102.87 90)
+			(at 163.83 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3869,7 +3105,7 @@
 			)
 		)
 		(property "Mouser Link" ""
-			(at 163.83 102.87 90)
+			(at 163.83 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3878,7 +3114,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 163.83 102.87 90)
+			(at 163.83 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3887,7 +3123,7 @@
 			)
 		)
 		(property "Description (Customer #)" ""
-			(at 163.83 102.87 90)
+			(at 163.83 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3896,7 +3132,7 @@
 			)
 		)
 		(property "LCSC" ""
-			(at 163.83 102.87 90)
+			(at 163.83 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4144,72 +3380,6 @@
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
 					(reference "TACH_A1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 92.71 128.27 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "eab90cd2-3afe-4baf-8cb0-593f2adc0712")
-		(property "Reference" "#PWR028"
-			(at 92.71 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 92.71 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 92.71 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 92.71 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 92.71 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5c4cca75-ce44-452d-be47-6faa05fe685a")
-		)
-		(instances
-			(project "PS-MotorControllerInterfacePCB"
-				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "#PWR028")
 					(unit 1)
 				)
 			)
