@@ -3046,12 +3046,6 @@
 		(uuid "ffabc320-0a56-495a-98f3-7368dc55769f")
 	)
 	(junction
-		(at 77.47 62.23)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "19b0bb12-e828-4426-a7b6-b840ff5e4cd1")
-	)
-	(junction
 		(at 72.39 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3140,6 +3134,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b2f9f824-5c60-4b0e-9f73-70f8503dd393")
+	)
+	(junction
+		(at 77.47 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c33d859f-342f-42d5-8e82-c09b066c9997")
 	)
 	(junction
 		(at 116.84 62.23)
@@ -3545,6 +3545,16 @@
 	)
 	(wire
 		(pts
+			(xy 72.39 62.23) (xy 77.47 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4306c992-8cdc-452c-ad7b-3de76ba78b5a")
+	)
+	(wire
+		(pts
 			(xy 163.83 40.64) (xy 104.14 40.64)
 		)
 		(stroke
@@ -3888,7 +3898,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 39.37) (xy 81.28 39.37)
+			(xy 72.39 39.37) (xy 81.28 39.37)
 		)
 		(stroke
 			(width 0)
@@ -3966,16 +3976,6 @@
 			(type default)
 		)
 		(uuid "86d676ab-6d18-448d-8742-9f5f7c1246a4")
-	)
-	(wire
-		(pts
-			(xy 73.66 62.23) (xy 77.47 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "897455be-67e8-4508-82e0-198dae208816")
 	)
 	(polyline
 		(pts
@@ -4170,16 +4170,6 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 62.23) (xy 80.01 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "acf9b7c3-2c51-4799-93fb-52c7b12f52be")
-	)
-	(wire
-		(pts
 			(xy 166.37 38.1) (xy 166.37 91.44)
 		)
 		(stroke
@@ -4187,6 +4177,16 @@
 			(type default)
 		)
 		(uuid "aec98b2e-a521-49c1-88bf-7eadf2c3e727")
+	)
+	(wire
+		(pts
+			(xy 77.47 62.23) (xy 80.01 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aff58d60-577a-44fe-befd-29d3c2f21a78")
 	)
 	(polyline
 		(pts
@@ -4352,7 +4352,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 62.23) (xy 73.66 39.37)
+			(xy 72.39 62.23) (xy 72.39 39.37)
 		)
 		(stroke
 			(width 0)
@@ -8323,7 +8323,7 @@
 		(uuid "23143e58-db08-4b82-b9c4-65159acd00b3")
 	)
 	(label "PSOM_PWR"
-		(at 73.66 62.23 180)
+		(at 72.39 62.23 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9870,72 +9870,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+24V")
-		(at 77.47 62.23 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2e39f5ab-c30d-43e5-8a98-420fd2d2cdb8")
-		(property "Reference" "#PWR07"
-			(at 77.47 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+24V"
-			(at 77.47 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 77.47 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 77.47 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+24V\""
-			(at 77.47 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1deb8c6d-ae3f-4d44-8d6a-69dc09ce5528")
-		)
-		(instances
-			(project "PS-MotorControllerInterfacePCB"
-				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 153.67 76.2 0)
 		(unit 1)
@@ -10939,6 +10873,71 @@
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
 					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 77.47 62.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5ef45ac4-b728-4cc4-93cd-fafe148d6ffe")
+		(property "Reference" "#FLG04"
+			(at 77.47 60.325 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 78.994 57.658 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 77.47 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 77.47 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 77.47 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bb0cc847-f53d-4c5a-93bc-bccaeb409885")
+		)
+		(instances
+			(project ""
+				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
+					(reference "#FLG04")
 					(unit 1)
 				)
 			)
