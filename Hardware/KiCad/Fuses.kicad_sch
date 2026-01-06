@@ -1851,7 +1851,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "14212e44-6e73-4f71-850c-69dca24ee026")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR041"
 			(at 143.51 85.09 0)
 			(effects
 				(font
@@ -1901,7 +1901,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/07f22498-fffc-46fc-8b11-2ac98c172822"
-					(reference "#PWR043")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -2152,7 +2152,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "232ce6d7-2680-4c16-97a9-d9a357e4ea0c")
-		(property "Reference" "#PWR042"
+		(property "Reference" "#PWR040"
 			(at 132.08 116.84 0)
 			(effects
 				(font
@@ -2202,7 +2202,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/07f22498-fffc-46fc-8b11-2ac98c172822"
-					(reference "#PWR042")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -2218,7 +2218,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "54a2c1fc-7a61-463a-8228-c24651307b57")
-		(property "Reference" "R17"
+		(property "Reference" "R15"
 			(at 186.69 107.9499 0)
 			(effects
 				(font
@@ -2326,7 +2326,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/07f22498-fffc-46fc-8b11-2ac98c172822"
-					(reference "R17")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -2342,7 +2342,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "59620c92-8d47-4539-9703-b9ba7a46f94a")
-		(property "Reference" "#PWR044"
+		(property "Reference" "#PWR042"
 			(at 184.15 129.54 0)
 			(effects
 				(font
@@ -2392,7 +2392,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/07f22498-fffc-46fc-8b11-2ac98c172822"
-					(reference "#PWR044")
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -2721,7 +2721,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c18e0b99-a463-4531-8e97-08ed7db4bc3b")
-		(property "Reference" "#PWR041"
+		(property "Reference" "#PWR039"
 			(at 100.33 85.09 0)
 			(effects
 				(font
@@ -2771,7 +2771,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/07f22498-fffc-46fc-8b11-2ac98c172822"
-					(reference "#PWR041")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)

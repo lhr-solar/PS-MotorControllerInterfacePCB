@@ -513,6 +513,12 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "name": "+24V",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgb(255, 0, 202)"
       }
     ],
     "meta": {
@@ -690,6 +696,18 @@
           "label": "LCSC",
           "name": "LCSC",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "LCSC P/N",
+          "name": "LCSC P/N",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Max Vgs",
+          "name": "Max Vgs",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -753,20 +771,12 @@
       "Power12V"
     ],
     [
-      "07f22498-fffc-46fc-8b11-2ac98c172822",
-      "Fuse"
-    ],
-    [
       "2c6af1c6-af26-4746-8ed9-5deb88ce0ee1",
       "Buck Converter 24V-12V"
     ],
     [
-      "a900cd4e-a274-446c-92be-25b8d12a288b",
-      "Power24V"
-    ],
-    [
-      "596d5dbc-45f3-4537-b268-5dc84ec230e0",
-      "StatusLEDs"
+      "457b93bf-62f4-46aa-a712-fe00e2990c62",
+      "HSS"
     ]
   ],
   "text_variables": {}
