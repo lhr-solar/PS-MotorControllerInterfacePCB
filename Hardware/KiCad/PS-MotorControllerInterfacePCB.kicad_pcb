@@ -21598,7 +21598,7 @@
 		(descr "Keystone THM Miniature Test Point 5000-5004, http://www.keyelco.com/product-pdf.cfm?p=1309")
 		(tags "Through Hole Mount Test Points")
 		(property "Reference" "TP_1"
-			(at 0 1.45 0)
+			(at 0.1 2.1 0)
 			(layer "F.SilkS")
 			(uuid "e49e8b3a-4c03-4b19-88b2-efad74e311d8")
 			(effects
@@ -27166,7 +27166,7 @@
 		(descr "Keystone THM Miniature Test Point 5000-5004, http://www.keyelco.com/product-pdf.cfm?p=1309")
 		(tags "Through Hole Mount Test Points")
 		(property "Reference" "TP_2"
-			(at -1.45 0.011 180)
+			(at -2.1 0 180)
 			(layer "F.SilkS")
 			(uuid "1b49384b-d7e8-4cc1-bcc7-6691902d73a6")
 			(effects
