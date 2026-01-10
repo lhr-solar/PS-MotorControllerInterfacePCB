@@ -709,7 +709,7 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R30"
-			(at 0 -1.15 90)
+			(at -2.1 0.05 180)
 			(layer "F.SilkS")
 			(uuid "26db78f7-9170-4535-b473-d88edb3ac7a0")
 			(effects
@@ -8063,7 +8063,7 @@
 		(descr "Molex Nano-Fit Power Connectors, 105313-xx03, 3 Pins per row (http://www.molex.com/pdm_docs/sd/1053131208_sd.pdf), generated with kicad-footprint-generator")
 		(tags "connector Molex Nano-Fit horizontal")
 		(property "Reference" "J6"
-			(at -2.3 0 0)
+			(at -2.2 0 0)
 			(layer "F.SilkS")
 			(uuid "96d6c9cc-8390-4ca5-8e58-5f782d2dbed2")
 			(effects
@@ -13880,7 +13880,7 @@
 		(descr "Molex Nano-Fit Power Connectors, 105313-xx02, 2 Pins per row (http://www.molex.com/pdm_docs/sd/1053131208_sd.pdf), generated with kicad-footprint-generator")
 		(tags "connector Molex Nano-Fit top entry")
 		(property "Reference" "J1"
-			(at -2.55 0.15 0)
+			(at -2.2 0.15 0)
 			(layer "F.SilkS")
 			(uuid "8bc45673-5661-4c15-b772-25c9e600a21a")
 			(effects
@@ -23474,7 +23474,7 @@
 		(descr "Molex Nano-Fit Power Connectors, 105313-xx02, 2 Pins per row (http://www.molex.com/pdm_docs/sd/1053131208_sd.pdf), generated with kicad-footprint-generator")
 		(tags "connector Molex Nano-Fit top entry")
 		(property "Reference" "J8"
-			(at -2.41 -0.05 0)
+			(at -2.26 -0.05 0)
 			(layer "F.SilkS")
 			(uuid "88350b5e-39dc-4b61-8d1d-b33b57ec8751")
 			(effects
@@ -28129,7 +28129,7 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R15"
-			(at 1.8875 2.1 270)
+			(at -0.7875 1.175 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "3fc20512-e144-40dc-be41-41028793d713")
@@ -36861,7 +36861,7 @@
 		(layer "Edge.Cuts")
 		(uuid "f129be61-94b8-44e2-8353-e00a98d58e85")
 	)
-	(gr_text "Spot reserved \nfor\nRichard"
+	(gr_text "Spot reserved \nfor\nDithard"
 		(at 195.9 93.2 0)
 		(layer "F.SilkS")
 		(uuid "5d9f270e-7477-47c1-938c-29892afeae65")
