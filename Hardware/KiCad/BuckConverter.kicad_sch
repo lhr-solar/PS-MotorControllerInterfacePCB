@@ -7616,7 +7616,7 @@
 		(uuid "0bed47fc-dacc-43fc-adc0-ca5648873891")
 	)
 	(hierarchical_label "12V_SENSE"
-		(shape input)
+		(shape output)
 		(at 210.82 118.11 0)
 		(effects
 			(font
@@ -9733,11 +9733,11 @@
 		(at 130.81 114.3 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "fb8cca52-6aec-4f6f-aff3-735117990968")
-		(property "Reference" "TP4"
+		(property "Reference" "BUCK_PG1"
 			(at 135.128 113.284 0)
 			(effects
 				(font
@@ -9755,7 +9755,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pin_1.0x1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 130.81 119.38 0)
 			(effects
 				(font
@@ -9833,7 +9833,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/2c6af1c6-af26-4746-8ed9-5deb88ce0ee1"
-					(reference "TP4")
+					(reference "BUCK_PG1")
 					(unit 1)
 				)
 			)

@@ -1788,7 +1788,7 @@
 		(uuid "66c725ac-5368-4690-92c2-f90d801dea8f")
 	)
 	(hierarchical_label "ST"
-		(shape input)
+		(shape output)
 		(at 209.55 105.41 0)
 		(effects
 			(font
@@ -2662,11 +2662,11 @@
 		(at 194.31 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "7ef0ab20-0372-43d4-ab88-2e797bac60d9")
-		(property "Reference" "TP3"
+		(property "Reference" "HSS_FAULT1"
 			(at 193.294 101.092 0)
 			(effects
 				(font
@@ -2684,7 +2684,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pin_1.0x1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 199.39 105.41 0)
 			(effects
 				(font
@@ -2762,7 +2762,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/457b93bf-62f4-46aa-a712-fe00e2990c62"
-					(reference "TP3")
+					(reference "HSS_FAULT1")
 					(unit 1)
 				)
 			)

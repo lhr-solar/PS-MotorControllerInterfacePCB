@@ -4586,7 +4586,7 @@
 	)
 	(text "PA4"
 		(exclude_from_sim no)
-		(at 121.666 85.598 0)
+		(at 127 85.598 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4606,7 +4606,7 @@
 	)
 	(text "Pin: PB10 ;\nTIM2_CH3"
 		(exclude_from_sim no)
-		(at 133.858 98.552 0)
+		(at 134.874 99.06 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4616,7 +4616,7 @@
 	)
 	(text "PB6"
 		(exclude_from_sim no)
-		(at 128.016 71.628 0)
+		(at 126.238 71.628 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4624,9 +4624,19 @@
 		)
 		(uuid "3756a009-006f-4ebf-8f76-7ea69207ecee")
 	)
+	(text "10A"
+		(exclude_from_sim no)
+		(at 61.976 26.924 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3d6bb7f8-2438-4d54-a547-3638dae4ba76")
+	)
 	(text "Pin: PA11 ; \nTIM1_CH4\n"
 		(exclude_from_sim no)
-		(at 136.652 114.3 0)
+		(at 136.398 115.824 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4636,7 +4646,7 @@
 	)
 	(text "PB7"
 		(exclude_from_sim no)
-		(at 124.206 74.168 0)
+		(at 126.238 74.168 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4667,7 +4677,7 @@
 	)
 	(text "Pin: PB12"
 		(exclude_from_sim no)
-		(at 125.984 95.758 0)
+		(at 130.556 95.758 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4677,7 +4687,7 @@
 	)
 	(text "stub before termination"
 		(exclude_from_sim no)
-		(at 114.3 245.11 0)
+		(at 110.744 250.698 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4687,7 +4697,7 @@
 	)
 	(text "Pin: PA5 ; \nTIM2_CH1"
 		(exclude_from_sim no)
-		(at 133.604 87.122 0)
+		(at 136.652 89.154 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4697,7 +4707,7 @@
 	)
 	(text "Pin: PB3 ; \nTIM2_CH2"
 		(exclude_from_sim no)
-		(at 135.128 108.966 0)
+		(at 135.382 109.982 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4727,7 +4737,7 @@
 	)
 	(text "PB14"
 		(exclude_from_sim no)
-		(at 128.016 103.378 0)
+		(at 125.476 103.378 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4737,7 +4747,7 @@
 	)
 	(text "PA6"
 		(exclude_from_sim no)
-		(at 121.666 90.678 0)
+		(at 129.286 90.678 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4952,8 +4962,8 @@
 		(uuid "662e5a4c-8fbe-4273-b61e-bf60fd15d2ea")
 	)
 	(no_connect
-		(at 167.64 259.08)
-		(uuid "8658ca77-fffe-4f67-aad7-4ac33d56f8a4")
+		(at 95.25 204.47)
+		(uuid "978dd46d-2680-4879-bc60-40a80591cd9f")
 	)
 	(no_connect
 		(at 69.85 227.33)
@@ -4974,6 +4984,10 @@
 	(no_connect
 		(at 80.01 102.87)
 		(uuid "d46e954c-9c85-4367-9cbd-e9475a023e09")
+	)
+	(no_connect
+		(at 96.52 229.87)
+		(uuid "d7b660ee-a63d-43eb-b6ac-f34d3ed8f8a5")
 	)
 	(no_connect
 		(at 69.85 229.87)
@@ -5205,7 +5219,7 @@
 		(stroke
 			(width 0)
 			(type default)
-			(color 194 0 194 1)
+			(color 0 132 0 1)
 		)
 		(uuid "1b1a3e81-4ed5-449c-aa26-8dc5d8a7e800")
 	)
@@ -5218,6 +5232,16 @@
 			(type default)
 		)
 		(uuid "1e22a63a-d03f-4bdc-a2ac-18f664f8ca11")
+	)
+	(wire
+		(pts
+			(xy 91.44 187.96) (xy 90.17 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e740c57-d71c-4969-b9a3-e77920034100")
 	)
 	(wire
 		(pts
@@ -5276,7 +5300,7 @@
 		(stroke
 			(width 0)
 			(type default)
-			(color 194 0 194 1)
+			(color 0 132 0 1)
 		)
 		(uuid "306ec75c-2386-4455-98ee-5a5ca32e15f0")
 	)
@@ -5489,7 +5513,7 @@
 		(stroke
 			(width 0)
 			(type default)
-			(color 194 0 194 1)
+			(color 0 132 0 1)
 		)
 		(uuid "5732c8e9-446f-4aee-ad41-9194e3a9c373")
 	)
@@ -5600,7 +5624,7 @@
 		(stroke
 			(width 0)
 			(type default)
-			(color 194 0 194 1)
+			(color 0 132 0 1)
 		)
 		(uuid "6bdf57ba-da3a-4d5a-9a54-b3c437d604eb")
 	)
@@ -5633,6 +5657,16 @@
 			(type default)
 		)
 		(uuid "6fdccce7-5cd7-4e8b-b8fd-692b1423ee27")
+	)
+	(wire
+		(pts
+			(xy 81.28 187.96) (xy 82.55 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73cedb24-c395-436d-a892-eb718be901ef")
 	)
 	(wire
 		(pts
@@ -5812,7 +5846,7 @@
 		(stroke
 			(width 0)
 			(type default)
-			(color 194 0 194 1)
+			(color 0 132 0 1)
 		)
 		(uuid "881db77c-36a3-40aa-bed2-f51e3735b223")
 	)
@@ -5853,7 +5887,7 @@
 		(stroke
 			(width 0)
 			(type default)
-			(color 194 0 194 1)
+			(color 0 132 0 1)
 		)
 		(uuid "8e9502c2-1a9a-491a-b141-8308a3dd5a7f")
 	)
@@ -6337,7 +6371,7 @@
 		(stroke
 			(width 0)
 			(type default)
-			(color 194 0 194 1)
+			(color 0 132 0 1)
 		)
 		(uuid "db50db95-0500-454e-bc85-4e08733e2678")
 	)
@@ -6348,7 +6382,7 @@
 		(stroke
 			(width 0)
 			(type default)
-			(color 194 0 194 1)
+			(color 0 132 0 1)
 		)
 		(uuid "dbaa9d2d-1b9b-4f6b-be6f-fe2d129ac1c3")
 	)
@@ -6359,7 +6393,7 @@
 		(stroke
 			(width 0)
 			(type default)
-			(color 194 0 194 1)
+			(color 0 132 0 1)
 		)
 		(uuid "dc17d767-5d5b-461d-a1c5-4f97cffed359")
 	)
@@ -6462,7 +6496,7 @@
 		(stroke
 			(width 0)
 			(type default)
-			(color 194 0 194 1)
+			(color 0 132 0 1)
 		)
 		(uuid "f64cb7a5-e375-4a5b-8562-7520e7c3d1d6")
 	)
@@ -10161,7 +10195,17 @@
 		)
 		(uuid "02d61d41-3497-46de-b299-c46596e4da0b")
 	)
-	(label "D_C"
+	(label "SHIELD"
+		(at 59.69 205.74 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "03b7eb2b-4544-40d5-b011-8e0eabf90d24")
+	)
+	(label "I_MOTOR"
 		(at 116.84 96.52 0)
 		(effects
 			(font
@@ -10171,7 +10215,7 @@
 		)
 		(uuid "03eecfb7-80e1-4cdd-9d11-860d637e9a35")
 	)
-	(label "MESSAGE"
+	(label "STATUS"
 		(at 156.21 92.71 180)
 		(effects
 			(font
@@ -10221,7 +10265,7 @@
 		)
 		(uuid "1da98fc1-4cef-44a3-9c9e-8774b3da64f0")
 	)
-	(label "M_FAULT"
+	(label "FAULT"
 		(at 116.84 104.14 0)
 		(effects
 			(font
@@ -10321,7 +10365,7 @@
 		)
 		(uuid "45caae1d-96be-4fa5-b6c0-e4a66e855060")
 	)
-	(label "M_FAULT"
+	(label "FAULT"
 		(at 156.21 124.46 180)
 		(effects
 			(font
@@ -10351,7 +10395,7 @@
 		)
 		(uuid "62386d12-f58e-43b1-8192-7766b670d93a")
 	)
-	(label "D_C"
+	(label "I_MOTOR"
 		(at 156.21 114.3 180)
 		(effects
 			(font
@@ -10361,7 +10405,7 @@
 		)
 		(uuid "64dfab9e-9761-43cf-a308-136cd30ec74a")
 	)
-	(label "PWM_FAN_A"
+	(label "PWM_A"
 		(at 116.84 99.06 0)
 		(effects
 			(font
@@ -10411,7 +10455,7 @@
 		)
 		(uuid "80fbdee0-ea34-4ad1-a13f-d00129bc30fd")
 	)
-	(label "S_OC"
+	(label "SW_OC"
 		(at 156.21 102.87 180)
 		(effects
 			(font
@@ -10441,7 +10485,7 @@
 		)
 		(uuid "8b525488-7f67-425c-9e24-e10e85171e84")
 	)
-	(label "EN"
+	(label "HSS_EN"
 		(at 116.84 86.36 0)
 		(effects
 			(font
@@ -10471,7 +10515,7 @@
 		)
 		(uuid "aab1614d-e9b3-4303-9e3e-5ed81ec31f04")
 	)
-	(label "PWM_FAN_A"
+	(label "PWM_A"
 		(at 212.09 91.44 180)
 		(effects
 			(font
@@ -10491,7 +10535,7 @@
 		)
 		(uuid "c0e26167-65fc-4644-bfb6-74915dfc44af")
 	)
-	(label "S_OC"
+	(label "SW_OC"
 		(at 116.84 74.93 0)
 		(effects
 			(font
@@ -10501,7 +10545,7 @@
 		)
 		(uuid "c1d1cf91-1996-42f6-b01a-13f3fa2c8bfd")
 	)
-	(label "MESSAGE"
+	(label "STATUS"
 		(at 116.84 72.39 0)
 		(effects
 			(font
@@ -10521,7 +10565,17 @@
 		)
 		(uuid "c6a50d44-f01b-47f6-b073-e97d7c2fb504")
 	)
-	(label "ST"
+	(label "SHIELD"
+		(at 57.15 229.87 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c6f84c30-f5c2-4a1a-bd30-72adfc9ca7c5")
+	)
+	(label "HSS_FAULT"
 		(at 109.22 38.1 0)
 		(effects
 			(font
@@ -10551,7 +10605,7 @@
 		)
 		(uuid "d551e386-439d-4ccb-b237-db56ce7046e7")
 	)
-	(label "PWM_FAN_B"
+	(label "PWM_B"
 		(at 212.09 83.82 180)
 		(effects
 			(font
@@ -10571,7 +10625,7 @@
 		)
 		(uuid "e5d4abb1-e844-40e8-8bf0-8a94c972d81d")
 	)
-	(label "EN"
+	(label "HSS_EN"
 		(at 109.22 40.64 0)
 		(effects
 			(font
@@ -10581,7 +10635,17 @@
 		)
 		(uuid "e95e136c-5791-4aa0-8d5f-20418b86591a")
 	)
-	(label "ST"
+	(label "SHIELD"
+		(at 81.28 187.96 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "eaf43e89-d1c4-4319-a219-6ddf0877c72f")
+	)
+	(label "HSS_FAULT"
 		(at 116.84 91.44 0)
 		(effects
 			(font
@@ -10591,7 +10655,7 @@
 		)
 		(uuid "ed92e77e-a517-41b4-8258-a5f5aab36491")
 	)
-	(label "PWM_FAN_B"
+	(label "PWM_B"
 		(at 116.84 88.9 0)
 		(effects
 			(font
@@ -10621,7 +10685,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0211f798-4f3e-4c9b-9f70-d87a3c5c2d1e")
-		(property "Reference" "J4"
+		(property "Reference" "CANDAPTER1"
 			(at 99.06 245.1099 0)
 			(effects
 				(font
@@ -10684,7 +10748,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "J4")
+					(reference "CANDAPTER1")
 					(unit 1)
 				)
 			)
@@ -10695,11 +10759,11 @@
 		(at 289.56 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "023c9255-f72b-4fcf-bc55-f7572f6ae9f3")
-		(property "Reference" "12V1"
+		(property "Reference" "PP_OUT1"
 			(at 294.386 28.448 0)
 			(effects
 				(font
@@ -10715,7 +10779,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pin_1.0x1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 294.64 33.02 0)
 			(effects
 				(font
@@ -10793,7 +10857,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "12V1")
+					(reference "PP_OUT1")
 					(unit 1)
 				)
 			)
@@ -11064,7 +11128,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "07ca3574-a238-41ea-8fc8-b5c5be53ac68")
-		(property "Reference" "J3"
+		(property "Reference" "CAN_IN1"
 			(at 66.04 194.31 0)
 			(effects
 				(font
@@ -11137,7 +11201,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "J3")
+					(reference "CAN_IN1")
 					(unit 1)
 				)
 			)
@@ -11518,72 +11582,6 @@
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
 					(reference "#PWR020")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 57.15 229.87 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1d77fe47-edbb-4d7e-8746-34e42a7c02e0")
-		(property "Reference" "#PWR03"
-			(at 57.15 236.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 57.15 234.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 57.15 229.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 57.15 229.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 57.15 229.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "57faffe0-0c7f-4768-87ba-74e2f81dbb73")
-		)
-		(instances
-			(project "PS-MotorControllerInterfacePCB"
-				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -11985,7 +11983,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3a6faac9-8321-4492-a31e-86c9ee715ecb")
-		(property "Reference" "J8"
+		(property "Reference" "PWR_12V1"
 			(at 330.2 33.0199 0)
 			(effects
 				(font
@@ -12048,7 +12046,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "J8")
+					(reference "PWR_12V1")
 					(unit 1)
 				)
 			)
@@ -12179,77 +12177,11 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 95.25 204.47 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3b4bc018-7d9c-480a-b403-1d133e7f2440")
-		(property "Reference" "#PWR08"
-			(at 95.25 210.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 95.25 209.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 95.25 204.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 95.25 204.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 95.25 204.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "88472511-b04e-4f58-9aae-9bd113f0c5a9")
-		)
-		(instances
-			(project "PS-MotorControllerInterfacePCB"
-				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 166.37 134.62 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "3dc0eafe-b1bc-4a9e-9997-b1744a30efe5")
@@ -12269,7 +12201,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pin_1.0x1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 171.45 134.62 0)
 			(effects
 				(font
@@ -12358,11 +12290,11 @@
 		(at 166.37 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "3eb02c33-95fe-4a07-8903-7927edc0cd07")
-		(property "Reference" "OVC1"
+		(property "Reference" "SW_OC1"
 			(at 162.56 99.822 0)
 			(effects
 				(font
@@ -12378,7 +12310,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pin_1.0x1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 171.45 102.87 0)
 			(effects
 				(font
@@ -12456,7 +12388,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "OVC1")
+					(reference "SW_OC1")
 					(unit 1)
 				)
 			)
@@ -12584,72 +12516,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 59.69 205.74 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4a71e9bc-a0e0-4d8d-930a-264f01743225")
-		(property "Reference" "#PWR04"
-			(at 59.69 212.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 59.69 210.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 59.69 205.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 59.69 205.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 59.69 205.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "198596c6-fc68-417e-828c-d36c422f184e")
-		)
-		(instances
-			(project ""
-				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_name "Conn_01x02_1")
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 41.91 33.02 0)
@@ -12661,22 +12527,20 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4d21565e-a3b7-4558-9289-8403c784d67c")
-		(property "Reference" "J1"
-			(at 39.37 33.0199 0)
+		(property "Reference" "PWR_BOARD1"
+			(at 41.91 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "PWR board"
-			(at 39.37 35.5599 0)
+			(at 41.91 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "UTSVT_Connectors:105313-2102"
@@ -12724,7 +12588,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "J1")
+					(reference "PWR_BOARD1")
 					(unit 1)
 				)
 			)
@@ -13114,11 +12978,11 @@
 		(at 106.68 46.99 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "64ffeb61-41a0-47fe-a381-182fda06c3a7")
-		(property "Reference" "TP5"
+		(property "Reference" "HSS_EN1"
 			(at 107.696 51.308 0)
 			(effects
 				(font
@@ -13136,7 +13000,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pin_1.0x1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 101.6 46.99 0)
 			(effects
 				(font
@@ -13214,7 +13078,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "TP5")
+					(reference "HSS_EN1")
 					(unit 1)
 				)
 			)
@@ -13349,7 +13213,7 @@
 		(at 166.37 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "66f4e04c-5202-4a09-9481-abbf0d93df5f")
@@ -13369,7 +13233,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pin_1.0x1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 171.45 144.78 0)
 			(effects
 				(font
@@ -13582,11 +13446,11 @@
 		(at 54.61 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "6e454322-bc7b-4b34-9436-4ec31ff95e13")
-		(property "Reference" "TP2"
+		(property "Reference" "12VSNS1"
 			(at 53.594 82.042 0)
 			(effects
 				(font
@@ -13604,7 +13468,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pin_1.0x1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 59.69 86.36 0)
 			(effects
 				(font
@@ -13682,118 +13546,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "TP2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 167.64 256.54 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "735fcaa3-7f38-44c3-b680-a7dc6a33a856")
-		(property "Reference" "H3"
-			(at 170.18 253.9999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole_Pad"
-			(at 160.02 261.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
-			(at 167.64 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 167.64 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole with connection"
-			(at 167.64 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 167.64 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Link" ""
-			(at 167.64 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 167.64 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description (Customer #)" ""
-			(at 167.64 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" ""
-			(at 167.64 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "626710d4-3f5b-4f4f-9ee4-4c938964eb6b")
-		)
-		(instances
-			(project "PS-MotorControllerInterfacePCB"
-				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "H3")
+					(reference "12VSNS1")
 					(unit 1)
 				)
 			)
@@ -13804,11 +13557,11 @@
 		(at 166.37 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "758deced-3a94-4ea5-956b-67da2bb7eee6")
-		(property "Reference" "D_C1"
+		(property "Reference" "I_MOTOR1"
 			(at 161.544 112.268 0)
 			(effects
 				(font
@@ -13824,7 +13577,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 171.45 114.3 0)
 			(effects
 				(font
@@ -13902,7 +13655,75 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "D_C1")
+					(reference "I_MOTOR1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 86.36 187.96 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7a58f66b-14c9-4f26-9434-01bd28efc5e5")
+		(property "Reference" "R34"
+			(at 86.36 181.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 86.36 184.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 86.36 189.738 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 86.36 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 86.36 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3518780c-5d60-493b-ad9a-71e4587e55a2")
+		)
+		(pin "1"
+			(uuid "336a299f-8273-4b25-8c14-1d6bda66d7d4")
+		)
+		(instances
+			(project ""
+				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
+					(reference "R34")
 					(unit 1)
 				)
 			)
@@ -13918,7 +13739,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "800b024e-4b06-40ef-b040-c5a60b278765")
-		(property "Reference" "J2"
+		(property "Reference" "CAN_OUT1"
 			(at 63.5 218.44 0)
 			(effects
 				(font
@@ -13991,7 +13812,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "J2")
+					(reference "CAN_OUT1")
 					(unit 1)
 				)
 			)
@@ -14199,7 +14020,7 @@
 		(at 176.53 69.85 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "a3601e21-d285-4c2e-ae2a-117db5bfaf43")
@@ -14219,7 +14040,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pin_1.0x1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 181.61 69.85 0)
 			(effects
 				(font
@@ -14308,7 +14129,7 @@
 		(at 224.79 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "a654a276-d310-4a07-b93b-28133772a319")
@@ -14328,7 +14149,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pin_1.0x1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 229.87 33.02 0)
 			(effects
 				(font
@@ -14960,11 +14781,11 @@
 		(at 132.08 62.23 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "b5fc57cf-b26e-430b-b9bc-f00802b76250")
-		(property "Reference" "3V1"
+		(property "Reference" "3V3"
 			(at 127.762 60.452 0)
 			(effects
 				(font
@@ -14972,7 +14793,7 @@
 				)
 			)
 		)
-		(property "Value" "TP_3V3"
+		(property "Value" "3V3"
 			(at 125.476 58.42 0)
 			(effects
 				(font
@@ -14980,7 +14801,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pin_1.0x1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 137.16 62.23 0)
 			(effects
 				(font
@@ -15058,7 +14879,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "3V1")
+					(reference "3V3")
 					(unit 1)
 				)
 			)
@@ -15074,7 +14895,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b83484bc-84e9-4ecb-ae59-c3faec0aaa27")
-		(property "Reference" "J7"
+		(property "Reference" "CAN(moco,mppts->board)1"
 			(at 104.14 226.0599 0)
 			(effects
 				(font
@@ -15140,7 +14961,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "J7")
+					(reference "CAN(moco,mppts->board)1")
 					(unit 1)
 				)
 			)
@@ -15634,6 +15455,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 91.44 187.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bd4e3a6a-c1cb-45ed-a864-9ceb609d9da9")
+		(property "Reference" "#PWR03"
+			(at 91.44 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.44 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 91.44 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b2351a1d-19e4-4335-b4d5-38b33bc2dceb")
+		)
+		(instances
+			(project ""
+				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
 		(at 100.33 201.93 0)
 		(unit 1)
@@ -15643,7 +15530,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c11dae10-2180-4cdd-8d8d-ed3f6c68838c")
-		(property "Reference" "J6"
+		(property "Reference" "CAN(board->moco,mppts)1"
 			(at 102.87 200.6599 0)
 			(effects
 				(font
@@ -15709,7 +15596,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "J6")
+					(reference "CAN(board->moco,mppts)1")
 					(unit 1)
 				)
 			)
@@ -15720,7 +15607,7 @@
 		(at 77.47 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "c17433e7-05e9-447b-8a90-48a1a0cdf38d")
@@ -15742,7 +15629,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pin_1.0x1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 82.55 110.49 0)
 			(effects
 				(font
@@ -16351,72 +16238,6 @@
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
 					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 96.52 229.87 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e22371b6-da2b-4f28-85e8-418c0aaa1370")
-		(property "Reference" "#PWR09"
-			(at 96.52 236.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 96.52 234.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 96.52 229.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 96.52 229.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 96.52 229.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8668fef4-d768-4190-b8d8-3d971b8c9ce2")
-		)
-		(instances
-			(project "PS-MotorControllerInterfacePCB"
-				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -17621,11 +17442,11 @@
 		(at 166.37 124.46 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "f1db2b05-3658-4287-8ac7-74f6d953cebd")
-		(property "Reference" "Fault1"
+		(property "Reference" "FAULT1"
 			(at 162.56 122.428 0)
 			(effects
 				(font
@@ -17641,7 +17462,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 171.45 124.46 0)
 			(effects
 				(font
@@ -17728,7 +17549,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "Fault1")
+					(reference "FAULT1")
 					(unit 1)
 				)
 			)
@@ -17739,11 +17560,11 @@
 		(at 166.37 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "f7fa7659-b493-4e7b-9127-784b2bd5d358")
-		(property "Reference" "Message1"
+		(property "Reference" "STATUS1"
 			(at 161.544 87.63 0)
 			(effects
 				(font
@@ -17759,7 +17580,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pin_1.0x1.0mm"
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 			(at 171.45 92.71 0)
 			(effects
 				(font
@@ -17837,7 +17658,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "Message1")
+					(reference "STATUS1")
 					(unit 1)
 				)
 			)
