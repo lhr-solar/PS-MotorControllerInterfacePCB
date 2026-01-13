@@ -2089,7 +2089,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C25804"
 			(at 87.63 83.82 90)
 			(effects
 				(font
@@ -2279,7 +2279,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C22356636"
 			(at 107.95 107.95 90)
 			(effects
 				(font
@@ -2402,7 +2402,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C25804"
 			(at 87.63 64.77 90)
 			(effects
 				(font
@@ -2581,7 +2581,7 @@
 		(at 101.6 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "85dfaa53-0f4b-4a24-b65d-f996b805ebb2")
@@ -2602,7 +2602,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 106.68 107.95 0)
 			(effects
 				(font
@@ -2743,6 +2743,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C67272"
+			(at 124.46 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "40442bcb-4e38-4bc9-92fd-b726fa34dffc")
 		)
@@ -2832,7 +2841,7 @@
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "8c0db939-4772-4f58-b4c7-5964263416ca")
@@ -3066,7 +3075,7 @@
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "ab99ad6e-d204-4514-b95c-80292bffd47d")
@@ -3420,7 +3429,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C22356636"
 			(at 168.91 107.95 90)
 			(effects
 				(font
@@ -3600,7 +3609,7 @@
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "d325b8bd-8e31-430d-bbe5-8efda7569436")
@@ -3621,7 +3630,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
 			(at 170.18 107.95 0)
 			(effects
 				(font
@@ -3833,7 +3842,7 @@
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "e88e615b-d899-408b-b9a2-380d50c84c49")
@@ -3988,6 +3997,15 @@
 			)
 		)
 		(property "Description" "5.3A Id, 30V Vds, 27mOhm Rds, N-Channel HEXFET Power MOSFET, SOT-23"
+			(at 152.4 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C67272"
 			(at 152.4 107.95 0)
 			(effects
 				(font

@@ -1861,6 +1861,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25804"
+			(at 152.4 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "75bf1374-a9da-467f-9ae6-cf0c7e3474ca")
 		)
@@ -1928,6 +1937,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25804"
+			(at 152.4 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "951c353c-8f55-4e39-a9f1-a1180a288974")
 		)
@@ -1988,6 +2006,15 @@
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 204.47 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25804"
+			(at 204.47 105.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2197,6 +2224,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C21122"
+			(at 215.9 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "51af7f7b-e563-41ed-915e-0accec3ae34b")
 		)
@@ -2323,6 +2359,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 168.91 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2870129"
 			(at 168.91 100.33 0)
 			(effects
 				(font
@@ -2575,6 +2620,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C21190"
+			(at 181.61 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "dc63cc59-a0b4-4694-8489-9f1296a94f72")
 		)
@@ -2642,6 +2696,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C21190"
+			(at 134.62 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d2248c00-57c1-4c64-a3c3-c8d1d42cb358")
 		)
@@ -2662,7 +2725,7 @@
 		(at 194.31 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "7ef0ab20-0372-43d4-ab88-2e797bac60d9")
@@ -2820,6 +2883,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C21190"
+			(at 134.62 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f2423c4f-9f68-4cc5-9c41-40bd080ae102")
 		)
@@ -2880,6 +2952,15 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 189.23 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25804"
 			(at 189.23 97.79 0)
 			(effects
 				(font
@@ -3024,6 +3105,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C440198"
+			(at 115.57 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "18a9003b-5c50-4d7f-86b4-304e1077514f")
 		)
@@ -3158,6 +3248,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C21190"
+			(at 198.12 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2427b628-69ed-45b7-9d60-832d87603450")
 		)
@@ -3220,6 +3319,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 105.41 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C15849"
 			(at 105.41 96.52 0)
 			(effects
 				(font
@@ -3353,6 +3461,15 @@
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 152.4 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25804"
+			(at 152.4 102.87 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3506,6 +3623,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C7371904"
+			(at 198.12 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5cf339ff-4328-4dbc-82ee-385f3402b3ba")
 		)
@@ -3566,6 +3692,15 @@
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 152.4 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25804"
+			(at 152.4 100.33 90)
 			(effects
 				(font
 					(size 1.27 1.27)

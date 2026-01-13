@@ -4772,6 +4772,12 @@
 		(uuid "027ed59f-a357-482d-80b3-370d18f0959a")
 	)
 	(junction
+		(at 76.2 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0dcdb5a7-8812-4e0f-b4ad-9e95e5834b9c")
+	)
+	(junction
 		(at 72.39 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5154,7 +5160,7 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 115.57) (xy 80.01 115.57)
+			(xy 72.39 115.57) (xy 76.2 115.57)
 		)
 		(stroke
 			(width 0)
@@ -5747,6 +5753,16 @@
 			(type default)
 		)
 		(uuid "77e96302-2126-4719-926a-ec604a950090")
+	)
+	(wire
+		(pts
+			(xy 76.2 115.57) (xy 80.01 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7848f232-cb1d-47b4-952b-43aa22434f27")
 	)
 	(wire
 		(pts
@@ -10680,7 +10696,7 @@
 		(at 96.52 245.11 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -10759,7 +10775,7 @@
 		(at 289.56 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "023c9255-f72b-4fcf-bc55-f7572f6ae9f3")
@@ -11094,7 +11110,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C7371904"
 			(at 180.34 134.62 90)
 			(effects
 				(font
@@ -11123,7 +11139,7 @@
 		(at 64.77 203.2 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -11307,7 +11323,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C7371904"
 			(at 180.34 92.71 90)
 			(effects
 				(font
@@ -11497,7 +11513,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C7371904"
 			(at 302.26 36.83 90)
 			(effects
 				(font
@@ -11684,7 +11700,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C21190"
 			(at 171.45 134.62 0)
 			(effects
 				(font
@@ -11978,7 +11994,7 @@
 		(at 327.66 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -12152,7 +12168,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C7371904"
 			(at 146.05 62.23 90)
 			(effects
 				(font
@@ -12181,7 +12197,7 @@
 		(at 166.37 134.62 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "3dc0eafe-b1bc-4a9e-9997-b1744a30efe5")
@@ -12290,7 +12306,7 @@
 		(at 166.37 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "3eb02c33-95fe-4a07-8903-7927edc0cd07")
@@ -12491,7 +12507,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C21190"
 			(at 171.45 124.46 0)
 			(effects
 				(font
@@ -12522,7 +12538,7 @@
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -12691,7 +12707,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C21190"
 			(at 137.16 62.23 0)
 			(effects
 				(font
@@ -12815,7 +12831,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C7371904"
 			(at 237.49 36.83 90)
 			(effects
 				(font
@@ -12958,6 +12974,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C21189"
+			(at 92.71 22.86 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b376f013-866a-4665-8bc3-ca3d5e25f706")
 		)
@@ -12978,7 +13003,7 @@
 		(at 106.68 46.99 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "64ffeb61-41a0-47fe-a381-182fda06c3a7")
@@ -13184,7 +13209,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C7371904"
 			(at 180.34 114.3 90)
 			(effects
 				(font
@@ -13213,7 +13238,7 @@
 		(at 166.37 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "66f4e04c-5202-4a09-9481-abbf0d93df5f")
@@ -13417,7 +13442,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C7371904"
 			(at 120.65 46.99 90)
 			(effects
 				(font
@@ -13446,7 +13471,7 @@
 		(at 54.61 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "6e454322-bc7b-4b34-9436-4ec31ff95e13")
@@ -13557,7 +13582,7 @@
 		(at 166.37 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "758deced-3a94-4ea5-956b-67da2bb7eee6")
@@ -13714,6 +13739,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C21189"
+			(at 86.36 187.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "3518780c-5d60-493b-ad9a-71e4587e55a2")
 		)
@@ -13734,7 +13768,7 @@
 		(at 62.23 227.33 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -14017,10 +14051,121 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
+		(at 76.2 115.57 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "9adc9ef2-6e3f-49c3-90e9-f6ca285a74fa")
+		(property "Reference" "GND1"
+			(at 77.216 119.888 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TP_GND"
+			(at 77.216 117.348 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 71.12 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 71.12 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 76.2 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 76.2 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 76.2 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 76.2 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description (Customer #)" ""
+			(at 76.2 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 76.2 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "41d0e4d5-2028-4483-bdab-4f620d518937")
+		)
+		(instances
+			(project "PS-MotorControllerInterfacePCB"
+				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
+					(reference "GND1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
 		(at 176.53 69.85 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "a3601e21-d285-4c2e-ae2a-117db5bfaf43")
@@ -14129,7 +14274,7 @@
 		(at 224.79 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "a654a276-d310-4a07-b93b-28133772a319")
@@ -14330,7 +14475,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C21190"
 			(at 171.45 92.71 0)
 			(effects
 				(font
@@ -14628,7 +14773,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C21190"
 			(at 171.45 114.3 0)
 			(effects
 				(font
@@ -14752,7 +14897,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C7371904"
 			(at 180.34 124.46 90)
 			(effects
 				(font
@@ -14781,7 +14926,7 @@
 		(at 132.08 62.23 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "b5fc57cf-b26e-430b-b9bc-f00802b76250")
@@ -14890,7 +15035,7 @@
 		(at 101.6 227.33 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -15067,7 +15212,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C7371904"
 			(at 180.34 144.78 90)
 			(effects
 				(font
@@ -15188,7 +15333,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C21190"
 			(at 171.45 144.78 0)
 			(effects
 				(font
@@ -15430,7 +15575,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C21190"
 			(at 111.76 46.99 0)
 			(effects
 				(font
@@ -15525,7 +15670,7 @@
 		(at 100.33 201.93 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -15607,11 +15752,11 @@
 		(at 77.47 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "c17433e7-05e9-447b-8a90-48a1a0cdf38d")
-		(property "Reference" "TP1"
+		(property "Reference" "GND2"
 			(at 76.454 106.172 0)
 			(effects
 				(font
@@ -15707,7 +15852,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "TP1")
+					(reference "GND2")
 					(unit 1)
 				)
 			)
@@ -15759,6 +15904,15 @@
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 265.43 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C21189"
+			(at 265.43 22.86 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16454,7 +16608,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e75500ea-46f6-4026-99fc-d02dea4a2ec7")
-		(property "Reference" "F1"
+		(property "Reference" "F_10A"
 			(at 58.42 26.67 90)
 			(effects
 				(font
@@ -16524,6 +16678,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C5249699"
+			(at 58.42 33.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d348295e-6c82-4d82-8e5d-17117e0d0a51")
 		)
@@ -16533,7 +16696,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "F1")
+					(reference "F_10A")
 					(unit 1)
 				)
 			)
@@ -16913,7 +17076,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C21190"
 			(at 171.45 102.87 0)
 			(effects
 				(font
@@ -17169,7 +17332,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C7371904"
 			(at 180.34 102.87 90)
 			(effects
 				(font
@@ -17292,7 +17455,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C7371904"
 			(at 193.04 73.66 90)
 			(effects
 				(font
@@ -17442,7 +17605,7 @@
 		(at 166.37 124.46 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "f1db2b05-3658-4287-8ac7-74f6d953cebd")
@@ -17560,7 +17723,7 @@
 		(at 166.37 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "f7fa7659-b493-4e7b-9127-784b2bd5d358")

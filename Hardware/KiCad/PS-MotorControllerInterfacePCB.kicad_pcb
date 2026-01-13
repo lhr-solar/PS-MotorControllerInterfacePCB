@@ -325,7 +325,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C2286"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -559,6 +559,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C15401"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "0d92e09b-ca07-4596-b235-3a63a9a4971c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/457b93bf-62f4-46aa-a712-fe00e2990c62/9be1eec1-0e83-4a7c-b975-5bfa0da481d5")
 		(sheetname "/HSS/")
@@ -752,6 +764,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2f062cc9-b535-46e1-9128-bb4ac9c79410")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C21189"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "07eb8ea4-f83b-47c3-9f06-0c6679876802")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1029,7 +1053,7 @@
 		(path "/023c9255-f72b-4fcf-bc55-f7572f6ae9f3")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 1.4 0)
@@ -1155,6 +1179,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "047d3731-8f4c-4a78-b85b-6897baf25c6f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C21189"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "718199c2-4555-45b3-b3e9-2008f66520e4")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1427,7 +1463,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C14676"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1718,7 +1754,7 @@
 		(path "/e5f388aa-02bc-4322-887c-76666751b990")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr smd exclude_from_bom)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start 7.2136 -1.524)
 			(end 5.9436 -2.159)
@@ -2843,7 +2879,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C2286"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3142,7 +3178,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C440198"
+		(property "LCSC" "C1691"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3438,7 +3474,7 @@
 		(path "/f1db2b05-3658-4287-8ac7-74f6d953cebd")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 1.4 0)
@@ -3642,7 +3678,7 @@
 		(path "/3eb02c33-95fe-4a07-8903-7927edc0cd07")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 1.4 0)
@@ -3791,7 +3827,7 @@
 		(path "/07ca3574-a238-41ea-8fc8-b5c5be53ac68")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 4.31 6.83)
 			(end 12.99 6.83)
@@ -4322,7 +4358,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C14676"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4534,6 +4570,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C15401"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "90402294-9165-482b-bd6c-37c9db2cff9f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/457b93bf-62f4-46aa-a712-fe00e2990c62/19296ac6-cdd5-432e-8f67-6485beaf24e7")
 		(sheetname "/HSS/")
@@ -4731,7 +4779,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C354606"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4905,6 +4953,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "80f74f54-8dc1-435d-b639-02ba550fcf33")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C67272"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "2dbbcf90-325c-41ad-9445-1736cf01d154")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5246,6 +5306,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C14676"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a8b81e2b-6708-45ea-ae8d-5245754c8aed")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/457b93bf-62f4-46aa-a712-fe00e2990c62/6e858cd0-0ace-4ee2-81ca-6918c1f67994")
 		(sheetname "/HSS/")
@@ -5510,7 +5582,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C14663"
+		(property "LCSC" "C3011705"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6014,7 +6086,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25804"
+		(property "LCSC" "C15401"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6292,7 +6364,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C2286"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6593,7 +6665,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C2286"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7171,7 +7243,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C22775"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8838,7 +8910,7 @@
 		(path "/2c6af1c6-af26-4746-8ed9-5deb88ce0ee1/fb8cca52-6aec-4f6f-aff3-735117990968")
 		(sheetname "/Buck Converter 24V-12V/")
 		(sheetfile "BuckConverter.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 1.4 0)
@@ -9042,7 +9114,7 @@
 		(path "/64ffeb61-41a0-47fe-a381-182fda06c3a7")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 1.4 0)
@@ -9167,6 +9239,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "86948471-5a63-49bf-8917-6b2fa72d8728")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C67272"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "07e825a6-347d-40da-9681-f6b41efa3292")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9561,7 +9645,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C14676"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9786,7 +9870,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C440198"
+		(property "LCSC" "C1691"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10063,7 +10147,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C17414"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10341,7 +10425,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25804"
+		(property "LCSC" "C15401"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10623,7 +10707,7 @@
 		(path "/9adc9ef2-6e3f-49c3-90e9-f6ca285a74fa")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -1.38 -1.38)
 			(end 0 -1.38)
@@ -11208,7 +11292,7 @@
 		(path "/1be836d0-aa31-4c63-bede-07160ebddab5/3685cace-ad38-4b36-ab54-6c5563b58f25")
 		(sheetname "/Power12V/")
 		(sheetfile "Power.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files)
 		(fp_line
 			(start -0.254724 -0.5225)
 			(end 0.254724 -0.5225)
@@ -11894,7 +11978,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C14676"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12404,7 +12488,7 @@
 		(path "/c17433e7-05e9-447b-8a90-48a1a0cdf38d")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 1.4 0)
@@ -12546,6 +12630,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C2286"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "11f26798-0ecf-453f-b9b2-df0f38d50abc")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -12771,7 +12867,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C440198"
+		(property "LCSC" "C1691"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13054,7 +13150,7 @@
 		(path "/f7fa7659-b493-4e7b-9127-784b2bd5d358")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 1.4 0)
@@ -13179,6 +13275,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "58ff83b2-08a2-4732-8c85-719e6bb0cf42")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C2870129"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "597b105a-6d0d-4f66-a662-b5efa0b16904")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13835,7 +13943,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C15849"
+		(property "LCSC" "C5673"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14048,6 +14156,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C14676"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ca9c382c-9905-4449-96e4-826b33a091bf")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/457b93bf-62f4-46aa-a712-fe00e2990c62/7f3fa26a-4389-4c20-a4b9-636df8631cc5")
 		(sheetname "/HSS/")
@@ -14241,6 +14361,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4d85be1b-ca02-41f0-ac1e-05b9fa3b3293")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C15401"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "02c7c4cb-68bc-4b0d-aa82-b8b5369c68f4")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15330,6 +15462,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C15401"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "32a9045b-c75d-40d3-a9d7-52c6148613f8")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/457b93bf-62f4-46aa-a712-fe00e2990c62/e3c11443-20e3-4067-b064-2017785efe7b")
 		(sheetname "/HSS/")
@@ -15807,6 +15951,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C15401"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d7d1d78a-061f-4297-ad0f-771228e9ea25")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/457b93bf-62f4-46aa-a712-fe00e2990c62/f07f1a51-c462-4ba6-be71-cc6e9a4ba234")
 		(sheetname "/HSS/")
@@ -15956,6 +16112,277 @@
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 		(layer "F.Cu")
+		(uuid "6fe28839-efc0-499b-ab8c-eb50fbf958f2")
+		(at 136.3 39.1)
+		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
+		(tags "capacitor handsolder")
+		(property "Reference" "C3"
+			(at 2.387402 0.349611 0)
+			(layer "F.SilkS")
+			(uuid "a28869fd-aca4-4be3-bcf8-279f383de902")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Value" ".1u"
+			(at 0 1.43 0)
+			(layer "F.Fab")
+			(uuid "c4b2223f-12d9-4911-8ceb-fcfa5dc991bb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d5cdaeca-4d0c-43cf-a3e3-834b306abcf5")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1dd4163c-ef14-43b8-bbf8-9759824cc20d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "43f777c3-9da9-485c-8526-e90243628ac4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3109cbb7-8415-4108-84a3-81bc9673ca1b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "06035C223K4T4A "
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "527a1e4d-a562-43dc-9120-d29527854857")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c107b92b-a992-4f12-a0a1-e5da81bb18c3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description (Customer #)" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7612c1a2-7820-4d05-a931-43e68883c81c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C3011705"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a79b3c46-889b-424e-a8fd-b79157936458")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr smd)
+		(fp_line
+			(start -0.146267 -0.51)
+			(end 0.146267 -0.51)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "dec347c6-61a1-44e9-b1b2-163384f3772c")
+		)
+		(fp_line
+			(start -0.146267 0.51)
+			(end 0.146267 0.51)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "39a07bda-3f2f-40aa-96d1-2c636fd642f3")
+		)
+		(fp_line
+			(start -1.65 -0.73)
+			(end 1.65 -0.73)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "4c106c4a-0e75-4b9f-9a6c-bb49fc7d68e6")
+		)
+		(fp_line
+			(start -1.65 0.73)
+			(end -1.65 -0.73)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "ebf5a267-7e75-43f9-96df-edcb8897d15c")
+		)
+		(fp_line
+			(start 1.65 -0.73)
+			(end 1.65 0.73)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "640f1cb7-11df-48fb-a7c3-6e4f349eb9ac")
+		)
+		(fp_line
+			(start 1.65 0.73)
+			(end -1.65 0.73)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "56770e72-618c-47ac-8680-8b8552ec0ba4")
+		)
+		(fp_line
+			(start -0.8 -0.4)
+			(end 0.8 -0.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "3cf1ad4c-cec5-4301-931c-84edf65bc3c4")
+		)
+		(fp_line
+			(start -0.8 0.4)
+			(end -0.8 -0.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "a01f15ef-6f64-49c3-a6b2-d014a490aa9e")
+		)
+		(fp_line
+			(start 0.8 -0.4)
+			(end 0.8 0.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "1f907740-a462-47b5-a80f-3f15b6dd4812")
+		)
+		(fp_line
+			(start 0.8 0.4)
+			(end -0.8 0.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "f070eddb-be71-48e7-a01f-694f6fbc2997")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "90990303-5e19-4514-8587-9959bc8d32d5")
+			(effects
+				(font
+					(size 0.4 0.4)
+					(thickness 0.06)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -0.8625 0)
+			(size 1.075 0.95)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(pintype "passive")
+			(uuid "4c2edf6f-ed94-40c5-b44a-6e4c2c26ea32")
+		)
+		(pad "2" smd roundrect
+			(at 0.8625 0)
+			(size 1.075 0.95)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(pintype "passive")
+			(uuid "ea6e5b45-131c-4160-8f19-e642b356fe90")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(layer "F.Cu")
 		(uuid "70fee336-3e06-4942-a1f6-7678f5e86db3")
 		(at 187.3625 51.9 180)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
@@ -16071,7 +16498,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C14663"
+		(property "LCSC" "C3011705"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16349,7 +16776,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C2286"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18111,7 +18538,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C440198"
+		(property "LCSC" "C1691"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18389,7 +18816,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C2286"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18718,7 +19145,7 @@
 		(path "/fdebdbaa-40a2-498d-be97-c346cb669f60")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole dnp)
+		(attr through_hole exclude_from_pos_files dnp)
 		(fp_line
 			(start -1.38 -1.38)
 			(end 0 -1.38)
@@ -18961,6 +19388,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "81019144-3473-41c6-8bc6-3678b7df676c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C1713"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "3ae44c8d-b52f-4f56-b28a-7a7d52a638ea")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19633,7 +20072,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C2286"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19933,7 +20372,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C2286"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20167,7 +20606,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C440198"
+		(property "LCSC" "C1691"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20397,7 +20836,7 @@
 		(path "/2c6af1c6-af26-4746-8ed9-5deb88ce0ee1/98f4bfe0-12f6-46b7-84f5-da2ed4177b29")
 		(sheetname "/Buck Converter 24V-12V/")
 		(sheetfile "BuckConverter.kicad_sch")
-		(attr smd dnp)
+		(attr smd exclude_from_pos_files dnp)
 		(fp_line
 			(start -0.146267 -0.51)
 			(end 0.146267 -0.51)
@@ -21008,7 +21447,7 @@
 		(path "/26b9ca43-4422-48e7-9562-1bb32842f27e/ab99ad6e-d204-4514-b95c-80292bffd47d")
 		(sheetname "/Fans/")
 		(sheetfile "Fans.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 1.81 14.33)
 			(end 10.49 14.33)
@@ -21660,7 +22099,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C14676"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21938,7 +22377,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C2286"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22244,7 +22683,7 @@
 		(path "/3dc0eafe-b1bc-4a9e-9997-b1744a30efe5")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 1.4 0)
@@ -22442,7 +22881,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C2286"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22677,7 +23116,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25803"
+		(property "LCSC" ""
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22694,7 +23133,7 @@
 		(path "/2c6af1c6-af26-4746-8ed9-5deb88ce0ee1/255df650-6c75-4c32-94d5-964ae4832f47")
 		(sheetname "/Buck Converter 24V-12V/")
 		(sheetfile "BuckConverter.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files)
 		(fp_line
 			(start -0.254724 -0.5225)
 			(end 0.254724 -0.5225)
@@ -22961,7 +23400,7 @@
 		(path "/6e454322-bc7b-4b34-9436-4ec31ff95e13")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 1.4 0)
@@ -23164,7 +23603,7 @@
 		(path "/758deced-3a94-4ea5-956b-67da2bb7eee6")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 1.4 0)
@@ -23852,6 +24291,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C14676"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d279a682-6336-4b44-879b-146605cf0c35")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/457b93bf-62f4-46aa-a712-fe00e2990c62/ac37359b-d62c-4757-99f1-e75be098dea6")
 		(sheetname "/HSS/")
@@ -24070,7 +24521,7 @@
 		(path "/3a6faac9-8321-4492-a31e-86c9ee715ecb")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -0.3 -1.534264)
 			(end 0 -1.11)
@@ -24517,7 +24968,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C14676"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24729,6 +25180,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C1697"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "91e07766-2c3d-4bd9-87ae-57c3d5900447")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/457b93bf-62f4-46aa-a712-fe00e2990c62/33754eae-4610-4c5b-a6bf-f985fe60eb39")
 		(sheetname "/HSS/")
@@ -24921,6 +25384,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "24e970c0-894f-4a18-b250-304fc1443c8b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C5673"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "e1c80c32-807e-4225-93c4-2b08609b5874")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25474,7 +25949,7 @@
 		(path "/26b9ca43-4422-48e7-9562-1bb32842f27e/d325b8bd-8e31-430d-bbe5-8efda7569436")
 		(sheetname "/Fans/")
 		(sheetfile "Fans.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 1.38 1.27)
 			(end 1.38 1.38)
@@ -25783,7 +26258,7 @@
 		(path "/a3601e21-d285-4c2e-ae2a-117db5bfaf43")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 1.4 0)
@@ -25915,7 +26390,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C440198"
+		(property "LCSC" "C1691"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -26127,7 +26602,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C440198"
+		(property "LCSC" "C1691"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -26405,7 +26880,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C14676"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -26737,7 +27212,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C183490"
+		(property "LCSC" "C353571"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27796,6 +28271,278 @@
 			)
 		)
 	)
+	(footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(layer "F.Cu")
+		(uuid "c408bedf-9eaf-4c46-b84d-d556d4ca7340")
+		(at 115.8 39.7)
+		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
+		(tags "capacitor handsolder")
+		(property "Reference" "C2"
+			(at -0.05 -2.825 0)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(uuid "1fb01575-6c48-44bf-abff-ac10342cd31a")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.1)
+				)
+			)
+		)
+		(property "Value" "1u"
+			(at 0 1.43 0)
+			(layer "F.Fab")
+			(uuid "fbd47f1d-ef1e-4ed6-9907-5529886790cd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "33816fdb-098e-4e3c-8e1e-d7fd31f9151d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "09cc11f9-fb36-4a13-9ede-c2e603cfaf56")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "468fbaab-9827-4b1d-89fa-8ea4c542ec2c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Mouser Link" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ab105978-c9f6-4b8a-a1ab-06a533db9d55")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "MLASU168SB5105KTNA01"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "706f3062-7db4-444c-8659-e095cd95eb14")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "62568c89-25cd-4087-8241-2ff19d02061f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description (Customer #)" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7c7e73ec-47a1-441f-875b-61f03dac8e21")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C5673"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0ddc70b8-c926-4d11-a954-74a32aa37fad")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr smd)
+		(fp_line
+			(start -0.146267 -0.51)
+			(end 0.146267 -0.51)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "3fbd5d87-3c52-4733-95a3-99a2d7665a3b")
+		)
+		(fp_line
+			(start -0.146267 0.51)
+			(end 0.146267 0.51)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e94abdd1-b1fb-4a21-8048-8c7b30f66c12")
+		)
+		(fp_line
+			(start -1.65 -0.73)
+			(end 1.65 -0.73)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "d73b9cdc-6856-4b46-954c-b430ca6dd94e")
+		)
+		(fp_line
+			(start -1.65 0.73)
+			(end -1.65 -0.73)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "dfb7244e-9936-4d7f-a155-ad6cfe0478b0")
+		)
+		(fp_line
+			(start 1.65 -0.73)
+			(end 1.65 0.73)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "31fe1fe6-faf8-4dba-8de6-9d7f036cf75f")
+		)
+		(fp_line
+			(start 1.65 0.73)
+			(end -1.65 0.73)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "dfe1b65d-6e98-467e-b655-1433e8c0c26a")
+		)
+		(fp_line
+			(start -0.8 -0.4)
+			(end 0.8 -0.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "bb5e9f3d-aec6-4da7-bcdd-8d9da75b3795")
+		)
+		(fp_line
+			(start -0.8 0.4)
+			(end -0.8 -0.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "7ebc3ded-1bb2-45f0-b120-5564e1d4f9cb")
+		)
+		(fp_line
+			(start 0.8 -0.4)
+			(end 0.8 0.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "f262bfe5-3fdc-46bb-9365-de390630bf31")
+		)
+		(fp_line
+			(start 0.8 0.4)
+			(end -0.8 0.4)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "81ac570e-ac35-4f68-bda0-3068c2a0056b")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "c644a1b0-de24-4452-8df9-352ca1ee3af0")
+			(effects
+				(font
+					(size 0.4 0.4)
+					(thickness 0.06)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -0.8625 0)
+			(size 1.075 0.95)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(pintype "passive")
+			(uuid "eff5fde8-cb16-4c37-b456-ca9416da1bf1")
+		)
+		(pad "2" smd roundrect
+			(at 0.8625 0)
+			(size 1.075 0.95)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(pintype "passive")
+			(uuid "e53da743-2937-49cd-8c7c-8b1a78b936a8")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
 		(layer "F.Cu")
 		(uuid "c4ab0bdd-4e27-4e34-8509-1b6a8142db3c")
@@ -27920,7 +28667,7 @@
 		(path "/66f4e04c-5202-4a09-9481-abbf0d93df5f")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 1.4 0)
@@ -28499,7 +29246,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C5219202"
+		(property "LCSC" "C3236215"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -29145,7 +29892,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C5754725"
+		(property "LCSC" "C353578"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -29650,6 +30397,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C21189"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a643191b-778c-457e-a951-231503bd7e85")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/5f777fae-6a5a-48ab-9d34-287a14fa2773")
 		(sheetname "/")
@@ -29842,6 +30601,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cdaf3dd1-e518-40a7-a4fc-9aac4caee8b6")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C14676"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9119c77c-fd43-444d-9b7c-e1ddcfdc4089")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30117,7 +30888,7 @@
 		(path "/26b9ca43-4422-48e7-9562-1bb32842f27e/85dfaa53-0f4b-4a24-b65d-f996b805ebb2")
 		(sheetname "/Fans/")
 		(sheetfile "Fans.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 1.38 1.27)
 			(end 1.38 1.38)
@@ -30706,7 +31477,7 @@
 		(path "/2c6af1c6-af26-4746-8ed9-5deb88ce0ee1/1d789d80-0ccc-4e83-8e32-412aa2394710")
 		(sheetname "/Buck Converter 24V-12V/")
 		(sheetfile "BuckConverter.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files)
 		(fp_line
 			(start -0.254724 -0.5225)
 			(end 0.254724 -0.5225)
@@ -31108,7 +31879,7 @@
 		(path "/800b024e-4b06-40ef-b040-c5a60b278765")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 4.31 6.83)
 			(end 12.99 6.83)
@@ -31639,7 +32410,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C2286"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32443,7 +33214,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C2286"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32748,7 +33519,7 @@
 		(path "/b5fc57cf-b26e-430b-b9bc-f00802b76250")
 		(sheetname "/")
 		(sheetfile "PS-MotorControllerInterfacePCB.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
 			(end 1.4 0)
@@ -32933,7 +33704,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2907165"
+		(property "LCSC" "C14676"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34855,7 +35626,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C22775"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35061,6 +35832,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7bfc05fe-c654-4ed2-a0c1-8965dd599d86")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C15401"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9127dcc5-b9b8-443b-b17e-ac670b427de5")
 			(effects
 				(font
 					(size 1.27 1.27)
