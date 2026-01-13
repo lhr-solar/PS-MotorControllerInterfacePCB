@@ -1999,7 +1999,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4b7b3625-dce6-4fdd-88c2-3ff51cccb8da")
-		(property "Reference" "PD_TACHA1"
+		(property "Reference" "R36"
 			(at 85.344 75.946 90)
 			(effects
 				(font
@@ -2107,7 +2107,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "PD_TACHA1")
+					(reference "R36")
 					(unit 1)
 				)
 			)
@@ -2189,7 +2189,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5338fcfe-714a-4fa3-a65b-fabde09ea9f9")
-		(property "Reference" "R_G1"
+		(property "Reference" "R37"
 			(at 105.918 105.664 90)
 			(effects
 				(font
@@ -2297,7 +2297,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "R_G1")
+					(reference "R37")
 					(unit 1)
 				)
 			)
@@ -2312,7 +2312,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "61c6c66a-71c8-4122-b37f-309c0f487cef")
-		(property "Reference" "PD_TACHB1"
+		(property "Reference" "R35"
 			(at 85.344 57.658 90)
 			(effects
 				(font
@@ -2420,7 +2420,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "PD_TACHB1")
+					(reference "R35")
 					(unit 1)
 				)
 			)
@@ -2585,7 +2585,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "85dfaa53-0f4b-4a24-b65d-f996b805ebb2")
-		(property "Reference" "PWM_B1"
+		(property "Reference" "TP17"
 			(at 101.6 102.362 0)
 			(effects
 				(font
@@ -2680,7 +2680,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "PWM_B1")
+					(reference "TP17")
 					(unit 1)
 				)
 			)
@@ -2845,7 +2845,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8c0db939-4772-4f58-b4c7-5964263416ca")
-		(property "Reference" "TACH_B1"
+		(property "Reference" "TP15"
 			(at 97.282 64.262 0)
 			(effects
 				(font
@@ -2940,7 +2940,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "TACH_B1")
+					(reference "TP15")
 					(unit 1)
 				)
 			)
@@ -2955,7 +2955,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a892a8db-9217-4748-8ed6-6f630a0c90ac")
-		(property "Reference" "R_PD1"
+		(property "Reference" "R38"
 			(at 118.11 112.014 90)
 			(effects
 				(font
@@ -3063,7 +3063,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "R_PD1")
+					(reference "R38")
 					(unit 1)
 				)
 			)
@@ -3079,7 +3079,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ab99ad6e-d204-4514-b95c-80292bffd47d")
-		(property "Reference" "FANS1"
+		(property "Reference" "J9"
 			(at 131.064 61.214 90)
 			(effects
 				(font
@@ -3199,7 +3199,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "FANS1")
+					(reference "J9")
 					(unit 1)
 				)
 			)
@@ -3215,7 +3215,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b92c04a0-dd38-42b8-8c7d-4e63536db78e")
-		(property "Reference" "R_PD2"
+		(property "Reference" "R39"
 			(at 158.75 112.014 90)
 			(effects
 				(font
@@ -3323,7 +3323,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "R_PD2")
+					(reference "R39")
 					(unit 1)
 				)
 			)
@@ -3339,7 +3339,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c2b8bf97-a1de-4b17-9397-63c6cbb03c87")
-		(property "Reference" "R_G2"
+		(property "Reference" "R40"
 			(at 170.942 105.664 90)
 			(effects
 				(font
@@ -3447,7 +3447,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "R_G2")
+					(reference "R40")
 					(unit 1)
 				)
 			)
@@ -3613,7 +3613,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d325b8bd-8e31-430d-bbe5-8efda7569436")
-		(property "Reference" "PWM_A1"
+		(property "Reference" "TP18"
 			(at 175.26 102.362 0)
 			(effects
 				(font
@@ -3708,7 +3708,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "PWM_A1")
+					(reference "TP18")
 					(unit 1)
 				)
 			)
@@ -3846,7 +3846,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e88e615b-d899-408b-b9a2-380d50c84c49")
-		(property "Reference" "TACH_A1"
+		(property "Reference" "TP16"
 			(at 97.282 83.312 0)
 			(effects
 				(font
@@ -3941,7 +3941,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/26b9ca43-4422-48e7-9562-1bb32842f27e"
-					(reference "TACH_A1")
+					(reference "TP16")
 					(unit 1)
 				)
 			)

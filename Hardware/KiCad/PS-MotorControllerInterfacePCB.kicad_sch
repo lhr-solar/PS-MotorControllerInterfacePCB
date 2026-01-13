@@ -10221,7 +10221,7 @@
 		)
 		(uuid "03b7eb2b-4544-40d5-b011-8e0eabf90d24")
 	)
-	(label "I_MOTOR"
+	(label "OTEMP"
 		(at 116.84 96.52 0)
 		(effects
 			(font
@@ -10231,7 +10231,7 @@
 		)
 		(uuid "03eecfb7-80e1-4cdd-9d11-860d637e9a35")
 	)
-	(label "STATUS"
+	(label "HB"
 		(at 156.21 92.71 180)
 		(effects
 			(font
@@ -10411,7 +10411,7 @@
 		)
 		(uuid "62386d12-f58e-43b1-8192-7766b670d93a")
 	)
-	(label "I_MOTOR"
+	(label "OTEMP"
 		(at 156.21 114.3 180)
 		(effects
 			(font
@@ -10561,7 +10561,7 @@
 		)
 		(uuid "c1d1cf91-1996-42f6-b01a-13f3fa2c8bfd")
 	)
-	(label "STATUS"
+	(label "HB"
 		(at 116.84 72.39 0)
 		(effects
 			(font
@@ -10701,7 +10701,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0211f798-4f3e-4c9b-9f70-d87a3c5c2d1e")
-		(property "Reference" "CANDAPTER1"
+		(property "Reference" "J4"
 			(at 99.06 245.1099 0)
 			(effects
 				(font
@@ -10764,7 +10764,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "CANDAPTER1")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -10779,7 +10779,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "023c9255-f72b-4fcf-bc55-f7572f6ae9f3")
-		(property "Reference" "PP_OUT1"
+		(property "Reference" "TP14"
 			(at 294.386 28.448 0)
 			(effects
 				(font
@@ -10787,7 +10787,7 @@
 				)
 			)
 		)
-		(property "Value" "TP_12V"
+		(property "Value" "PP_OUT"
 			(at 294.894 30.48 0)
 			(effects
 				(font
@@ -10873,7 +10873,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "PP_OUT1")
+					(reference "TP14")
 					(unit 1)
 				)
 			)
@@ -11019,7 +11019,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "03233972-a946-4397-89ab-07ca2ecee4f2")
-		(property "Reference" "LED6"
+		(property "Reference" "D10"
 			(at 181.61 132.08 0)
 			(effects
 				(font
@@ -11128,7 +11128,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "LED6")
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -11144,7 +11144,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "07ca3574-a238-41ea-8fc8-b5c5be53ac68")
-		(property "Reference" "CAN_IN1"
+		(property "Reference" "J3"
 			(at 66.04 194.31 0)
 			(effects
 				(font
@@ -11217,7 +11217,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "CAN_IN1")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -11232,7 +11232,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "08696ef8-eb57-4f17-a83f-9a3021f3c169")
-		(property "Reference" "LED2"
+		(property "Reference" "D6"
 			(at 181.864 90.17 0)
 			(effects
 				(font
@@ -11341,7 +11341,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "LED2")
+					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -11422,7 +11422,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0c92818a-4ca1-4356-87c1-898803320420")
-		(property "Reference" "LED8"
+		(property "Reference" "D14"
 			(at 303.784 40.132 0)
 			(effects
 				(font
@@ -11531,7 +11531,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "LED8")
+					(reference "D14")
 					(unit 1)
 				)
 			)
@@ -11999,7 +11999,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3a6faac9-8321-4492-a31e-86c9ee715ecb")
-		(property "Reference" "PWR_12V1"
+		(property "Reference" "J8"
 			(at 330.2 33.0199 0)
 			(effects
 				(font
@@ -12062,7 +12062,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "PWR_12V1")
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -12077,7 +12077,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3b234c6b-23ca-4e6c-922b-b3433f18e773")
-		(property "Reference" "LED1"
+		(property "Reference" "D5"
 			(at 150.368 58.42 0)
 			(effects
 				(font
@@ -12186,7 +12186,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "LED1")
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -12201,7 +12201,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3dc0eafe-b1bc-4a9e-9997-b1744a30efe5")
-		(property "Reference" "TP_1"
+		(property "Reference" "TP10"
 			(at 162.306 130.048 0)
 			(effects
 				(font
@@ -12209,7 +12209,7 @@
 				)
 			)
 		)
-		(property "Value" "LED1"
+		(property "Value" "TP"
 			(at 162.56 132.334 0)
 			(effects
 				(font
@@ -12295,7 +12295,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "TP_1")
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -12310,7 +12310,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3eb02c33-95fe-4a07-8903-7927edc0cd07")
-		(property "Reference" "SW_OC1"
+		(property "Reference" "TP7"
 			(at 162.56 99.822 0)
 			(effects
 				(font
@@ -12318,7 +12318,7 @@
 				)
 			)
 		)
-		(property "Value" "TP_OC"
+		(property "Value" "TP"
 			(at 162.814 97.79 0)
 			(effects
 				(font
@@ -12404,7 +12404,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "SW_OC1")
+					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -12543,7 +12543,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4d21565e-a3b7-4558-9289-8403c784d67c")
-		(property "Reference" "PWR_BOARD1"
+		(property "Reference" "J1"
 			(at 41.91 26.67 0)
 			(effects
 				(font
@@ -12604,7 +12604,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "PWR_BOARD1")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -12740,7 +12740,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5876ce39-f99e-4971-bc1e-77ad5b39653a")
-		(property "Reference" "LED9"
+		(property "Reference" "D13"
 			(at 239.014 40.132 0)
 			(effects
 				(font
@@ -12849,7 +12849,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "LED9")
+					(reference "D13")
 					(unit 1)
 				)
 			)
@@ -13007,7 +13007,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "64ffeb61-41a0-47fe-a381-182fda06c3a7")
-		(property "Reference" "HSS_EN1"
+		(property "Reference" "TP4"
 			(at 107.696 51.308 0)
 			(effects
 				(font
@@ -13103,7 +13103,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "HSS_EN1")
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -13118,7 +13118,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6638e757-b259-482d-9564-695e8b360c78")
-		(property "Reference" "LED4"
+		(property "Reference" "D8"
 			(at 181.864 111.252 0)
 			(effects
 				(font
@@ -13227,7 +13227,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "LED4")
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -13242,7 +13242,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "66f4e04c-5202-4a09-9481-abbf0d93df5f")
-		(property "Reference" "TP_2"
+		(property "Reference" "TP11"
 			(at 162.56 139.954 0)
 			(effects
 				(font
@@ -13250,7 +13250,7 @@
 				)
 			)
 		)
-		(property "Value" "LED2"
+		(property "Value" "TP"
 			(at 163.068 141.732 0)
 			(effects
 				(font
@@ -13336,7 +13336,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "TP_2")
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -13351,7 +13351,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "68169381-8be1-4dab-a121-e68ab8bd0733")
-		(property "Reference" "LED11"
+		(property "Reference" "D4"
 			(at 124.968 43.18 0)
 			(effects
 				(font
@@ -13460,7 +13460,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "LED11")
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -13475,7 +13475,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6e454322-bc7b-4b34-9436-4ec31ff95e13")
-		(property "Reference" "12VSNS1"
+		(property "Reference" "TP1"
 			(at 53.594 82.042 0)
 			(effects
 				(font
@@ -13571,7 +13571,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "12VSNS1")
+					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -13586,7 +13586,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "758deced-3a94-4ea5-956b-67da2bb7eee6")
-		(property "Reference" "I_MOTOR1"
+		(property "Reference" "TP8"
 			(at 161.544 112.268 0)
 			(effects
 				(font
@@ -13594,7 +13594,7 @@
 				)
 			)
 		)
-		(property "Value" "TP_DC"
+		(property "Value" "TP"
 			(at 162.306 110.236 0)
 			(effects
 				(font
@@ -13680,7 +13680,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "I_MOTOR1")
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -13773,7 +13773,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "800b024e-4b06-40ef-b040-c5a60b278765")
-		(property "Reference" "CAN_OUT1"
+		(property "Reference" "J2"
 			(at 63.5 218.44 0)
 			(effects
 				(font
@@ -13846,7 +13846,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "CAN_OUT1")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -14058,7 +14058,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9adc9ef2-6e3f-49c3-90e9-f6ca285a74fa")
-		(property "Reference" "GND1"
+		(property "Reference" "TP2"
 			(at 77.216 119.888 0)
 			(effects
 				(font
@@ -14154,7 +14154,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "GND1")
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -14169,7 +14169,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a3601e21-d285-4c2e-ae2a-117db5bfaf43")
-		(property "Reference" "24V1"
+		(property "Reference" "TP12"
 			(at 180.594 66.548 0)
 			(effects
 				(font
@@ -14263,7 +14263,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "24V1")
+					(reference "TP12")
 					(unit 1)
 				)
 			)
@@ -14278,7 +14278,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a654a276-d310-4a07-b93b-28133772a319")
-		(property "Reference" "BUCK_OUT1"
+		(property "Reference" "TP13"
 			(at 229.616 28.448 0)
 			(effects
 				(font
@@ -14286,7 +14286,7 @@
 				)
 			)
 		)
-		(property "Value" "TP_12V"
+		(property "Value" "BUCK_OUT"
 			(at 230.124 30.48 0)
 			(effects
 				(font
@@ -14372,7 +14372,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "BUCK_OUT1")
+					(reference "TP13")
 					(unit 1)
 				)
 			)
@@ -14806,7 +14806,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b3788bd6-4daf-425a-97e9-e52670492dfd")
-		(property "Reference" "LED5"
+		(property "Reference" "D9"
 			(at 183.642 120.904 0)
 			(effects
 				(font
@@ -14915,7 +14915,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "LED5")
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -14930,7 +14930,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b5fc57cf-b26e-430b-b9bc-f00802b76250")
-		(property "Reference" "3V3"
+		(property "Reference" "TP5"
 			(at 127.762 60.452 0)
 			(effects
 				(font
@@ -15024,7 +15024,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "3V3")
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -15040,7 +15040,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b83484bc-84e9-4ecb-ae59-c3faec0aaa27")
-		(property "Reference" "CAN(moco,mppts->board)1"
+		(property "Reference" "J7"
 			(at 104.14 226.0599 0)
 			(effects
 				(font
@@ -15106,7 +15106,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "CAN(moco,mppts->board)1")
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -15121,7 +15121,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bb81c175-e13b-4a9b-93fb-bcd10e3de89f")
-		(property "Reference" "LED7"
+		(property "Reference" "D11"
 			(at 176.784 142.24 0)
 			(effects
 				(font
@@ -15230,7 +15230,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "LED7")
+					(reference "D11")
 					(unit 1)
 				)
 			)
@@ -15675,7 +15675,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c11dae10-2180-4cdd-8d8d-ed3f6c68838c")
-		(property "Reference" "CAN(board->moco,mppts)1"
+		(property "Reference" "J6"
 			(at 102.87 200.6599 0)
 			(effects
 				(font
@@ -15741,7 +15741,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "CAN(board->moco,mppts)1")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -15756,7 +15756,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c17433e7-05e9-447b-8a90-48a1a0cdf38d")
-		(property "Reference" "GND2"
+		(property "Reference" "TP3"
 			(at 76.454 106.172 0)
 			(effects
 				(font
@@ -15852,7 +15852,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "GND2")
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -16608,7 +16608,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e75500ea-46f6-4026-99fc-d02dea4a2ec7")
-		(property "Reference" "F_10A"
+		(property "Reference" "F1"
 			(at 58.42 26.67 90)
 			(effects
 				(font
@@ -16696,7 +16696,7 @@
 		(instances
 			(project ""
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "F_10A")
+					(reference "F1")
 					(unit 1)
 				)
 			)
@@ -17241,7 +17241,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ee70570a-61db-49cd-bd02-caac22be2344")
-		(property "Reference" "LED3"
+		(property "Reference" "D7"
 			(at 181.61 99.568 0)
 			(effects
 				(font
@@ -17350,7 +17350,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "LED3")
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -17365,7 +17365,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "eeaad0ff-91ed-4b82-9a6c-e94a4373bd7f")
-		(property "Reference" "LVPWR1"
+		(property "Reference" "D12"
 			(at 194.564 79.248 0)
 			(effects
 				(font
@@ -17473,7 +17473,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "LVPWR1")
+					(reference "D12")
 					(unit 1)
 				)
 			)
@@ -17609,7 +17609,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f1db2b05-3658-4287-8ac7-74f6d953cebd")
-		(property "Reference" "FAULT1"
+		(property "Reference" "TP9"
 			(at 162.56 122.428 0)
 			(effects
 				(font
@@ -17617,7 +17617,7 @@
 				)
 			)
 		)
-		(property "Value" "TP_F"
+		(property "Value" "TP"
 			(at 162.56 119.888 0)
 			(effects
 				(font
@@ -17712,7 +17712,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "FAULT1")
+					(reference "TP9")
 					(unit 1)
 				)
 			)
@@ -17727,7 +17727,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f7fa7659-b493-4e7b-9127-784b2bd5d358")
-		(property "Reference" "STATUS1"
+		(property "Reference" "TP6"
 			(at 161.544 87.63 0)
 			(effects
 				(font
@@ -17735,7 +17735,7 @@
 				)
 			)
 		)
-		(property "Value" "TP_M"
+		(property "Value" "HB"
 			(at 161.544 85.852 0)
 			(effects
 				(font
@@ -17821,7 +17821,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978"
-					(reference "STATUS1")
+					(reference "TP6")
 					(unit 1)
 				)
 			)

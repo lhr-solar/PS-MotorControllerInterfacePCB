@@ -9394,7 +9394,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "de59b8e1-28f4-4998-ae66-5b17e1df70de")
-		(property "Reference" "LED10"
+		(property "Reference" "D15"
 			(at 129.032 127 90)
 			(effects
 				(font
@@ -9503,7 +9503,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/2c6af1c6-af26-4746-8ed9-5deb88ce0ee1"
-					(reference "LED10")
+					(reference "D15")
 					(unit 1)
 				)
 			)
@@ -9737,7 +9737,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fb8cca52-6aec-4f6f-aff3-735117990968")
-		(property "Reference" "BUCK_PG1"
+		(property "Reference" "TP20"
 			(at 135.128 113.284 0)
 			(effects
 				(font
@@ -9746,7 +9746,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "TP_PG"
+		(property "Value" "BUCK_PG"
 			(at 132.588 113.284 0)
 			(effects
 				(font
@@ -9833,7 +9833,7 @@
 		(instances
 			(project "PS-MotorControllerInterfacePCB"
 				(path "/a2e13c19-ff3a-4e43-a7f5-200fd5b2b978/2c6af1c6-af26-4746-8ed9-5deb88ce0ee1"
-					(reference "BUCK_PG1")
+					(reference "TP20")
 					(unit 1)
 				)
 			)
