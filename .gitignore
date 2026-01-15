@@ -35,4 +35,5 @@ fp-info-cache
 .DS_Store
 
 # Backups
-Controls-MotorControllerBreakout-backups/*
+Controls-MotorControllerBreakout-backups/*project.db
+Hardware/KiCad/jlcpcb/
