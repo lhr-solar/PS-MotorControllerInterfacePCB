@@ -1,9 +1,7 @@
 #include "led.h"
 #include "stm32xx_hal.h"
 
-#define LED_PIN GPIO_PIN_0
-#define LED_PORT GPIOB
-#define LED_TOGGLE_DELAY 500
+#define LED_TOGGLE_DELAY 500 // ms
 
 void LED_Init(void)
 {

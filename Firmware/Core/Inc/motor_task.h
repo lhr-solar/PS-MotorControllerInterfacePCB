@@ -1,4 +1,5 @@
+//lets motor_task.c functions be used in main.c
 #pragma once
 
-void MotorTask_Init(void); 
-void MotorTask_Run(void);
+void Init_Task(void); 
+void Run_Task(void);

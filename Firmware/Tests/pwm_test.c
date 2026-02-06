@@ -1,0 +1,35 @@
+//PWM on PB10 and PA5
+
+#include "stm32xx_hal.h"
+#include "pwm.h"
+#include "led.h"
+
+TIM_HandleTypeDef pwm1TimHandle = {0}; 
+TIM_HandleTypeDef pwm2TimHandle = {0};  
+
+int main(void) {
+    HAL_Init();
+    
+    PWM1_Init(&pwm1TimHandle);  
+    PWM2_Init(&pwm2TimHandle);  
+    
+    LED_Init();
+    
+    // Test variables
+    uint8_t duty_cycles[] = {0, 25, 50, 75, 100};
+    uint8_t num_tests = sizeof(duty_cycles) / sizeof(duty_cycles[0]);
+    
+    while (1) 
+    {
+        // test the variables
+        for (uint8_t i = 0; i < num_tests; i++) 
+        {
+            PWM1_SetDuty(duty_cycles[i]);  // PA2
+            PWM2_SetDuty(duty_cycles[i]);  // PA5 
+            LED_Toggle(); // see that its working
+        }
+    }
+    
+    return 0;
+}
+
