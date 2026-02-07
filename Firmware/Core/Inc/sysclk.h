@@ -1,4 +1,4 @@
-//lets SystemClock_Config be used in other files
+// included in main.c and led_test.c
 
 #pragma once
 

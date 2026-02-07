@@ -1,5 +1,5 @@
-//PWM on PB10 and PA5
-
+// PWM on PB10 and PA5
+// when u run this test should see pwms loop from duty cycles 0, 25, 50, 75, 100
 #include "stm32xx_hal.h"
 #include "pwm.h"
 #include "led.h"

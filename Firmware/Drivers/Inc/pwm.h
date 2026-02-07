@@ -9,7 +9,7 @@ void PWM1_SetDuty(uint8_t duty);
 void PWM2_Init(TIM_HandleTypeDef* timHandle);
 void PWM2_SetDuty(uint8_t duty);
 
-// ===== SHARED PWM CONFIGURATION =====
+// Shared PWM configurations (for now)
 #define PWM_PULSE 500 
 #define PWM_TIMER_CLK_HZ 80000000UL
 #define PWM_PERIOD 999 // 1 MHz / (999 + 1) = 1 kHz PWM

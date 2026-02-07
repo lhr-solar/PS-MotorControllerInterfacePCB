@@ -1,4 +1,3 @@
-
 #include "motor_task.h"
 #include "sysclk.h"
 #include "stm32xx_hal.h"
@@ -23,4 +22,5 @@ void Error_Handler(void)
     // baka
   }
 }
+
 

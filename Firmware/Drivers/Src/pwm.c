@@ -5,8 +5,6 @@
 static TIM_HandleTypeDef* pPwm1TimHandle = NULL;
 static TIM_HandleTypeDef* pPwm2TimHandle = NULL;
 
-#define PWM_MAX_COUNT (PWM_PERIOD + 1)
-
 void PWM1_Init(TIM_HandleTypeDef* timHandle)
 {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
