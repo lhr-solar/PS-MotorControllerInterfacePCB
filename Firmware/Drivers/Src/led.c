@@ -18,9 +18,13 @@ void LED_Init(void)
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 
     // Status LED (used for hardware verification)
-    GPIO_InitStruct.Pin = LED_PIN;
-    HAL_GPIO_Init(LED_PORT, &GPIO_InitStruct);
-    HAL_GPIO_WritePin(LED_PORT, LED_PIN, GPIO_PIN_RESET);
+    GPIO_InitStruct.Pin = LED1_PIN;
+    HAL_GPIO_Init(LED1_PORT, &GPIO_InitStruct);
+    HAL_GPIO_WritePin(LED1_PORT, LED1_PIN, GPIO_PIN_RESET);
+
+    GPIO_InitStruct.Pin = LED2_PIN;
+    HAL_GPIO_Init(LED2_PORT, &GPIO_InitStruct);
+    HAL_GPIO_WritePin(LED2_PORT, LED2_PIN, GPIO_PIN_RESET);
 
     // HEARTBEAT LED (PB6)
     GPIO_InitStruct.Pin = HEARTBEAT_PIN;
@@ -56,11 +60,12 @@ void LED_Init(void)
     GPIO_InitStruct.Pin = FAULT_PIN;
     HAL_GPIO_Init(FAULT_PORT, &GPIO_InitStruct);
     HAL_GPIO_WritePin(FAULT_PORT, FAULT_PIN, GPIO_PIN_RESET);
+
 }
 
 void LED_Toggle(void)
 {
-    HAL_GPIO_TogglePin(LED_PORT, LED_PIN);
+    HAL_GPIO_TogglePin(LED1_PORT, LED1_PIN);
     HAL_Delay(LED_TOGGLE_DELAY);
 }
 

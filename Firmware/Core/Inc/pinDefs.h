@@ -27,11 +27,11 @@
 
 // status LEDs (no determined function yet, just for testing now)
 
-#define LED_PIN GPIO_PIN_0
-#define LED_PORT GPIOB
+#define LED1_PIN GPIO_PIN_0
+#define LED1_PORT GPIOB
 
-#define GPIO_A12_PIN GPIO_PIN_12
-#define GPIO_A12_PORT GPIOA
+#define LED2_PIN GPIO_PIN_12
+#define LED2_PORT GPIOA
 
 // PCB gpio configurations
 

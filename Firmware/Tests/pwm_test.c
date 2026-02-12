@@ -3,9 +3,7 @@
 #include "stm32xx_hal.h"
 #include "pwm.h"
 #include "led.h"
-
-TIM_HandleTypeDef pwm1TimHandle = {0}; 
-TIM_HandleTypeDef pwm2TimHandle = {0};  
+#include "motor_task.h"
 
 int main(void) {
     HAL_Init();
