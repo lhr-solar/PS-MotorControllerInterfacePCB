@@ -1,17 +1,16 @@
 #include "pwm.h"
 #include "pinDefs.h"
 
-// statis points so PWM Set duty can use
 static TIM_HandleTypeDef* pPwm1TimHandle = NULL;
 static TIM_HandleTypeDef* pPwm2TimHandle = NULL;
 
-void PWM1_Init(TIM_HandleTypeDef* timHandle)
+void PWM1_Init(TIM_HandleTypeDef* timHandle) // PWMA Initialization
 {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
 
     pPwm1TimHandle = timHandle;
 
-    // timer handle confogs
+    // timHandle configurations
     timHandle->Instance = PWM1_TIMER_INSTANCE;
     timHandle->Init.Prescaler = PWM_PRESCALER;
     timHandle->Init.CounterMode = TIM_COUNTERMODE_UP;
@@ -21,11 +20,11 @@ void PWM1_Init(TIM_HandleTypeDef* timHandle)
 
     HAL_TIM_PWM_Init(timHandle);
 
-    // clock enables
+    // Clock Enables
     PWM1_TIMER_CLK_ENABLE();
     PWM1_GPIO_CLK_ENABLE();
 
-    // Configure GPIO for PB10
+    // GPIO Congifurations
     GPIO_InitStruct.Pin = PWM1_GPIO_PIN;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -33,7 +32,7 @@ void PWM1_Init(TIM_HandleTypeDef* timHandle)
     GPIO_InitStruct.Alternate = PWM1_GPIO_AF;
     HAL_GPIO_Init(PWM1_GPIO_PORT, &GPIO_InitStruct);
 
-    // Configure PWM channel
+    // PWM and Channel Configurations
     TIM_OC_InitTypeDef sConfigOC = {0};
     sConfigOC.OCMode = TIM_OCMODE_PWM1;
     sConfigOC.Pulse = PWM_PULSE;
@@ -44,14 +43,14 @@ void PWM1_Init(TIM_HandleTypeDef* timHandle)
     HAL_TIM_PWM_Start(timHandle, PWM1_TIMER_CHANNEL);
 }
 
-void PWM1_SetDuty(uint8_t duty)
+void PWM1_SetDuty(uint8_t duty) // PWMA Duty Function
 {
-    if (duty > 100) duty = 100; // caps duty at 100%
-    uint32_t compare = (PWM_MAX_COUNT * duty) / 100; //calculates compare value based on duty cycle % taken
-    __HAL_TIM_SET_COMPARE(pPwm1TimHandle, PWM1_TIMER_CHANNEL, compare); //sets compare registers
+    if (duty > 100) duty = 100; // Caps duty at 100%
+    uint32_t compare = (PWM_MAX_COUNT * duty) / 100; // Calculates compare value based on duty cycle %
+    __HAL_TIM_SET_COMPARE(pPwm1TimHandle, PWM1_TIMER_CHANNEL, compare); // Sets compare registers
 }
 
-void PWM2_Init(TIM_HandleTypeDef* timHandle)
+void PWM2_Init(TIM_HandleTypeDef* timHandle) // PWMB Initialization
 {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
 
@@ -89,7 +88,7 @@ void PWM2_Init(TIM_HandleTypeDef* timHandle)
     HAL_TIM_PWM_Start(timHandle, PWM2_TIMER_CHANNEL);
 }
 
-void PWM2_SetDuty(uint8_t duty)
+void PWM2_SetDuty(uint8_t duty) // PWMB Duty Function
 {
     if (duty > 100) duty = 100;
     uint32_t compare = (PWM_MAX_COUNT * duty) / 100;

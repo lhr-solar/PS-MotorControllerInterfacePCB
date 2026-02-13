@@ -2,7 +2,7 @@
 #include "stm32xx_hal.h"
 #include "pinDefs.h"
 
-#define LED_TOGGLE_DELAY 500 // ms
+#define LED_TOGGLE_DELAY 500 // 500 ms
 
 void LED_Init(void)
 {
@@ -17,7 +17,7 @@ void LED_Init(void)
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 
-    // Status LED (used for hardware verification)
+    // Debug LEDs (currently used for hardware verification (error handler and LED_Toggle)
     GPIO_InitStruct.Pin = LED1_PIN;
     HAL_GPIO_Init(LED1_PORT, &GPIO_InitStruct);
     HAL_GPIO_WritePin(LED1_PORT, LED1_PIN, GPIO_PIN_RESET);
@@ -63,18 +63,20 @@ void LED_Init(void)
 
 }
 
-void LED_Toggle(void)
+void LED_Debug_Toggle(void) // Hardware verification debug LEDs
 {
     HAL_GPIO_TogglePin(LED1_PORT, LED1_PIN);
+    HAL_GPIO_TogglePin(LED2_PORT, LED2_PIN);
+
     HAL_Delay(LED_TOGGLE_DELAY);
 }
 
-void LED_SetState(uint16_t pin, GPIO_TypeDef* port, uint8_t state)
+void LED_SetState(uint16_t pin, GPIO_TypeDef* port, uint8_t state) // LED helper function 1
 {
     HAL_GPIO_WritePin(port, pin, (GPIO_PinState)state);
 }
 
-void LED_TogglePin(uint16_t pin, GPIO_TypeDef* port)
+void LED_TogglePin(uint16_t pin, GPIO_TypeDef* port) // LED helper function 2
 {
     HAL_GPIO_TogglePin(port, pin);
 }

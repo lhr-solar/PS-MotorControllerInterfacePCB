@@ -1,5 +1,8 @@
 // Tests all status LEDs on the board
-// Test sequence: each LED should blink (heartbeat, swoc, hss en, hss fault, otemp, latch, fault, status_leds), after all LEDs should blink thrice at the same time. if fails, then status LEDS PB0 and PA12 should toggle rapidly
+// Test sequence: heartbeat, swoc, hss en, hss fault, otemp, latch, fault, status_leds
+// Blinks each status LED once, then thrice all at the same time. 
+// failure mode: activate error handler, status LEDS PB0 and PA12 should toggle rapidly
+
 // test validated! ✅
 
 #include "led.h"
@@ -9,8 +12,7 @@
 
 #define TEST_DELAY 250 // ms between LED toggles
 
-// toggles status LEDs rapidly on error
-void Error_Handler(void)
+void Error_Handler(void) // Toggles Status LEDs rapidly on error
 {
     while (1)
     {
@@ -68,7 +70,7 @@ int main(void)
     LED_SetState(FAULT_PIN, FAULT_PORT, 0);
     HAL_Delay(TEST_DELAY);
 
-    // All LEDs blink together (5 times)
+    // All LEDs blink together (3 times)
     for (uint8_t i = 0; i < 5; i++)
     {
         LED_SetState(HEARTBEAT_PIN, HEARTBEAT_PORT, 1);
