@@ -3,7 +3,7 @@
 #include "pwm.h"
 #include "led.h"
 
-TIM_HandleTypeDef pwm1TimHandle = {0};  // PA2
+TIM_HandleTypeDef pwm1TimHandle = {0};  // PB10
 TIM_HandleTypeDef pwm2TimHandle = {0};  // PA5
 
 void Init_Task(void)

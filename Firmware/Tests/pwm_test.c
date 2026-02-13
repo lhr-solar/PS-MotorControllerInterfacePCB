@@ -1,5 +1,6 @@
 // PWM on PB10 and PA5
-// when u run this test should see pwms loop from duty cycles 0, 25, 50, 75, 100
+// when u run this test should see pwms loop from duty cycles 0, 25, 50, 75, 100, PB0 toggle if code has been flashed
+// test validated! ✅
 #include "stm32xx_hal.h"
 #include "pwm.h"
 #include "led.h"
@@ -24,7 +25,7 @@ int main(void) {
         {
             PWM1_SetDuty(duty_cycles[i]);  // PA2
             PWM2_SetDuty(duty_cycles[i]);  // PA5 
-            LED_Toggle(); // see that its working
+            LED_Toggle(); // PB0 should toggle if pwm_test is flashed properly
         }
     }
     

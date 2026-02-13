@@ -1,5 +1,6 @@
 // Tests all status LEDs on the board
 // Test sequence: each LED should blink (heartbeat, swoc, hss en, hss fault, otemp, latch, fault, status_leds), after all LEDs should blink thrice at the same time. if fails, then status LEDS PB0 and PA12 should toggle rapidly
+// test validated! ✅
 
 #include "led.h"
 #include "pinDefs.h"

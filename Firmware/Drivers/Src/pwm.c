@@ -25,7 +25,7 @@ void PWM1_Init(TIM_HandleTypeDef* timHandle)
     PWM1_TIMER_CLK_ENABLE();
     PWM1_GPIO_CLK_ENABLE();
 
-    // Configure GPIO for PA2
+    // Configure GPIO for PB10
     GPIO_InitStruct.Pin = PWM1_GPIO_PIN;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
