@@ -9,11 +9,7 @@ int main(void)
     SystemClock_Config();
 
     Init_Task();
-
-    while(1)
-    {
-        Run_Task();
-    }
+    Run_Task();
 }
 
 void Error_Handler(void) //if called, will flash LED1 and LED2 rapidly

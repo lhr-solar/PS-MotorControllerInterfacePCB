@@ -11,10 +11,9 @@ void LED_Init(void)
     // Enable GPIO clocks
     __HAL_RCC_GPIOA_CLK_ENABLE();
     __HAL_RCC_GPIOB_CLK_ENABLE();
-
-    // Configure all status LED pins as outputs
+    
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Pull = GPIO_PULLDOWN; 
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 
     // Debug LEDs (currently used for hardware verification (error handler and LED_Toggle)
@@ -40,6 +39,7 @@ void LED_Init(void)
     GPIO_InitStruct.Pin = HSS_ENABLE_PIN;
     HAL_GPIO_Init(HSS_ENABLE_PORT, &GPIO_InitStruct);
     HAL_GPIO_WritePin(HSS_ENABLE_PORT, HSS_ENABLE_PIN, GPIO_PIN_RESET);
+    
 
     // HSS_FAULT LED (PA6)
     GPIO_InitStruct.Pin = HSS_FAULT_PIN;

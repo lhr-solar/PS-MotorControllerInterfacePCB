@@ -1,11 +1,13 @@
 // Port Configurations (PWM1, PWM2, Debug LEDs, Status LEDs, TACHs)
 
 #pragma once
+#include "stm32xx_hal.h"
+
 #define PINDEFS_H
 
 // PWM1 configuration PB10 (TIM2_CH3)
 #define PWM1_TIMER_INSTANCE TIM2
-#define PWM1_TIMER_CHANNEL TIM_CHANNEL
+#define PWM1_TIMER_CHANNEL TIM_CHANNEL_3
 
 #define PWM1_GPIO_PORT GPIOB
 #define PWM1_GPIO_PIN GPIO_PIN_10
@@ -79,3 +81,4 @@
 #define FAN_B_TACH_PIN        GPIO_PIN_11
 #define FAN_B_TACH_PORT       GPIOA
 #define FAN_B_TACH_AF         GPIO_AF1_TIM1 
+
