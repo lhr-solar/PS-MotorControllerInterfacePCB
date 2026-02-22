@@ -9,6 +9,10 @@ void PWM1_SetDuty(uint8_t duty);
 void PWM2_Init(TIM_HandleTypeDef* timHandle);
 void PWM2_SetDuty(uint8_t duty);
 
+// Pointers to pwm handles defined in pwm.c
+extern TIM_HandleTypeDef *pwm1TimHandle;
+extern TIM_HandleTypeDef *pwm2TimHandle;
+
 // Shared PWM configurations (for now)
 #define PWM_PULSE 500 
 #define PWM_TIMER_CLK_HZ 80000000UL

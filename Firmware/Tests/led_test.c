@@ -1,25 +1,75 @@
 // Tests all status LEDs on the board
 // Test sequence: heartbeat, swoc, hss en, hss fault, otemp, latch, fault, status_leds
 // Blinks each status LED once, then thrice all at the same time. 
-// failure mode: activate error handler, status LEDS PB0 and PA12 should toggle rapidly
-
-// test validated! ✅
+// failure mode: activate error handler, FAULT LED should toggle rapidly
 
 #include "led.h"
 #include "pinDefs.h"
-#include "sysclk.h"
+#include "common.h"
 #include "stm32xx_hal.h"
+#include "FreeRTOS.h"
+#include "task.h"
 
-#define TEST_DELAY 250 // ms between LED toggles
+// Task parameters
+#define LED_TEST_TASK_PRIO       (tskIDLE_PRIORITY + 1)
+#define LED_TEST_TASK_STACK     configMINIMAL_STACK_SIZE * 2
 
-void Error_Handler(void) // Toggles Status LEDs rapidly on error
+// Static buffers
+StaticTask_t    LED_Test_Task_Buffer;
+StackType_t     LED_Test_Task_Stack[LED_TEST_TASK_STACK];
+
+#define TEST_DELAY_TICKS    pdMS_TO_TICKS(250)
+
+// Array of all LEDs to test
+typedef struct {
+    uint16_t pin;
+    GPIO_TypeDef* port;
+} led_entry_t;
+
+static const led_entry_t leds[] = {
+    {HSS_FAULT_PIN, HSS_FAULT_PORT},
+    {HSS_ENABLE_PIN, HSS_ENABLE_PORT},
+    {DEBUG_LED1_PIN, DEBUG_LED1_PORT},
+    {DEBUG_LED2_PIN, DEBUG_LED2_PORT},
+    {SOFTWARE_OC_PIN, SOFTWARE_OC_PORT},
+    {HEARTBEAT_PIN, HEARTBEAT_PORT},
+    {OTEMP_PIN, OTEMP_PORT},
+    {FAULT_PIN, FAULT_PORT},
+};
+
+#define LED_COUNT (sizeof(leds) / sizeof(leds[0]))
+
+void LED_Test_Task(void *pvParameters)
 {
-    while (1)
+    (void)pvParameters;
+
+    // Test all LEDs one by one
+    for (uint8_t i = 0; i < LED_COUNT; i++)
     {
-        HAL_GPIO_TogglePin(LED1_PORT, LED1_PIN);
-        HAL_GPIO_TogglePin(LED2_PORT, LED2_PIN);
-        HAL_Delay(50);
+        HAL_GPIO_WritePin(leds[i].port, leds[i].pin, 1);
+        vTaskDelay(TEST_DELAY_TICKS);
+        HAL_GPIO_WritePin(leds[i].port, leds[i].pin, 0);
+        vTaskDelay(TEST_DELAY_TICKS);
     }
+
+    // All LEDs blink together (5 times)
+    for (uint8_t i = 0; i < 5; i++)
+    {
+        for (uint8_t j = 0; j < LED_COUNT; j++)
+        {
+            LED_SetState(leds[j].pin, leds[j].port, 1);
+        }
+        vTaskDelay(TEST_DELAY_TICKS);
+
+        for (uint8_t j = 0; j < LED_COUNT; j++)
+        {
+            LED_SetState(leds[j].pin, leds[j].port, 0);
+        }
+        vTaskDelay(TEST_DELAY_TICKS);
+    }
+    
+    // Task complete - delete itself
+    vTaskDelete(NULL);
 }
 
 int main(void)
@@ -29,71 +79,22 @@ int main(void)
 
     LED_Init();
     
-    // Test all LEDs one by one
-    LED_SetState(HSS_FAULT_PIN, HSS_FAULT_PORT, 1);
-    HAL_Delay(TEST_DELAY);
-    LED_SetState(HSS_FAULT_PIN, HSS_FAULT_PORT, 0);
-    HAL_Delay(TEST_DELAY);
+    // Create LED Test Task
+    xTaskCreateStatic(
+        LED_Test_Task,
+        "LED Test",
+        LED_TEST_TASK_STACK,
+        NULL,
+        LED_TEST_TASK_PRIO,
+        LED_Test_Task_Stack,
+        &LED_Test_Task_Buffer
+    );
+    
+    // Start scheduler
+    vTaskStartScheduler();
 
-    LED_SetState(HSS_ENABLE_PIN, HSS_ENABLE_PORT, 1);
-    HAL_Delay(TEST_DELAY);
-    LED_SetState(HSS_ENABLE_PIN, HSS_ENABLE_PORT, 0);
-    HAL_Delay(TEST_DELAY);
-
-    LED_SetState(LED1_PIN, LED1_PORT, 1);
-    HAL_Delay(TEST_DELAY);
-    LED_SetState(LED1_PIN, LED1_PORT, 0);
-    HAL_Delay(TEST_DELAY);
-
-    LED_SetState(LED2_PIN, LED2_PORT, 1);
-    HAL_Delay(TEST_DELAY);
-    LED_SetState(LED2_PIN, LED2_PORT, 0);
-    HAL_Delay(TEST_DELAY);
-
-    LED_SetState(SOFTWARE_OC_PIN, SOFTWARE_OC_PORT, 1);
-    HAL_Delay(TEST_DELAY);
-    LED_SetState(SOFTWARE_OC_PIN, SOFTWARE_OC_PORT, 0);
-    HAL_Delay(TEST_DELAY);
-
-    LED_SetState(HEARTBEAT_PIN, HEARTBEAT_PORT, 1);
-    HAL_Delay(TEST_DELAY);
-    LED_SetState(HEARTBEAT_PIN, HEARTBEAT_PORT, 0);
-    HAL_Delay(TEST_DELAY);
-
-    LED_SetState(OTEMP_PIN, OTEMP_PORT, 1);
-    HAL_Delay(TEST_DELAY);
-    LED_SetState(OTEMP_PIN, OTEMP_PORT, 0);
-    HAL_Delay(TEST_DELAY);
-
-    LED_SetState(FAULT_PIN, FAULT_PORT, 1);
-    HAL_Delay(TEST_DELAY);
-    LED_SetState(FAULT_PIN, FAULT_PORT, 0);
-    HAL_Delay(TEST_DELAY);
-
-    // All LEDs blink together (3 times)
-    for (uint8_t i = 0; i < 5; i++)
-    {
-        LED_SetState(HEARTBEAT_PIN, HEARTBEAT_PORT, 1);
-        LED_SetState(SOFTWARE_OC_PIN, SOFTWARE_OC_PORT, 1);
-        LED_SetState(HSS_ENABLE_PIN, HSS_ENABLE_PORT, 1);
-        LED_SetState(HSS_FAULT_PIN, HSS_FAULT_PORT, 1);
-        LED_SetState(OTEMP_PIN, OTEMP_PORT, 1);
-        LED_SetState(FAULT_PIN, FAULT_PORT, 1);
-        LED_SetState(LED1_PIN, LED1_PORT, 1);
-        LED_SetState(LED2_PIN, LED2_PORT, 1);
-        HAL_Delay(200);
-
-        LED_SetState(HEARTBEAT_PIN, HEARTBEAT_PORT, 0);
-        LED_SetState(SOFTWARE_OC_PIN, SOFTWARE_OC_PORT, 0);
-        LED_SetState(HSS_ENABLE_PIN, HSS_ENABLE_PORT, 0);
-        LED_SetState(HSS_FAULT_PIN, HSS_FAULT_PORT, 0);
-        LED_SetState(OTEMP_PIN, OTEMP_PORT, 0);
-        LED_SetState(FAULT_PIN, FAULT_PORT, 0);
-        LED_SetState(LED1_PIN, LED1_PORT, 0);
-        LED_SetState(LED2_PIN, LED2_PORT, 0);
-        HAL_Delay(200);
-    }
-
-    return 0;
+    // Should never reach here
+    Error_Handler();
+    while (1);
 }
 

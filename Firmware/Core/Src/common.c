@@ -1,5 +1,24 @@
-#include "sysclk.h"
+#include "pinDefs.h"
 #include "stm32xx_hal.h"
+#include "common.h"
+
+
+void Error_Handler() {
+    // Blink FAULT LED
+    while (1) 
+    {
+        HAL_GPIO_TogglePin(FAULT_PORT, FAULT_PIN);
+        HAL_Delay(500);
+    }
+}
+
+void Success_Handler() {
+    // Blink HEARTBEAT LED
+    while(1){
+        HAL_GPIO_TogglePin(HEARTBEAT_PORT, HEARTBEAT_PIN);
+        HAL_Delay(500);
+    }
+}
 
 void SystemClock_Config(void)
 {
