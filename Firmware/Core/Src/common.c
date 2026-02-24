@@ -13,7 +13,6 @@ void Error_Handler() {
 }
 
 void Success_Handler() {
-    // Blink HEARTBEAT LED
         HAL_GPIO_TogglePin(HEARTBEAT_PORT, HEARTBEAT_PIN);
 }
 
