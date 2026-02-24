@@ -2,6 +2,7 @@
 // The HSS_EN LED should indicate, and PP_OUT, BUCK_OUT, and 24V outputs should toggle
 
 #include "led.h"
+#include "hss.h"
 #include "pinDefs.h"
 #include "common.h"
 #include "stm32xx_hal.h"
@@ -18,7 +19,9 @@ StackType_t HSS_Test_Task_Stack[HSS_TEST_TASK_STACK];
 
 void HSS_Test_Task(void *pvParameters)
 {
-    (void)pvParameters;
+    (void)pvParameters; // TODO: change in later PR
+
+    HSS_EN_SetState(HSS_ON);
     
     while(1)
     {
@@ -34,6 +37,11 @@ int main(void)
     HAL_Init();
     SystemClock_Config();
 
+    // Initialize HSS (creates mutex)
+    if (HSS_Init() != pdTRUE) {
+        Error_Handler();
+    }
+    
     LED_Init();
 
     // Create HSS Test Task

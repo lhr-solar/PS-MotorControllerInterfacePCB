@@ -57,13 +57,13 @@ void LED_Test_Task(void *pvParameters)
     {
         for (uint8_t j = 0; j < LED_COUNT; j++)
         {
-            LED_SetState(leds[j].pin, leds[j].port, 1);
+            HAL_GPIO_WritePin(leds[j].port, leds[j].pin, 1);
         }
         vTaskDelay(TEST_DELAY_TICKS);
 
         for (uint8_t j = 0; j < LED_COUNT; j++)
         {
-            LED_SetState(leds[j].pin, leds[j].port, 0);
+            HAL_GPIO_WritePin(leds[j].port, leds[j].pin, 0);
         }
         vTaskDelay(TEST_DELAY_TICKS);
     }

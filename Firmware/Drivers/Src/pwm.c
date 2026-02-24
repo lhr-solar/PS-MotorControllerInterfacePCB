@@ -37,9 +37,7 @@ void PWM1_Init(TIM_HandleTypeDef* timHandle) // PWMA Initialization
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     GPIO_InitStruct.Alternate = PWM1_GPIO_AF;
-    if (HAL_GPIO_Init(PWM1_GPIO_PORT, &GPIO_InitStruct) != HAL_OK) {
-        Error_Handler();
-    }
+    HAL_GPIO_Init(PWM1_GPIO_PORT, &GPIO_InitStruct);
 
     // PWM and Channel Configurations
     TIM_OC_InitTypeDef sConfigOC = {0};
@@ -89,9 +87,7 @@ void PWM2_Init(TIM_HandleTypeDef* timHandle) // PWMB Initialization
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     GPIO_InitStruct.Alternate = PWM2_GPIO_AF;
-    if (HAL_GPIO_Init(PWM2_GPIO_PORT, &GPIO_InitStruct) != HAL_OK) {
-        Error_Handler();
-    }
+    HAL_GPIO_Init(PWM2_GPIO_PORT, &GPIO_InitStruct);
 
     TIM_OC_InitTypeDef sConfigOC = {0};
     sConfigOC.OCMode = TIM_OCMODE_PWM1;

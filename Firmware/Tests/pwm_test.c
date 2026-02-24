@@ -8,6 +8,7 @@
 #include "motor_task.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "hss.h"
 
 // Task parameters
 #define PWM_TEST_TASK_PRIO       (tskIDLE_PRIORITY + 1)
@@ -25,6 +26,9 @@ void PWM_Test_Task(void *pvParameters)
 {
     (void)pvParameters;
     
+    // Enable HSS after scheduler is running
+    HSS_EN_SetState(HSS_ON);
+    
     uint8_t test_index = 0;
     
     while (1) 
@@ -32,9 +36,6 @@ void PWM_Test_Task(void *pvParameters)
         // Cycle through duty cycles
         PWM1_SetDuty(duty_cycles[test_index]);  // PB10
         PWM2_SetDuty(duty_cycles[test_index]);  // PA5 
-        
-        // Toggle debug LED to show task is running
-        LED_Debug_Toggle();
         
         // Move to next duty cycle
         test_index = (test_index + 1) % NUM_TESTS;
@@ -47,7 +48,11 @@ void PWM_Test_Task(void *pvParameters)
 int main(void) {
     HAL_Init();
     SystemClock_Config();
-    
+
+    if (HSS_Init() != pdTRUE) {
+        Error_Handler();
+    }
+
     // Initialize PWM outputs
     PWM1_Init(pwm1TimHandle);  
     PWM2_Init(pwm2TimHandle);  

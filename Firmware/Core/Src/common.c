@@ -14,10 +14,7 @@ void Error_Handler() {
 
 void Success_Handler() {
     // Blink HEARTBEAT LED
-    while(1){
         HAL_GPIO_TogglePin(HEARTBEAT_PORT, HEARTBEAT_PIN);
-        HAL_Delay(500);
-    }
 }
 
 void SystemClock_Config(void)

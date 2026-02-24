@@ -1,6 +1,7 @@
 #include "motor_task.h"
 #include "pwm.h"
 #include "led.h"
+#include "hss.h"
 #include "common.h"
 
 // Static buffers for motor task
@@ -9,6 +10,11 @@ StackType_t Motor_Task_Stack[MOTOR_TASK_STACK_SIZE];
 
 void Motor_Task_Init(void)
 {
+    // Initialize HSS (creates mutex)
+    if (HSS_Init() != pdTRUE) {
+        Error_Handler();
+    }
+    
     // Initialize both PWM outputs
     PWM1_Init(pwm1TimHandle);
     PWM2_Init(pwm2TimHandle);  
@@ -30,7 +36,7 @@ void Motor_Task_Init(void)
 
 void Motor_Task(void *pvParameters)
 {
-    (void)pvParameters; // mark parameter unused
+    (void)pvParameters;
 
     while (1)
     {
@@ -39,10 +45,10 @@ void Motor_Task(void *pvParameters)
         PWM2_SetDuty(70); 
         
         // Blink HEARTBEAT LED to show working
-        Success_Handler();
+        // Success_Handler();
 
-        // Enable HSS circuit
-        HAL_GPIO_WritePin(HSS_ENABLE_PORT, HSS_ENABLE_PIN, 1);
+        // Enable HSS circuit 
+        HSS_EN_SetState(HSS_ON);
 
         // Delay for task period (10ms = 100Hz)
         vTaskDelay(MOTOR_TASK_PERIOD);

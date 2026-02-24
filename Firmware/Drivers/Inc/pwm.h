@@ -1,12 +1,30 @@
 #pragma once
 #include "stm32l4xx_hal.h"
 
-// PWM1 Functions
+/**
+ * @brief Initialize PWM1
+ * @param timHandle Pointer to addresses of pwm.c static variables
+ * @note If failure, FAULT led will blink
+ */
 void PWM1_Init(TIM_HandleTypeDef* timHandle);
+
+/**
+ * @brief Set the duty cycle of PWM1
+ * @param duty duty cycle % value
+ */
 void PWM1_SetDuty(uint8_t duty);
 
-// PWM2 Functions  
+/**
+ * @brief Initialize PWM2
+ * @param timHandle Pointer to addresses of pwm.c static variables
+ * @note If failure, FAULT led will blink
+ */
 void PWM2_Init(TIM_HandleTypeDef* timHandle);
+
+/**
+ * @brief Set the duty cycle of PWM2
+ * @param duty duty cycle % value
+ */
 void PWM2_SetDuty(uint8_t duty);
 
 // Pointers to pwm handles defined in pwm.c
