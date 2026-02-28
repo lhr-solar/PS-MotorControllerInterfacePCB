@@ -1,9 +1,7 @@
-[submodule "UTSVT-KiCadLibraries"]
-	path = UTSVT-KiCadLibraries
-	url = git@github.com:lhr-solar/UTSVT-KiCadLibraries.git
+[submodule "Firmware/Embedded-Sharepoint"]
+	path = Firmware/Embedded-Sharepoint
+	url = https://github.com/lhr-solar/Embedded-Sharepoint.git
+	branch = main
 [submodule "KiCAD-Sharepoint"]
 	path = KiCAD-Sharepoint
-	url = git@github.com:lhr-solar/KiCAD-Sharepoint.git
-[submodule "Hardware/KiCAD-Sharepoint"]
-	path = Hardware/KiCAD-Sharepoint
-	url = git@github.com:lhr-solar/KiCAD-Sharepoint.git
+	url = https://github.com/lhr-solar/KiCAD-Sharepoint.git
