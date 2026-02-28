@@ -20,7 +20,7 @@ void Motor_Task_Init(void)
     PWM2_Init(pwm2TimHandle);  
     
     // Initialize LEDs
-    LED_Init();
+    LEDs_Init();
 
     // Create the Motor Task
     xTaskCreateStatic(
@@ -48,9 +48,8 @@ void Motor_Task(void *pvParameters)
         // Success_Handler();
 
         // Enable HSS circuit 
-        HSS_EN_SetState(HSS_ON);
+        HSS_EN_SetState(HSS_ON, portMAX_DELAY);
 
-        // Delay for task period (10ms = 100Hz)
         vTaskDelay(MOTOR_TASK_PERIOD);
     }
 }

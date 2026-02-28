@@ -1,6 +1,5 @@
 #include "pwm.h"
 #include "pinDefs.h"
-#include "gpioInits.h"
 #include "common.h"
 
 static TIM_HandleTypeDef pwm1TimHandle_ = {0};  // Static handle instance, _ after variable means one time instantiation and not meant to be directly called

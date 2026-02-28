@@ -77,7 +77,7 @@ int main(void)
     HAL_Init();
     SystemClock_Config();
 
-    LED_Init();
+    LEDs_Init();
     
     // Create LED Test Task
     xTaskCreateStatic(

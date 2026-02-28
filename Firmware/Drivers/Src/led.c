@@ -3,9 +3,7 @@
 #include "pinDefs.h"
 #include "common.h"
 
-#define LED_TOGGLE_DELAY 500 // 500 ms
-
-void LED_Init(void)
+void LEDs_Init(void)
 {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
 
@@ -26,5 +24,38 @@ void LED_Init(void)
     GPIO_InitStruct.Pin = DEBUG_LED1_PIN | HEARTBEAT_PIN | SOFTWARE_OC_PIN | OTEMP_PIN | HSS_LATCH_PIN | FAULT_PIN;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
     HAL_GPIO_WritePin(GPIOB, DEBUG_LED1_PIN | HEARTBEAT_PIN | SOFTWARE_OC_PIN | OTEMP_PIN | HSS_LATCH_PIN | FAULT_PIN, GPIO_PIN_RESET);
+}
+
+void statusLEDs_toggle(status_leds_t led)
+{
+    switch(led){
+        case HEARTBEAT_LED:
+            HAL_GPIO_TogglePin(HEARTBEAT_PORT, HEARTBEAT_PIN);
+            break;
+        case FAULT_LED:
+            HAL_GPIO_TogglePin(FAULT_PORT, FAULT_PIN);
+            break;
+        case HSS_FAULT_LED:
+            HAL_GPIO_TogglePin(HSS_FAULT_PORT, HSS_FAULT_PIN);
+            break;
+        default:
+            break;
+    }
+}
+void statusLEDs_write(status_leds_t led, pin_status_t newState)
+{
+        switch(led){
+        case HEARTBEAT_LED:
+            HAL_GPIO_WritePin(HEARTBEAT_PORT, HEARTBEAT_PIN, newState);
+            break;
+        case FAULT_LED:
+            HAL_GPIO_WritePin(FAULT_PORT, FAULT_PIN, newState);
+            break;
+        case HSS_FAULT_LED:
+            HAL_GPIO_WritePin(HSS_FAULT_PORT, HSS_FAULT_PIN, newState);
+            break;
+        default:
+            break;
+    }
 }
 

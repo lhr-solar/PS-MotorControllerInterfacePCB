@@ -19,6 +19,10 @@
 #define PWM2_GPIO_AF GPIO_AF1_TIM2
 
 // Status LEDs
+typedef struct {
+    uint16_t Pin;
+    GPIO_TypeDef *Port;
+} led_t;
 
 // PB6
 #define HEARTBEAT_PIN GPIO_PIN_6

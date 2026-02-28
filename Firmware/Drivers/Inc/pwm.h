@@ -1,5 +1,5 @@
 #pragma once
-#include "stm32l4xx_hal.h"
+#include "stm32xx_hal.h"
 
 /**
  * @brief Initialize PWM1
@@ -37,3 +37,15 @@ extern TIM_HandleTypeDef *pwm2TimHandle;
 #define PWM_PERIOD 999 // 1 MHz / (999 + 1) = 1 kHz PWM
 #define PWM_PRESCALER 79 // 80 MHz / (79 + 1) = 1 MHz timer tick
 #define PWM_MAX_COUNT (PWM_PERIOD + 1)
+
+// PWM1 GPIO Configurations
+#define PWM1_TIMER_CLK_ENABLE() __HAL_RCC_TIM2_CLK_ENABLE()
+#define PWM1_GPIO_CLK_ENABLE() __HAL_RCC_GPIOB_CLK_ENABLE()
+#define PWM1_GPIO_PORT GPIOB
+#define PWM1_GPIO_PIN GPIO_PIN_10
+
+// PWM2 GPIO Configurations
+#define PWM2_TIMER_CLK_ENABLE() __HAL_RCC_TIM2_CLK_ENABLE()
+#define PWM2_GPIO_CLK_ENABLE() __HAL_RCC_GPIOA_CLK_ENABLE()
+#define PWM2_GPIO_PORT GPIOA
+#define PWM2_GPIO_PIN GPIO_PIN_5

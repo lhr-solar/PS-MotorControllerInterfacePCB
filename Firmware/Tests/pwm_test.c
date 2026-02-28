@@ -27,7 +27,7 @@ void PWM_Test_Task(void *pvParameters)
     (void)pvParameters;
     
     // Enable HSS after scheduler is running
-    HSS_EN_SetState(HSS_ON);
+    HSS_EN_SetState(HSS_ON, portMAX_DELAY);
     
     uint8_t test_index = 0;
     
@@ -58,7 +58,7 @@ int main(void) {
     PWM2_Init(pwm2TimHandle);  
     
     // Initialize LEDs
-    LED_Init();
+    LEDs_Init();
     
     // Create PWM Test Task
     xTaskCreateStatic(

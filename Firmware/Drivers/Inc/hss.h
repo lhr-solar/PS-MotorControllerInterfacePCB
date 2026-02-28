@@ -19,7 +19,7 @@ BaseType_t HSS_Init(void);
  * @param state Assigned to global variable hss_current_state
  * @note HEARTBEAT led should blink when called
  */
-void HSS_EN_SetState(hss_status_t state);
+void HSS_EN_SetState(hss_status_t state, TickType_t xTicksToWait);
 
 /**
  * @brief Toggle HSS circuit ON and OFF

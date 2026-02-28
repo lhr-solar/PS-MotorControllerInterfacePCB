@@ -21,7 +21,7 @@ void HSS_Test_Task(void *pvParameters)
 {
     (void)pvParameters; // TODO: change in later PR
 
-    HSS_EN_SetState(HSS_ON);
+    HSS_EN_SetState(HSS_ON, portMAX_DELAY);
     
     while(1)
     {
@@ -42,7 +42,7 @@ int main(void)
         Error_Handler();
     }
     
-    LED_Init();
+    LEDs_Init();
 
     // Create HSS Test Task
     xTaskCreateStatic(
