@@ -13,7 +13,7 @@ void Error_Handler() {
 }
 
 void Success_Handler() {
-        HAL_GPIO_TogglePin(HEARTBEAT_PORT, HEARTBEAT_PIN);
+    HAL_GPIO_TogglePin(HEARTBEAT_PORT, HEARTBEAT_PIN);
 }
 
 void SystemClock_Config(void)

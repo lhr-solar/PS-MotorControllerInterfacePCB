@@ -59,3 +59,11 @@ void statusLEDs_write(status_leds_t led, pin_status_t newState)
     }
 }
 
+void canLED_heartbeat(void)
+{
+    while(1){
+    HAL_GPIO_TogglePin(HEARTBEAT_PORT, HEARTBEAT_PIN);
+    HAL_Delay(500);
+  }
+}
+
