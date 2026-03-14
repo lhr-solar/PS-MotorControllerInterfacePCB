@@ -65,14 +65,14 @@ typedef struct {
 #define FAULT_PORT GPIOB
 
 
+// PA12 (most on the left on bottom LED row)
+#define DEBUG_LED1_PIN GPIO_PIN_12
+#define DEBUG_LED1_PORT GPIOA
+
+
 // PB0
-#define DEBUG_LED1_PIN GPIO_PIN_0
-#define DEBUG_LED1_PORT GPIOB
-
-
-// PA12
-#define DEBUG_LED2_PIN GPIO_PIN_12
-#define DEBUG_LED2_PORT GPIOA
+#define DEBUG_LED2_PIN GPIO_PIN_0
+#define DEBUG_LED2_PORT GPIOB //PB0 does NOT work
 
 
 // BUCK SENSE (PA2)

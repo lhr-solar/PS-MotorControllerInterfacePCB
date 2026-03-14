@@ -3,6 +3,8 @@
 #include "common.h"
 #include "pinDefs.h"
 
+#define CAN_INTERRUPT_PRIO configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY
+
 
 // MOCO CAN IDs
 #define MOTOR_CONTROLLER_IDENTIFICATION  0x240
@@ -23,7 +25,7 @@
 
 
 // CAN function declarations
-bool CAN_Init();
+can_status_t CAN_Init(void); // change from bool to can_status_t
 can_status_t CAN_Send_Motor_Command(uint16_t id, uint8_t data[], uint8_t length);
 
 

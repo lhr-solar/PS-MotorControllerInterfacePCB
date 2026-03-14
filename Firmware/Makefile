@@ -44,8 +44,7 @@ PROJECT_MAIN_DIR ?= Core/Src
 ifneq ($(TEST), main)
 PROJECT_C_SOURCES := $(filter-out $(PROJECT_MAIN_DIR)/main.c, $(PROJECT_C_SOURCES))
 PROJECT_C_SOURCES := $(filter-out $(PROJECT_MAIN_DIR)/motor_task.c, $(PROJECT_C_SOURCES))
-# PROJECT_C_SOURCES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_SOURCES) Tests/$(TEST).c)
-PROJECT_C_SOURCES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_SOURCES) Embedded-Sharepoint/test/tests/$(TEST).c)
+PROJECT_C_SOURCES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_SOURCES) Tests/$(TEST).c)
 else
 PROJECT_C_SOURCES := $(addprefix $(MAKEFILE_DIR)/, $(PROJECT_C_SOURCES))
 endif

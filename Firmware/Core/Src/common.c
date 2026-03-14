@@ -8,12 +8,18 @@ void Error_Handler() {
     while (1) 
     {
         HAL_GPIO_TogglePin(FAULT_PORT, FAULT_PIN);
-        HAL_Delay(500);
+        HAL_Delay(100);
     }
 }
 
 void Success_Handler() {
+
+  while (1)
+  {
     HAL_GPIO_TogglePin(HEARTBEAT_PORT, HEARTBEAT_PIN);
+    HAL_Delay(200);
+  }
+
 }
 
 void SystemClock_Config(void)

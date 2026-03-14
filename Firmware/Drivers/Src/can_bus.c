@@ -1,34 +1,17 @@
 #include "can_bus.h"
 #include <stm32l4xx_hal_can.h>
+#include "common.h"
+#include "pinDefs.h"
+
+// no queue
 
 /**
- * @brief Initialize CAN GPIO pins 
+ * @brief Initialize CAN
  */
-bool CAN_Init()
+can_status_t CAN_Init(void)
 {
-    // Initialize GPIOs
-    GPIO_InitTypeDef GPIO_InitStruct = {0};
 
-    // Enable CAN clocks
-    CAN1_CLK_ENABLE();
-    CAN_GPIO_CLK_ENABLE();
-
-    // Configure CAN RX pin (PB8)
-    GPIO_InitStruct.Pin = CAN_RX_PIN;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-    GPIO_InitStruct.Alternate = CAN_RX_AF;
-    HAL_GPIO_Init(CAN_RX_PORT, &GPIO_InitStruct);
-
-    // Configure CAN TX pin (PB9)
-    GPIO_InitStruct.Pin = CAN_TX_PIN;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-    GPIO_InitStruct.Alternate = CAN_TX_AF;
-    HAL_GPIO_Init(CAN_TX_PORT, &GPIO_InitStruct);
-    
+    // removed GPIO init block, it exists in MSP
     // Create Filter
     CAN_FilterTypeDef sFilterConfig;
     sFilterConfig.FilterBank = 0;
@@ -43,15 +26,16 @@ bool CAN_Init()
     sFilterConfig.SlaveStartFilterBank = 14;
 
     // Setup CAN1 Initialization
+    hcan1->Instance = CAN1;
     hcan1->Init.Prescaler = 20;
-    hcan1->Init.Mode = CAN_MODE_LOOPBACK;
+    hcan1->Init.Mode = CAN_MODE_NORMAL;
     hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
-    hcan1->Init.TimeSeg1 = CAN_BS1_6TQ;
+    hcan1->Init.TimeSeg1 = CAN_BS1_13TQ;
     hcan1->Init.TimeSeg2 = CAN_BS2_2TQ;
     hcan1->Init.TimeTriggeredMode = DISABLE;
     hcan1->Init.AutoBusOff = DISABLE;
     hcan1->Init.AutoWakeUp = DISABLE;
-    hcan1->Init.AutoRetransmission = ENABLE;
+    hcan1->Init.AutoRetransmission = DISABLE;
     hcan1->Init.ReceiveFifoLocked = DISABLE;
     
     // If TransmitFifoPriority is disabled, the hardware selects the mailbox based on the message ID priority. 
@@ -59,15 +43,62 @@ bool CAN_Init()
     hcan1->Init.TransmitFifoPriority = ENABLE;
 
     // Initialize CAN1
-    if (can_init(hcan1, &sFilterConfig) != CAN_OK) {
-        return false;
+    if (can_init(hcan1, &sFilterConfig) != CAN_OK) { 
+        Error_Handler();
+        return CAN_ERR;
     }
     // Start CAN1
-    if (can_start(hcan1) != CAN_OK) {
-        return false;
+    if (can_start(hcan1) != CAN_OK) { 
+        Error_Handler();
+        return CAN_ERR;
     }
-    return true;
+    return CAN_OK;
 }
+
+void HAL_CAN_MspInit(CAN_HandleTypeDef* hcan) {
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  if(hcan->Instance==CAN1) {
+    /* Peripheral clock enable */
+    __HAL_RCC_CAN1_CLK_ENABLE();
+
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+    /**CAN1 GPIO Configuration
+    PB8     ------> CAN1_RX
+    PB9     ------> CAN1_TX
+    */
+    GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF9_CAN1;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    /* CAN1 interrupt Init */
+    HAL_NVIC_SetPriority(CAN1_TX_IRQn, CAN_INTERRUPT_PRIO, 0);
+    HAL_NVIC_EnableIRQ(CAN1_TX_IRQn);
+    HAL_NVIC_SetPriority(CAN1_RX0_IRQn, CAN_INTERRUPT_PRIO, 0);
+    HAL_NVIC_EnableIRQ(CAN1_RX0_IRQn);
+  }
+}
+
+void HAL_CAN_MspDeInit(CAN_HandleTypeDef* hcan) {
+  if(hcan->Instance==CAN1) {
+    /* Peripheral clock disable */
+    __HAL_RCC_CAN1_CLK_DISABLE();
+
+    /**CAN1 GPIO Configuration
+    PB8     ------> CAN1_RX
+    PB9     ------> CAN1_TX
+    */
+    HAL_GPIO_DeInit(GPIOB, GPIO_PIN_8|GPIO_PIN_9);
+
+    /* CAN1 interrupt DeInit */
+    HAL_NVIC_DisableIRQ(CAN1_TX_IRQn);
+    HAL_NVIC_DisableIRQ(CAN1_RX0_IRQn);
+  }
+}
+
+
 /**
  * @brief Send a motor controller command over CAN
  * @param id CAN message ID
