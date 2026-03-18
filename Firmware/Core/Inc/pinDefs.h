@@ -95,8 +95,7 @@ typedef struct {
 #define FAN_B_TACH_AF         GPIO_AF1_TIM1
 
 
-//CAN
-// CAN1_RX: PA11, CAN1_TX: PA12
+// CAN1_RX: PB8, CAN1_TX: PB9
 #define CAN_RX_PIN        GPIO_PIN_8
 #define CAN_RX_PORT       GPIOB
 #define CAN_TX_PIN        GPIO_PIN_9

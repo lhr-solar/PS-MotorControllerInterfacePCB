@@ -31,7 +31,7 @@ void Motor_Task_Init(void)
    LEDs_Init();
   
    // Initialize CAN bus
-   if (CAN_Init()!=true) {
+   if (CAN_Init() != CAN_OK) {
        Error_Handler();
    }
 

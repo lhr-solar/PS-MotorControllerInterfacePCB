@@ -2,7 +2,7 @@
 #include "can_bus.h"
 #include "pinDefs.h"
 #include "common.h"
-
+// can send and receive works
 
 /* 
 Debugging: main is fine, inits passed and task created
@@ -28,32 +28,28 @@ void CAN1_test_task(void *pvParameters)
   uint8_t tx_data[8] = {0};
   tx_data[1] = 0x00;
 
-  // 2. Each LED blinks 5 times, 6th time only DEBUG_LED1, DEBUG_LED2, HSS_EN, no Error handler trigger
   while(1)
   {
     // --- Send two payloads to ID 0x1 ---
     tx_header.StdId = 0x1;
 
     tx_data[0] = 0x01;
-    if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) == CAN_OK) 
-    HAL_GPIO_TogglePin(DEBUG_LED1_PORT, DEBUG_LED1_PIN);
-    else 
-    Error_Handler();
+    if (can_send(hcan1, &tx_header, tx_data, portMAX_DELAY) == CAN_OK) {
+      HAL_GPIO_TogglePin(DEBUG_LED1_PORT, DEBUG_LED1_PIN);
+    } else 
+      Error_Handler();
 
+    // RX Test: PCAN → STM ID 0x1
+    CAN_RxHeaderTypeDef rx_header = {0};
+    uint8_t rx_data[8] = {0};
+    if (can_recv(hcan1, 0x1, &rx_header, rx_data, pdMS_TO_TICKS(500)) == CAN_OK)  
+      HAL_GPIO_TogglePin(DEBUG_LED2_PORT, DEBUG_LED2_PIN);
+   
+    HAL_GPIO_TogglePin(HSS_ENABLE_PORT, HSS_ENABLE_PIN);
     // 3. Pause before sending the batch again
     vTaskDelay(pdMS_TO_TICKS(100));
   }
   Error_Handler();
-  /* -  CAN_RxHeaderTypeDef rx_header = {0};
--  uint8_t rx_data[8] = {0};
--  can_status_t status;
--
--  // CAN1
--  status = can_recv(hcan1, 0x1, &rx_header, rx_data, portMAX_DELAY);
--  if (status != CAN_OK && rx_data[0] != 0x1) Error_Handler();
--  status = can_recv(hcan1, 0x1, &rx_header, rx_data, portMAX_DELAY);
--  if (status != CAN_OK && rx_data[0] != 0x2) Error_Handler();
-*/
   // Task complete - delete itself
   vTaskDelete(NULL);
 }

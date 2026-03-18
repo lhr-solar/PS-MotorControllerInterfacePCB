@@ -21,5 +21,4 @@
  } pin_status_t;
 
 void LEDs_Init(void);
-void canLED_heartbeat(void);
 

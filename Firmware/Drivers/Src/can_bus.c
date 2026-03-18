@@ -105,6 +105,7 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* hcan) {
  * @param data Data bytes to send
  * @param length Number of data bytes (max 8)
  * @return can_status_t status
+ * 
  */
 
 can_status_t CAN_Send_Motor_Command(uint16_t id, uint8_t data[], uint8_t length) {
