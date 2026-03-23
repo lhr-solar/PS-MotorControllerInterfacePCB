@@ -97,14 +97,10 @@ static void send_motor_command(int16_t torque_command, int16_t angular_velocity)
     CAN_Send_Motor_Command(CONTROL_MODE, data, 4);
 }
 
-
+// receive from moco only no send
 void Motor_Task(void *pvParameters)
 {
    (void)pvParameters;
-  
-   // Default torque command (0 = no torque)
-   int16_t torque_command = 0;
-   int16_t angular_velocity = 0;
   
    while (1)
    {
@@ -115,17 +111,12 @@ void Motor_Task(void *pvParameters)
 
        recv_motor_status();
       
-       // Example: Send control command
-       // In a real application, this would be based on input from controls
-       send_motor_command(torque_command, angular_velocity);
-      
        // Sets duty cycles for the PWMs
        PWM1_SetDuty(70);
        PWM2_SetDuty(70);
       
        // Enable HSS circuit
        HSS_EN_SetState(HSS_ON, portMAX_DELAY);
-
 
        vTaskDelay(MOTOR_TASK_PERIOD);
    }

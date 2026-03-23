@@ -5,28 +5,21 @@
 
 #define CAN_INTERRUPT_PRIO configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY
 
-
-// MOCO CAN IDs
-#define MOTOR_CONTROLLER_IDENTIFICATION  0x240
-#define MOTOR_STATUS                    0x241
-#define MOTOR_CONTROLLER_BUS            0x242
-#define VELOCITY                        0x243
-#define MOTOR_CONTROLLER_PHASE_CURRENT   0x244
-#define MOTOR_VOLTAGE_VECTOR             0x245
-#define MOTOR_CURRENT_VECTOR             0x246
-#define MOTOR_BACKEMF                   0x247
-#define LOW_VOLTAGE_RAIL_MEASUREMENT    0x248
-#define DSP_VOLTAGE_RAIL_MEASUREMENT    0x249
-#define MOTOR_TEMPERATURE                0x24B
-#define DSP_BOARD_TEMPERATURE            0x24C
-
-
-#define CONTROL_MODE                     0x580
-
-
+extern CAN_HandleType* can_handle;
 // CAN function declarations
 can_status_t CAN_Init(void); // change from bool to can_status_t
-can_status_t CAN_Send_Motor_Command(uint16_t id, uint8_t data[], uint8_t length);
+
+/**
+ * @brief Send a motor controller command over CAN
+ * @param id CAN message ID
+ * @param data Data bytes to send
+ * @param length Number of data bytes (max 8)
+ * @return can_status_t status
+ * 
+ */
+can_status_t CANbus_send(uint16_t id, uint8_t data[], uint8_t length);
+
+can_status_t CANbus_recv(uint16_t id, CAN_RxHeaderTypeDef *header, uint8_t data[], TickType_t timeout);
 
 
 
