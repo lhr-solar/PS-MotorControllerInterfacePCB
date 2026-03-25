@@ -23,7 +23,7 @@ void LEDs_Init(void)
     {DEBUG_LED2_PIN,       DEBUG_LED2_PORT}
 };
 
-    for (int i = 0, i < ((sizeof(leds))/(sizeof(leds[0]))), i++) {
+    for (int i = 0; i < ((sizeof(leds))/(sizeof(leds[0]))); i++) {
         GPIO_InitStruct.Pin = leds[i].Pin;
         HAL_GPIO_Init(leds[i].Port, &GPIO_InitStruct);
         HAL_GPIO_WritePin(leds[i].Port, leds[i].Pin, GPIO_PIN_RESET);

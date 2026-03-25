@@ -3,6 +3,7 @@
 #include "common.h"
 #include "pinDefs.h"
 #include "MotorCAN_can_msgs.h"
+#include <string.h>
 
 // no queue
 

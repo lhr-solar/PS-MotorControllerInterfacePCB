@@ -21,4 +21,6 @@
  } pin_status_t;
 
 void LEDs_Init(void);
+void statusLEDs_write(status_leds_t led, pin_status_t newState);
+void statusLEDs_toggle(status_leds_t led);
 

@@ -14,7 +14,7 @@ StackType_t Motor_Task_Stack[MOTOR_TASK_STACK_SIZE];
 // Motor state variables
 static mc_status_t motor_status;
 static mc_motor_tempmeasurement_t motor_temp;
-static bool motor_temp_valid = false;
+// static bool motor_temp_valid = false;
 
 void Motor_Task_Init(void)
 {
@@ -31,7 +31,7 @@ void Motor_Task_Init(void)
    LEDs_Init();
   
    // Initialize CAN bus
-   if (CAN_Init(&hcan1) != CAN_OK) {
+   if (CAN_Init(hcan1) != CAN_OK) {
        Error_Handler();
    }
 
@@ -69,7 +69,7 @@ static bool recv_motor_temp(void)
    can_status_t status = CANbus_recv(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, &rx_header, rx_data, timeout);
    if(status == CAN_OK) {
        bool unpacked = (can_unpack(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, rx_data, &motor_temp) == CAN_OK);
-       motor_temp_valid = unpacked;
+       //motor_temp_valid = unpacked;
        return unpacked;
    }
    return false;
@@ -104,28 +104,28 @@ void Motor_Task(void *pvParameters)
             uint8_t duty;
        } temp_lut_entry_t;
        
-       if (motor_temp_valid) {
+       if (temp_ok && status_ok) {
            float temp = motor_temp.MC_HeatsinkTemp;
 
             static const temp_lut_entry_t lut[] = {
-                {40.0, 0},
-                {45.0, 17},
-                {50.0, 33},
-                {55.0, 50},
-                {60.0, 67},
-                {65.0, 83},
-                {70.0, 100}
+                {40.0f, 0},
+                {45.0f, 17},
+                {50.0f, 33},
+                {55.0f, 50},
+                {60.0f, 67},
+                {65.0f, 83},
+                {70.0f, 100}
             };
         
-           if (temp > 70.0) {
+           if (temp > 70.0f) {
                temp_fault = true;
                fan_duty = 100;
-           } else if (temp > 40.0) {
+           } else if (temp > 40.0f) {
                fan_duty = 0;
-               for (int i = 0, i < ((sizeof(lut))/(sizeof(lut[0]))), i++) {
-               }
+               for (int i = 0; i < ((sizeof(lut))/(sizeof(lut[0]))); i++) {
                 if (temp > lut[i].temp)
                     fan_duty = lut[i].duty;
+               }
            } else
                break;
        }
