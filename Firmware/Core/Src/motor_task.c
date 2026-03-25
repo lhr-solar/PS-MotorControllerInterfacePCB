@@ -5,16 +5,16 @@
 #include "can_bus.h"
 #include "common.h"
 #include "CAN.h"
+#include "MotorCAN_can_msgs.h"
 
 // Static buffers for motor task
 StaticTask_t Motor_Task_Buffer;
 StackType_t Motor_Task_Stack[MOTOR_TASK_STACK_SIZE];
 
 // Motor state variables
-/* static int16_t current_velocity = 0;
-static uint16_t bus_voltage = 0;
-static int16_t motor_current = 0; */
-// static bool motor_ready = false;
+static mc_status_t motor_status;
+static mc_motor_tempmeasurement_t motor_temp;
+static bool motor_temp_valid = false;
 
 void Motor_Task_Init(void)
 {
@@ -31,7 +31,7 @@ void Motor_Task_Init(void)
    LEDs_Init();
   
    // Initialize CAN bus
-   if (CAN_Init() != CAN_OK) {
+   if (CAN_Init(&hcan1) != CAN_OK) {
        Error_Handler();
    }
 
@@ -47,54 +47,32 @@ void Motor_Task_Init(void)
    );
 }
 
-static ws_status_t motor_status;
-
-static bool recv_motor_status(void) //(x241)
+static bool recv_motor_status(void)
 {
-   CAN_RxHeaderTypeDef rx_header = {0};
+   CAN_RxHeaderTypeDef rx_header;
    uint8_t rx_data[8] = {0};
-   can_status_t status;
-
-   status = can_recv(hcan1, MOTOR_STATUS, &rx_header, rx_data, 0);
-
-   if(status == CAN_RECV)
-   {
-       motor_status.limit_flags =
-           rx_data[0] | (rx_data[1] << 8);
-
-       motor_status.error_flags =
-           rx_data[2] | (rx_data[3] << 8);
-
-       motor_status.active_motor =
-           rx_data[4] | (rx_data[5] << 8);
-
-       motor_status.tx_error_count = rx_data[6];
-       motor_status.rx_error_count = rx_data[7];
-       return true;
+   TickType_t timeout = 0; // non-blocking
+   
+   can_status_t status = CANbus_recv(CAN_ID_MC_STATUS, &rx_header, rx_data, timeout);
+   if(status == CAN_OK) {
+       return (can_unpack(CAN_ID_MC_STATUS, rx_data, &motor_status) == CAN_OK);
    }
    return false;
 }
 
-
-/**
- * @brief Send motor command to motor controller over CAN
- * @param torque_command Torque value to send (signed 16-bit)
- * @param angular_velocity Angular velocity to send (signed 16-bit)
- */
-static void send_motor_command(int16_t torque_command, int16_t angular_velocity)
+static bool recv_motor_temp(void)
 {
-    uint8_t data[8] = {0};
-    
-    // Pack torque command (2 bytes, little-endian)
-    data[0] = (uint8_t)(torque_command & 0xFF);
-    data[1] = (uint8_t)((torque_command >> 8) & 0xFF);
-    
-    // Pack angular velocity (2 bytes, little-endian)
-    data[2] = (uint8_t)(angular_velocity & 0xFF);
-    data[3] = (uint8_t)((angular_velocity >> 8) & 0xFF);
-    
-    // Send to CONTROL_MODE ID (0x580)
-    CAN_Send_Motor_Command(CONTROL_MODE, data, 4);
+   CAN_RxHeaderTypeDef rx_header;
+   uint8_t rx_data[8] = {0};
+   TickType_t timeout = 0;
+   
+   can_status_t status = CANbus_recv(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, &rx_header, rx_data, timeout);
+   if(status == CAN_OK) {
+       bool unpacked = (can_unpack(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, rx_data, &motor_temp) == CAN_OK);
+       motor_temp_valid = unpacked;
+       return unpacked;
+   }
+   return false;
 }
 
 // receive from moco only no send
@@ -104,20 +82,63 @@ void Motor_Task(void *pvParameters)
   
    while (1)
    {
-       // Try to receive various CAN messages (non-blocking)
-       /* receive_motor_status();
-       receive_velocity();
-       receive_bus_voltage(); */
-
-       recv_motor_status();
+       bool status_ok = recv_motor_status();
+       bool temp_ok = recv_motor_temp();
       
-       // Sets duty cycles for the PWMs
-       PWM1_SetDuty(70);
-       PWM2_SetDuty(70);
+       // HSS Enable logic (fixed)
+       GPIO_PinState fault_state = HAL_GPIO_ReadPin(HSS_FAULT_PORT, HSS_FAULT_PIN);
+       bool hss_safe = (fault_state == GPIO_PIN_SET); // SET = no fault (active-low)
+       
+       if (hss_safe) {
+           HSS_EN_SetState(HSS_ON, portMAX_DELAY);
+       } else {
+           HSS_EN_SetState(HSS_OFF, portMAX_DELAY);
+       }
       
-       // Enable HSS circuit
-       HSS_EN_SetState(HSS_ON, portMAX_DELAY);
+       // Temperature-based fan contro
+       uint8_t fan_duty = 0;
+       bool temp_fault = false;
 
+       typedef struct {
+            float temp;
+            uint8_t duty;
+       } temp_lut_entry_t;
+       
+       if (motor_temp_valid) {
+           float temp = motor_temp.MC_HeatsinkTemp;
+
+            static const temp_lut_entry_t lut[] = {
+                {40.0, 0},
+                {45.0, 17},
+                {50.0, 33},
+                {55.0, 50},
+                {60.0, 67},
+                {65.0, 83},
+                {70.0, 100}
+            };
+        
+           if (temp > 70.0) {
+               temp_fault = true;
+               fan_duty = 100;
+           } else if (temp > 40.0) {
+               fan_duty = 0;
+               for (int i = 0, i < ((sizeof(lut))/(sizeof(lut[0]))), i++) {
+               }
+                if (temp > lut[i].temp)
+                    fan_duty = lut[i].duty;
+           } else
+               break;
+       }
+       
+       PWM1_SetDuty(fan_duty);
+       PWM2_SetDuty(fan_duty);
+       
+       // Fault handling
+       if (temp_fault) {
+           statusLEDs_write(HSS_FAULT_LED, ON);
+       }
+      
        vTaskDelay(MOTOR_TASK_PERIOD);
    }
 }
+

@@ -5,9 +5,9 @@
 
 #define CAN_INTERRUPT_PRIO configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY
 
-extern CAN_HandleType* can_handle;
+extern CAN_HandleTypeDef* can_handle;
 // CAN function declarations
-can_status_t CAN_Init(void); // change from bool to can_status_t
+can_status_t CAN_Init(CAN_HandleTypeDef* hcan);
 
 /**
  * @brief Send a motor controller command over CAN
@@ -20,6 +20,7 @@ can_status_t CAN_Init(void); // change from bool to can_status_t
 can_status_t CANbus_send(uint16_t id, uint8_t data[], uint8_t length);
 
 can_status_t CANbus_recv(uint16_t id, CAN_RxHeaderTypeDef *header, uint8_t data[], TickType_t timeout);
+can_status_t can_unpack(uint16_t id, const uint8_t rx_data[8], void *msg);
 
 
 

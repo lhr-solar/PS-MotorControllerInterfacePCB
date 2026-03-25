@@ -13,13 +13,7 @@ void Error_Handler() {
 }
 
 void Success_Handler() {
-
-  while (1)
-  {
-    HAL_GPIO_TogglePin(HEARTBEAT_PORT, HEARTBEAT_PIN);
-    HAL_Delay(200);
-  }
-
+    HAL_GPIO_WritePin(HEARTBEAT_PORT, HEARTBEAT_PIN, 1);
 }
 
 void SystemClock_Config(void)

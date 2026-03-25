@@ -2,7 +2,8 @@
 #pragma once
 #include "stm32xx_hal.h"
 
-
+// PORT configurations
+#define PORT
 // PWM1 configuration PB10 (TIM2_CH3)
 #define PWM1_TIMER_INSTANCE TIM2
 #define PWM1_TIMER_CHANNEL TIM_CHANNEL_3
@@ -65,14 +66,14 @@ typedef struct {
 #define FAULT_PORT GPIOB
 
 
-// PA12 (most on the left on bottom LED row)
+// PA12 (most left on bottom LED row)
 #define DEBUG_LED1_PIN GPIO_PIN_12
 #define DEBUG_LED1_PORT GPIOA
 
 
 // PB0
 #define DEBUG_LED2_PIN GPIO_PIN_0
-#define DEBUG_LED2_PORT GPIOB //PB0 does NOT work
+#define DEBUG_LED2_PORT GPIOB 
 
 
 // BUCK SENSE (PA2)

@@ -19,12 +19,4 @@ extern StackType_t Motor_Task_Stack[MOTOR_TASK_STACK_SIZE];
 
 void Motor_Task_Init(void);
 
-
 void Motor_Task(void *pvParameters);
-typedef struct {
-   uint16_t limit_flags;
-   uint16_t error_flags;
-   uint16_t active_motor;
-   uint8_t  tx_error_count;
-   uint8_t  rx_error_count;
-} ws_status_t;
