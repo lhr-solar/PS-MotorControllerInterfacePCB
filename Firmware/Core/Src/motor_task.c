@@ -6,6 +6,7 @@
 #include "common.h"
 #include "CAN.h"
 #include "MotorCAN_can_msgs.h"
+#include "can1_recv_entries.h"
 
 // Static buffers for motor task
 StaticTask_t Motor_Task_Buffer;
@@ -104,7 +105,7 @@ void Motor_Task(void *pvParameters)
             uint8_t duty;
        } temp_lut_entry_t;
        
-       if (temp_ok && status_ok) {
+       if (temp_ok && status_ok ) {
            float temp = motor_temp.MC_HeatsinkTemp;
 
             static const temp_lut_entry_t lut[] = {
