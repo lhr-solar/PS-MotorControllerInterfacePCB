@@ -5,9 +5,8 @@
 
 #define CAN_INTERRUPT_PRIO configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY
 
-extern CAN_HandleTypeDef* can_handle;
 // CAN function declarations
-can_status_t CAN_Init(CAN_HandleTypeDef* hcan);
+can_status_t CAN_Init(void);
 
 /**
  * @brief Send a motor controller command over CAN

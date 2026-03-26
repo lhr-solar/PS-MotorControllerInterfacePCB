@@ -4,18 +4,17 @@
 #include "pinDefs.h"
 #include "MotorCAN_can_msgs.h"
 #include <string.h>
+#include <stm32l4xx_hal_can.h>
 
 // no queue
 
-CAN_HandleTypeDef* can_handle;
 
 /**
  * @brief Initialize CAN
  */
-can_status_t CAN_Init(CAN_HandleTypeDef* hcan)
+can_status_t CAN_Init(void)
 {
 
-    can_handle = hcan;
     // removed GPIO init block, it exists in MSP
     // Create Filter
     CAN_FilterTypeDef sFilterConfig;
@@ -31,28 +30,28 @@ can_status_t CAN_Init(CAN_HandleTypeDef* hcan)
     sFilterConfig.SlaveStartFilterBank = 14;
 
     // Setup CAN1 Initialization
-    can_handle->Instance = CAN1;
-    can_handle->Init.Prescaler = 20;
-    can_handle->Init.Mode = CAN_MODE_NORMAL;
-    can_handle->Init.SyncJumpWidth = CAN_SJW_1TQ;
-    can_handle->Init.TimeSeg1 = CAN_BS1_13TQ;
-    can_handle->Init.TimeSeg2 = CAN_BS2_2TQ;
-    can_handle->Init.TimeTriggeredMode = DISABLE;
-    can_handle->Init.AutoBusOff = DISABLE;
-    can_handle->Init.AutoWakeUp = DISABLE;
-    can_handle->Init.AutoRetransmission = DISABLE;
-    can_handle->Init.ReceiveFifoLocked = DISABLE;
+    hcan1->Instance = CAN1;
+    hcan1->Init.Prescaler = 20;
+    hcan1->Init.Mode = CAN_MODE_NORMAL;
+    hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
+    hcan1->Init.TimeSeg1 = CAN_BS1_13TQ;
+    hcan1->Init.TimeSeg2 = CAN_BS2_2TQ;
+    hcan1->Init.TimeTriggeredMode = DISABLE;
+    hcan1->Init.AutoBusOff = DISABLE;
+    hcan1->Init.AutoWakeUp = DISABLE;
+    hcan1->Init.AutoRetransmission = DISABLE;
+    hcan1->Init.ReceiveFifoLocked = DISABLE;
     
     // If TransmitFifoPriority is disabled, the hardware selects the mailbox based on the message ID priority. 
     // If enabled, the hardware uses a FIFO mechanism to select the mailbox based on the order of transmission requests.
-    can_handle->Init.TransmitFifoPriority = ENABLE;
+    hcan1->Init.TransmitFifoPriority = ENABLE;
 
     // Initialize CAN1
-    if (can_init(can_handle, &sFilterConfig) != CAN_OK) { 
+    if (can_init(hcan1, &sFilterConfig) != CAN_OK) { 
         return CAN_ERR;
     }
     // Start CAN1
-    if (can_start(can_handle) != CAN_OK) { 
+    if (can_start(hcan1) != CAN_OK) { 
         return CAN_ERR;
     }
     return CAN_OK;
@@ -109,7 +108,7 @@ can_status_t CANbus_send(uint16_t id, uint8_t data[], uint8_t length) {
     tx_header.DLC = length;
     tx_header.TransmitGlobalTime = DISABLE;
     
-    return can_send(can_handle, &tx_header, data, portMAX_DELAY);
+    return can_send(hcan1, &tx_header, data, portMAX_DELAY);
 }
 
 /**
@@ -121,7 +120,7 @@ can_status_t CANbus_send(uint16_t id, uint8_t data[], uint8_t length) {
  * @return can_status_t CAN_OK / CAN_ERR / CAN_EMPTY
  */
 can_status_t CANbus_recv(uint16_t id, CAN_RxHeaderTypeDef *header, uint8_t data[], TickType_t timeout) {
-    return can_recv(can_handle, id, header, data, timeout);
+    return can_recv(hcan1, id, header, data, timeout);
 }
 
 can_status_t can_unpack(uint16_t id, const uint8_t rx_data[8], void *dest) { //
