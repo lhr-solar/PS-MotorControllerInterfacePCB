@@ -6,7 +6,6 @@
 #include "common.h"
 #include "CAN.h"
 #include "MotorCAN_can_msgs.h"
-#include "can1_recv_entries.h"
 
 // Static buffers for motor task
 StaticTask_t Motor_Task_Buffer;
@@ -15,7 +14,6 @@ StackType_t Motor_Task_Stack[MOTOR_TASK_STACK_SIZE];
 // Motor state variables
 static mc_status_t motor_status;
 static mc_motor_tempmeasurement_t motor_temp;
-// static bool motor_temp_valid = false;
 
 void Motor_Task_Init(void)
 {
@@ -32,7 +30,7 @@ void Motor_Task_Init(void)
    LEDs_Init();
   
    // Initialize CAN bus
-   if (CAN_Init(hcan1) != CAN_OK) {
+   if (CAN_Init() != CAN_OK) {
        Error_Handler();
    }
 
@@ -48,7 +46,7 @@ void Motor_Task_Init(void)
    );
 }
 
-static bool recv_motor_status(void)
+ static bool recv_motor_status(void)
 {
    CAN_RxHeaderTypeDef rx_header;
    uint8_t rx_data[8] = {0};
@@ -63,13 +61,16 @@ static bool recv_motor_status(void)
 
 static bool recv_motor_temp(void)
 {
+    // touches here
    CAN_RxHeaderTypeDef rx_header;
    uint8_t rx_data[8] = {0};
    TickType_t timeout = 0;
    
-   can_status_t status = CANbus_recv(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, &rx_header, rx_data, timeout);
+can_status_t status = CANbus_recv(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, &rx_header, rx_data, timeout);
+
+//status is NOT CAN_OK as of 3/25/2026 11:26 PM
    if(status == CAN_OK) {
-       bool unpacked = (can_unpack(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, rx_data, &motor_temp) == CAN_OK);
+    bool unpacked = (can_unpack(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, rx_data, &motor_temp) == CAN_OK);
        //motor_temp_valid = unpacked;
        statusLEDs_toggle(HEARTBEAT_LED);
        return unpacked;
@@ -85,12 +86,14 @@ void Motor_Task(void *pvParameters)
    while (1)
    {
        bool status_ok = recv_motor_status();
+       // HAL_GPIO_WritePin(SOFTWARE_OC_PORT, SOFTWARE_OC_PIN, 1);
        bool temp_ok = recv_motor_temp();
+       // HAL_GPIO_WritePin(HEARTBEAT_PORT, HEARTBEAT_PIN, 1);
       
        // HSS Enable logic (fixed)
-       //GPIO_PinState fault_state = HAL_GPIO_ReadPin(HSS_FAULT_PORT, HSS_FAULT_PIN);
-       //bool hss_safe = (fault_state == GPIO_PIN_SET); // SET = no fault (active-low)
-       bool hss_safe = true;
+       // GPIO_PinState fault_state = HAL_GPIO_ReadPin(HSS_FAULT_PORT, HSS_FAULT_PIN);
+       // bool hss_safe = (fault_state == GPIO_PIN_RESET); // SET = no fault (active-low)
+bool hss_safe = true;
        if (hss_safe) {
            HSS_EN_SetState(HSS_ON, portMAX_DELAY);
            statusLEDs_write(HSS_FAULT_LED, OFF);
@@ -100,7 +103,7 @@ void Motor_Task(void *pvParameters)
        }
       
        // Temperature-based fan contro
-       uint8_t fan_duty = 0;
+       uint8_t fan_duty = 50;
        bool temp_fault = false;
 
        typedef struct {
@@ -108,14 +111,15 @@ void Motor_Task(void *pvParameters)
             uint8_t duty;
        } temp_lut_entry_t;
        
-       if (temp_ok && status_ok ) {
+       if (temp_ok || status_ok) {
            float temp = motor_temp.MC_HeatsinkTemp;
-
+HAL_GPIO_WritePin(SOFTWARE_OC_PORT, SOFTWARE_OC_PIN, 1); // i AM getting to this point
             static const temp_lut_entry_t lut[] = {
-                {40.0f, 0},
+               /* {40.0f, 0},
                 {45.0f, 17},
                 {50.0f, 33},
                 {55.0f, 50},
+                */
                 {60.0f, 67},
                 {65.0f, 83},
                 {70.0f, 100}

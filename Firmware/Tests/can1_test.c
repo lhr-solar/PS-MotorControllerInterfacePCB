@@ -43,7 +43,7 @@ void CAN1_test_task(void *pvParameters)
     // RX Test: PCAN → STM ID 0x1
     CAN_RxHeaderTypeDef rx_header = {0};
     uint8_t rx_data[8] = {0};
-    if (can_recv(hcan1, 0x2, &rx_header, rx_data, pdMS_TO_TICKS(500)) == CAN_OK)  
+    if (can_recv(hcan1, 0x002, &rx_header, rx_data, pdMS_TO_TICKS(500)) == CAN_OK)  
       HAL_GPIO_TogglePin(DEBUG_LED2_PORT, DEBUG_LED2_PIN);
    
     HAL_GPIO_TogglePin(HSS_ENABLE_PORT, HSS_ENABLE_PIN);

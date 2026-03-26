@@ -144,4 +144,3 @@ typedef struct {
 typedef struct {
     float MC_SlipSpeed;
 } mc_slipspeedmeasurement_t;
-
