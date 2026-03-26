@@ -15,9 +15,9 @@ void LEDs_Init(void)
     {HEARTBEAT_PIN,        HEARTBEAT_PORT},
     {SOFTWARE_OC_PIN,      SOFTWARE_OC_PORT},
     {HSS_ENABLE_PIN,       HSS_ENABLE_PORT},
-    {HSS_FAULT_PIN,        HSS_FAULT_PORT},    // Fixed: was HSS_ENABLE_PIN
+    
     {OTEMP_PIN,            OTEMP_PORT},
-    {HSS_LATCH_PIN,        HSS_LATCH_PORT},    // Fixed: was HSS_ENABLE_PIN
+    
     {FAULT_PIN,            FAULT_PORT},
     {DEBUG_LED1_PIN,       DEBUG_LED1_PORT},
     {DEBUG_LED2_PIN,       DEBUG_LED2_PORT}

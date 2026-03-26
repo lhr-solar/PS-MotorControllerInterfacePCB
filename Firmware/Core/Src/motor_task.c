@@ -71,6 +71,7 @@ static bool recv_motor_temp(void)
    if(status == CAN_OK) {
        bool unpacked = (can_unpack(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, rx_data, &motor_temp) == CAN_OK);
        //motor_temp_valid = unpacked;
+       statusLEDs_toggle(HEARTBEAT_LED);
        return unpacked;
    }
    return false;
@@ -87,13 +88,15 @@ void Motor_Task(void *pvParameters)
        bool temp_ok = recv_motor_temp();
       
        // HSS Enable logic (fixed)
-       GPIO_PinState fault_state = HAL_GPIO_ReadPin(HSS_FAULT_PORT, HSS_FAULT_PIN);
-       bool hss_safe = (fault_state == GPIO_PIN_SET); // SET = no fault (active-low)
-       
+       //GPIO_PinState fault_state = HAL_GPIO_ReadPin(HSS_FAULT_PORT, HSS_FAULT_PIN);
+       //bool hss_safe = (fault_state == GPIO_PIN_SET); // SET = no fault (active-low)
+       bool hss_safe = true;
        if (hss_safe) {
            HSS_EN_SetState(HSS_ON, portMAX_DELAY);
+           statusLEDs_write(HSS_FAULT_LED, OFF);
        } else {
            HSS_EN_SetState(HSS_OFF, portMAX_DELAY);
+           statusLEDs_write(HSS_FAULT_LED, ON);
        }
       
        // Temperature-based fan contro
@@ -122,13 +125,14 @@ void Motor_Task(void *pvParameters)
                temp_fault = true;
                fan_duty = 100;
            } else if (temp > 40.0f) {
-               fan_duty = 0;
+               fan_duty = 50;
                for (int i = 0; i < ((sizeof(lut))/(sizeof(lut[0]))); i++) {
                 if (temp > lut[i].temp)
                     fan_duty = lut[i].duty;
                }
-           } else
-               break;
+           } else {
+               fan_duty = 0;
+           }
        }
        
        PWM1_SetDuty(fan_duty);
