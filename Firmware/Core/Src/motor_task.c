@@ -1,11 +1,4 @@
 #include "motor_task.h"
-#include "pwm.h"
-#include "led.h"
-#include "hss.h"
-#include "can_bus.h"
-#include "common.h"
-#include "CAN.h"
-#include "MotorCAN_can_msgs.h"
 
 // Static buffers for motor task
 StaticTask_t Motor_Task_Buffer;
@@ -14,12 +7,14 @@ StackType_t Motor_Task_Stack[MOTOR_TASK_STACK_SIZE];
 // Motor state variables
 static mc_status_t motor_status;
 static mc_motor_tempmeasurement_t motor_temp;
+static BaseType_t temp_fault;
 
-void Motor_Task_Init(void)
+
+init_status_t Motor_Task_Init(void)
 {
    // Initialize HSS (creates mutex)
    if (HSS_Init() != pdTRUE) {
-       Error_Handler();
+       return INIT_ERR;
    }
   
    // Initialize both PWM outputs
@@ -30,8 +25,8 @@ void Motor_Task_Init(void)
    LEDs_Init();
   
    // Initialize CAN bus
-   if (CAN_Init() != CAN_OK) {
-       Error_Handler();
+   if (CANbus_init() != CAN_OK) {
+       return INIT_ERR;
    }
 
    // Create the Motor Task
@@ -44,38 +39,59 @@ void Motor_Task_Init(void)
        Motor_Task_Stack,        // Stack buffer
        &Motor_Task_Buffer       // TCB buffer
    );
+
+   return INIT_ERR;
 }
 
- static bool recv_motor_status(void)
+static BaseType_t recv_motor_status(mc_status_t *mc_status, TickType_t timeout)
 {
    CAN_RxHeaderTypeDef rx_header;
    uint8_t rx_data[8] = {0};
-   TickType_t timeout = 0; // non-blocking
    
    can_status_t status = CANbus_recv(CAN_ID_MC_STATUS, &rx_header, rx_data, timeout);
-   if(status == CAN_OK) {
-       return (can_unpack(CAN_ID_MC_STATUS, rx_data, &motor_status) == CAN_OK);
+   if (status == CAN_OK && can_unpack_status(CAN_ID_MC_STATUS, rx_data, mc_status) == CAN_OK) {
+      HAL_GPIO_TogglePin(DEBUG_LED2_PORT, DEBUG_LED2_PIN);
+      return pdPASS;
    }
-   return false;
+   return pdFAIL;
 }
 
-static bool recv_motor_temp(void)
+static BaseType_t recv_motor_temp(mc_motor_tempmeasurement_t *mc_temp, TickType_t timeout)
 {
-    // touches here
    CAN_RxHeaderTypeDef rx_header;
    uint8_t rx_data[8] = {0};
-   TickType_t timeout = 0;
    
-can_status_t status = CANbus_recv(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, &rx_header, rx_data, timeout);
-
-//status is NOT CAN_OK as of 3/25/2026 11:26 PM
-   if(status == CAN_OK) {
-    bool unpacked = (can_unpack(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, rx_data, &motor_temp) == CAN_OK);
-       //motor_temp_valid = unpacked;
-       statusLEDs_toggle(HEARTBEAT_LED);
-       return unpacked;
+   can_status_t status = CANbus_recv(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, &rx_header, rx_data, timeout);
+    if (status == CAN_OK && can_unpack_temp(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, rx_data, mc_temp) == CAN_OK) {
+       HAL_GPIO_TogglePin(HEARTBEAT_PORT, HEARTBEAT_PIN);
+       return pdPASS;
    }
-   return false;
+   return pdFAIL;
+}
+
+static uint8_t search_lut(void) {
+
+    float temp = motor_temp.MC_HeatsinkTemp;
+    printf("temp: %.5f/n/r", temp);
+
+    uint8_t duty = 60;
+
+    if (temp >= 70.0f) {
+        temp_fault = true;
+        duty = 100;
+    } else if (temp >= 40.0f) {
+        temp_fault = false;
+        for (int i = 0; i < ((sizeof(lut))/(sizeof(lut[0]))); i++) {
+            if (temp > lut[i].temp)
+                duty = lut[i].duty;
+        }
+    } else {
+        duty = 0; // turns fans off
+
+        return duty;
+    }
+
+    return 0;
 }
 
 // receive from moco only no send
@@ -85,69 +101,36 @@ void Motor_Task(void *pvParameters)
   
    while (1)
    {
-       bool status_ok = recv_motor_status();
-       // HAL_GPIO_WritePin(SOFTWARE_OC_PORT, SOFTWARE_OC_PIN, 1);
-       bool temp_ok = recv_motor_temp();
-       // HAL_GPIO_WritePin(HEARTBEAT_PORT, HEARTBEAT_PIN, 1);
-      
-       // HSS Enable logic (fixed)
-       // GPIO_PinState fault_state = HAL_GPIO_ReadPin(HSS_FAULT_PORT, HSS_FAULT_PIN);
-       // bool hss_safe = (fault_state == GPIO_PIN_RESET); // SET = no fault (active-low)
-bool hss_safe = true;
-       if (hss_safe) {
-           HSS_EN_SetState(HSS_ON, portMAX_DELAY);
-           statusLEDs_write(HSS_FAULT_LED, OFF);
-       } else {
-           HSS_EN_SetState(HSS_OFF, portMAX_DELAY);
-           statusLEDs_write(HSS_FAULT_LED, ON);
-       }
-      
-       // Temperature-based fan contro
-       uint8_t fan_duty = 50;
-       bool temp_fault = false;
+       BaseType_t status_ok = recv_motor_status(&motor_status, 0);
+       BaseType_t temp_ok = recv_motor_temp(&motor_temp, 0);
 
-       typedef struct {
-            float temp;
-            uint8_t duty;
-       } temp_lut_entry_t;
-       
-       if (temp_ok || status_ok) {
-           float temp = motor_temp.MC_HeatsinkTemp;
-HAL_GPIO_WritePin(SOFTWARE_OC_PORT, SOFTWARE_OC_PIN, 1); // i AM getting to this point
-            static const temp_lut_entry_t lut[] = {
-               /* {40.0f, 0},
-                {45.0f, 17},
-                {50.0f, 33},
-                {55.0f, 50},
-                */
-                {60.0f, 67},
-                {65.0f, 83},
-                {70.0f, 100}
-            };
-        
-           if (temp > 70.0f) {
-               temp_fault = true;
-               fan_duty = 100;
-           } else if (temp > 40.0f) {
-               fan_duty = 50;
-               for (int i = 0; i < ((sizeof(lut))/(sizeof(lut[0]))); i++) {
-                if (temp > lut[i].temp)
-                    fan_duty = lut[i].duty;
-               }
-           } else {
-               fan_duty = 0;
-           }
+       int fault_state = HAL_GPIO_ReadPin(HSS_FAULT_PORT, HSS_FAULT_PIN);
+       bool hss_safe = (fault_state == GPIO_PIN_RESET); 
+
+       if (hss_safe) {
+           HSS_EN_SetState(HSS_ON);
+       } else {
+           HSS_EN_SetState(HSS_OFF);
        }
+
+       uint8_t fan_duty = 0;
+
+       // Temperature-based fan control                                                                                                                            a
+       if (temp_ok || status_ok) { // will be adding to status
+            fan_duty = search_lut();
+        }
        
        PWM1_SetDuty(fan_duty);
        PWM2_SetDuty(fan_duty);
        
        // Fault handling
-       if (temp_fault) {
-           statusLEDs_write(HSS_FAULT_LED, ON);
-       }
+        if (temp_fault) {
+            statusLEDs_write(FAULT_LED, ON);
+        } else
+            statusLEDs_write(FAULT_LED, OFF);
       
        vTaskDelay(MOTOR_TASK_PERIOD);
    }
 }
+
 

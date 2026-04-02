@@ -7,13 +7,16 @@
  * @brief Initializes all status LEDs
  * @note HEARTBEAT led should blink when called
  */
-
- 
  typedef enum {
     HEARTBEAT_LED,
     FAULT_LED,
     HSS_FAULT_LED
  } status_leds_t;
+ typedef struct {
+   uint16_t Pin;
+   GPIO_TypeDef *Port;
+   status_leds_t type;
+} led_t;
 
  typedef enum {
     OFF = GPIO_PIN_RESET,

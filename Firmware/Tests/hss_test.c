@@ -21,7 +21,7 @@ void HSS_Test_Task(void *pvParameters)
 {
     (void)pvParameters; // TODO: change in later PR
 
-    HSS_EN_SetState(HSS_ON, portMAX_DELAY);
+    HSS_EN_SetState(HSS_ON);
     
     while(1)
     {

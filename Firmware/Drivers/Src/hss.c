@@ -23,16 +23,10 @@ BaseType_t HSS_Init(void)
     return pdTRUE;
 }
 
-void HSS_EN_SetState(hss_status_t state, TickType_t xTicksToWait)
+void HSS_EN_SetState(hss_status_t state)
 {
-    // Acquire mutex before modifying state
-    xSemaphoreTake(hss_mutex, xTicksToWait);
-    
     hss_current_state = state;
     HAL_GPIO_WritePin(HSS_ENABLE_PORT, HSS_ENABLE_PIN, state);
-    
-    // Release mutex after done
-    xSemaphoreGive(hss_mutex);
 }
 
 void HSS_EN_Toggle(void)

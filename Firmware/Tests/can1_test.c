@@ -61,7 +61,7 @@ int main(void)
     LEDs_Init();
     if (HAL_Init() != HAL_OK) Error_Handler(); 
     SystemClock_Config();
-    if (CAN_Init() != CAN_OK) Error_Handler();
+    if (CANbus_init() != CAN_OK) Error_Handler();
 
     // HAL_GPIO_TogglePin(HSS_ENABLE_PORT, HSS_ENABLE_PIN); // on = inits passed ✅
 

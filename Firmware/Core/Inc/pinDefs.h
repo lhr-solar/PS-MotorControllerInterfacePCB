@@ -2,8 +2,6 @@
 #pragma once
 #include "stm32xx_hal.h"
 
-// PORT configurations
-#define PORT
 // PWM1 configuration PB10 (TIM2_CH3)
 #define PWM1_TIMER_INSTANCE TIM2
 #define PWM1_TIMER_CHANNEL TIM_CHANNEL_3
@@ -25,10 +23,6 @@
 
 
 // Status LEDs
-typedef struct {
-   uint16_t Pin;
-   GPIO_TypeDef *Port;
-} led_t;
 
 
 // PB6
@@ -81,6 +75,26 @@ typedef struct {
 #define BUCK_SENSE_PORT GPIOA
 
 
+// PSOM LED 1 (PA7)
+#define PSOM_LED1_PIN GPIO_PIN_7
+#define PSOM_LED1_PORT GPIOA
+
+
+// PSOM LED 2 (PA8)
+#define PSOM_LED2_PIN GPIO_PIN_8
+#define PSOM_LED2_PORT GPIOA
+
+
+// PSOM LED 3 (PA15)
+#define PSOM_LED3_PIN GPIO_PIN_15
+#define PSOM_LED3_PORT GPIOA
+
+
+// PSOM LED 4 (PB11)
+#define PSOM_LED4_PIN GPIO_PIN_11
+#define PSOM_LED4_PORT GPIOB
+
+
 // Tach Input Configurations (timer input capture)
 
 
@@ -98,12 +112,7 @@ typedef struct {
 
 // CAN1_RX: PB8, CAN1_TX: PB9
 #define CAN_RX_PIN        GPIO_PIN_8
-#define CAN_RX_PORT       GPIOB
 #define CAN_TX_PIN        GPIO_PIN_9
-#define CAN_TX_PORT       GPIOB
 #define CAN_RX_AF         GPIO_AF9_CAN1
 #define CAN_TX_AF         GPIO_AF9_CAN1
-
-
-#define CAN1_CLK_ENABLE() __HAL_RCC_CAN1_CLK_ENABLE()
-#define CAN_GPIO_CLK_ENABLE() __HAL_RCC_GPIOB_CLK_ENABLE()
+#define CAN_PORT          GPIOB
