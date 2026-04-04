@@ -6,11 +6,14 @@
 #include <string.h>
 #include <stm32l4xx_hal_can.h>
 
+CAN_HandleTypeDef *g_hcan1;
+
 /**
  * @brief Initialize CAN
  */
 can_status_t CANbus_init(void)
 {
+    g_hcan1 = hcan1;
 
     // removed GPIO init block, it exists in MSP
     // Create Filter
@@ -27,28 +30,28 @@ can_status_t CANbus_init(void)
     sFilterConfig.SlaveStartFilterBank = 14;
 
     // Setup CAN1 Initialization
-    hcan1->Instance = CAN1;
-    hcan1->Init.Prescaler = 20;
-    hcan1->Init.Mode = CAN_MODE_NORMAL;
-    hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
-    hcan1->Init.TimeSeg1 = CAN_BS1_13TQ;
-    hcan1->Init.TimeSeg2 = CAN_BS2_2TQ;
-    hcan1->Init.TimeTriggeredMode = DISABLE;
-    hcan1->Init.AutoBusOff = DISABLE;
-    hcan1->Init.AutoWakeUp = DISABLE;
-    hcan1->Init.AutoRetransmission = DISABLE;
-    hcan1->Init.ReceiveFifoLocked = DISABLE;
+    g_hcan1->Instance = CAN1;
+    g_hcan1->Init.Prescaler = 20;
+    g_hcan1->Init.Mode = CAN_MODE_NORMAL;
+    g_hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
+    g_hcan1->Init.TimeSeg1 = CAN_BS1_13TQ;
+    g_hcan1->Init.TimeSeg2 = CAN_BS2_2TQ;
+    g_hcan1->Init.TimeTriggeredMode = DISABLE;
+    g_hcan1->Init.AutoBusOff = DISABLE;
+    g_hcan1->Init.AutoWakeUp = DISABLE;
+    g_hcan1->Init.AutoRetransmission = DISABLE;
+    g_hcan1->Init.ReceiveFifoLocked = DISABLE;
     
     // If TransmitFifoPriority is disabled, the hardware selects the mailbox based on the message ID priority. 
     // If enabled, the hardware uses a FIFO mechanism to select the mailbox based on the order of transmission requests.
     hcan1->Init.TransmitFifoPriority = ENABLE;
 
     // Initialize CAN1
-    if (can_init(hcan1, &sFilterConfig) != CAN_OK) { 
+    if (can_init(g_hcan1, &sFilterConfig) != CAN_OK) { 
         return CAN_ERR;
     }
     // Start CAN1
-    if (can_start(hcan1) != CAN_OK) { 
+    if (can_start(g_hcan1) != CAN_OK) { 
         return CAN_ERR;
     }
     return CAN_OK;
@@ -97,7 +100,7 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* hcan) {
   }
 }
 
-can_status_t CANbus_send(uint16_t id, uint8_t data[], uint8_t length) {
+can_status_t CANbus_send(uint16_t id, uint8_t data[], uint8_t length, TickType_t timeout) {
     CAN_TxHeaderTypeDef tx_header = {0};
     tx_header.StdId = id;
     tx_header.RTR = CAN_RTR_DATA;
@@ -105,17 +108,9 @@ can_status_t CANbus_send(uint16_t id, uint8_t data[], uint8_t length) {
     tx_header.DLC = length;
     tx_header.TransmitGlobalTime = DISABLE;
     
-    return can_send(hcan1, &tx_header, data, portMAX_DELAY);
+    return can_send(g_hcan1, &tx_header, data, timeout);
 }
 
-/**
- * @brief Receive CAN message matching ID
- * @param id Expected STD ID
- * @param header Rx header output
- * @param data Rx data output (8 bytes)
- * @param timeout RTOS ticks to block
- * @return can_status_t CAN_OK / CAN_ERR / CAN_EMPTY
- */
 can_status_t CANbus_recv(uint16_t id, CAN_RxHeaderTypeDef *header, uint8_t data[], TickType_t timeout) {
-    return can_recv(hcan1, id, header, data, timeout);
+return can_recv(g_hcan1, id, header, data, timeout);
 }

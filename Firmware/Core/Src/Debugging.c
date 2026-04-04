@@ -1,7 +1,7 @@
 #include "Debugging.h"
 #include <stdio.h>
 
-void initPrintf(void) {
+uart_status_t initPrintf(void) {
 	// First, initialize the UART hardware (GPIO, clocks, etc.)
 	// UART init
 	GPIO_InitTypeDef InitStruct = {0};
@@ -12,7 +12,7 @@ void initPrintf(void) {
 	PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART1;
 	PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK2;
 	if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK) {
-		Error_Handler();
+		return UART_ERR;
 	}
 
 	/* Peripheral clock enable */
@@ -42,15 +42,6 @@ void initPrintf(void) {
 	setvbuf(stdout, NULL, _IONBF, 0);
 
 	printf_init(husart1);
-}
 
-//int _write(int file, char *ptr, int len) {
-//	(void)file;
-//	if (husart1 == NULL)
-//		return -1;
-//	if (HAL_UART_Transmit(husart1, (uint8_t *)ptr, (uint16_t)len,
-//						  HAL_MAX_DELAY) != HAL_OK) {
-//		return -1;
-//	}
-//	return len;
-//}
+	return UART_OK;
+}

@@ -17,9 +17,16 @@ can_status_t CANbus_init(void);
  * @return can_status_t status
  * 
  */
-can_status_t CANbus_send(uint16_t id, uint8_t data[], uint8_t length);
+can_status_t CANbus_send(uint16_t id, uint8_t data[], uint8_t length, TickType_t timeout);
+/**
+ * @brief Receive CAN message matching ID
+ * @param id Expected STD ID
+ * @param header Rx header output
+ * @param data Rx data output (8 bytes)
+ * @param timeout RTOS ticks to block
+ * @return can_status_t CAN_OK / CAN_ERR / CAN_EMPTY
+ */
 can_status_t CANbus_recv(uint16_t id, CAN_RxHeaderTypeDef *header, uint8_t data[], TickType_t timeout);
-can_status_t can_unpack(uint16_t id, const uint8_t rx_data[8], void *msg);
 
 
 

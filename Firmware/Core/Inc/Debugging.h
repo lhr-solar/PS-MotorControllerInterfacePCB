@@ -7,4 +7,4 @@
 #include "pinDefs.h"
 
 extern UART_HandleTypeDef* husart1;
-void initPrintf();
+uart_status_t initPrintf();
