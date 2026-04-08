@@ -32,9 +32,9 @@ can_status_t can_unpack_status(uint16_t id, const uint8_t rx_data[8], mc_status_
 
       status->MC_FAULT_Reserved = (raw >> 25) & 0x7F; // [25:31]
 
-      status->MC_ActiveMotor  = (raw >> 32) & 0xFFFF; // [32:47]
-      status->MC_TxErrorCount = (raw >> 48) & 0xFF; // [48:55]
-      status->MC_RxErrorCount = (raw >> 56) & 0xFF; // [56:63]
+      status->MC_ActiveMotor  = rx_data[3]; // [32:47]
+      status->MC_TxErrorCount = rx_data[5]; // [48:55]
+      status->MC_RxErrorCount = rx_data[6]; // [56:63]
 
       return CAN_OK;
   }

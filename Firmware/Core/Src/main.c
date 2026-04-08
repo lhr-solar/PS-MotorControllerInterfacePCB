@@ -11,12 +11,11 @@ int main(void)
     
     // Initialize motor task and create RTOS task
     init_status_t init_status = Motor_Task_Init();
-    if (init_status != INIT_OK) {
-        Error_Handler();
+    if (init_status != INIT_ERR) {
+        vTaskStartScheduler();
     }
+
     
-    // Start the RTOS scheduler
-    vTaskStartScheduler();
 
     // Unreachable
     Error_Handler();

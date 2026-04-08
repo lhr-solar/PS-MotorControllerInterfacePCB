@@ -37,7 +37,7 @@ init_status_t Motor_Task_Init(void)
        &Motor_Task_Buffer       // TCB buffer
    );
 
-   return INIT_ERR;
+   return INIT_OK;
 }
 
 static BaseType_t recv_motor_status(mc_status_t *mc_status, TickType_t timeout)
@@ -51,21 +51,22 @@ static BaseType_t recv_motor_status(mc_status_t *mc_status, TickType_t timeout)
    }
    return pdFAIL;
    
-   HAL_GPIO_TogglePin(DEBUG_LED2_PORT, DEBUG_LED2_PIN);
 }
 
 static BaseType_t recv_motor_temp(mc_motor_tempmeasurement_t *mc_temp, TickType_t timeout)
 {
-   CAN_RxHeaderTypeDef rx_header;
+   CAN_RxHeaderTypeDef rx_header = {0};
    uint8_t rx_data[8] = {0};
    
    can_status_t status = CANbus_recv(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, &rx_header, rx_data, timeout);
     if (status == CAN_OK && can_unpack_temp(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, rx_data, mc_temp) == CAN_OK) {
+        HAL_GPIO_TogglePin(DEBUG_LED1_PORT, DEBUG_LED1_PIN);
+
        return pdPASS;
    }
+
    return pdFAIL;
    
-   HAL_GPIO_TogglePin(HEARTBEAT_PORT, HEARTBEAT_PIN);
 }
 
 static uint8_t find_duty(const mc_motor_tempmeasurement_t *motor_temp, BaseType_t *temp_fault) {
@@ -73,7 +74,7 @@ static uint8_t find_duty(const mc_motor_tempmeasurement_t *motor_temp, BaseType_
     float temp = motor_temp->MC_HeatsinkTemp;
     printf("temp: %.5f\n/r", temp);
 
-    uint8_t duty = 60; // 24V fan undervoltage: 14V. Minimum duty% other than 0 must be 60%.
+    uint8_t duty = 100; // 24V fan undervoltage: 14V. Minimum duty% other than 0 must be 60%.
 
     if (temp >= 70.0f) {
         *temp_fault = pdTRUE;
@@ -97,12 +98,14 @@ void Motor_Task(void *pvParameters)
 {
    (void)pvParameters;
    
+   
    mc_status_t motor_status = {0};
    mc_motor_tempmeasurement_t motor_temp = {0};
    BaseType_t temp_fault = pdFALSE;
-  HAL_GPIO_WritePin(DEBUG_LED1_PORT, DEBUG_LED1_PIN, 1);
    while (1)
-   {
+   {    
+        HAL_GPIO_TogglePin(HEARTBEAT_PORT, HEARTBEAT_PIN);
+        vTaskDelay(100);
        recv_motor_status(&motor_status, 0);
        recv_motor_temp(&motor_temp, 0);
 
