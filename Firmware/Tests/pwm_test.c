@@ -27,7 +27,7 @@ void PWM_Test_Task(void *pvParameters)
     (void)pvParameters;
     
     // Enable HSS after scheduler is running
-    HSS_EN_SetState(HSS_ON, portMAX_DELAY);
+    HSS_EN_SetState(HSS_ON);
     
     uint8_t test_index = 0;
     

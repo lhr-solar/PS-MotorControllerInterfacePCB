@@ -1,0 +1,8 @@
+// CAN_RECV_ENTRY(ID, SIZE, CIRCULAR)
+
+
+#include "can_bus.h"
+#include "MotorCAN_can_msgs.h"
+
+CAN_RECV_ENTRY(CAN_ID_MC_STATUS, 1, true)
+CAN_RECV_ENTRY(CAN_ID_MC_MOTOR_TEMPMEASUREMENT, 1, true)

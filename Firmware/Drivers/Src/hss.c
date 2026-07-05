@@ -23,27 +23,33 @@ BaseType_t HSS_Init(void)
     return pdTRUE;
 }
 
-void HSS_EN_SetState(hss_status_t state, TickType_t xTicksToWait)
+BaseType_t HSS_EN_SetState(hss_status_t state, TickType_t timeout)
 {
-    // Acquire mutex before modifying state
-    xSemaphoreTake(hss_mutex, xTicksToWait);
-    
-    hss_current_state = state;
-    HAL_GPIO_WritePin(HSS_ENABLE_PORT, HSS_ENABLE_PIN, state);
-    
-    // Release mutex after done
-    xSemaphoreGive(hss_mutex);
+    if(xSemaphoreTake(hss_mutex, timeout) == pdTRUE) {
+        hss_current_state = state;
+        HAL_GPIO_WritePin(HSS_ENABLE_PORT, HSS_ENABLE_PIN, state);
+        xSemaphoreGive(hss_mutex);
+        return pdTRUE;
+    }
+    return pdFALSE;
 }
 
-void HSS_EN_Toggle(void)
+BaseType_t HSS_EN_Toggle(TickType_t timeout)
 {
     // Acquire mutex before modifying state
-    xSemaphoreTake(hss_mutex, portMAX_DELAY);
-    
-    HAL_GPIO_TogglePin(HSS_ENABLE_PORT, HSS_ENABLE_PIN);
-    
-    // Release mutex after done
-    xSemaphoreGive(hss_mutex);
+    if(xSemaphoreTake(hss_mutex, timeout) == pdTRUE) {
+        HAL_GPIO_TogglePin(HSS_ENABLE_PORT, HSS_ENABLE_PIN);
+        
+        // Release mutex after done
+        xSemaphoreGive(hss_mutex);
+        return pdTRUE;
+    }
+    return pdFALSE;
+}
+
+hss_status_t HSS_GetFaultStatus(void)
+{
+    return (HAL_GPIO_ReadPin(HSS_FAULT_PORT, HSS_FAULT_PIN) == GPIO_PIN_SET) ? HSS_FAULT : HSS_OK;
 }
 
 

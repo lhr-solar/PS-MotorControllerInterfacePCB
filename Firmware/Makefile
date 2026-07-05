@@ -22,13 +22,31 @@ PROJECT_TARGET ?= stm32l431cbt
 ####
 
 ####
+# build variant: moco (motor controller interface) or mppt
+# selected via `make moco` / `make mppt`, or `make BUILD=mppt`
+BUILD ?= moco
+
+ifneq ($(filter moco mppt,$(MAKECMDGOALS)),)
+BUILD := $(lastword $(filter moco mppt,$(MAKECMDGOALS)))
+endif
+
+ifeq ($(BUILD), moco)
+PROJECT_MACROS += BUILD_MOCO
+else ifeq ($(BUILD), mppt)
+PROJECT_MACROS += BUILD_MPPT
+else
+$(error Unknown BUILD '$(BUILD)'. Use BUILD=moco or BUILD=mppt)
+endif
+####
+
+####
 # source and include directories
 PROJECT_C_INCLUDES = $(wildcard */Inc)
 PROJECT_C_SOURCES = $(wildcard */Src/*.c)
 ####
 
-# build directories
-PROJECT_BUILD_DIR = build
+# build directories (separate per variant so moco/mppt objects never mix)
+PROJECT_BUILD_DIR = build/$(BUILD)
 
 ####
 BUILD_MAKEFILE_DIR ?= Embedded-Sharepoint
@@ -66,6 +84,7 @@ export PROJECT_TARGET
 export PROJECT_C_SOURCES
 export PROJECT_C_INCLUDES
 export PROJECT_BUILD_DIR
+export PROJECT_MACROS
 
 
 #-------------------------------
@@ -88,6 +107,12 @@ ifeq ($(MAKECMDGOALS),)
 default: build_code
 else ifeq ($(MAKECMDGOALS), all)
 all: build_code
+else ifeq ($(MAKECMDGOALS), moco)
+.PHONY: moco
+moco: build_code
+else ifeq ($(MAKECMDGOALS), mppt)
+.PHONY: mppt
+mppt: build_code
 else
 %:
 	$(BEAR_PREFIX) $(MAKE) -C $(BUILD_MAKEFILE_DIR) $(MAKECMDGOALS)
@@ -95,6 +120,7 @@ endif
 
 
 build_code:
+	@echo -e "Build variant: ${CYAN}$(BUILD)${NC}"
 ifneq ($(TEST), main)
 	@echo -e "Making ${PURPLE}$(PROJECT_TARGET)${NC}build for ${BLUE}TEST=${PURPLE} ${TEST}${NC}"
 else

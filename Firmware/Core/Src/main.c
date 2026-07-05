@@ -1,19 +1,25 @@
 #include "motor_task.h"
 #include "common.h"
 #include "stm32xx_hal.h"
+#include "Debugging.h"
 
 int main(void)
 {
     HAL_Init();
     SystemClock_Config();
-
-    // Initialize motor task and create RTOS task
-    Motor_Task_Init();
+    initPrintf();
     
-    // Start the RTOS scheduler
-    vTaskStartScheduler();
+    // Initialize motor task and create RTOS task
+    init_status_t init_status = Motor_Task_Init();
+    if (init_status != INIT_ERR) {
+        vTaskStartScheduler();
+    }
 
+    
+
+    // Unreachable
     Error_Handler();
+    
     while (1);
 }
 

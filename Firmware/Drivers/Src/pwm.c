@@ -55,7 +55,10 @@ void PWM1_Init(TIM_HandleTypeDef* timHandle) // PWMA Initialization
 
 void PWM1_SetDuty(uint8_t duty) // PWMA Duty Function
 {
-    if (duty > 100) duty = 100; // Caps duty at 100%
+    if (duty >= 100) 
+        duty = 100; // Caps duty at 100%
+    else if (duty <= 60 && duty != 0) 
+        duty = 60;
     uint32_t compare = (PWM_MAX_COUNT * duty) / 100; // Calculates compare value based on duty cycle %
     __HAL_TIM_SET_COMPARE(pwm1TimHandle, PWM1_TIMER_CHANNEL, compare); // Sets compare registers
 }
@@ -104,7 +107,12 @@ void PWM2_Init(TIM_HandleTypeDef* timHandle) // PWMB Initialization
 
 void PWM2_SetDuty(uint8_t duty) // PWMB Duty Function
 {
-    if (duty > 100) duty = 100;
+    if (duty > 100){ 
+        duty = 100;
+    }
+    else if (duty <= 60 && duty != 0){ 
+        duty = 60;
+    }
     uint32_t compare = (PWM_MAX_COUNT * duty) / 100;
     __HAL_TIM_SET_COMPARE(pwm2TimHandle, PWM2_TIMER_CHANNEL, compare);
 }

@@ -36,3 +36,7 @@ fp-info-cache
 
 # Backups
 Controls-MotorControllerBreakout-backups/*
+
+# Build Files
+build/
+Build/
