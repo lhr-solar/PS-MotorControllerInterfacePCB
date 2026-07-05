@@ -112,5 +112,5 @@ can_status_t CANbus_send(uint16_t id, uint8_t data[], uint8_t length, TickType_t
 }
 
 can_status_t CANbus_recv(uint16_t id, CAN_RxHeaderTypeDef *header, uint8_t data[], TickType_t timeout) {
-return can_recv(g_hcan1, id, header, data, timeout);
+  return can_recv(g_hcan1, id, header, data, timeout);
 }

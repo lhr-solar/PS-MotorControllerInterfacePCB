@@ -39,8 +39,6 @@ uart_status_t initPrintf(void) {
 	husart1->Init.HwFlowCtl = UART_HWCONTROL_NONE;
 	husart1->Init.OverSampling = UART_OVERSAMPLING_16;
 
-	setvbuf(stdout, NULL, _IONBF, 0);
-
 	printf_init(husart1);
 
 	return UART_OK;

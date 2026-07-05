@@ -43,6 +43,14 @@ can_status_t can_unpack_status(uint16_t id, const uint8_t rx_data[8], mc_status_
 
 can_status_t can_unpack_temp(uint16_t id, const uint8_t rx_data[8], mc_motor_tempmeasurement_t * temp) {
 
-        memcpy(temp, rx_data, CAN_DLC_MC_MOTOR_TEMPMEASUREMENT);
-        return CAN_OK;
+  // MC_MotorTemp is float bits 0–31 (32 bits) unit Â°C
+  // MC_HeatsinkTemp is float bits 32–63 (32 bits) unit Â°C
+  if (id != CAN_ID_MC_MOTOR_TEMPMEASUREMENT) {
+    return CAN_ERR;
+  }
+
+  memcpy(&temp->MC_MotorTemp, rx_data, sizeof(temp->MC_MotorTemp));
+  memcpy(&temp->MC_HeatsinkTemp, rx_data + 4, sizeof(temp->MC_HeatsinkTemp));
+
+  return CAN_OK;
 }
